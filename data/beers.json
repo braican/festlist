@@ -1,0 +1,1102 @@
+{
+	"4 Hands Brewing Co." : [
+		{
+			"name": "Beyond the Bricks"
+		},
+		{
+			"name": "Bona Fide Imperial Stout"
+		},
+		{
+			"name": "Cuvee Ange"
+		},
+		{
+			"name": "Peanut Butter Chocolate Milk Stout"
+		}
+	],
+	"Against the Grain Brewery and Smokehouse": [
+		{
+			"name": "70K"
+		},
+		{
+			"name": "Against The Grain / Blue Stallion Brewing Co. BerwynnerWeisse"
+		},
+		{
+			"name": "Bo & Luke"
+		},
+		{
+			"name": "Brett The Hipman Hop"
+		},
+		{
+			"name": "Citra Ass Down"
+		},
+		{
+			"name": "Fruitis The Farmer Bees Cake"
+		},
+		{
+			"name": "Kein Lacheln Mein Nachbeer"
+		},
+		{
+			"name": "Kentucky Ryed Chicken"
+		},
+		{
+			"name": "London Bailing"
+		}
+	],
+	"Allagash Brewing Company": [
+		{
+			"name": "Avance"
+		},
+		{
+			"name": "Winslow"
+		},
+		{
+			"name": "Red Howes"
+		}
+	],
+	"Anderson Valley Brewing Company":[
+		{
+			"name": "Gatlin Damnosus"
+		},
+		{
+			"name": "Huge Arker"
+		},
+		{
+			"name": "Imperial Boont Amber Ale"
+		},
+		{
+			"name": "The Kimmie, The Yink, & The Holy Gose"
+		}
+	],
+	"Avery Brewing Company": [
+		{
+			"name": "Boulder Weiss"
+		},
+		{
+			"name": "Tweak"
+		},
+		{
+			"name": "Uncle Jacob's Stout"
+		}
+	],
+	"Blue Point Brewing Company":[
+		{
+			"name": "(Sour) Cherry Imperial Stout"
+		},
+		{
+			"name": "No Apologies Imperial IPA"
+		},
+		{
+			"name": "Mosaic IPA"
+		}
+	],
+	"Boston Beer Company (Sam Adams)":[
+		{
+			"name": "Grand Cru"
+		},
+		{
+			"name": "Tetravis"
+		}
+	],
+	"Boston Beer Works":[
+		{
+			"name": "Blue Thunder - Imperial Blueberry Ale"
+		},
+		{
+			"name": "Oude Bruin - Sour Brown"
+		},
+		{
+			"name": "Redeemer Imperial Red Ale"
+		},
+		{
+			"name": "Rosemary Imperial Ale"
+		}
+	],
+	"Boulevard Brewing Co.":[
+		{
+			"name": "Foeder Projekt #1"
+		},
+		{
+			"name": "Boulevard Imperial Stout"
+		},
+		{
+			"name": "Rye-on-Rye"
+		},
+		{
+			"name": "The Sixth Glass"
+		}
+	],
+	"Brasserie Dunham":[
+		{
+			"name": "Black Barley Wine"
+		},
+		{
+			"name": "Dunham / Kissmeyer La Resurrection De Broderus"
+		},
+		{
+			"name": "Dunham Gouden Meyer"
+		},
+		{
+			"name": "Imperial Black IPA"
+		},
+		{
+			"name": "Saison Du Pinnacle"
+		},
+		{
+			"name": "Saison Reserve"
+		},
+		{
+			"name": "Saison Rouge Sauvage"
+		},
+		{
+			"name": "The Red Sashes - Vin De Siegle"
+		},
+		{
+			"name": "Vladimir Sour Beaver Riot"
+		}
+	],
+	"Brasserie Trois Dames":[
+		{
+			"name": "Trois Dames L'Amoureuse No. 1 Blanche"
+		}
+	],
+	"Braustelle":[
+		{
+			"name": "Freigeist Geisterzug Gose"
+		}
+	],
+	"Brouwerij Kerkom":[
+		{
+			"name": "Bink Grand Cru"
+		}
+	],
+	"Burley Oak Brewery":[
+		{
+			"name": "LOAKAL"
+		},
+		{
+			"name": "Sout Trip"
+		},
+		{
+			"name": "Tart Attack"
+		}
+	],
+	"Cape Ann Brewing Company":[
+		{
+			"name": "Blackburn Imperial Stout"
+		},
+		{
+			"name": "Ester's Decree"
+		},
+		{
+			"name": "Fisherman's Chili Stout"
+		},
+		{
+			"name": "Fisherman's Dead Eye Double IPA"
+		},
+		{
+			"name": "Fisherman's Reserve No. 3"
+		},
+		{
+			"name": "Fisherman's Tea Party"
+		}
+	],
+	"Captain Lawrence Brewing Co.":[
+		{
+			"name": "Frost Monster"
+		},
+		{
+			"name": "Golden Delicious"
+		},
+		{
+			"name": "Rosso E Marrone"
+		},
+		{
+			"name": "Seeking Alpha"
+		}
+	],
+	"Carton Brewing Company":[
+		{
+			"name": "Boat Beer"
+		},
+		{
+			"name": "Pumpkin Cream Scobeyville Wood"
+		},
+		{
+			"name": "Regular Coffee"
+		},
+		{
+			"name": "Ship Wreck Porter"
+		},
+		{
+			"name": "Something Like Sandy"
+		},
+		{
+			"name": "Swisher"
+		}
+	],
+	"Cascade Brewing / Raccoon Lodge & Brewpub":[
+		{
+			"name": "Bourbonic Plague"
+		},
+		{
+			"name": "Sang Noir"
+		},
+		{
+			"name": "Vlad the Imp Aler"
+		},
+		{
+			"name": "Figaro"
+		}
+	],
+	"Cigar City Brewing":[
+		{
+			"name": "Don Gavino's Big Guava"
+		},
+		{
+			"name": "Margarita Gose"
+		},
+		{
+			"name": "Marshal Zhukov's Imperial Stout - Rum Barrel Aged"
+		},
+		{
+			"name": "Passionfruit Guava Grove"
+		}
+	],
+	"Cisco Brewers Inc.":[
+		{
+			"name": "Baggywrinkle Barleywind on Brettanomyces"
+		},
+		{
+			"name": "Island Reserve: Lager"
+		},
+		{
+			"name": "Island Reserve: Saison Farmhouse Ale"
+		},
+		{
+			"name": "Monomoy Kreik"
+		}
+	],
+	"Clown Shoes":[
+		{
+			"name": "Billionaire"
+		},
+		{
+			"name": "Hammer of the Holy"
+		},
+		{
+			"name": "Luchador En Fuego"
+		},
+		{
+			"name": "Muffin Top"
+		},
+		{
+			"name": "Space Cake"
+		}
+	],
+	"Crooked Stave Brewery and Taproom":[
+		{
+			"name": "Nightmare on Brett - Grand Cru"
+		},
+		{
+			"name": "Vieille Artisinal Saison (Cranberry and Spice)"
+		},
+		{
+			"name": "WWB Batch 60"
+		}
+	],
+	"Dark Horse Brewing Company":[
+		{
+			"name": "Bourbon Barrel Aged Plead the 5th"
+		},
+		{
+			"name": "Sarsaparilla 666 Bourbon Barrel Root Beer Stout"
+		},
+		{
+			"name": "This Little Piggy Went to Dark Horse - Bacon Ale"
+		},
+		{
+			"name": "Where the Wild Things Macerate Raspberries"
+		}
+	],
+	"Dogfish Head Brewery":[
+		{
+			"name": "120 Minute IPA"
+		},
+		{
+			"name": "Namaste"
+		},
+		{
+			"name": "Nano-Nano"
+		},
+		{
+			"name": "Raw Creation"
+		},
+		{
+			"name": "Sah'tea"
+		},
+		{
+			"name": "Stalactite"
+		},
+		{
+			"name": "Stalagmite"
+		}
+	],
+	"Due South Brewing Co.":[
+		{
+			"name": "Coconut Bay Breeze"
+		},
+		{
+			"name": "Maple Orange Imperial Caramel Cream Ale"
+		},
+		{
+			"name": "Mariana Trench - Whiskey Barrel Aged"
+		},
+		{
+			"name": "Saigon Blonde"
+		}
+	],
+	"Element Brewing Company":[
+		{
+			"name": "6:56 - Altoberfest"
+		},
+		{
+			"name": "Lactonium"
+		},
+		{
+			"name": "Plasma"
+		},
+		{
+			"name": "Vernal"
+		}
+	],
+	"Evil Twin Brewing":[
+		{
+			"name": "Barrel Aged Lil' B"
+		},
+		{
+			"name": "Even More Jesus"
+		},
+		{
+			"name": "Justin Blabaer"
+		}
+	],
+	"Firestone Walker Brewing Co.":[
+		{
+			"name": "Agrestic Ale"
+		},
+		{
+			"name": "Bretta Weisse"
+		},
+		{
+			"name": "Lil' Mikkel"
+		},
+		{
+			"name": "Opal - Proprietor's Reserve"
+		},
+		{
+			"name": "Parabajava"
+		},
+		{
+			"name": "Velvet Markin"
+		}
+	],
+	"Founders Brewing Company":[
+		{
+			"name": "Boilermaker (Barrel Aged Solid Gold)"
+		},
+		{
+			"name": "Bolt Cutter"
+		},
+		{
+			"name": "Curmudgeon (Old Ale)"
+		},
+		{
+			"name": "Doom"
+		},
+		{
+			"name": "Founders Imperial Stout"
+		},
+		{
+			"name": "KBS (Kentucky Breakfast Stout)"
+		},
+		{
+			"name": "Rubaeus"
+		},
+		{
+			"name": "Smoked Porter"
+		}
+	],
+	"Franklin's Restaurant, Brewery & General Store":[
+		{
+			"name": "Batch 500"
+		},
+		{
+			"name": "Batch 600"
+		},
+		{
+			"name": "Batch 700"
+		},
+		{
+			"name": "Biological Speculation"
+		},
+		{
+			"name": "Blasphemous"
+		},
+		{
+			"name": "Bustin' Loose"
+		},
+		{
+			"name": "Higher Ground"
+		},
+		{
+			"name": "Jack the Giant Killer"
+		},
+		{
+			"name": "Ludicrous"
+		},
+		{
+			"name": "One of Those Funky Thangs"
+		},
+		{
+			"name": "Purgatoire"
+		},
+		{
+			"name": "Ridiculous"
+		},
+		{
+			"name": "Slippin' Into Darkness"
+		},
+		{
+			"name": "The Sugar Act"
+		}
+	],
+	"Funky Buddha Brewery":[
+		{
+			"name": "French Toast Double Brown Ale"
+		},
+		{
+			"name": "Last Snow"
+		},
+		{
+			"name": "No Crusts"
+		},
+		{
+			"name": "Passionfruit Berliner Weisse"
+		}
+	],
+	"Green Flash Brewing Co.":[
+		{
+			"name": "Le Freak"
+		},
+		{
+			"name": "Palate Wrecker"
+		},
+		{
+			"name": "Saison Diego"
+		},
+		{
+			"name": "Serrano Stout"
+		}
+	],
+	"Half Acre Beer Company":[
+		{
+			"name": "Big Hugs"
+		},
+		{
+			"name": "Chocolate Camaro"
+		},
+		{
+			"name": "Double Daisy Cutter"
+		},
+		{
+			"name": "Gin Barrel Aged Pony Pilsner"
+		},
+		{
+			"name": "Navaja"
+		},
+		{
+			"name": "Quakerbridge"
+		}
+	],
+	"Hardywood Park Craft Brewery":[
+		{
+			"name": "Hardywood Park Barleywine"
+		},
+		{
+			"name": "Bourbon GBS (Gingerbread Stout)"
+		},
+		{
+			"name": "Brian's Barrel Blend #4"
+		},
+		{
+			"name": "Oak Aged Saison Rustica"
+		},
+		{
+			"name": "Raspberry Stout"
+		},
+		{
+			"name": "The Great Return"
+		}
+	],
+	"Harpoon Brewery & Beer Hall":[
+		{
+			"name": "Citrus Pale Ale"
+		},
+		{
+			"name": "Uncle Fester"
+		},
+		{
+			"name": "Imperial Maple Porter"
+		},
+		{
+			"name": "Oaked Boston Irish Stout"
+		},
+		{
+			"name": "Oyster Saison"
+		}
+	],
+	"Ithaca Beer Company":[
+		{
+			"name": "Anniversary Sixteen"
+		},
+		{
+			"name": "CranBretta"
+		},
+		{
+			"name": "Flower Power India Pale Ale"
+		},
+		{
+			"name": "Gozer the Gozerian"
+		},
+		{
+			"name": "Zuul"
+		}
+	],
+	"Jack's Abby Brewing":[
+		{
+			"name": "Baby Maker"
+		},
+		{
+			"name": "Framinghammer Baltic Porter - Bourbon Barrel Aged"
+		},
+		{
+			"name": "Saxonator Dunkels Doppelbock"
+		},
+		{
+			"name": "Smoked Marzen"
+		}
+	],
+	"Kane Brewing Company":[
+		{
+			"name": "A Night to End All Dawns"
+		},
+		{
+			"name": "Boutbon Barrel Aged Quad"
+		},
+		{
+			"name": "Heirloom"
+		},
+		{
+			"name": "Sea Change"
+		},
+		{
+			"name": "Wine Barrel Aged Quad"
+		}
+	],
+	"Local Option":[
+		{
+			"name": "Bourbon Barrel Aged Kentucky Common"
+		},
+		{
+			"name": "Morning Wood"
+		}
+	],
+	"Long Trail Brewing Co.":[
+		{
+			"name": "Culmination Chocolate Porter (With Chipotle Chilis)"
+		},
+		{
+			"name": "Double Eisenbock with Maple"
+		},
+		{
+			"name": "Double Secret Stout"
+		},
+		{
+			"name": "Limbo"
+		},
+		{
+			"name": "Smoke Lichtenhainer Berliner Weisse"
+		}
+	],
+	"Mikkeller ApS":[
+		{
+			"name": "Drink'in The Snow"
+		}
+	],
+	"Mystic Brewery":[
+		{
+			"name": "Barrel Aged Day of Doom"
+		},
+		{
+			"name": "Entropy"
+		},
+		{
+			"name": "Petite Table Beer"
+		},
+		{
+			"name": "Radix"
+		},
+		{
+			"name": "Sauterneal Saison"
+		}
+	],
+	"New England Brewing Co.":[
+		{
+			"name": "Coriolis"
+		},
+		{
+			"name": "El Guapo Saison"
+		},
+		{
+			"name": "Fat Ten-Er #5"
+		},
+		{
+			"name": "Friar's Quad (with Brett)"
+		}
+	],
+	"Newburgh Brewing Company":[
+		{
+			"name": "Magnanini Niagra Tripel"
+		},
+		{
+			"name": "Sally's Oyster Stout"
+		},
+		{
+			"name": "Winter Spruce Porter"
+		}
+	],
+	"Night Shift Brewing":[
+		{
+			"name": "Art #18"
+		},
+		{
+			"name": "Ever Weiss"
+		},
+		{
+			"name": "Funk'd Citra"
+		},
+		{
+			"name": "Smoked Hop IPA"
+		},
+		{
+			"name": "Viva Habanera"
+		}
+	],
+	"Nøgne Ø - Det Kompromissløse Bryggeri A/S":[
+		{
+			"name": "Dark Horizon 4th Edition"
+		}
+	],
+	"Off Color Brewing":[
+		{
+			"name": "Dinos'mores"
+		},
+		{
+			"name": "Off Color / Three Floyds - Rats in the Ashes"
+		}
+	],
+	"Oskar Blues Grill & Brew":[
+		{
+			"name": "Body Like A Battle Axe"
+		},
+		{
+			"name": "GUBNA Imperial IPA"
+		},
+		{
+			"name": "OBliterator"
+		}
+	],
+	"Prism Brewing Company":[
+		{
+			"name": "90's Splashback"
+		},
+		{
+			"name": "Insana"
+		},
+		{
+			"name": "Love is Evol"
+		},
+		{
+			"name": "Mason's Porter"
+		},
+		{
+			"name": "ParTea Pale Ale"
+		},
+		{
+			"name": "Shady Blond"
+		}
+	],
+	"Relic Brewing Co.":[
+		{
+			"name": "Cherry Wood Aged Hiver"
+		},
+		{
+			"name": "Jasmine Saison"
+		},
+		{
+			"name": "Ryepocolypse Stout"
+		},
+		{
+			"name": "Sarrasin"
+		}
+	],
+	"Revolution Brewing Company":[
+		{
+			"name": "Chicago Smoke"
+		},
+		{
+			"name": "Deth's Tar"
+		},
+		{
+			"name": "Red Skull"
+		},
+		{
+			"name": "Straight Jacket"
+		}
+	],
+	"Right Brain Brewery":[
+		{
+			"name": "Batch 1000"
+		},
+		{
+			"name": "Blue Magic"
+		},
+		{
+			"name": "Mangalista Pig Porter"
+		},
+		{
+			"name": "Pecan Piewhole"
+		},
+		{
+			"name": "Several Hopped Stowaway Saison"
+		},
+		{
+			"name": "Spiny Norman IPA"
+		}
+	],
+	"Sebago Brewing Company":[
+		{
+			"name": "Bourbon Barrel Aged Lake Trout Stout"
+		},
+		{
+			"name": "Full Throttle Double IPA"
+		},
+		{
+			"name": "Single Batch Series - 2013 Bourbon Barrel Aged Barleywine"
+		},
+		{
+			"name": "Single Batch Series - M"
+		}
+	],
+	"Shmaltz Brewing Company":[
+		{
+			"name": "He'Brew Bittersweet Lenny'r R.I.P.A. On Rye"
+		},
+		{
+			"name": "He;Brew Funky Jewbelation '13"
+		},
+		{
+			"name": "He'Brew Jewbelation Sweet 16 Anniversary Ale"
+		},
+		{
+			"name": "He'Brew Rejewvenator Dubbel Doppel (2013)"
+		},
+		{
+			"name": "Reunion Ale '13 - A Beer for Hope"
+		}
+	],
+	"Short's Brewing Company":[
+		{
+			"name": "Bim Bam Boom"
+		},
+		{
+			"name": "Black Chai"
+		},
+		{
+			"name": "Bourbon Carrot Cake"
+		},
+		{
+			"name": "Bourbon Hammer Jack"
+		},
+		{
+			"name": "Golden Eagle"
+		},
+		{
+			"name": "Jitterbug Perfume"
+		},
+		{
+			"name": "Juicy Tree"
+		},
+		{
+			"name": "London Fog"
+		}
+	],
+	"Sierra Nevada":[
+		{
+			"name": "Anything Gose - Beer Camp #72"
+		},
+		{
+			"name": "Blizzicane Bock"
+		},
+		{
+			"name": "Boston Baked Beer"
+		},
+		{
+			"name": "Ovila Saison - Rye Whiskey Barrel Aged"
+		},
+		{
+			"name": "Bigfoot Barleywine Style Ale"
+		}
+	],
+	"Sixpoint Brewery":[
+		{
+			"name": "Barrel Aged Otis"
+		},
+		{
+			"name": "Barrel Aged 3Beans Baltic Porter"
+		},
+		{
+			"name": "Get Safe (with Lemongrass Tincture)"
+		},
+		{
+			"name": "Hi-Res"
+		}
+	],
+	"Smuttynose Brewing Company":[
+		{
+			"name": "Smuttlabs Winter Ale - Aged in Red Wine Barrels"
+		},
+		{
+			"name": "Big A IPA"
+		},
+		{
+			"name": "Imperial Stout (Big Beer Series)"
+		},
+		{
+			"name": "Wheat Wine (Big Beer Series)"
+		}
+	],
+	"Stone Brewing Co.":[
+		{
+			"name": "Crime"
+		},
+		{
+			"name": "Double Bastard Ale"
+		},
+		{
+			"name": "Matt's Burning Rosids"
+		},
+		{
+			"name": "Punishment"
+		}
+	],
+	"SweetWater Brewing Company":[
+		{
+			"name": "16th Anniversary Ale Red Wheat Wine"
+		},
+		{
+			"name": "Dank Tank Red Hot Mama"
+		},
+		{
+			"name": "Festive Ale"
+		},
+		{
+			"name": "Happy Ending Imperial Stout"
+		}
+	],
+	"The Bruery":[
+		{
+			"name": "Bois Fume"
+		},
+		{
+			"name": "Bottleworks XII"
+		},
+		{
+			"name": "Chocolate Rain"
+		},
+		{
+			"name": "Sout in the Rye"
+		}
+	],
+	"The Lost Abbey":[
+		{
+			"name": "Cuvee De Tomme"
+		},
+		{
+			"name": "Deliverance"
+		},
+		{
+			"name": "Framboise De Amorosa"
+		},
+		{
+			"name": "Red Poppy Ale"
+		},
+		{
+			"name": "Spontaneous Cheer"
+		},
+		{
+			"name": "The Angel's Share Grand Cru"
+		}
+	],
+	"Throwback Brewery":[
+		{
+			"name": "Apple Brandy Barrel Aged Imperial Stout"
+		},
+		{
+			"name": "Campfire Smoked Porter"
+		},
+		{
+			"name": "Throwback Oyster Stout"
+		},
+		{
+			"name": "Spicy Bohemian"
+		},
+		{
+			"name": "White Heron Chai Porter"
+		}
+	],
+	"ToØl":[
+		{
+			"name": "Nordic By Nature"
+		}
+	],
+	"Toppling Goliath Brewing Company":[
+		{
+			"name": "Mornin' Delight"
+		},
+		{
+			"name": "Naughty 90"
+		},
+		{
+			"name": "Sosus"
+		},
+		{
+			"name": "Sue"
+		},
+		{
+			"name": "ZeeLander"
+		}
+	],
+	"Tree House Brewing Company":[
+		{
+			"name": "Double Shot"
+		},
+		{
+			"name": "Juice Machine"
+		}
+	],
+	"Troegs Brewing Company":[
+		{
+			"name": "Scratch Beer 128 - 2013 (Belgian Chocolate Raspberry Stout)"
+		},
+		{
+			"name": "Scratch Beer 83 - 2012 (Impending Descent)"
+		},
+		{
+			"name": "Troegenator Double Bock (Bourbon Barrel Aged)"
+		}
+	],
+	"Trophy Brewing Co.":[
+		{
+			"name": "Hickotine Whiskey Barrel Aged Hickory Smoked Barleywine"
+		},
+		{
+			"name": "Little Miss Sunshine"
+		},
+		{
+			"name": "Loner"
+		},
+		{
+			"name": "Wine Spektator"
+		}
+	],
+	"Two Roads Brewing Company":[
+		{
+			"name": "Henry's Farm - Barrel Aged"
+		},
+		{
+			"name": "Igor's Dream"
+		},
+		{
+			"name": "Krazy Pucker"
+		},
+		{
+			"name": "Rye 95 (Cask Conditioned With Elderflowers)"
+		},
+		{
+			"name": "Urban Funk"
+		}
+	],
+	"Uinta Brewing Company":[
+		{
+			"name": "Detour Double India Pale Ale"
+		},
+		{
+			"name": "Dubhe Imperial Black IPA"
+		},
+		{
+			"name": "Sea Legs Baltic Porter"
+		},
+		{
+			"name": "Tinder Rauchbier"
+		}
+	],
+	"Victory Brewing Company":[
+		{
+			"name": "Hop Ranch"
+		},
+		{
+			"name": "Old Horizontal"
+		},
+		{
+			"name": "Red Thunder"
+		},
+		{
+			"name": "Swing Session Saison"
+		}
+	],
+	"Watch City Brewing Co.":[
+		{
+			"name": "Fiery Death"
+		},
+		{
+			"name": "I'll Have What Lee's Smokin'"
+		},
+		{
+			"name": "Kiss My Kvass"
+		},
+		{
+			"name": "Nettle of Honor"
+		},
+		{
+			"name": "Sno'Blower Winter Wit"
+		}
+	],
+	"Weyerbacher Brewing Co.":[
+		{
+			"name": "Camelopardalis"
+		},
+		{
+			"name": "Tarte Nouveau"
+		},
+		{
+			"name": "Tiny"
+		}
+	],
+	"Xbeeriment I/S":[
+		{
+			"name": "Black Force One"
+		}
+	]
+
+}

@@ -1,0 +1,51 @@
+
+body{
+	font-family: 'Lato', sans-serif;
+}
+ul{
+	padding: 0;
+	list-style: none;
+}
+
+#beerlist{
+	padding-right: 40px;
+}
+#beerlist ul{
+	padding-top: 10px;
+}
+
+#beerlist > li{
+	border-top: 1px solid #ccc;
+	padding: 10px 0;
+}
+#beerlist .breweryname{
+	font-weight: 700;
+}
+#beerlist .name-and-rating{
+	margin-left: 25px;
+}
+#beerlist input[type="checkbox"]{
+	float:left;
+	width:20px;
+}
+#beerlist select{
+	display: none;
+}
+#beerlist .checked select{
+	display: inline;
+	margin-left: 10px;
+}
+#beerlist .checked .beername{
+	text-decoration: line-through;
+}
+#beerlist ul li{
+	padding: 6px 0;
+}
+
+#scrollit{
+	width: 20px;
+	position: fixed;
+	right:10px;
+	top: 0;
+	text-align: center;
+}
