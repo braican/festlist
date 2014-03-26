@@ -1,8 +1,10 @@
 
 //
-// EBF - namespace
+// BEERFEST - namespace
 //
-(function(EBF, $){
+(function(BEERFEST, $){
+
+	// =======================
 
 	function renderBeers(data){
 
@@ -40,11 +42,21 @@
 	    	document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
 	    }
 	}
-	$(document).ready(function(){
+
+	// =========================
+
+	BEERFEST.init = function(festName){
+		//
+		// set up cookies to expire after a year
+		//
+		$.cookie.defaults = {
+		    expires: 365
+		}
+
 		//
 		// get the beers
 		//
-		$.getJSON('data/beers.json', function(data){
+		$.getJSON('data/' + festName + '.json', function(data){
 			renderBeers(data);
 			// console.log(data);
 		});
@@ -99,6 +111,11 @@
 				}
 			});
 		});
+	}
 
+	$(document).ready(function(){
+		// initialize the drinking!	
+		BEERFEST.init('ebf-2014');
 	});
-})(window.EBF = window.EBF || {}, jQuery, undefined);
+
+})(window.BEERFEST = window.BEERFEST || {}, jQuery, undefined);
