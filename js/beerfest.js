@@ -43,6 +43,35 @@
 	    }
 	}
 
+	/**
+	 * clearAllData 
+	 * 
+	 * clear all markings and remove all the cookies
+	 * @param event: object from the click
+	 */
+	function clearAllData(event){
+		event.preventDefault();
+		deleteAllCookies();
+		$('input[type="checkbox"]').removeProp('checked');
+		$('li li').removeClass('checked');		
+	}
+
+	function scrollToLetter(event){
+		event.preventDefault();
+		var letter = $(this).attr('id');
+
+		$('#beerlist > li').each(function(i, e){
+			var breweryname = $(e).data('brewery');
+			if(letter == breweryname.charAt(0).toLowerCase()){
+				$('body, html').animate({
+					'scrollTop': $(e).offset().top
+				});
+				return false;
+			}
+		}
+	}
+
+
 	// =========================
 
 	BEERFEST.init = function(festName){
@@ -60,6 +89,8 @@
 			renderBeers(data);
 			// console.log(data);
 		});
+
+
 
 		$('#beerlist').on('click', '.beername', function(event){
 			event.preventDefault();
@@ -90,27 +121,9 @@
 			}
 		});
 
-		$('#clearall').on('click', function(event){
-			event.preventDefault();
-			deleteAllCookies();
-			$('input[type="checkbox"]').removeProp('checked');
-			$('li li').removeClass('checked');
-		});
+		$('#clearall').on('click', clearAllData);
 
-		$('#scrollit li').on('click', function(event){
-			event.preventDefault();
-			var letter = $(this).attr('id');
-
-			$('#beerlist > li').each(function(i, e){
-				var breweryname = $(e).data('brewery');
-				if(letter == breweryname.charAt(0).toLowerCase()){
-					$('body, html').animate({
-						'scrollTop': $(e).offset().top
-					});
-					return false;
-				}
-			});
-		});
+		$('#scrollit li').on('click', scrollToLetter);
 	}
 
 	$(document).ready(function(){
