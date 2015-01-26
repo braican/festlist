@@ -4,6 +4,8 @@
 //
 (function(BEERFEST, $){
 
+	BEERFEST.name = "ebf-2015";
+
 	// =======================
 
 	function renderBeers(data){
@@ -68,7 +70,7 @@
 				});
 				return false;
 			}
-		}
+		});
 	}
 
 
@@ -128,7 +130,7 @@
 
 	$(document).ready(function(){
 		// initialize the drinking!	
-		BEERFEST.init('ebf-2014');
+		BEERFEST.init(BEERFEST.name);
 	});
 
 })(window.BEERFEST = window.BEERFEST || {}, jQuery, undefined);
