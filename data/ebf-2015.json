@@ -1,74 +1,358 @@
 {
-	"4 Hands Brewing Co." : [],
-	"7venth Sun Brewing": [],
-	"Against the Grain Brewery and Smokehouse": [],
-	"Allagash Brewing Company": [],
-	"Almanac Beer Co." : [],
-	"Anderson Valley Brewing Company":[],
-	"Avery Brewing Company": [],
-	"Bayou Teche Brewing": [],
-	"Beau's All Natural":[],
-	"Boston Beer Company (Sam Adams)":[],
-	"Boulevard Brewing Co.":[],
-	"Brewery Vivant":[],
-	"Burley Oak Brewery":[],
-	"Cape Ann Brewing Company":[],
-	"Captain Lawrence Brewing Co.":[],
-	"Carton Brewing Company":[],
-	"Cascade Brewing Co.":[],
-	"Cigar City Brewing":[],
-	"Clown Shoes":[],
-	"Coronado Brewing Co.":[],
-	"Crux Fermentation Project": [],
-	"Dark Horse Brewing Company":[],
-	"Dogfish Head Brewery":[],
-	"Due South Brewing Co.":[],
-	"Element Brewing Company":[],
-	"Epic Brewing Company":[],
-	"Finback Brewery": [],
-	"Finch's Beer Company": [],
-	"Firestone Walker Brewing Co.":[],
-	"Founders Brewing Company":[],
-	"Franklin's Restaurant, Brewery & General Store":[],
-	"Funky Buddah Brewery": [],
-	"Green Flash Brewing Co.":[],
-	"Grimm Ales": [],
-	"Hardywood Park Craft Brewery":[],
-	"Heavy Seas Beer":[],
-	"Hidden Cove Brewing Co.": [],
-	"Ithaca Beer Company":[],
-	"Jack's Abby Brewing":[],
-	"Jackie O's Pub & Brewery": [],
-	"Kane Brewing Company":[],
-	"Listermann/Triple Digit Brewing Company":[],
-	"Long Trail Brewing Co.":[],
-	"NERAX": [],
-	"New Holland Brewing Co.": [],
-	"Newburgh Brewing Company":[],
-	"Night Shift Brewing":[],
-	"OEC Brewing":[],
-	"Oskar Blues Brewery": [],
-	"Other Half Brewing": [],
-	"Proclamation Ale Company":[],
-	"Relic Brewing Co.":[],
-	"Revolution Brewing Company":[],
-	"Right Brain Brewery":[],
-	"Shmaltz Brewing Company":[],
-	"Short's Brewing Company":[],
-	"Sierra Nevada Brweing Co":[],
-	"Sixpoint Brewery":[],
-	"Smuttynose Brewing Co.":[],
-	"Somerville Brewing Co.": [],
-	"Stone Brewing Co.":[],
-	"Strangeways Brewing": [],
-	"Surly Brewing Co.": [],
-	"SweetWater Brewing Company":[],
-	"The Bruery":[],
-	"The Lost Abbey":[],
-	"The Rare Barrel": [],
-	"Throwback Brewery":[],
-	"Toppling Goliath Brewing Company":[],
-	"Tree House Brewing Company":[],
-	"Trophy Brewing Co.":[],
-	"Two Roads Brewing Company":[]
+	"4 Hands Brewing Co." : {
+		"beers":[
+			{
+				"name": "Cuvee Diable",
+				"style": "Saison/Farmhouse Ale",
+				"abv": 5.5,
+				"ba_score": 86
+			}, {
+			    "name": "Madagascar",
+			    "style": "Milk/Sweet Stout",
+			    "abv": 9.3,
+			    "ba_score": 97
+			},{
+			    "name": "Prelude",
+			    "style": "American Wild Ale",
+			    "abv": 5.5,
+			    "ba_score": 0
+			},{
+			    "name": "Super Flare",
+			    "style": "American IPA",
+			    "abv": 7.5,
+			    "ba_score": 91
+			}
+
+		]
+	},
+	"7venth Sun Brewing": {
+		"beers":[]
+	},
+	"Against the Grain Brewery and Smokehouse": {
+		"beers":[]
+	},
+	"Allagash Brewing Company": {
+		"beers":[]
+	},
+	"Almanac Beer Co." : {
+		"beers":[]
+	},
+	"Anderson Valley Brewing Company":{
+		"beers":[]
+	},
+	"Avery Brewing Company": {
+		"beers":[]
+	},
+	"Bayou Teche Brewing": {
+		"beers":[]
+	},
+	"Beau's All Natural":{
+		"beers":[
+			{
+			    "name": "2Unlimited",
+			    "style": "Scottish Gruit/Ancient Herbed Ale",
+			    "abv": 8,
+			    "ba_score": 0
+			},{
+			    "name": "Haters Gonna Hate",
+			    "style": "Kolsch",
+			    "abv": 8,
+			    "ba_score": 0
+			},{
+			    "name": "The Bottle Imp",
+			    "style": "Russian Imperial Stout",
+			    "abv": 9,
+			    "ba_score": 87
+			}, {
+			    "name": "Wild Oats Series No. 23 - Dark Helmut",
+			    "style": "Schwarzbier",
+			    "abv": 7.3,
+			    "ba_score": 86
+			}
+		]
+	},
+	"Boston Beer Company (Sam Adams)":{
+		"beers":[]
+	},
+	"Boulevard Brewing Co.":{
+		"beers":[]
+	},
+	"Brewery Vivant":{
+		"beers":[
+			{
+			    "name": "Habanango",
+			    "style": "American Wild Ale",
+			    "abv": 6.7,
+			    "ba_score": 0
+			}, {
+			    "name": "Paisley's Pajamas",
+			    "style": "Belgian Dark Ale",
+			    "abv": 6.7,
+			    "ba_score": 0
+			},{
+			    "name": "Paris",
+			    "style": "Saison/Farmhouse Ale",
+			    "abv": 9,
+			    "ba_score": 87
+			},{
+			    "name": "Wizard Burial Ground",
+			    "style": "Quad",
+			    "abv": 10.4,
+			    "ba_score": 92
+			}
+		]
+	},
+	"Burley Oak Brewery":{
+		"beers":[]
+	},
+	"Cape Ann Brewing Company":{
+		"beers":[]
+	},
+	"Captain Lawrence Brewing Co.":{
+		"beers":[]
+	},
+	"Carton Brewing Company":{
+		"beers":[]
+	},
+	"Cascade Brewing Co.":{
+		"beers":[]
+	},
+	"Cigar City Brewing":{
+		"beers":[]
+	},
+	"Clown Shoes":{
+		"beers":[]
+	},
+	"Coronado Brewing Co.":{
+		"beers":[
+			{
+			    "name": "German Chocolate Cake",
+			    "style": "Milk/Sweet Stout",
+			    "abv": 10,
+			    "ba_score": 83
+			}, {
+			    "name": "Old Scallywag",
+			    "style": "English Barleywine",
+			    "abv": 11.4,
+			    "ba_score": 0
+			},{
+			    "name": "Old Scallywag - Bourbon Barrel Aged",
+			    "style": "English Barleywine",
+			    "abv": 11.6,
+			    "ba_score": 88
+			},{
+			    "name": "Stupid Stout - Bourbon Barrel Aged",
+			    "style": "American Double/Imperial Stout",
+			    "abv": 9.5,
+			    "ba_score": 89
+			}
+		]
+	},
+	"Crux Fermentation Project": {
+		"beers":[
+		]
+	},
+	"Dark Horse Brewing Company":{
+		"beers":[
+		]
+	},
+	"Dogfish Head Brewery":{
+		"beers":[
+		]
+	},
+	"Due South Brewing Co.":{
+		"beers":[
+		]
+	},
+	"Element Brewing Company":{
+		"beers":[]
+	},
+	"Epic Brewing Company":{
+		"beers":[
+		]
+	},
+	"Finback Brewery": {
+		"beers":[
+		]
+	},
+	"Finch's Beer Company": {
+		"beers":[
+		]
+	},
+	"Firestone Walker Brewing Co.":{
+		"beers":[
+		]
+	},
+	"Founders Brewing Company":{
+		"beers":[
+		]
+	},
+	"Franklin's Restaurant, Brewery & General Store":{
+		"beers":[
+		]
+	},
+	"Funky Buddah Brewery": {
+		"beers":[
+		]
+	},
+	"Green Flash Brewing Co.":{
+		"beers":[
+		]
+	},
+	"Grimm Ales": {
+		"beers":[
+		]
+	},
+	"Hardywood Park Craft Brewery":{
+		"beers":[
+		]
+	},
+	"Heavy Seas Beer":{
+		"beers":[
+		]
+	},
+	"Hidden Cove Brewing Co.": {
+		"beers":[
+		]
+	},
+	"Ithaca Beer Company":{
+		"beers":[
+		]
+	},
+	"Jack's Abby Brewing":{
+		"beers":[
+		]
+	},
+	"Jackie O's Pub & Brewery": {
+		"beers":[
+		]
+	},
+	"Kane Brewing Company":{
+		"beers":[
+		]
+	},
+	"Listermann/Triple Digit Brewing Company":{
+		"beers":[
+		]
+	},
+	"Long Trail Brewing Co.":{
+		"beers":[
+		]
+	},
+	"NERAX": {
+		"beers":[
+		]
+	},
+	"New Holland Brewing Co.": {
+		"beers":[
+		]
+	},
+	"Newburgh Brewing Company":{
+		"beers":[
+		]
+	},
+	"Night Shift Brewing":{
+		"beers":[
+		]
+	},
+	"OEC Brewing":{
+		"beers":[
+		]
+	},
+	"Oskar Blues Brewery": {
+		"beers":[
+		]
+	},
+	"Other Half Brewing": {
+		"beers":[
+		]
+	},
+	"Proclamation Ale Company":{
+		"beers":[
+		]
+	},
+	"Relic Brewing Co.":{
+		"beers":[
+		]
+	},
+	"Revolution Brewing Company":{
+		"beers":[
+		]
+	},
+	"Right Brain Brewery":{
+		"beers":[
+		]
+	},
+	"Shmaltz Brewing Company":{
+		"beers":[
+		]
+	},
+	"Short's Brewing Company":{
+		"beers":[
+		]
+	},
+	"Sierra Nevada Brweing Co":{
+		"beers":[
+		]
+	},
+	"Sixpoint Brewery":{
+		"beers":[
+		]
+	},
+	"Smuttynose Brewing Co.":{
+		"beers":[
+		]
+	},
+	"Somerville Brewing Co.": {
+		"beers":[
+		]
+	},
+	"Stone Brewing Co.":{
+		"beers":[
+		]
+	},
+	"Strangeways Brewing": {
+		"beers":[
+		]
+	},
+	"Surly Brewing Co.": {
+		"beers":[
+		]
+	},
+	"SweetWater Brewing Company":{
+		"beers":[
+		]
+	},
+	"The Bruery":{
+		"beers":[
+		]
+	},
+	"The Lost Abbey":{
+		"beers":[
+		]
+	},
+	"The Rare Barrel": {
+		"beers":[
+		]
+	},
+	"Throwback Brewery":{
+		"beers":[
+		]
+	},
+	"Toppling Goliath Brewing Company":{
+		"beers":[
+		]
+	},
+	"Tree House Brewing Company":{
+		"beers":[
+		]
+	},
+	"Trophy Brewing Co.":{
+		"beers":[
+		]
+	},
+	"Two Roads Brewing Company":{
+		"beers":[
+		]
+	}
 }
