@@ -1,358 +1,633 @@
 {
-	"4 Hands Brewing Co." : {
-		"beers":[
-			{
-				"name": "Cuvee Diable",
-				"style": "Saison/Farmhouse Ale",
-				"abv": 5.5,
-				"ba_score": 86
-			}, {
-			    "name": "Madagascar",
-			    "style": "Milk/Sweet Stout",
-			    "abv": 9.3,
-			    "ba_score": 97
-			},{
-			    "name": "Prelude",
-			    "style": "American Wild Ale",
-			    "abv": 5.5,
-			    "ba_score": 0
-			},{
-			    "name": "Super Flare",
-			    "style": "American IPA",
-			    "abv": 7.5,
-			    "ba_score": 91
-			}
+    "4 Hands Brewing Co." : {
+        "beers":[
+            {
+                "name": "Cuvee Diable",
+                "style": "Saison/Farmhouse Ale",
+                "abv": 5.5,
+                "ba_score": 86
+            }, {
+                "name": "Madagascar",
+                "style": "Milk/Sweet Stout",
+                "abv": 9.3,
+                "ba_score": 97
+            },{
+                "name": "Prelude",
+                "style": "American Wild Ale",
+                "abv": 5.5,
+                "ba_score": 0
+            },{
+                "name": "Super Flare",
+                "style": "American IPA",
+                "abv": 7.5,
+                "ba_score": 91
+            }
 
-		]
-	},
-	"7venth Sun Brewing": {
-		"beers":[]
-	},
-	"Against the Grain Brewery and Smokehouse": {
-		"beers":[]
-	},
-	"Allagash Brewing Company": {
-		"beers":[]
-	},
-	"Almanac Beer Co." : {
-		"beers":[]
-	},
-	"Anderson Valley Brewing Company":{
-		"beers":[]
-	},
-	"Avery Brewing Company": {
-		"beers":[]
-	},
-	"Bayou Teche Brewing": {
-		"beers":[]
-	},
-	"Beau's All Natural":{
-		"beers":[
-			{
-			    "name": "2Unlimited",
-			    "style": "Scottish Gruit/Ancient Herbed Ale",
-			    "abv": 8,
-			    "ba_score": 0
-			},{
-			    "name": "Haters Gonna Hate",
-			    "style": "Kolsch",
-			    "abv": 8,
-			    "ba_score": 0
-			},{
-			    "name": "The Bottle Imp",
-			    "style": "Russian Imperial Stout",
-			    "abv": 9,
-			    "ba_score": 87
-			}, {
-			    "name": "Wild Oats Series No. 23 - Dark Helmut",
-			    "style": "Schwarzbier",
-			    "abv": 7.3,
-			    "ba_score": 86
-			}
-		]
-	},
-	"Boston Beer Company (Sam Adams)":{
-		"beers":[]
-	},
-	"Boulevard Brewing Co.":{
-		"beers":[]
-	},
-	"Brewery Vivant":{
-		"beers":[
-			{
-			    "name": "Habanango",
-			    "style": "American Wild Ale",
-			    "abv": 6.7,
-			    "ba_score": 0
-			}, {
-			    "name": "Paisley's Pajamas",
-			    "style": "Belgian Dark Ale",
-			    "abv": 6.7,
-			    "ba_score": 0
-			},{
-			    "name": "Paris",
-			    "style": "Saison/Farmhouse Ale",
-			    "abv": 9,
-			    "ba_score": 87
-			},{
-			    "name": "Wizard Burial Ground",
-			    "style": "Quad",
-			    "abv": 10.4,
-			    "ba_score": 92
-			}
-		]
-	},
-	"Burley Oak Brewery":{
-		"beers":[]
-	},
-	"Cape Ann Brewing Company":{
-		"beers":[]
-	},
-	"Captain Lawrence Brewing Co.":{
-		"beers":[]
-	},
-	"Carton Brewing Company":{
-		"beers":[]
-	},
-	"Cascade Brewing Co.":{
-		"beers":[]
-	},
-	"Cigar City Brewing":{
-		"beers":[]
-	},
-	"Clown Shoes":{
-		"beers":[]
-	},
-	"Coronado Brewing Co.":{
-		"beers":[
-			{
-			    "name": "German Chocolate Cake",
-			    "style": "Milk/Sweet Stout",
-			    "abv": 10,
-			    "ba_score": 83
-			}, {
-			    "name": "Old Scallywag",
-			    "style": "English Barleywine",
-			    "abv": 11.4,
-			    "ba_score": 0
-			},{
-			    "name": "Old Scallywag - Bourbon Barrel Aged",
-			    "style": "English Barleywine",
-			    "abv": 11.6,
-			    "ba_score": 88
-			},{
-			    "name": "Stupid Stout - Bourbon Barrel Aged",
-			    "style": "American Double/Imperial Stout",
-			    "abv": 9.5,
-			    "ba_score": 89
-			}
-		]
-	},
-	"Crux Fermentation Project": {
-		"beers":[
-		]
-	},
-	"Dark Horse Brewing Company":{
-		"beers":[
-		]
-	},
-	"Dogfish Head Brewery":{
-		"beers":[
-		]
-	},
-	"Due South Brewing Co.":{
-		"beers":[
-		]
-	},
-	"Element Brewing Company":{
-		"beers":[]
-	},
-	"Epic Brewing Company":{
-		"beers":[
-		]
-	},
-	"Finback Brewery": {
-		"beers":[
-		]
-	},
-	"Finch's Beer Company": {
-		"beers":[
-		]
-	},
-	"Firestone Walker Brewing Co.":{
-		"beers":[
-		]
-	},
-	"Founders Brewing Company":{
-		"beers":[
-		]
-	},
-	"Franklin's Restaurant, Brewery & General Store":{
-		"beers":[
-		]
-	},
-	"Funky Buddah Brewery": {
-		"beers":[
-		]
-	},
-	"Green Flash Brewing Co.":{
-		"beers":[
-		]
-	},
-	"Grimm Ales": {
-		"beers":[
-		]
-	},
-	"Hardywood Park Craft Brewery":{
-		"beers":[
-		]
-	},
-	"Heavy Seas Beer":{
-		"beers":[
-		]
-	},
-	"Hidden Cove Brewing Co.": {
-		"beers":[
-		]
-	},
-	"Ithaca Beer Company":{
-		"beers":[
-		]
-	},
-	"Jack's Abby Brewing":{
-		"beers":[
-		]
-	},
-	"Jackie O's Pub & Brewery": {
-		"beers":[
-		]
-	},
-	"Kane Brewing Company":{
-		"beers":[
-		]
-	},
-	"Listermann/Triple Digit Brewing Company":{
-		"beers":[
-		]
-	},
-	"Long Trail Brewing Co.":{
-		"beers":[
-		]
-	},
-	"NERAX": {
-		"beers":[
-		]
-	},
-	"New Holland Brewing Co.": {
-		"beers":[
-		]
-	},
-	"Newburgh Brewing Company":{
-		"beers":[
-		]
-	},
-	"Night Shift Brewing":{
-		"beers":[
-		]
-	},
-	"OEC Brewing":{
-		"beers":[
-		]
-	},
-	"Oskar Blues Brewery": {
-		"beers":[
-		]
-	},
-	"Other Half Brewing": {
-		"beers":[
-		]
-	},
-	"Proclamation Ale Company":{
-		"beers":[
-		]
-	},
-	"Relic Brewing Co.":{
-		"beers":[
-		]
-	},
-	"Revolution Brewing Company":{
-		"beers":[
-		]
-	},
-	"Right Brain Brewery":{
-		"beers":[
-		]
-	},
-	"Shmaltz Brewing Company":{
-		"beers":[
-		]
-	},
-	"Short's Brewing Company":{
-		"beers":[
-		]
-	},
-	"Sierra Nevada Brweing Co":{
-		"beers":[
-		]
-	},
-	"Sixpoint Brewery":{
-		"beers":[
-		]
-	},
-	"Smuttynose Brewing Co.":{
-		"beers":[
-		]
-	},
-	"Somerville Brewing Co.": {
-		"beers":[
-		]
-	},
-	"Stone Brewing Co.":{
-		"beers":[
-		]
-	},
-	"Strangeways Brewing": {
-		"beers":[
-		]
-	},
-	"Surly Brewing Co.": {
-		"beers":[
-		]
-	},
-	"SweetWater Brewing Company":{
-		"beers":[
-		]
-	},
-	"The Bruery":{
-		"beers":[
-		]
-	},
-	"The Lost Abbey":{
-		"beers":[
-		]
-	},
-	"The Rare Barrel": {
-		"beers":[
-		]
-	},
-	"Throwback Brewery":{
-		"beers":[
-		]
-	},
-	"Toppling Goliath Brewing Company":{
-		"beers":[
-		]
-	},
-	"Tree House Brewing Company":{
-		"beers":[
-		]
-	},
-	"Trophy Brewing Co.":{
-		"beers":[
-		]
-	},
-	"Two Roads Brewing Company":{
-		"beers":[
-		]
-	}
+        ]
+    },
+    "7venth Sun Brewing": {
+        "beers":[]
+    },
+    "Against the Grain Brewery and Smokehouse": {
+        "beers":[]
+    },
+    "Allagash Brewing Company": {
+        "beers":[]
+    },
+    "Almanac Beer Co." : {
+        "beers":[]
+    },
+    "Anderson Valley Brewing Company":{
+        "beers":[]
+    },
+    "Avery Brewing Company": {
+        "beers":[]
+    },
+    "Bayou Teche Brewing": {
+        "beers":[]
+    },
+    "Beau's All Natural":{
+        "beers":[
+            {
+                "name": "2Unlimited",
+                "style": "Scottish Gruit/Ancient Herbed Ale",
+                "abv": 8,
+                "ba_score": 0
+            },{
+                "name": "Haters Gonna Hate",
+                "style": "Kolsch",
+                "abv": 8,
+                "ba_score": 0
+            },{
+                "name": "The Bottle Imp",
+                "style": "Russian Imperial Stout",
+                "abv": 9,
+                "ba_score": 87
+            }, {
+                "name": "Wild Oats Series No. 23 - Dark Helmut",
+                "style": "Schwarzbier",
+                "abv": 7.3,
+                "ba_score": 86
+            }
+        ]
+    },
+    "Boston Beer Company (Sam Adams)":{
+        "beers":[]
+    },
+    "Boulevard Brewing Co.":{
+        "beers":[]
+    },
+    "Brewery Vivant":{
+        "beers":[
+            {
+                "name": "Habanango",
+                "style": "American Wild Ale",
+                "abv": 6.7,
+                "ba_score": 0
+            }, {
+                "name": "Paisley's Pajamas",
+                "style": "Belgian Dark Ale",
+                "abv": 6.7,
+                "ba_score": 0
+            },{
+                "name": "Paris",
+                "style": "Saison/Farmhouse Ale",
+                "abv": 9,
+                "ba_score": 87
+            },{
+                "name": "Wizard Burial Ground",
+                "style": "Quad",
+                "abv": 10.4,
+                "ba_score": 92
+            }
+        ]
+    },
+    "Burley Oak Brewery":{
+        "beers":[]
+    },
+    "Cape Ann Brewing Company":{
+        "beers":[]
+    },
+    "Captain Lawrence Brewing Co.":{
+        "beers":[]
+    },
+    "Carton Brewing Company":{
+        "beers":[]
+    },
+    "Cascade Brewing Co.":{
+        "beers":[]
+    },
+    "Cigar City Brewing":{
+        "beers":[]
+    },
+    "Clown Shoes":{
+        "beers":[]
+    },
+    "Coronado Brewing Co.":{
+        "beers":[
+            {
+                "name": "German Chocolate Cake",
+                "style": "Milk/Sweet Stout",
+                "abv": 10,
+                "ba_score": 83
+            }, {
+                "name": "Old Scallywag",
+                "style": "English Barleywine",
+                "abv": 11.4,
+                "ba_score": 0
+            },{
+                "name": "Old Scallywag - Bourbon Barrel Aged",
+                "style": "English Barleywine",
+                "abv": 11.6,
+                "ba_score": 88
+            },{
+                "name": "Stupid Stout - Bourbon Barrel Aged",
+                "style": "American Double/Imperial Stout",
+                "abv": 9.5,
+                "ba_score": 89
+            }
+        ]
+    },
+    "Crux Fermentation Project": {
+        "beers":[
+        ]
+    },
+    "Dark Horse Brewing Company":{
+        "beers":[
+        ]
+    },
+    "Dogfish Head Brewery":{
+        "beers":[
+        ]
+    },
+    "Due South Brewing Co.":{
+        "beers":[
+            {
+                "name": "Calling All Cars - Coffee Donut Porter",
+                "style": "American Porter",
+                "abv": 5.7,
+                "ba_score": 90
+            },{
+                "name": "Mariana Trench - Bourbon Barrel Aged",
+                "style": "Russian Imperial Stout",
+                "abv": 9.8,
+                "ba_score": 92
+            },{
+                "name": "Mexican Standoff",
+                "style": "American Porter",
+                "abv": 8.5,
+                "ba_score": 86
+            }
+        ]
+    },
+    "Element Brewing Company":{
+        "beers":[
+            {
+                "name": "6:56 (2014) - Summer Pilsner Fusion",
+                "style": "American Double/Imperial Pilsner",
+                "abv": 15,
+                "ba_score": 0
+            },{
+                "name": "Citronium",
+                "style": "American Double/Imperial IPA",
+                "abv": 9.5,
+                "ba_score": 84
+            },{
+                "name": "Dark Vanilla",
+                "style": "American Black Ale",
+                "abv": 8,
+                "ba_score": 0
+            },{
+                "name": "Lactonium",
+                "style": "American Dark Wheat Ale",
+                "abv": 9.3,
+                "ba_score": 84
+            },{
+                "name": "Lavendar Extra Special Oak (LESO)",
+                "style": "English Strong Ale",
+                "abv": 7.75,
+                "ba_score": 85
+            },{
+                "name": "Plasma",
+                "style": "American IPA",
+                "abv": 9.33,
+                "ba_score": 86
+            },{
+                "name": "Vernal",
+                "style": "Wheatwine",
+                "abv": 11.8,
+                "ba_score": 84
+            },{
+                "name": "Winter Ion",
+                "style": "Herbed/Spiced Beer",
+                "abv": 9.1,
+                "ba_score": 81
+            }
+        ]
+    },
+    "Epic Brewing Company":{
+        "beers":[
+            {
+                "name": "Big Bad Baptist",
+                "style": "American Double/Imperial Stout",
+                "abv": 11.8,
+                "ba_score": 97
+            },{
+                "name": "Brainless On Cherries Belgian-Style Ale (Batch 5+)",
+                "style": "Belgian Strong Pale Ale",
+                "abv": 10.1,
+                "ba_score": 78
+            },{
+                "name": "Brainless on Peaches Belgian-Style Ale",
+                "style": "Fruit/Vegetable Beer",
+                "abv": 10.7,
+                "ba_score": 81
+            },{
+                "name": "Elder Brett: Saison-Brett Golden Ale",
+                "style": "Saison/Farmhouse Ale",
+                "abv": 8.8,
+                "ba_score": 90
+            }
+        ]
+    },
+    "Finback Brewery": {
+        "beers":[
+        ]
+    },
+    "Finch's Beer Company": {
+        "beers":[
+        ]
+    },
+    "Firestone Walker Brewing Co.":{
+        "beers":[
+            {
+                "name": "Agrestic American Wild Red Ale",
+                "style": "American Wild Ale",
+                "abv": 6.6,
+                "ba_score": 92
+            },{
+                "name": "Bretta Rose",
+                "style": "American Wild Ale",
+                "abv": 5.3,
+                "ba_score": 98
+            },{
+                "name": "Maltose Falcons Brownywine",
+                "style": "American Barleywine",
+                "abv": 13.6,
+                "ba_score": 98
+            },{
+                "name": "Stickee Monkee",
+                "style": "Quad",
+                "abv": 13.4,
+                "ba_score": 99
+            }
+        ]
+    },
+    "Founders Brewing Company":{
+        "beers":[
+        ]
+    },
+    "Franklin's Restaurant, Brewery & General Store":{
+        "beers":[
+        ]
+    },
+    "Funky Buddah Brewery": {
+        "beers":[
+        ]
+    },
+    "Green Flash Brewing Co.":{
+        "beers":[
+        ]
+    },
+    "Grimm Ales": {
+        "beers":[
+        ]
+    },
+    "Hardywood Park Craft Brewery":{
+        "beers":[
+        ]
+    },
+    "Heavy Seas Beer":{
+        "beers":[
+            {
+                "name": "'Creamsickle' Gold Ale Cask",
+                "style": "Herbed/Spiced Beer",
+                "abv": 4.75,
+                "ba_score": 0
+            },{
+                "name": "Great'ER Pumpkin",
+                "style": "Pumpkin Ale",
+                "abv": 10,
+                "ba_score": 88
+            },{
+                "name": "Plank III",
+                "style": "Tripel",
+                "abv": 8,
+                "ba_score": 84
+            },{
+                "name": "Siren Noire Imperial Chocolate Stout",
+                "style": "American Double/Imperial Stout",
+                "abv": 9.5,
+                "ba_score": 85
+            },{
+                "name": "Holy Sheet (Brandy Barrel)",
+                "style": "Dubbel",
+                "abv": 9,
+                "ba_score": 89
+            },{
+                "name": "Yule Tide (2014)",
+                "style": "Weizenbock",
+                "abv": 9,
+                "ba_score": 85
+            }
+        ]
+    },
+    "Hidden Cove Brewing Co.": {
+        "beers":[
+        ]
+    },
+    "Ithaca Beer Company":{
+        "beers":[
+        ]
+    },
+    "Jack's Abby Brewing":{
+        "beers":[
+            {
+                "name": "Barrel-Aged Framinghammer",
+                "style": "Baltic Porter",
+                "abv": 10,
+                "ba_score": 96
+            },{
+                "name": "Bride Maker",
+                "style": "English Barleywine",
+                "abv": 13,
+                "ba_score": 96
+            },{
+                "name": "Lager Ness Monster",
+                "style": "Baltic Porter",
+                "abv": 15,
+                "ba_score": 95
+            },{
+                "name": "Triple Dry Hopped Hoponius Union",
+                "style": "American Pale Lager",
+                "abv": 6.7,
+                "ba_score": 93
+            }
+        ]
+    },
+    "Jackie O's Pub & Brewery": {
+        "beers":[
+        ]
+    },
+    "Kane Brewing Company":{
+        "beers":[
+        ]
+    },
+    "Listermann/Triple Digit Brewing Company":{
+        "beers":[
+        ]
+    },
+    "Long Trail Brewing Co.":{
+        "beers":[
+        ]
+    },
+    "NERAX": {
+        "beers":[
+        ]
+    },
+    "New Holland Brewing Co.": {
+        "beers":[
+        ]
+    },
+    "Newburgh Brewing Company":{
+        "beers":[
+        ]
+    },
+    "Night Shift Brewing":{
+        "beers":[
+        ]
+    },
+    "OEC Brewing":{
+        "beers":[
+            {
+                "name": "Brunneis",
+                "style": "Flanders Oud Bruin",
+                "abv": 9,
+                "ba_score": 88
+            },{
+                "name": "Experimentalis With Peachs (Pedro Ximenez Barrel)",
+                "style": "American Wild Ale",
+                "abv": 7,
+                "ba_score": 91
+            },{
+                "name": "Grandis",
+                "style": "Old Ale",
+                "abv": 10.5,
+                "ba_score": 85
+            },{
+                "name": "Nepenthes Hydromelita",
+                "style": "Braggot",
+                "abv": 8.5,
+                "ba_score": 0
+            },{
+                "name": "Phantasma Sour",
+                "style": "Baltic Porter",
+                "abv": 9.5,
+                "ba_score": 88
+            },{
+                "name": "Tempus",
+                "style": "Saison/Farmhouse Ale",
+                "abv": 5.9,
+                "ba_score": 92
+            }
+        ]
+    },
+    "Oskar Blues Brewery": {
+        "beers":[
+        ]
+    },
+    "Other Half Brewing": {
+        "beers":[
+        ]
+    },
+    "Proclamation Ale Company":{
+        "beers":[
+        ]
+    },
+    "Relic Brewing Co.":{
+        "beers":[
+            {
+                "name": "Anyssa",
+                "style": "Belgian Strong Dark Ale",
+                "abv": 9,
+                "ba_score": 0
+            },{
+                "name": "Coffee Milk",
+                "style": "English Dark Mild Ale",
+                "abv": 4.8,
+                "ba_score": 0
+            },{
+                "name": "Indira",
+                "style": "American Wild Ale",
+                "abv": 6.4,
+                "ba_score": 0
+            },{
+                "name": "Morgue Party",
+                "style": "American Barleywine",
+                "abv": 10.8,
+                "ba_score": 0
+            }
+        ]
+    },
+    "Revolution Brewing Company":{
+        "beers":[
+            {
+                "name": "Fist City Rattle-r",
+                "style": "Fruit/Vegetable Beer",
+                "abv": 3.5,
+                "ba_score": 0
+            },{
+                "name": "Mineshaft Gap",
+                "style": "American Barleywine",
+                "abv": 13,
+                "ba_score": 0
+            },{
+                "name": "One and Done",
+                "style": "American Double/Imperial IPA",
+                "abv": "-",
+                "ba_score": 0
+            },{
+                "name": "Uncalled Four",
+                "style": "Quad",
+                "abv": 13.5,
+                "ba_score": 92
+            }
+        ]
+    },
+    "Right Brain Brewery":{
+        "beers":[
+        ]
+    },
+    "Shmaltz Brewing Company":{
+        "beers":[
+        ]
+    },
+    "Short's Brewing Company":{
+        "beers":[
+        ]
+    },
+    "Sierra Nevada Brweing Co":{
+        "beers":[
+        ]
+    },
+    "Sixpoint Brewery":{
+        "beers":[
+        ]
+    },
+    "Smuttynose Brewing Co.":{
+        "beers":[
+        ]
+    },
+    "Somerville Brewing Co.": {
+        "beers":[
+        ]
+    },
+    "Stone Brewing Co.":{
+        "beers":[
+            {
+                "name": "Baird/Ishii/Stone Japanese Green Tea IPA",
+                "style": "American Double/Imperial IPA",
+                "abv": 10.1,
+                "ba_score": 88
+            },{
+                "name": "Old Guardian Barley Wine Style Ale - Extra Hoppy",
+                "style": "American Barleywine",
+                "abv": 10.5,
+                "ba_score": 0
+            },{
+                "name": "Stone Imperial Russian Stout - Chai",
+                "style": "Russian Imperial Stout",
+                "abv": 10.8,
+                "ba_score": 0
+            }
+        ]
+    },
+    "Strangeways Brewing": {
+        "beers":[
+            {
+                "name": "Freeze Ray",
+                "style": "Eisbock",
+                "abv": 10.24,
+                "ba_score": 0
+            },{
+                "name": "Martian Spring Biere De Mars",
+                "style": "Biere De Garde",
+                "abv": 7.35,
+                "ba_score": 85
+            },{
+                "name": "Oscillate Wildly Blueberry Wild Sour Ale",
+                "style": "American Wild Ale",
+                "abv": 10,
+                "ba_score": 0
+            }
+        ]
+    },
+    "Surly Brewing Co.": {
+        "beers":[]
+    },
+    "SweetWater Brewing Company":{
+        "beers":[]
+    },
+    "The Bruery":{
+        "beers":[]
+    },
+    "The Lost Abbey":{
+        "beers":[
+        ]
+    },
+    "The Rare Barrel": {
+        "beers":[
+            {
+                "name": "Apropros Of Nothing",
+                "style": "American Wild Ale",
+                "abv": 5.6,
+                "ba_score": 94
+            },{
+                "name": "Forces Unseen",
+                "style": "American Wild Ale",
+                "abv": 5.3,
+                "ba_score": 92
+            },{
+                "name": "Map of the Sun",
+                "style": "American Wild Ale",
+                "abv": 5.5,
+                "ba_score": 96
+            },{
+                "name": "Soliloquy",
+                "style": "American Wild Ale",
+                "abv": 5,
+                "ba_score": 95
+            }
+        ]
+    },
+    "Throwback Brewery":{
+        "beers":[
+        ]
+    },
+    "Toppling Goliath Brewing Company":{
+        "beers":[
+        ]
+    },
+    "Tree House Brewing Company":{
+        "beers":[
+        ]
+    },
+    "Trophy Brewing Co.":{
+        "beers":[
+        ]
+    },
+    "Two Roads Brewing Company":{
+        "beers":[
+        ]
+    }
 }

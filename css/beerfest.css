@@ -1,51 +1,93 @@
 
 body{
-	font-family: 'Lato', sans-serif;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
 }
 ul{
-	padding: 0;
-	list-style: none;
+    padding: 0;
+    list-style: none;
 }
 
-#beerlist{
-	padding-right: 40px;
+
+/**
+ * --beer list
+ */
+.app-main{
+    padding: 0 40px 0 10px;
 }
-#beerlist ul{
-	padding-top: 10px;
+.app-main ul{
+    padding-top: 10px;
+}
+.app-main > li{
+    border-top: 1px solid #ccc;
+    padding: 16px 0;
+}
+.app-main .breweryname{
+    font-weight: 700;
 }
 
-#beerlist > li{
-	border-top: 1px solid #ccc;
-	padding: 10px 0;
+
+/* individual beers */
+.app-main ul li{
+    padding: 6px 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 }
-#beerlist .breweryname{
-	font-weight: 700;
+.app-main ul li:nth-child(odd){
+    background: #f3f3f3;
 }
-#beerlist .name-and-rating{
-	margin-left: 25px;
+.app-main .beer-util{
+    flex: 0 1 50px;
 }
-#beerlist input[type="checkbox"]{
-	float:left;
-	width:20px;
+.app-main .beer-util select{
+    width: 40px;
 }
-#beerlist select{
-	display: none;
-}
-#beerlist .checked select{
-	display: inline;
-	margin-left: 10px;
-}
-#beerlist .checked .beername{
-	text-decoration: line-through;
-}
-#beerlist ul li{
-	padding: 6px 0;
+.app-main .beer-info{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
 }
 
+.app-main .beer-info .beer-name{
+    flex: 1 100%;
+    padding: 6px 0 10px 0;
+    font-size: 14px;
+}
+.app-main .beer-info .beer-extra{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex: 1 100%;
+}
+.app-main .beer-info .beer-extra .beer-style{
+    flex: 2 0 50%;
+}
+.app-main .beer-info .beer-extra .beer-abv{
+    flex: 1 0 25%;
+}
+.app-main .beer-info .beer-extra .beer-score{
+    flex: 1 0 25%;
+}
+
+
+/**
+ * --scroll
+ */
 #scrollit{
-	width: 20px;
-	position: fixed;
-	right:10px;
-	top: 0;
-	text-align: center;
+    width: 20px;
+    position: fixed;
+    right:10px;
+    top: 0;
+    text-align: center;
 }
