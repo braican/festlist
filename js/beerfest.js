@@ -45,14 +45,14 @@
                     input        = rating ? '<input type="checkbox" checked>' : '<input type="checkbox">',
                     checkedClass = rating ? ' class="checked"' : '';
 
-                markup += '<li data-beer="' + beer + '"' + checkedClass + '>' +
+                markup += '<li class="flex-item" data-beer="' + beer + '"' + checkedClass + '>' +
                             '<div class="beer-util">' +
                                 '<div class="beer-had">' + input + '</div>' +
                                 '<div class="beer-rating">' + getRatingDropdownMarkup(rating) + '</div>' +
                             '</div>' +
-                            '<div class="beer-info">' +
+                            '<div class="beer-info flex-item">' +
                                 '<div class="beer-name">' + beer + '</div>' +
-                                '<div class="beer-extra">' +
+                                '<div class="beer-extra flex-item">' +
                                     '<div class="beer-style">' + beerObj.style + '</div>' +
                                     '<div class="beer-abv">ABV: ' + beerObj.abv + '</div>' +
                                     '<div class="beer-score">BA Score: ' + beerObj.ba_score + '</div>' +
