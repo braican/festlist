@@ -139,45 +139,6 @@
      * -------------------------------------------- */
 
     /**
-     * saveBeerRating 
-     * 
-     * save the selected rating to a cookie
-     * @param event: the object from the change event
-     */
-    // function saveBeerRating(event){
-    //     event.preventDefault();
-    //     var beername = $(this).parents('li').data('beer'),
-    //         rating   = $(this).val();
-
-    //     if(localStorage.getItem(beername)){
-    //         localStorage.setItem(beername, rating)
-    //     }
-    // }
-
-
-    /**
-     * checkOffBeer 
-     * 
-     * check or uncheck a beer
-     * @param event: obj from the click
-     */
-    // function checkOffBeer(event){
-    //     event.preventDefault();
-    //     var $t       = $(this),
-    //         $parent  = $t.closest('li'),
-    //         beername = $parent.data('beer'),
-    //         rating   = $parent.find('select').val();
-
-    //     if($t.prop('checked')){
-    //         localStorage.setItem(beername, rating);
-    //     } else {
-    //         localStorage.removeItem(beername);
-    //     }
-    //     $parent.toggleClass('checked');
-    // }
-
-
-    /**
      * triggerBeerCheck 
      * 
      * upon clicking anywhere on the beer name checks it off
@@ -186,9 +147,7 @@
     function triggerBeerCheck(event){
         event.preventDefault();
 
-        var $t = $(this);
-
-        $t.closest('li').addClass('rate-it');
+        $(this).closest('li').addClass('rate-it');
     }
 
 
@@ -202,10 +161,9 @@
         event.preventDefault();
 
         var $t       = $(this),
-            $parent  = $t.closest('li').removeClass('rate-it'),
+            $parent  = $t.closest('li'),
             rating   = $t.data('value'),
             beername = $parent.data('beer');
-
 
         if(rating === -1){
             $('.beer-had label', $parent).text('+');
@@ -220,6 +178,10 @@
             $parent.addClass('checked');
             localStorage.setItem(beername, rating);
         }
+
+        setTimeout(function(){
+            $parent.removeClass('rate-it');
+        }, 200);
     }
 
 
@@ -253,10 +215,8 @@
             .fail(ajaxError);
 
 
-        $('#beerlist').on('click', '.beer-name', triggerBeerCheck);
+        $('#beerlist').on('click', '.beers > li', triggerBeerCheck);
         $('#beerlist').on('click', '.beer-rating span', rateBeer);
-
-
 
         $('#clearall').on('click', BEERFEST.clearData);
 

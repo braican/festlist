@@ -64,7 +64,7 @@ input[type="checkbox"]{
     position: relative;
 }
 .app-main ul li.checked{
-    background: #e9f2e7;
+    background: #e2efdf;
 }
 .app-main .beer-util{
     flex: 0 30px;
