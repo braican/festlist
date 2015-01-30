@@ -6,11 +6,16 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+html,body,#app, #app-main{
+    height: 100%;
+}
 body{
     font-family: sans-serif;
     font-size: 12px;
     padding: 0;
     margin: 0;
+    position: relative;
+    overflow: hidden;
 }
 ul{
     padding: 0;
@@ -22,11 +27,24 @@ input[type="checkbox"]{
 }
 
 
+h1{
+    font-weight: 100;
+    font-size: 20px;
+}
+
 
 /**
  * --layout
  */
-.app-main .flex-item{
+#app-main{
+    overflow: auto;
+    position: relative;
+    left: 0;
+    -webkit-transition: left .3s;
+    -o-transition: left .3s;
+    transition: left .3s;
+}
+.beer-list .flex-item{
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -37,77 +55,157 @@ input[type="checkbox"]{
 
 
 /**
+ * --side
+ */
+.menu-trigger{
+    width: 20px;
+    margin: 10px auto;
+}
+.menu-trigger > span{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+}
+.menu-trigger > span + span{
+    margin-top: 3px;
+}
+
+/**
+ * --scroll
+ */
+#side-banner{
+    position: fixed;
+    width: 40px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: scroll;
+    text-align: center;
+    background: #333;
+    z-index: 11;
+}
+#scrollit li{
+    color: #fff;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 22px;
+    margin: 0 auto;
+    border-radius: 100%;
+    -webkit-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+}
+#scrollit li.selected{
+    background: #ddd;
+}
+
+
+/**
+ * --nav
+ */
+#app-nav{
+    position: absolute;
+    right: -60%;
+    width: 60%;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background: #333;
+    color: #fff;
+    -webkit-transition: right .3s;
+    -o-transition: right .3s;
+    transition: right .3s;
+}
+#app-nav ul{
+    padding: 20px;
+}
+#app-nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-open #app-nav{
+    right: 0;
+}
+
+.menu-open #app-main{
+    left: -60%;
+}
+
+
+/**
  * --beer list
  */
-.app-main{
-    padding: 0 40px 0 10px;
-}
-.app-main > li{
+.beer-list > li{
     padding: 16px 0;
 }
-.app-main .breweryname{
+.beer-list .breweryname{
     display: inline-block;
     font-weight: bold;
     padding: 8px;
     background: #336699;
     color: #fff;
+    margin-left: 10px;
 }
 
-.app-main .beers{
+.beer-list .beers{
     border-top: 1px solid #ddd;
 }
 
 /* individual beers */
-.app-main ul li{
+.beer-list ul li{
     border-bottom: 1px solid #ddd;
     background: #f9f9f9;
     position: relative;
+    padding-right: 40px;
 }
-.app-main ul li.checked{
+.beer-list ul li.checked{
     background: #e2efdf;
 }
-.app-main .beer-util{
+.beer-list .beer-util{
     flex: 0 30px;
     padding: 6px;
     text-align: center;
 }
-.app-main .beer-util input{
+.beer-list .beer-util input{
     display: none;
 }
-.app-main .beer-info{
+.beer-list .beer-info{
     flex: 1 1 auto;
     flex-flow: row wrap;
     padding: 6px 0;
 }
 
-.app-main .beer-info .beer-name{
+.beer-list .beer-info .beer-name{
     flex: 1 100%;
     font-size: 14px;
     padding: 2px 6px;
     font-weight: bold;
 }
-.app-main .beer-info .beer-extra{
+.beer-list .beer-info .beer-extra{
     flex: 1 100%;
     align-items: flex-start;
 }
-.app-main .beer-info .beer-extra em{
+.beer-list .beer-info .beer-extra em{
     color: #666;
     font-size: .8em;
 }
-.app-main .beer-info .beer-extra > div{
+.beer-list .beer-info .beer-extra > div{
     padding: 3px 6px;
 }
-.app-main .beer-info .beer-extra .beer-style{
+.beer-list .beer-info .beer-extra .beer-style{
     flex: 2 53%;
 }
-.app-main .beer-info .beer-extra .beer-abv{
+.beer-list .beer-info .beer-extra .beer-abv{
     flex: 1 20%;
 }
-.app-main .beer-info .beer-extra .beer-score{
+.beer-list .beer-info .beer-extra .beer-score{
     flex: 1 27%;
 }
 
-.app-main ul li .beer-rating{
+.beer-list ul li .beer-rating{
     position: absolute;
     display: none;
     top: 0;
@@ -119,50 +217,27 @@ input[type="checkbox"]{
     justify-content: center;
     background: #e1eaef;
 }
-.app-main ul li.rate-it .beer-rating{
+.beer-list ul li.rate-it .beer-rating{
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
 }
-.app-main ul li .beer-rating > span{
+.beer-list ul li .beer-rating > span{
     flex: 0 1 40px;
     padding: 0 10px;
 }
-.app-main ul li .beer-rating > span svg{
+.beer-list ul li .beer-rating > span svg{
     width: 100%;
 }
-.app-main ul li .beer-rating > span.selected svg path{
+.beer-list ul li .beer-rating > span.selected svg path{
     fill:#ffd522;
 }
 
 @media screen and (min-width: 820px){
-    .app-main .beer-info .beer-name,
-    .app-main .beer-info .beer-extra{
+    .beer-list .beer-info .beer-name,
+    .beer-list .beer-info .beer-extra{
         flex: 1 50%;
     }
-}
-
-
-/**
- * --scroll
- */
-#scrollit{
-    width: 20px;
-    position: fixed;
-    right:10px;
-    top: 0;
-    text-align: center;
-}
-#scrollit li{
-    display: block;
-    padding: 5px 4px 3px 4px;
-    border-radius: 100%;
-    -webkit-transition: background .2s;
-    -o-transition: background .2s;
-    transition: background .2s;
-}
-#scrollit li.selected{
-    background: #ddd;
 }

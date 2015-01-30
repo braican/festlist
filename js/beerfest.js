@@ -120,14 +120,14 @@
         }, 300);
 
         if(letter == "#"){
-            $('body, html').animate({
+            $('body, html, #app-main').animate({
                 'scrollTop': 0
             });
         } else {
             $('#beerlist > li').each(function(i, e){
                 var breweryname = $(e).data('brewery').toLowerCase();
                 if(letter == breweryname.charAt(0).toLowerCase()){
-                    $('body, html').animate({
+                    $('body, html, #app-main').animate({
                         'scrollTop': $(e).offset().top
                     });
                     return false;
@@ -135,6 +135,18 @@
             });    
         }
         
+    }
+
+
+    /**
+     * engageMobileMenu 
+     * 
+     * do the mobile menu
+     * @param event: the object from the click
+     */
+    function engageMobileMenu(event){
+        event.preventDefault();
+        $('body').toggleClass('menu-open');
     }
 
 
@@ -187,7 +199,7 @@
 
         setTimeout(function(){
             $parent.removeClass('rate-it');
-        }, 200);
+        }, 100);
     }
 
 
@@ -223,6 +235,8 @@
 
         $('#beerlist').on('click', '.beers > li', triggerBeerCheck);
         $('#beerlist').on('click', '.beer-rating span', rateBeer);
+
+        $('.menu-trigger').on('click', engageMobileMenu);
 
         $('#clearall').on('click', BEERFEST.clearData);
 

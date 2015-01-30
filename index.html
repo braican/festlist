@@ -10,13 +10,26 @@
 <body>
 
 <div id="app">
-    <ul id="beerlist" class="app-main"></ul>
+    <div id="app-nav">
+        <ul>
+            <li><a href="#" id="clearall">Clear Data</a></li>
+        </ul>
+    </div>
 
-    <ul id="scrollit"></ul>
+<div id="app-main">
+    <ul id="beerlist" class="beer-list"></ul>
+    
+    <div id="side-banner">
+        <div class="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="scrollit"></ul>
+    </div>
+    
 
 </div>
-
-<button id="clearall">Reset</button>
     
 <script src="js/jquery.js"></script>
 <script src="js/beerfest.js"></script>
