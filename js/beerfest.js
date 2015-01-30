@@ -61,8 +61,8 @@
                                 '<div class="beer-name">' + beer + '</div>' +
                                 '<div class="beer-extra flex-item">' +
                                     '<div class="beer-style">' + beerObj.style + '</div>' +
-                                    '<div class="beer-abv">ABV: ' + beerObj.abv + '</div>' +
-                                    '<div class="beer-score">BA Score: ' + beerObj.ba_score + '</div>' +
+                                    '<div class="beer-abv"><em>ABV:</em> ' + beerObj.abv + '</div>' +
+                                    '<div class="beer-score"><em>BA Score:</em> ' + beerObj.ba_score + '</div>' +
                                 '</div>' +
                             '</div>' +
                             '<div class="beer-rating">' + getRatingDropdownMarkup(rating) + '</div>' +
@@ -111,7 +111,13 @@
      */
     function scrollToLetter(event){
         event.preventDefault();
-        var letter = $(this).data('char').toLowerCase();
+
+        var $t     = $(this),
+            letter = $t.addClass('selected').data('char').toLowerCase();
+
+        setTimeout(function(){
+            $t.removeClass('selected');
+        }, 300);
 
         if(letter == "#"){
             $('body, html').animate({

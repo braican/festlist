@@ -90,17 +90,21 @@ input[type="checkbox"]{
     flex: 1 100%;
     align-items: flex-start;
 }
+.app-main .beer-info .beer-extra em{
+    color: #666;
+    font-size: .8em;
+}
 .app-main .beer-info .beer-extra > div{
     padding: 3px 6px;
 }
 .app-main .beer-info .beer-extra .beer-style{
-    flex: 2 50%;
+    flex: 2 53%;
 }
 .app-main .beer-info .beer-extra .beer-abv{
-    flex: 1 25%;
+    flex: 1 20%;
 }
 .app-main .beer-info .beer-extra .beer-score{
-    flex: 1 25%;
+    flex: 1 27%;
 }
 
 .app-main ul li .beer-rating{
@@ -153,5 +157,12 @@ input[type="checkbox"]{
 }
 #scrollit li{
     display: block;
-    padding: 4px;
+    padding: 5px 4px 3px 4px;
+    border-radius: 100%;
+    -webkit-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+}
+#scrollit li.selected{
+    background: #ddd;
 }
