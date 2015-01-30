@@ -22,25 +22,10 @@ input[type="checkbox"]{
 }
 
 
+
 /**
- * --beer list
+ * --layout
  */
-.app-main{
-    padding: 0 40px 0 10px;
-}
-.app-main ul{
-    padding-top: 10px;
-}
-.app-main > li{
-    border-top: 1px solid #ccc;
-    padding: 16px 0;
-}
-.app-main .breweryname{
-    font-weight: 700;
-}
-
-
-/* individual beers */
 .app-main .flex-item{
     display: -webkit-flex;
     display: -moz-flex;
@@ -50,11 +35,35 @@ input[type="checkbox"]{
     align-items: center;
 }
 
-.app-main ul li:nth-child(odd){
-    background: #f3f3f3;
+
+/**
+ * --beer list
+ */
+.app-main{
+    padding: 0 40px 0 10px;
+}
+.app-main > li{
+    padding: 16px 0;
+}
+.app-main .breweryname{
+    display: inline-block;
+    font-weight: bold;
+    padding: 8px;
+    background: #1D1959;
+    color: #fff;
+}
+
+.app-main .beers{
+    border-top: 1px solid #ccc;
+}
+
+/* individual beers */
+
+.app-main ul li{
+    border-bottom: 1px solid #ccc;
 }
 .app-main .beer-util{
-    flex: 0 1 50px;
+    flex: 0 50px;
     padding: 6px;
 }
 .app-main .beer-util > div{
@@ -70,27 +79,30 @@ input[type="checkbox"]{
 .app-main .beer-info{
     flex: 1 1 auto;
     flex-flow: row wrap;
+    padding: 6px 0;
 }
 
 .app-main .beer-info .beer-name{
     flex: 1 100%;
     font-size: 14px;
-    padding: 6px;
+    padding: 2px 6px;
+    font-weight: bold;
 }
 .app-main .beer-info .beer-extra{
     flex: 1 100%;
+    align-items: flex-start;
 }
 .app-main .beer-info .beer-extra > div{
-    padding: 6px;
+    padding: 3px 6px;
 }
 .app-main .beer-info .beer-extra .beer-style{
-    flex: 2 0 50%;
+    flex: 2 50%;
 }
 .app-main .beer-info .beer-extra .beer-abv{
-    flex: 1 0 25%;
+    flex: 1 25%;
 }
 .app-main .beer-info .beer-extra .beer-score{
-    flex: 1 0 25%;
+    flex: 1 25%;
 }
 
 @media screen and (min-width: 820px){
