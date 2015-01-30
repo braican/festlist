@@ -36,19 +36,26 @@
      */
     function renderBeers(data){
 
+        var navArray = [],
+            currentLetter;
+
         $.each(data, function(brewery, breweryData){
-            var markup = '<li data-brewery="' + brewery + '"><span class="breweryname">' + brewery + '</span><ul class="beers">';
+            var markup      = '<li data-brewery="' + brewery + '"><span class="breweryname">' + brewery + '</span><ul class="beers">',
+                firstLetter = brewery.charAt(0).match(/[a-z]/i) ? brewery.charAt(0) : "#";
+
+            if(firstLetter !== currentLetter && navArray.indexOf(firstLetter) === -1 ){
+                navArray.push(firstLetter);
+            }
 
             $.each(breweryData.beers, function(index, beerObj){
-                var beer         = beerObj.name,
-                    rating       = $.cookie(beer),
-                    input        = rating ? '<input type="checkbox" checked>' : '<input type="checkbox">',
-                    checkedClass = rating ? ' class="checked"' : '';
+                var beer          = beerObj.name,
+                    rating        = localStorage.getItem(beer),
+                    isChecked     = rating ? ' checked' : '',
+                    displayRating = rating ? rating : '+';
 
-                markup += '<li class="flex-item" data-beer="' + beer + '"' + checkedClass + '>' +
+                markup += '<li class="flex-item' + isChecked + '" data-beer="' + beer + '">' +
                             '<div class="beer-util">' +
-                                '<div class="beer-had">' + input + '</div>' +
-                                '<div class="beer-rating">' + getRatingDropdownMarkup(rating) + '</div>' +
+                                '<div class="beer-had"><input type="checkbox"' + isChecked + '><label>' + displayRating + '</label></div>' +
                             '</div>' +
                             '<div class="beer-info flex-item">' +
                                 '<div class="beer-name">' + beer + '</div>' +
@@ -58,11 +65,16 @@
                                     '<div class="beer-score">BA Score: ' + beerObj.ba_score + '</div>' +
                                 '</div>' +
                             '</div>' +
+                            '<div class="beer-rating">' + getRatingDropdownMarkup(rating) + '</div>' +
                           '</li>'
             });
             markup += '</ul></li>';
             $('#beerlist').append(markup);
-        }); 
+        });
+
+        $.each(navArray, function(index, character){
+            $('#scrollit').append('<li data-char="' + character + '">' + character + '</li>');
+        });
     }
 
 
@@ -73,15 +85,14 @@
      * @param rating: if a rating has already been chosen, select that one
      */
     function getRatingDropdownMarkup(rating){
-        var possibleRatings = [5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, .5],
-            markup = '<select>';
+        var possibleRatings = [1, 2, 3, 4, 5],
+            starSvg         = '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 190 181" enable-background="new 0 0 190 181" xml:space="preserve"><g><path fill="#FFFFFF" d="M90.6,11.1c2.4-4.9,6.4-4.9,8.9,0L119,50.8c2.4,4.9,8.9,9.6,14.3,10.4l43.8,6.4c5.4,0.8,6.7,4.6,2.7,8.4l-31.7,30.9c-3.9,3.8-6.4,11.4-5.5,16.8l7.5,43.6c0.9,5.4-2.3,7.8-7.2,5.2l-39.2-20.6c-4.9-2.6-12.8-2.6-17.7,0L47,172.5c-4.9,2.6-8.1,0.2-7.2-5.2l7.5-43.6c0.9-5.4-1.5-13-5.5-16.8L10.2,76c-3.9-3.8-2.7-7.6,2.7-8.4l43.8-6.4c5.4-0.8,11.9-5.5,14.3-10.4L90.6,11.1z"/></g></svg>';
+            markup          = '<span data-value="-1"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><g><path fill="#999999" d="M30,5c13.8,0,25,11.2,25,25S43.8,55,30,55S5,43.8,5,30S16.2,5,30,5 M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30s30-13.4,30-30S46.6,0,30,0L30,0z"/></g><line fill="none" stroke="#999999" stroke-width="5" stroke-miterlimit="10" x1="9.5" y1="9.5" x2="51" y2="51"/></svg></span>';
 
         $.each(possibleRatings, function(i, r){
-            var isSelected = rating == r ? ' selected' : '';
-            markup += '<option value="' + r + '"' + isSelected + '>' + r + '</option>';
+            var isSelected = rating >= r ? ' selected' : '';
+            markup += '<span class="star' + isSelected + '" data-value="' + r + '">' + starSvg + '</span>';
         });
-
-        markup += '</select>';
 
         return markup;
     }
@@ -100,48 +111,26 @@
      */
     function scrollToLetter(event){
         event.preventDefault();
-        var letter = $(this).attr('id');
+        var letter = $(this).data('char').toLowerCase();
 
-        $('#beerlist > li').each(function(i, e){
-            var breweryname = $(e).data('brewery');
-            if(letter == breweryname.charAt(0).toLowerCase()){
-                $('body, html').animate({
-                    'scrollTop': $(e).offset().top
-                });
-                return false;
-            }
-        });
-    }
-
-
-    /**
-     * deleteAllCookies 
-     * 
-     * remove all the cookies
-     */
-    function deleteAllCookies() {
-        var cookies = document.cookie.split(";");
-
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i];
-            var eqPos  = cookie.indexOf("=");
-            var name   = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        if(letter == "#"){
+            $('body, html').animate({
+                'scrollTop': 0
+            });
+        } else {
+            $('#beerlist > li').each(function(i, e){
+                var breweryname = $(e).data('brewery').toLowerCase();
+                if(letter == breweryname.charAt(0).toLowerCase()){
+                    $('body, html').animate({
+                        'scrollTop': $(e).offset().top
+                    });
+                    return false;
+                }
+            });    
         }
+        
     }
 
-    /**
-     * clearAllData 
-     * 
-     * clear all markings and remove all the cookies
-     * @param event: object from the click
-     */
-    function clearAllData(event){
-        event.preventDefault();
-        deleteAllCookies();
-        $('input[type="checkbox"]').removeProp('checked');
-        $('li li').removeClass('checked');      
-    }
 
 
 
@@ -155,15 +144,15 @@
      * save the selected rating to a cookie
      * @param event: the object from the change event
      */
-    function saveBeerRating(event){
-        event.preventDefault();
-        var beername = $(this).parents('li').data('beer'),
-            rating   = $(this).val();
-        
-        if($.cookie(beername)){
-            $.cookie(beername, rating);
-        }
-    }
+    // function saveBeerRating(event){
+    //     event.preventDefault();
+    //     var beername = $(this).parents('li').data('beer'),
+    //         rating   = $(this).val();
+
+    //     if(localStorage.getItem(beername)){
+    //         localStorage.setItem(beername, rating)
+    //     }
+    // }
 
 
     /**
@@ -172,20 +161,20 @@
      * check or uncheck a beer
      * @param event: obj from the click
      */
-    function checkOffBeer(event){
-        event.preventDefault();
-        var $t       = $(this),
-            $parent  = $t.closest('li'),
-            beername = $parent.data('beer'),
-            rating   = $parent.find('select').val();
+    // function checkOffBeer(event){
+    //     event.preventDefault();
+    //     var $t       = $(this),
+    //         $parent  = $t.closest('li'),
+    //         beername = $parent.data('beer'),
+    //         rating   = $parent.find('select').val();
 
-        if($t.prop('checked')){
-            $.cookie(beername, rating);
-        } else {
-            $.removeCookie(beername);
-        }
-        $parent.toggleClass('checked');
-    }
+    //     if($t.prop('checked')){
+    //         localStorage.setItem(beername, rating);
+    //     } else {
+    //         localStorage.removeItem(beername);
+    //     }
+    //     $parent.toggleClass('checked');
+    // }
 
 
     /**
@@ -196,21 +185,65 @@
      */
     function triggerBeerCheck(event){
         event.preventDefault();
-        $(this).closest('li').find('input[type="checkbox"]').prop("checked", function(i, val){
-            return !val;
-        }).trigger('change');                
+
+        var $t = $(this);
+
+        $t.closest('li').addClass('rate-it');
     }
+
+
+    /**
+     * rateBeer 
+     * 
+     * click on one of the ratings
+     * @param event: the object from the click
+     */
+    function rateBeer(event){
+        event.preventDefault();
+
+        var $t       = $(this),
+            $parent  = $t.closest('li').removeClass('rate-it'),
+            rating   = $t.data('value'),
+            beername = $parent.data('beer');
+
+
+        if(rating === -1){
+            $('.beer-had label', $parent).text('+');
+            $parent.removeClass('checked');
+            localStorage.removeItem(beername);
+        } else {
+            $('.beer-had label', $parent).text(rating);
+            $t.addClass('selected').siblings('.star').removeClass('selected').filter(function(){
+                return $(this).index() < $t.index();
+            }).addClass('selected');
+
+            $parent.addClass('checked');
+            localStorage.setItem(beername, rating);
+        }
+    }
+
+
 
 
     // =========================
 
+    /**
+     * BEERFEST.clearData 
+     * 
+     * clear all markings and remove all the cookies
+     * @param event: object from the click
+     */
+    BEERFEST.clearData = function(event){
+        if(event)
+            event.preventDefault();
+
+        localStorage.clear();
+        $('input[type="checkbox"]').removeProp('checked');
+        $('#beerlist li li').removeClass('checked');  
+    }
+
+
     BEERFEST.init = function(festName){
-        //
-        // set up cookies to expire after a year
-        //
-        $.cookie.defaults = {
-            expires: 365
-        }
 
         //
         // get the beers
@@ -221,12 +254,13 @@
 
 
         $('#beerlist').on('click', '.beer-name', triggerBeerCheck);
-        $('#beerlist').on('change', 'input[type="checkbox"]', checkOffBeer);
-        $('#beerlist').on('change', 'select', saveBeerRating);
+        $('#beerlist').on('click', '.beer-rating span', rateBeer);
 
-        $('#clearall').on('click', clearAllData);
 
-        $('#scrollit li').on('click', scrollToLetter);
+
+        $('#clearall').on('click', BEERFEST.clearData);
+
+        $('#scrollit').on('click', 'li', scrollToLetter);
     }
 
     $(document).ready(function(){
