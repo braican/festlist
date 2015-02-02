@@ -6,13 +6,14 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+html{
+    overflow-x: hidden;
+}
 body{
     font-family: sans-serif;
     font-size: 12px;
     padding: 0;
     margin: 0;
-    position: relative;
 }
 ul{
     padding: 0;
@@ -33,13 +34,8 @@ h1{
 /**
  * --layout
  */
-#app-main{
-    overflow: auto;
+#app{
     position: relative;
-    left: 0;
-    -webkit-transition: left .3s;
-    -o-transition: left .3s;
-    transition: left .3s;
 }
 .beer-list .flex-item{
     display: -webkit-flex;
@@ -72,12 +68,12 @@ h1{
  * --scroll
  */
 #side-banner{
-    position: fixed;
+    /*position: fixed;*/
+    position: absolute;
     width: 40px;
     top: 0;
     right: 0;
     bottom: 0;
-    overflow: scroll;
     text-align: center;
     background: #333;
     z-index: 11;
