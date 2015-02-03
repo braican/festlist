@@ -186,14 +186,6 @@ h1{
 .beer-list ul li.checked{
     background: #e2efdf;
 }
-.beer-list .beer-util{
-    flex: 0 30px;
-    padding: 6px;
-    text-align: center;
-}
-.beer-list .beer-util input{
-    display: none;
-}
 .beer-list .beer-info{
     flex: 1 1 auto;
     flex-flow: row wrap;
@@ -228,27 +220,12 @@ h1{
 }
 
 .beer-list ul li .beer-rating{
-    position: absolute;
-    display: none;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background: #e09900;
-}
-.beer-list ul li.rate-it .beer-rating{
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
+    padding: 4px 0;
 }
 .beer-list ul li .beer-rating > span{
-    flex: 0 1 40px;
-    padding: 0 10px;
+    display: inline-block;
+    width: 32px;
+    padding: 6px;
 }
 .beer-list ul li .beer-rating > span svg{
     width: 100%;
