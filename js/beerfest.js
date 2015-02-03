@@ -2,7 +2,7 @@
 //
 // BEERFEST - namespace
 //
-(function(BEERFEST, $){
+(function(BEERFEST, $, undefined$){
 
     BEERFEST.name = "ebf-2015";
 
@@ -248,5 +248,5 @@
         BEERFEST.init(BEERFEST.name);
     });
 
-})(window.BEERFEST = window.BEERFEST || {}, jQuery, undefined);
+})(window.BEERFEST = window.BEERFEST || {}, jQuery);
 
