@@ -62,9 +62,29 @@ h1{
     width: 100%;
     height: 3px;
     background: #fff;
+    opacity: 1;
+
+    -webkit-transition: all .4s;
+         -o-transition: all .4s;
+            transition: all .4s;
 }
 .menu-trigger > span + span{
     margin-top: 3px;
+}
+.menu-open .menu-trigger .mid{
+    opacity: 0;
+}
+.menu-open .menu-trigger .top{
+    -webkit-transform: translateY(6px) rotate(-45deg);
+        -ms-transform: translateY(6px) rotate(-45deg);
+         -o-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
+}
+.menu-open .menu-trigger .bottom{
+    -webkit-transform: translateY(-6px) rotate(45deg);
+        -ms-transform: translateY(-6px) rotate(45deg);
+         -o-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg);
 }
 
 /**
@@ -72,7 +92,6 @@ h1{
  */
 #slideout{
     position: fixed;
-    /*position: absolute;*/
     width: 260px;
     top: 0;
     right: -220px;
@@ -80,6 +99,11 @@ h1{
     text-align: center;
     background: #333;
     z-index: 11;
+    -webkit-box-shadow: inset 10px 0 15px -10px rgba(0,0,0,.9);
+            box-shadow: inset 10px 0 15px -10px rgba(0,0,0,.9);
+    -webkit-transition: right .4s;
+         -o-transition: right .4s;
+            transition: right .4s;
 }
 .menu-open #slideout{
     right: 0;
@@ -103,36 +127,27 @@ h1{
     transition: background .2s;
 }
 #scrollit li.selected{
-    background: #ddd;
+    background: #666;
 }
 
 
 /**
  * --nav
  */
-#app-nav{
-    position: absolute;
-    right: -60%;
-    width: 60%;
-    top: 0;
-    bottom: 0;
-    z-index: 10;
-    background: #333;
-    color: #fff;
-    -webkit-transition: right .3s;
-    -o-transition: right .3s;
-    transition: right .3s;
+#slideout .menu{
+    padding: 0 20px 0 60px;
+    text-align: right;
 }
-#app-nav ul{
-    padding: 20px;
+#slideout .menu li{
+    padding: 20px 0;
+    border-bottom: 1px solid #666;
 }
-#app-nav a{
+#slideout .menu li a{
     color: #fff;
     text-decoration: none;
+    font-size: 14px;
 }
-.menu-open #app-nav{
-    right: 0;
-}
+
 
 /**
  * --beer list
@@ -140,27 +155,33 @@ h1{
 .beer-list{
     padding-right: 40px;
 }
-.beer-list > li{
-    padding: 16px 0;
-}
 .beer-list .breweryname{
-    display: inline-block;
     font-weight: bold;
-    padding: 8px;
-    background: #336699;
+    padding: 16px 8px;
+    border-bottom: 1px solid #ccc;
+}
+.beer-list > li.active .breweryname{
+    background: #e09900;
     color: #fff;
-    margin-left: 10px;
 }
 
 .beer-list .beers{
     border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    display: none;
+}
+.beer-list > li.active .beers{
+    display: block;
 }
 
 /* individual beers */
 .beer-list ul li{
     border-bottom: 1px solid #ddd;
-    background: #f9f9f9;
     position: relative;
+}
+.beer-list ul li:last-child{
+    -webkit-box-shadow: inset 0 -4px 23px -10px rgba(0,0,0,.5);
+            box-shadow: inset 0 -4px 23px -10px rgba(0,0,0,.5);
 }
 .beer-list ul li.checked{
     background: #e2efdf;
@@ -182,7 +203,7 @@ h1{
 .beer-list .beer-info .beer-name{
     flex: 1 100%;
     font-size: 14px;
-    padding: 2px 6px;
+    padding: 4px 6px;
     font-weight: bold;
 }
 .beer-list .beer-info .beer-extra{
@@ -216,7 +237,7 @@ h1{
     text-align: center;
     align-items: center;
     justify-content: center;
-    background: #e1eaef;
+    background: #e09900;
 }
 .beer-list ul li.rate-it .beer-rating{
     display: -webkit-flex;
@@ -233,7 +254,7 @@ h1{
     width: 100%;
 }
 .beer-list ul li .beer-rating > span.selected svg path{
-    fill:#ffd522;
+    fill:#e09900;
 }
 
 @media screen and (min-width: 820px){

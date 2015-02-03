@@ -40,7 +40,7 @@
             currentLetter;
 
         $.each(data, function(brewery, breweryData){
-            var markup      = '<li data-brewery="' + brewery + '"><span class="breweryname">' + brewery + '</span><ul class="beers">',
+            var markup      = '<li data-brewery="' + brewery + '"><div class="breweryname">' + brewery + '</div><ul class="beers">',
                 firstLetter = brewery.charAt(0).match(/[a-z]/i) ? brewery.charAt(0) : "#";
 
             if(firstLetter !== currentLetter && navArray.indexOf(firstLetter) === -1 ){
@@ -61,8 +61,8 @@
                                 '<div class="beer-name">' + beer + '</div>' +
                                 '<div class="beer-extra flex-item">' +
                                     '<div class="beer-style">' + beerObj.style + '</div>' +
-                                    '<div class="beer-abv"><em>ABV:</em> ' + beerObj.abv + '</div>' +
-                                    '<div class="beer-score"><em>BA Score:</em> ' + beerObj.ba_score + '</div>' +
+                                    '<div class="beer-abv"><em>ABV:</em><br> ' + beerObj.abv + '</div>' +
+                                    '<div class="beer-score"><em>BA Score:</em><br> ' + beerObj.ba_score + '</div>' +
                                 '</div>' +
                             '</div>' +
                             '<div class="beer-rating">' + getRatingDropdownMarkup(rating) + '</div>' +
@@ -157,6 +157,17 @@
      * -------------------------------------------- */
 
     /**
+     * openBeerlist 
+     * 
+     * toggles the opening/closing of a beer list
+     */
+    function openBeerlist(){
+        event.preventDefault();
+
+        $(this).closest('li').addClass('active').siblings().removeClass('active');
+    }
+
+    /**
      * clearAllClicks 
      * 
      * clear all the click
@@ -232,6 +243,7 @@
             event.preventDefault();
 
         localStorage.clear();
+        $('.beer-had label').text('+');
         $('input[type="checkbox"]').removeProp('checked');
         $('#beerlist li li').removeClass('checked');  
     }
@@ -248,7 +260,7 @@
             .done(renderBeers)
             .fail(ajaxError);
 
-
+        $('#beerlist').on('click', '.breweryname', openBeerlist);
         $('#beerlist').on('click', '.beers > li', triggerBeerCheck);
         $('#beerlist').on('click', '.beer-rating span', rateBeer);
 
