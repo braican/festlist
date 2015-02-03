@@ -157,6 +157,18 @@
      * -------------------------------------------- */
 
     /**
+     * clearAllClicks 
+     * 
+     * clear all the click
+     * @param event: the object from the click
+     */
+    function clearAllClicks(event){
+        if ( $(event.target).closest('.flex-item').length == 0 ) {
+            $('.rate-it').removeClass('rate-it');
+        }
+    }
+
+    /**
      * triggerBeerCheck 
      * 
      * upon clicking anywhere on the beer name checks it off
@@ -165,6 +177,7 @@
     function triggerBeerCheck(event){
         event.preventDefault();
 
+        $('.rate-it').removeClass('rate-it');
         $(this).closest('li').addClass('rate-it');
     }
 
@@ -177,6 +190,7 @@
      */
     function rateBeer(event){
         event.preventDefault();
+        event.stopPropagation();
 
         var $t       = $(this),
             $parent  = $t.closest('li'),
@@ -224,6 +238,8 @@
 
 
     BEERFEST.init = function(festName){
+
+        $(document).on('click', clearAllClicks);
 
         //
         // get the beers
