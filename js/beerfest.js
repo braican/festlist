@@ -175,7 +175,7 @@
      * 
      * toggles the opening/closing of a beer list
      */
-    function openBeerlist(){
+    function openBeerlist(event){
         event.preventDefault();
 
         $(this).closest('.brewery').toggleClass('active').siblings().removeClass('active');
