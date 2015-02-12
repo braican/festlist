@@ -6,9 +6,16 @@
 
     BEERFEST.name = "ebf-2015";
 
+    // svg stuff
     var starSvg   = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 190 181" enable-background="new 0 0 190 181" xml:space="preserve"><g><path fill="#cccccc" d="M90.6,11.1c2.4-4.9,6.4-4.9,8.9,0L119,50.8c2.4,4.9,8.9,9.6,14.3,10.4l43.8,6.4c5.4,0.8,6.7,4.6,2.7,8.4l-31.7,30.9c-3.9,3.8-6.4,11.4-5.5,16.8l7.5,43.6c0.9,5.4-2.3,7.8-7.2,5.2l-39.2-20.6c-4.9-2.6-12.8-2.6-17.7,0L47,172.5c-4.9,2.6-8.1,0.2-7.2-5.2l7.5-43.6c0.9-5.4-1.5-13-5.5-16.8L10.2,76c-3.9-3.8-2.7-7.6,2.7-8.4l43.8-6.4c5.4-0.8,11.9-5.5,14.3-10.4L90.6,11.1z"/></g></svg>',
         checkSvg  = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32"><path d="M27 4l-15 15-7-7-5 5 12 12 20-20z" fill="#cccccc"></path></svg>',
         removeSvg = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve"><g><path fill="#cccccc" d="M30,5c13.8,0,25,11.2,25,25S43.8,55,30,55S5,43.8,5,30S16.2,5,30,5 M30,0C13.4,0,0,13.4,0,30s13.4,30,30,30s30-13.4,30-30S46.6,0,30,0L30,0z"/></g><line fill="none" stroke="#cccccc" stroke-width="5" stroke-miterlimit="10" x1="9.5" y1="9.5" x2="51" y2="51"/></svg>';
+
+    // firebase data
+    var beerfest_data      = new Firebase("https://braican-beerfest.firebaseio.com/"),
+        uid;
+
+
 
 
     /* --------------------------------------------
@@ -23,6 +30,21 @@
     function ajaxError( jqxhr, textStatus, error ) {
         console.log( "Request Failed: " + error );
         console.log(textStatus);
+    }
+
+
+    /**
+     * beerfest_user_data 
+     * 
+     * get the user data from firebase
+     */
+    function beerfest_user_data(){
+        if(uid){
+            return beerfest_data.child('users/' + uid + '/fests/' + BEERFEST.name);
+        } else {
+            return false;
+        }
+        
     }
     
 
@@ -39,46 +61,53 @@
      * @param data: the data to render
      */
     function renderBeers(data){
-
-        var navArray = [],
+        var beerdata = data.val(),
+            navArray = [],
             currentLetter;
 
-        $.each(data, function(brewery, breweryData){
-            var markup      = '<li class="brewery" data-brewery="' + brewery + '"><div class="breweryname">' + brewery + '<span class="expand">+</span><span class="collapse">-</span></div><ul class="beers">',
-                firstLetter = brewery.charAt(0).match(/[a-z]/i) ? brewery.charAt(0) : "#";
+        beerfest_user_data().once('value', function(snapshot){
 
-            if(firstLetter !== currentLetter && navArray.indexOf(firstLetter) === -1 ){
-                navArray.push(firstLetter);
-            }
+            var userData = snapshot.val();
+            
+            $.each(beerdata, function(brewery, breweryData){
+                var markup      = '<li class="brewery" data-brewery="' + brewery + '"><div class="breweryname">' + decodeURIComponent(brewery) + '<span class="expand">+</span><span class="collapse">-</span></div><ul class="beers">',
+                    firstLetter = brewery.charAt(0).match(/[a-z]/i) ? brewery.charAt(0) : "#";
 
-            $.each(breweryData.beers, function(index, beerObj){
-                var beer       = beerObj.name,
-                    rating     = localStorage.getItem(beer),
-                    isWishlist = localStorage.getItem(beer + '_wishlist') ? ' wishlist' : '', 
-                    isRated    = rating ? ' rate-it' : '';
+                if(firstLetter !== currentLetter && navArray.indexOf(firstLetter) === -1 ){
+                    navArray.push(firstLetter);
+                }
 
-                markup += '<li class="beer' + isRated + isWishlist + '" data-beer="' + beer + '">' +
-                            '<div class="beer-util"><ul>' +
-                                '<li class="rate">' + checkSvg + '</li>' +
-                                '<li class="wishlist">' + starSvg + '</li>' +
-                            '</ul></div>' +
-                            '<div class="beer-rating">' + getRatingDropdownMarkup(rating) + '</div>' +
-                            '<div class="beer-info flex-item">' +
-                                '<div class="beer-name">' + beer + '</div>' +
-                                '<div class="beer-extra flex-item">' +
-                                    '<div class="beer-style">' + beerObj.style + '</div>' +
-                                    '<div class="beer-abv"><em>ABV:</em><br> ' + beerObj.abv + '</div>' +
-                                    '<div class="beer-score"><em>BA Score:</em><br> ' + beerObj.ba_score + '</div>' +
+                $.each(breweryData.beers, function(index, beerObj){
+                    var beer        = beerObj.name,
+                        encodedBeer = encodeURIComponent(beer),
+                        beerUnique  = brewery + '_' + encodedBeer,
+                        rating      = userData && userData.hads ? userData.hads[beerUnique] : false,
+                        isWishlist  = userData && userData.wishlist && userData.wishlist[beerUnique] > -1 ? ' wishlist' : '',
+                        isRated     = rating ? ' rate-it' : '';
+
+                    markup += '<li class="beer' + isRated + isWishlist + '" data-beer="' + encodedBeer + '">' +
+                                '<div class="beer-util"><ul>' +
+                                    '<li class="rate">' + checkSvg + '</li>' +
+                                    '<li class="wishlist">' + starSvg + '</li>' +
+                                '</ul></div>' +
+                                '<div class="beer-rating">' + getRatingDropdownMarkup(rating) + '</div>' +
+                                '<div class="beer-info flex-item">' +
+                                    '<div class="beer-name">' + beer + '</div>' +
+                                    '<div class="beer-extra flex-item">' +
+                                        '<div class="beer-style">' + beerObj.style + '</div>' +
+                                        '<div class="beer-abv"><em>ABV:</em><br> ' + beerObj.abv + '</div>' +
+                                        '<div class="beer-score"><em>BA Score:</em><br> ' + beerObj.ba_score + '</div>' +
+                                    '</div>' +
                                 '</div>' +
-                            '</div>' +
-                          '</li>'
+                              '</li>'
+                });
+                markup += '</ul></li>';
+                $('#beerlist').append(markup);
             });
-            markup += '</ul></li>';
-            $('#beerlist').append(markup);
-        });
 
-        $.each(navArray, function(index, character){
-            $('#scrollit').append('<li data-char="' + character + '">' + character + '</li>');
+            $.each(navArray, function(index, character){
+                $('#scrollit').append('<li data-char="' + character + '">' + character + '</li>');
+            });
         });
     }
 
@@ -192,12 +221,23 @@
     function toggleWishlist(event){
         event.preventDefault();
         
-        var beer = $(this).closest('.beer').toggleClass('wishlist').data('beer');
+        var $t      = $(this),
+            brewery = $t.closest('.brewery').data('brewery');
+            beer    = $t.closest('.beer').toggleClass('wishlist').data('beer');
 
-        if(localStorage.getItem(beer + '_wishlist')){
-            localStorage.removeItem(beer + '_wishlist');
+        if(uid){
+            var wishlist = beerfest_user_data().child('wishlist/' + brewery + '_' + beer);
+            if($t.closest('.beer').hasClass('wishlist')){
+                wishlist.set(true);
+            } else {
+                wishlist.remove();
+            }
         } else {
-            localStorage.setItem(beer + '_wishlist', true);
+            if(localStorage.getItem(beer + '_wishlist')){
+                localStorage.removeItem(beer + '_wishlist');
+            } else {
+                localStorage.setItem(beer + '_wishlist', true);
+            }
         }
     }
 
@@ -226,25 +266,89 @@
         event.preventDefault();
         event.stopPropagation();
 
-        var $t       = $(this),
-            $parent  = $t.closest('.beer'),
-            rating   = $t.data('value'),
-            beername = $parent.data('beer');
+        var $t      = $(this),
+            $parent = $t.closest('.beer'),
+            brewery = $t.closest('.brewery').data('brewery'),
+            beer    = $parent.data('beer'),
+            rating  = $t.data('value'),
+            hads    = uid ? beerfest_user_data().child('hads/' + brewery + '_' + beer) : false;
 
         if(rating === -1){
             $t.siblings('.star').removeClass('selected');
             $parent.removeClass('rate-it');
-            localStorage.removeItem(beername);
+            if(hads){
+                hads.remove();
+            } else {
+                localStorage.removeItem(beer);    
+            }
+            
         } else {
             $t.addClass('selected').siblings('.star').removeClass('selected').filter(function(){
                 return $(this).index() < $t.index();
             }).addClass('selected');
 
-            localStorage.setItem(beername, rating);
+            if(hads){
+                hads.set(rating);
+            } else {
+                localStorage.setItem(beer, rating); 
+            }
         }
     }
 
 
+
+
+
+    // -------------------------------
+    // LOGIN / REGISTER
+    //
+
+    /**
+     * submitLogin 
+     * 
+     * submit the login form
+     */
+    function submitLogin(event){
+        event.preventDefault();
+
+        var email    = $('input[name="user_email"]', this).val(),
+            password = $('input[name="user_password"]', this).val();
+
+        beerfest_data.authWithPassword({
+            email    : email,
+            password : password
+        }, function(error, authData) {
+            if (error) {
+                console.log("Login Failed!", error);
+            } else {
+                console.log("Authenticated successfully with payload:", authData);
+            }
+        });
+    }
+
+
+    /**
+     * submitRegistration 
+     * 
+     * submit the registrationo form
+     */
+    function submitRegistration(event){
+        event.preventDefault();
+
+        var email    = $('input[name="user_email"]', this).val(),
+            password = $('input[name="user_password"]', this).val();
+
+        beerfest_data.createUser({
+            email    : email,
+            password : password
+        }, function(error, userData) {
+            if (error) {
+                console.log("Error creating user:", error);
+            } else {
+                console.log("Successfully created user account with uid:", userData.uid);
+            }
+        });
+    }
 
 
     // =========================
@@ -259,7 +363,7 @@
         if(event)
             event.preventDefault();
 
-        localStorage.clear();
+        // localStorage.clear();
         $('#beerlist .beer').removeClass('rate-it wishlist');  
     }
 
@@ -271,9 +375,9 @@
         //
         // get the beers
         //
-        $.getJSON('data/' + festName + '.json')
-            .done(renderBeers)
-            .fail(ajaxError);
+        // $.getJSON('data/' + festName + '.json')
+        //     .done(renderBeers)
+        //     .fail(ajaxError);
 
         $('#beerlist').on('click', '.breweryname', openBeerlist);
         
@@ -290,9 +394,34 @@
         $('#scrollit').on('click', 'li', scrollToLetter);
     }
 
+
+    BEERFEST.initLogin = function(){
+
+        $('#authentication').addClass('active');
+
+        $('#login-form').on('submit', submitLogin);
+        $('#register-form').on('submit', submitRegistration);
+    }
+
+
     $(document).ready(function(){
+
+        var loginData = beerfest_data.getAuth();
+
         // initialize the drinking! 
-        BEERFEST.init(BEERFEST.name);
+        BEERFEST.init();
+
+        if(loginData){
+            console.log("logged in");
+            uid = loginData.uid;
+            console.log("current user = " + uid);
+            $('#banner').text(loginData.password.email);
+        } else {
+            BEERFEST.initLogin();
+
+        }
+
+        beerfest_data.child('beerfests/' + BEERFEST.name + '/beerlist').once("value", renderBeers);
     });
 
 })(window.BEERFEST = window.BEERFEST || {}, jQuery);

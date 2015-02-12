@@ -203,8 +203,8 @@ h1{
     position: relative;
 }
 .beer-list .beer:last-child{
-    -webkit-box-shadow: inset 0 -4px 23px -10px rgba(0,0,0,.5);
-            box-shadow: inset 0 -4px 23px -10px rgba(0,0,0,.5);
+    -webkit-box-shadow: inset 0 -14px 25px -20px rgba(0,0,0,.5);
+            box-shadow: inset 0 -14px 25px -20px rgba(0,0,0,.5);
 }
 .beer-list .beer.wishlist{
     background: #fff7e8;
@@ -303,6 +303,24 @@ h1{
     fill:#e09900;
 }
 
+
+
+/**
+ * --authenticate
+ */
+#authentication{
+    display: none;
+    padding: 20px;
+}
+#authentication.active{
+    display: block;
+}
+
+
+#banner{
+    text-align: right;
+    padding-right: 60px;
+}
 
 
 @media screen and (min-width: 820px){
