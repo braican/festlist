@@ -372,6 +372,8 @@
                 console.log("Authenticated successfully with payload:", authData);
                 $('#beerlist, #scrollit').empty();
                 uid = authData.uid;
+                $('body').removeClass('anonymous').addClass('logged-in');
+                $('#banner').text(authData.password.email);
                 BEERFEST.getBeerList();
             }
         });
@@ -429,6 +431,11 @@
             event.preventDefault();
 
         beerfest_data.unauth();
+
+        $('#banner, #beerlist, #scrollit').empty();
+        uid = null;
+        $('body').addClass('anonymous').removeClass('logged-in');
+        BEERFEST.getBeerList();
     }
 
 
