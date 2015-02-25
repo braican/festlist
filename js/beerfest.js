@@ -427,8 +427,10 @@
      * log out of the app
      */
     BEERFEST.logout = function(event){
-        if(event)
+        if(event){
             event.preventDefault();
+            engageMobileMenu(event);
+        }
 
         beerfest_data.unauth();
 
@@ -454,6 +456,7 @@
         $('.menu-trigger').on('click', engageMobileMenu);
 
         // $('#clearall').on('click', BEERFEST.clearData);
+        $('#firebase-logout').on('click', BEERFEST.logout);
 
         $('#scrollit').on('click', 'li', scrollToLetter);
     }
