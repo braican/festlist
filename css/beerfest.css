@@ -71,9 +71,44 @@ h1{
 /**
  * --banner
  */
-#banner{
-    text-align: right;
-    padding-right: 60px;
+.app-banner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    z-index: 15;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.app-banner .branding{
+    padding: 10px;
+    background: #f35353;
+}
+.app-banner .util-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    background: #222;
+}
+.app-banner .util-nav ul li{
+    text-align: center;
+    flex: 1 auto;
+    padding: 6px;
+}
+.app-banner .util-nav ul li svg{
+    width: auto;
+    height: 28px;
+}
+.app-banner .util-nav ul li + li{
+    border-left: 1px solid #444;
 }
 
 
@@ -82,8 +117,8 @@ h1{
  * --side
  */
 .menu-trigger{
+    float: right;
     width: 20px;
-    margin: 10px auto;
 }
 .menu-trigger > span{
     display: block;
@@ -183,10 +218,12 @@ h1{
 .beer-list{
     padding-right: 40px;
 }
+.beer-list .brewery{
+    border-top: 1px solid #ccc;
+}
 .beer-list .breweryname{
     font-weight: bold;
-    padding: 16px 8px;
-    border-bottom: 1px solid #ccc;
+    padding: 16px 38px 16px 8px;
     position: relative;
 }
 .beer-list .breweryname span{
@@ -200,9 +237,12 @@ h1{
     display: none;
     font-size: 20px;
 }
+.beer-list .brewery.active{
+    border-color: #C02020;
+    border-bottom: 8px solid #c02020;
+}
 .beer-list .brewery.active .breweryname{
-    background: #e09900;
-    border-bottom-color: #e09900;
+    background: #C02020;
     color: #fff;
 }
 .beer-list .brewery.active .breweryname span.collapse{
@@ -213,7 +253,6 @@ h1{
 }
 
 .beer-list .beers{
-    border-top: 1px solid #ddd;
     background: #f9f9f9;
     display: none;
 }
@@ -227,21 +266,20 @@ h1{
  * --beer
  */
 .beer-list .beer{
-    border-bottom: 1px solid #ddd;
     position: relative;
 }
-.beer-list .beer:last-child{
-    -webkit-box-shadow: inset 0 -14px 25px -20px rgba(0,0,0,.5);
-            box-shadow: inset 0 -14px 25px -20px rgba(0,0,0,.5);
+.beer-list .beer-info{
+    border-bottom: 1px solid #ddd;
 }
 .beer-list .beer.wishlist{
-    background: #fff7e8;
+    /*background: #fff7e8;*/
+    border-left: 12px solid #d8a71d;
 }
 .beer-list .beer.rate-it{
-    background: #e8ffeb;
+    border-left: 12px solid #446b00;
 }
 .beer-list .beer.wishlist .wishlist svg path{
-    fill:#e09900;
+    fill:#d8a71d;
 }
 
 
@@ -290,7 +328,7 @@ h1{
  */
 .beer-util,
 .beer-rating{
-    padding: 4px 0;
+    padding-top: 4px;
     height: 45px;
     text-align: right;
 }
@@ -328,7 +366,7 @@ h1{
     display: block;
 }
 .beer-rating > span.selected svg path{
-    fill:#e09900;
+    fill:#f35353;
 }
 
 

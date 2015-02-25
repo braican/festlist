@@ -13,7 +13,8 @@
 
     // firebase data
     var beerfest_data = new Firebase("https://braican-beerfest.firebaseio.com/"),
-        uid;
+        uid,
+        headerHeight;
 
 
 
@@ -201,7 +202,7 @@
                 var breweryname = $(e).data('brewery').toLowerCase();
                 if(letter == breweryname.charAt(0).toLowerCase()){
                     $('body, html, #app-main').animate({
-                        'scrollTop': $(e).offset().top
+                        'scrollTop': $(e).offset().top - headerHeight
                     });
                     return false;
                 }
@@ -252,7 +253,7 @@
         $brewery.siblings().removeClass('active');
 
         $('html,body').animate({
-            scrollTop: $brewery.offset().top
+            scrollTop: $brewery.offset().top - headerHeight
         });
     }
 
@@ -456,7 +457,7 @@
         $('.menu-trigger').on('click', engageMobileMenu);
 
         // $('#clearall').on('click', BEERFEST.clearData);
-        $('#firebase-logout').on('click', BEERFEST.logout);
+        $('#firebase-logout a').on('click', BEERFEST.logout);
 
         $('#scrollit').on('click', 'li', scrollToLetter);
     }
@@ -483,6 +484,10 @@
     $(document).ready(function(){
 
         var loginData = beerfest_data.getAuth();
+
+        headerHeight = $('#banner').outerHeight();
+
+        $('#side-banner').css('top', headerHeight + 'px');
 
         // initialize the drinking! 
         BEERFEST.init();
