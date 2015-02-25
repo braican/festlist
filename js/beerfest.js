@@ -374,7 +374,7 @@
                 $('#beerlist, #scrollit').empty();
                 uid = authData.uid;
                 $('body').removeClass('anonymous').addClass('logged-in');
-                $('#banner').text(authData.password.email);
+                $('#banner .user-info').text(authData.password.email);
                 BEERFEST.getBeerList();
             }
         });
@@ -497,7 +497,7 @@
             console.log("logged in");
             uid = loginData.uid;
             console.log("current user = " + uid);
-            $('#banner').text(loginData.password.email);
+            $('#banner .user-info').text(loginData.password.email);
         } else {
             $('body').addClass('anonymous');
             BEERFEST.initLogin();
