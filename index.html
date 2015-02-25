@@ -6,10 +6,20 @@
     <title>Beer Fest</title>
 
     <link rel="stylesheet" href="css/beerfest.css">
+
+    <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/beerfest.js"></script>
 </head>
 <body>
 
-
+<div class="loader">
+    <div class="preloader">
+      <div class="preloader-container">
+        <span class="animated-preloader"></span>
+      </div>
+    </div>
+</div>
 
 <div id="app">
 
@@ -49,6 +59,7 @@
 
         <div class="menu">
             <ul>
+                <li><a href="#" id="firebase-logout">Log Out</a></li>
                 <li><a href="#" id="clearall">Clear Data</a></li>
             </ul>
         </div>
@@ -59,8 +70,5 @@
     </div>
 </div>
     
-<script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/beerfest.js"></script>
 </body>
 </html>
