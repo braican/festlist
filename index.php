@@ -1,3 +1,6 @@
+
+<?php include "util/functions.php"; ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,9 +10,6 @@
 
     <link rel="stylesheet" href="css/beerfest.css">
 
-    <script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/beerfest.js"></script>
 </head>
 <body>
 
@@ -36,8 +36,9 @@
 
         <div class="util-nav">
             <ul>
-                <li><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36"><path d="M18 3c-8.287 0-15 6.712-15 15s6.712 15 15 15 15-6.712 15-15-6.712-15-15-15zM18 7.5c2.482 0 4.5 2.018 4.5 4.5 0 2.49-2.018 4.5-4.5 4.5s-4.5-2.010-4.5-4.5c0-2.482 2.018-4.5 4.5-4.5zM18 28.8c-3.758 0-7.058-1.92-9-4.83 0.038-2.977 6.008-4.62 9-4.62s8.955 1.643 9 4.62c-1.942 2.91-5.242 4.83-9 4.83z" fill="#ffffff"></path></svg></li>
-                <li><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 190 181" enable-background="new 0 0 190 181" xml:space="preserve"><g><path fill="#FFFFFF" d="M90.6,11.1c2.4-4.9,6.4-4.9,8.9,0L119,50.8c2.4,4.9,8.9,9.6,14.3,10.4l43.8,6.4c5.4,0.8,6.7,4.6,2.7,8.4l-31.7,30.9c-3.9,3.8-6.4,11.4-5.5,16.8l7.5,43.6c0.9,5.4-2.3,7.8-7.2,5.2l-39.2-20.6c-4.9-2.6-12.8-2.6-17.7,0L47,172.5c-4.9,2.6-8.1,0.2-7.2-5.2l7.5-43.6c0.9-5.4-1.5-13-5.5-16.8L10.2,76c-3.9-3.8-2.7-7.6,2.7-8.4l43.8-6.4c5.4-0.8,11.9-5.5,14.3-10.4L90.6,11.1z"/></g></svg></li>
+                <li><?php include_svg('globe'); ?></li>
+                <li><?php include_svg('user'); ?></li>
+                <li><?php include_svg('star'); ?></li>
             </ul>
         </div>
     </div>
@@ -81,6 +82,12 @@
         <ul id="beerlist" class="beer-list"></ul>
     </div>
 </div>
-    
+
+
+<script src="https://cdn.firebase.com/js/client/2.1.2/firebase.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/util.js"></script>
+<script src="js/beerfest.js"></script>
+
 </body>
 </html>

@@ -28,7 +28,8 @@
                 $('#baContent table tr', data).each(function(index, $tr){
 
                     if($('h6', $tr).length > 0){
-                        brewery = encodeURIComponent( $('h6', $tr).text().replace('Co.', 'Company') );
+                        // brewery = encodeURIComponent( $('h6', $tr).text().replace('Co.', 'Company') );
+                        brewery = BEERFEST.encodeValue( $('h6', $tr).text() );
                         BEERFEST_ADMIN.beerObj[brewery] = {
                             "beers":[]
                         };

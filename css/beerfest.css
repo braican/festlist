@@ -274,9 +274,11 @@ h1{
 .beer-list .beer.wishlist{
     /*background: #fff7e8;*/
     border-left: 12px solid #d8a71d;
+    background: #eee;
 }
 .beer-list .beer.rate-it{
     border-left: 12px solid #446b00;
+    background: #eee;
 }
 .beer-list .beer.wishlist .wishlist svg path{
     fill:#d8a71d;
