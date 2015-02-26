@@ -25,7 +25,7 @@
 
     <div id="banner" class="app-banner">
         <div class="branding">
-            <span class="app-name">Beerfest</span>
+            <span class="app-name"><?php include_svg('logo'); ?></span>
             <span class="user-info"></span>
             <div class="menu-trigger">
                 <span class="top"></span>
@@ -36,9 +36,9 @@
 
         <div class="util-nav">
             <ul>
-                <li><?php include_svg('globe'); ?></li>
-                <li><?php include_svg('user'); ?></li>
-                <li><?php include_svg('star'); ?></li>
+                <li class="active" data-list="global"><?php include_svg('globe'); ?></li>
+                <li data-list="hads"><?php include_svg('user'); ?></li>
+                <li data-list="wishlist"><?php include_svg('star'); ?></li>
             </ul>
         </div>
     </div>
@@ -79,7 +79,17 @@
     </div>
 
     <div id="app-main">
-        <ul id="beerlist" class="beer-list"></ul>
+        <header id="app-header">
+            <h2 class="active" data-list="global">Global Beer List</h2>
+            <h2 data-list="hads">My Hads</h2>
+            <h2 data-list="wishlist">My Wishlist</h2>
+        </header>
+
+        <div id="beerlists">
+            <ul id="beerlist" class="beer-list active" data-list="global"></ul>
+            <ul id="my-beerlist" class="beer-list" data-list="hads"></ul>
+            <ul id="my-wishlist" class="beer-list" data-list="wishlist"></ul>
+        </div>
     </div>
 </div>
 

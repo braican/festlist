@@ -97,7 +97,7 @@
                         isWishlist  = getIsWishList(userData, beerUnique) ? ' wishlist' : '',
                         isRated     = rating ? ' rate-it' : '';
 
-                    markup += '<li class="beer' + isRated + isWishlist + '" data-beer="' + encodedBeer + '">' +
+                    markup += '<li class="beer' + isRated + isWishlist + '" data-beer="' + encodedBeer + '"><div class="beerwrapper">' +
                                 '<div class="beer-util"><ul>' +
                                     '<li class="rate">' + checkSvg + '</li>' +
                                     '<li class="wishlist">' + starSvg + '</li>' +
@@ -111,7 +111,7 @@
                                         '<div class="beer-score"><em>BA Score:</em><br> ' + beerObj.ba_score + '</div>' +
                                     '</div>' +
                                 '</div>' +
-                              '</li>'
+                              '</div></li>'
                 });
                 markup += '</ul></li>';
                 $('#beerlist').append(markup);
@@ -173,10 +173,81 @@
     }
 
 
+    /**
+     * adjustAppLayout 
+     * 
+     * adjust the app layout based on the header size and stuff like that
+     */
+    function adjustAppLayout(){
+        $('#side-banner').css('top', headerHeight + 'px');
+        $('#app-main').css('paddingTop', headerHeight + 'px');
+    }
+
+
+
+    /**
+     * renderHads 
+     * 
+     * render the user's hads
+     */
+    function renderHads(){
+        $('#my-beerlist').empty();
+
+        $('#beerlist .beer.rate-it').each(function(){
+            var clone = $(this).clone();
+
+            $('#my-beerlist').append(clone);
+        });
+    }
+
+
+
+
+
+    /**
+     * renderWishlist 
+     * 
+     * render the user's wishlist
+     */
+    function renderWishlist(){
+        $('#my-wishlist').empty();
+
+        $('#beerlist .beer.wishlist').not('.rate-it').each(function(){
+            var clone = $(this).clone();
+
+            $('#my-wishlist').append(clone);
+        });
+    }
+
+
 
     /* --------------------------------------------
      * --UX
      * -------------------------------------------- */
+
+
+
+    /**
+     * beerfestNav 
+     * 
+     * navigation clicks router
+     * @param event (click event)
+     */
+    function beerfestNav(event){
+        var $t   = $(this),
+            list = $t.data('list');
+
+        $t.addClass('active').siblings('.active').removeClass('active');
+        $('#app-header h2[data-list="' + list + '"], #beerlists ul[data-list="' + list + '"]').addClass('active').siblings('.active').removeClass('active');
+
+        if(list == 'hads'){
+            renderHads();
+        } else if(list =='wishlist'){
+            renderWishlist();
+        }
+    }
+
+
 
     /**
      * scrollToLetter
@@ -192,7 +263,7 @@
 
         setTimeout(function(){
             $t.removeClass('selected');
-        }, 300);
+        }, 200);
 
         if(letter == "#"){
             $('body, html, #app-main').animate({
@@ -203,7 +274,7 @@
                 var breweryname = $(e).data('brewery').toLowerCase();
                 if(letter == breweryname.charAt(0).toLowerCase()){
                     $('body, html, #app-main').animate({
-                        'scrollTop': $(e).offset().top - headerHeight
+                        'scrollTop': $(e).offset().top - headerHeight - 8
                     });
                     return false;
                 }
@@ -254,7 +325,7 @@
         $brewery.siblings().removeClass('active');
 
         $('html,body').animate({
-            scrollTop: $brewery.offset().top - headerHeight
+            scrollTop: $brewery.offset().top - headerHeight - 8
         });
     }
 
@@ -447,6 +518,21 @@
 
         $(document).on('click', clearAllClicks);
 
+        // -------------------------------
+        // navigation
+        //
+        $('.app-banner .util-nav ul li').on('click', beerfestNav);
+        $('.menu-trigger').on('click', engageMobileMenu);
+
+        // $('#clearall').on('click', BEERFEST.clearData);
+        $('#firebase-logout a').on('click', BEERFEST.logout);
+
+        $('#scrollit').on('click', 'li', scrollToLetter);
+
+
+        // -------------------------------
+        // beerlist stuff
+        //
         $('#beerlist').on('click', '.breweryname', openBeerlist);
         
         $('#beerlist').on('click', '.beer-util .wishlist', toggleWishlist);
@@ -454,13 +540,6 @@
 
         $('#beerlist').on('click', '.beer-rating span', rateBeer);
         
-
-        $('.menu-trigger').on('click', engageMobileMenu);
-
-        // $('#clearall').on('click', BEERFEST.clearData);
-        $('#firebase-logout a').on('click', BEERFEST.logout);
-
-        $('#scrollit').on('click', 'li', scrollToLetter);
     }
 
 
@@ -488,7 +567,7 @@
 
         headerHeight = $('#banner').outerHeight();
 
-        $('#side-banner').css('top', headerHeight + 'px');
+        adjustAppLayout();
 
         // initialize the drinking! 
         BEERFEST.init();
