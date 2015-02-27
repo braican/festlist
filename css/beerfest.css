@@ -15,7 +15,7 @@ body{
     padding: 0;
     margin: 0;
     width: 100%;
-    background: #e4e4e4;
+    background: #fff;
 }
 ul{
     padding: 0;
@@ -38,10 +38,58 @@ h2{
     color: #f35353;
 }
 
+a{
+    color: #404040;
+    text-decoration: underline;
+}
+
+
+/**
+ * --forms
+ */
+input[type="text"],
+input[type="password"]{
+    border: 1px solid #ccc;
+    display: block;
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    border-radius: 0;
+}
+button[type="submit"]{
+    background: #f35353;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0;
+    display: inline-block;
+    padding: 8px;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+button[type="submit"]:focus{
+    outline: none;
+}
+form .error{
+    color: #f35353;
+    margin: 6px 0;
+}
+form .actions{
+    margin: 4px 0 8px;
+}
+form .actions .loading{
+    float: left;
+}
+
 
 /**
  * --layout
  */
+html, body, #app{
+    height: 100%;
+}
 #app{
     position: relative;
     overflow: hidden;
@@ -71,6 +119,9 @@ h2{
     left: 0;
     text-align: center;
 }
+.loader.hidden{
+    display: none;
+}
 
 
 /**
@@ -85,7 +136,7 @@ h2{
     z-index: 15;
 }
 .app-banner .branding{
-    padding: 10px;
+    padding: 15px 10px;
     background: #f35353;
 }
 .app-banner .app-name{
@@ -121,10 +172,15 @@ h2{
 }
 .app-banner .util-nav ul li svg{
     width: auto;
-    height: 28px;
+    height: 24px;
 }
 .app-banner .util-nav ul li + li{
     border-left: 1px solid #444;
+}
+.user-email{
+    float: right;
+    color: #fff;
+    margin:2px  10px 0 10px;
 }
 
 
@@ -135,7 +191,7 @@ h2{
     padding: 16px 10px;
 }
 #app-main{
-    padding-right: 40px;
+    padding-right: 32px;
 }
 
 
@@ -149,68 +205,97 @@ h2{
 }
 .menu-trigger > span{
     display: block;
+    position: relative;
     width: 100%;
     height: 3px;
+    margin-bottom: 3px;
     background: #fff;
-    opacity: 1;
+    top: 0;
 
-    -webkit-transition: all .4s;
-         -o-transition: all .4s;
-            transition: all .4s;
+    -webkit-transform-origin: 50% 50%;
+       -moz-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+         -o-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
 }
-.menu-trigger > span + span{
-    margin-top: 3px;
+.menu-trigger > span.mid{
+    -webkit-transition: all .2s .2s;
+         -o-transition: all .2s .2s;
+            transition: all .2s .2s;
 }
-.menu-open .menu-trigger .mid{
+.menu-open .menu-trigger span.mid{
     opacity: 0;
+    visibility: hidden;
 }
-.menu-open .menu-trigger .top{
-    -webkit-transform: translateY(6px) rotate(-45deg);
-        -ms-transform: translateY(6px) rotate(-45deg);
-         -o-transform: translateY(6px) rotate(-45deg);
-            transform: translateY(6px) rotate(-45deg);
+.menu-trigger span.top,
+.menu-trigger span.bottom{
+    -webkit-transition: -webkit-transform .2s, top .2s .2s;
+         -o-transition: -o-transform .2s, top .2s .2s;
+            transition: transform .2s, top .2s .2s;
 }
-.menu-open .menu-trigger .bottom{
-    -webkit-transform: translateY(-6px) rotate(45deg);
-        -ms-transform: translateY(-6px) rotate(45deg);
-         -o-transform: translateY(-6px) rotate(45deg);
-            transform: translateY(-6px) rotate(45deg);
+.menu-open .menu-trigger span.top,
+.menu-open .menu-trigger span.bottom{
+    -webkit-transition: top .2s, -webkit-transform .2s .2s;
+         -o-transition: top .2s, -o-transform .2s .2s;
+            transition: top .2s, transform .2s .2s;
+
+    
 }
+.menu-open .menu-trigger span.top{
+    top: 6px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.menu-open .menu-trigger span.bottom{
+    top: -6px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+
+
+
+
 
 /**
  * --scroll
  */
-#slideout{
+.secondary{
     position: fixed;
     width: 260px;
     top: 0;
-    right: -220px;
+    right: -228px;
     bottom: 0;
-    text-align: center;
-    background: #ccc;
+    background: #eee;
     z-index: 11;
-    border-left: 1px solid #aaa;
+    border-left: 1px solid #ccc;
     -webkit-transition: right .4s;
          -o-transition: right .4s;
             transition: right .4s;
 }
-.menu-open #slideout{
+.menu-open .secondary{
     right: 0;
 }
 #side-banner{
     position: absolute;
     top: 0;
     left: 0;
-    width: 40px;
+    bottom: 0;
+    width: 32px;
+    border-right: 1px solid #ccc;
 }
 #scrollit{
     padding-top: 10px;
+    text-align: center;
 }
 #scrollit li{
     color: #404040;
     display: block;
-    width: 20px;
-    height: 20px;
+    padding: 5px 0;
     margin: 0 auto;
     position: relative;
     cursor: default;
@@ -220,8 +305,9 @@ h2{
     width: 20px;
     height: 20px;
     position: absolute;
-    left: 0;
-    top: -5px;
+    left: 50%;
+    top: 0;
+    margin-left: -10px;
     background: #aaa;
     border-radius: 50%;
     z-index: -1;
@@ -250,19 +336,53 @@ h2{
 /**
  * --nav
  */
-#slideout .menu{
-    padding: 0 20px 0 60px;
+.secondary-container{
+    margin-left: 32px;
+    overflow: hidden;
+}
+.secondary-slide{
+    width: 200%;
+    -webkit-transition: all .4s;
+         -o-transition: all .4s;
+            transition: all .4s;
+}
+.secondary-slide.reveal-login{
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+.secondary-slide:before,
+.secondary-slide:after{
+    content:"";
+    display: table;
+}
+.secondary-slide:after{
+    clear: both;
+}
+.secondary-slide .slide{
     text-align: right;
+    float: left;
+    width: 50%;
+    padding: 20px;
 }
-#slideout .menu li{
-    padding: 20px 0;
-    border-bottom: 1px solid #666;
+
+/* menu */
+.secondary .menu li{
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
 }
-#slideout .menu li a{
-    color: #fff;
+.secondary .menu li a{
+    color: #404040;
     text-decoration: none;
     font-size: 14px;
 }
+
+.logged-in #firebase-login,
+.anonymous #firebase-logout{
+    display: none;
+}
+
 
 
 
@@ -270,11 +390,11 @@ h2{
 /**
  * --lists
  */
-#beerlists .beer-list{
+.beer-list{
     display: none;
     padding: 8px;
 }
-#beerlists .beer-list.active{
+.beer-list.active{
     display: block;
 }
 
@@ -288,80 +408,109 @@ h2{
 
 
 
-/**
+/* ------------------------------------------
  * --beer list
- */
+ * ------------------------------------------ */
 
-.beer-list .brewery{
+
+.brewery{
     border: 1px solid #ccc;
+    margin-bottom: 8px;
 }
-.beer-list .brewery + .brewery{
-    margin-top: 8px;
+.brewery.inactive{
+    display: none;
 }
-.beer-list .breweryname{
+.brewery-header{
     font-weight: bold;
     padding: 14px 38px 14px 8px;
     position: relative;
 }
-.beer-list .breweryname span{
+.brewery-header span.expand,
+.brewery-header span.collapse{
     position: absolute;
     right: 20px;
     top: 12px;
     bottom: 0;
     font-size: 16px;
-}
-.beer-list .breweryname span.collapse{
     display: none;
+}
+.brewery-header span.collapse{   
     font-size: 20px;
 }
-.beer-list .brewery.active{
-    border-color: #C02020;
-    border-bottom: 4px solid #c02020;
-}
-.beer-list .brewery.active .breweryname{
-    background: #C02020;
-    color: #fff;
-}
-.beer-list .brewery.active .breweryname span.collapse{
-    display: block;
-}
-.beer-list .brewery.active .breweryname span.expand{
-    display: none;
-}
-
-.beer-list .beers{
+.beers{
     background: #f9f9f9;
-    display: none;
-    padding: 8px;
+    padding: 8px 8px 0 8px;
 }
-.beer-list .brewery.active .beers{
+.global .beers{
+    display: none;
+}
+.global .brewery.active .beers{
     display: block;
 }
 
 
+/* the global list */
+.global .brewery.active{
+    border-color: #999;
+    border-width: 2px;
+    border-top:4px solid #c02020;
+}
+.global .brewery.active .brewery-header{
+    background: #ccc;
+}
+.global .brewery-header span.expand,
+.global .brewery.active .brewery-header span.collapse{
+    display: block;
+}
+.global .brewery.active .brewery-header span.expand{
+    display: none;
+}
 
-/**
+
+/* user list */
+.hads .brewery,
+.wishlist .brewery{
+    border-top: 4px solid #c02020;
+    margin-bottom: 20px;
+}
+
+.hads .beer,
+.wishlist .beer{
+    display: none;
+}
+.hads .beer.rate-it,
+.wishlist .beer.wishlist{
+    display: block;
+}
+.wishlist .beer.wishlist.rate-it{
+    display: none;
+}
+
+
+
+
+
+/* ------------------------------------------
  * --beer
- */
-.beer-list .beer{
+ * ------------------------------------------ */
+
+.beer{
     position: relative;
     border: 1px solid #ccc;
     background: #fff;
     -webkit-box-shadow: 0px 1px 3px -2px rgba(0,0,0,.4);
     box-shadow: 0px 1px 3px -2px rgba(0,0,0,.4);
+    margin-bottom: 8px;
 }
-.beer-list .beer + .beer{
-    margin-top: 8px;
-}
-.beer-list .beer.wishlist .beerwrapper{
+.beer.wishlist .beerwrapper{
     border-left: 12px solid #d8a71d;
     background: #eee;
 }
-.beer-list .beer.rate-it .beerwrapper{
+.beer.rate-it .beerwrapper{
     border-left: 12px solid #446b00;
     background: #eee;
 }
-.beer-list .beer.wishlist .wishlist svg path{
+.beer.wishlist .wishlist svg path{
     fill:#d8a71d;
 }
 
@@ -452,30 +601,6 @@ h2{
     fill:#f35353;
 }
 
-
-
-/**
- * --authenticate
- */
-#authentication{
-    display: none;
-    padding: 20px;
-}
-
-#firebase-logout{
-    display: none;
-}
-
-
-/* logged out state */
-.anonymous #authentication{
-    display: block;
-}
-
-/* logged in state */
-.logged-in #firebase-logout{
-    display: block;
-}
 
 
 

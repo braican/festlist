@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/beerfest.css">
 
 </head>
-<body>
+<body class="global">
 
 <div class="loader">
     <div class="preloader">
@@ -26,12 +26,14 @@
     <div id="banner" class="app-banner">
         <div class="branding">
             <span class="app-name"><?php include_svg('logo'); ?></span>
-            <span class="user-info"></span>
+
             <div class="menu-trigger">
                 <span class="top"></span>
                 <span class="mid"></span>
                 <span class="bottom"></span>
             </div>
+
+            <span class="user-email"></span>
         </div>
 
         <div class="util-nav">
@@ -42,39 +44,40 @@
             </ul>
         </div>
     </div>
-    
-    <div id="authentication">
-        <div class="login">
-            <h2>Login</h2>
-            <form id="login-form">
-                <input type="text" name="user_email" placeholder="email address">
-                <input type="password" name="user_password" placeholder="password">
-                <button type="submit">Log in</button>
-            </form>
-        </div>
-        
-        <div class="register">
-            or create an account
-
-            <form id="register-form">
-                <input type="text" name="user_email" placeholder="email address">
-                <input type="password" name="user_password" placeholder="password">
-                <button type="submit">Register</button>
-            </form>
-        </div>
-    </div>
 
 
-    <div id="slideout">
+    <div id="drawer" class="secondary">
         <div id="side-banner">
             <ul id="scrollit"></ul>
         </div>
+        
 
-        <div class="menu">
-            <ul>
-                <li id="firebase-logout"><a href="#">Log Out</a></li>
-                <!-- <li id="clearall"><a href="#">Clear Data</a></li> -->
-            </ul>
+        <div class="secondary-container">
+            <div class="secondary-slide">
+                <div class="menu slide">
+                    <div id="user-info">Not logged in<br><small>You can still save data on your device.</small></div>
+                    <ul>
+                        <li id="firebase-login"><a href="#" class="js-trigger-prompt-login">Log In</a></li>
+                        <li id="firebase-logout"><a href="#">Log Out</a></li>
+                    </ul>
+                </div>
+
+                <div class="slide authentication">
+                    <div class="login">
+                        <h2>Login</h2>
+                        <form id="login-form">
+                            <input type="text" name="user_email" placeholder="email address">
+                            <input type="password" name="user_password" placeholder="password">
+                            <div class="actions">
+
+                                <button type="submit">Log in</button>
+                            </div>
+                            <a href="#" class="js-trigger-prompt-login">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -85,12 +88,10 @@
             <h2 data-list="wishlist">My Wishlist</h2>
         </header>
 
-        <div id="beerlists">
-            <ul id="beerlist" class="beer-list active" data-list="global"></ul>
-            <ul id="my-beerlist" class="beer-list" data-list="hads"></ul>
-            <ul id="my-wishlist" class="beer-list" data-list="wishlist"></ul>
-        </div>
+        <ul id="beerlist" class="beer-list active" data-list="global"></ul>
+        
     </div>
+
 </div>
 
 
