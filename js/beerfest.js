@@ -479,11 +479,12 @@
             email    : email,
             password : password
         }, function(error, authData) {
+            $t.removeClass('loading');
             if (error) {
                 console.log("Login Failed!", error);
-                $(t).find('.error').remove();
-                $(t).prepend('<div class="error">' + error.message + '</div>');
-                $('input[name="user_password"]', t).val('');
+                $t.find('.error').remove();
+                $t.prepend('<div class="error">' + error.message + '</div>');
+                $('input[name="user_password"]', $t).val('');
             } else {
                 console.log("Authenticated successfully with payload:", authData);
                 

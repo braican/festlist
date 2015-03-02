@@ -69,11 +69,24 @@
                             <input type="text" name="user_email" placeholder="email address">
                             <input type="password" name="user_password" placeholder="password">
                             <div class="actions">
-
+                                
+                                <div class="loader">
+                                    <div class="preloader">
+                                      <div class="preloader-container">
+                                        <span class="animated-preloader"></span>
+                                      </div>
+                                    </div>
+                                </div>
+                                
                                 <button type="submit">Log in</button>
                             </div>
                             <a href="#" class="js-trigger-prompt-login">Cancel</a>
                         </form>
+
+                        <div class="about">
+                            <p>This app in still in limited beta. For a user account, contact Nick Braica at <a href="mailto:nick.braica@gmail.com">nick.braica@gmail.com</a>.</p>
+                            <p>The app will save your data without a login; it will simply save to the device you are using.</p>
+                        </div>
                     </div>
                 </div>
             </div>
