@@ -97,6 +97,7 @@
         function addTheBeers(){
             
             $.each(beerdata, function(brewery, breweryData){
+
                 var markup      = '<li class="brewery" data-brewery="' + brewery + '"><div class="brewery-header"><span class="breweryname">' + decodeURIComponent(brewery) + '</span><span class="expand">+</span><span class="collapse">-</span></div><ul class="beers">',
                     firstLetter = brewery.charAt(0).match(/[a-z]/i) ? brewery.charAt(0) : "#";
 
@@ -129,7 +130,7 @@
                               '</div></li>'
                 });
                 markup += '</ul></li>';
-                $('#beerlist').append(markup);
+                $('#beerlist .beer-list').append(markup);
             });
 
             $('.loader').addClass('hidden');
@@ -252,6 +253,17 @@
 
 
 
+    /**
+     * renderMore 
+     * 
+     * render the more content
+     */
+    function renderMore(){
+    
+    }
+
+
+
 
     /* --------------------------------------------
      * --UX
@@ -278,13 +290,17 @@
      * @param event (click event)
      */
     function beerfestNav(event){
-        var $t   = $(this),
-            list = $t.data('list');
+        var $t     = $(this),
+            list   = $t.data('list'),
+            title  = $t.data('title'),
+            module = $t.data('module');
 
         $t.addClass('active').siblings('.active').removeClass('active');
-        $('#app-header h2[data-list="' + list + '"]').addClass('active').siblings('.active').removeClass('active');
+        $('#' + module).addClass('active').siblings('.active').removeClass('active');
 
-        $('body').removeClass('hads wishlist global').addClass(list);
+        $('#app-header h2').text(title);
+
+        $('body').removeClass('hads wishlist global more').addClass(list);
 
         if(list == 'hads'){
             renderHads();
@@ -292,6 +308,8 @@
             renderWishlist();
         } else if(list == 'global'){
             renderGlobal();
+        } else if(list == 'more'){
+            renderMore();
         }
     }
 
@@ -318,7 +336,7 @@
                 'scrollTop': 0
             });
         } else {
-            $('#beerlist > li').each(function(i, e){
+            $('#beerlist ul > li').each(function(i, e){
                 var breweryname = $(e).data('brewery').toLowerCase();
                 if(letter == breweryname.charAt(0).toLowerCase()){
                     $('body, html, #app-main').animate({
@@ -343,19 +361,6 @@
         $('body').toggleClass('menu-open');
     }
 
-
-
-    // /**
-    //  * promptLogin
-    //  * 
-    //  * slide open to reveal the login form
-    //  * @param event (object)
-    //  */
-    // function promptLogin(event){
-    //     event.preventDefault();
-
-    //     $(this).closest('.secondary-slide').toggleClass('reveal-login');
-    // }
 
 
 
@@ -385,6 +390,12 @@
         var $brewery = $(this).closest('.brewery').toggleClass('active');
             
         $brewery.siblings().removeClass('active');
+
+        if($('.brewery.active').length == 0){
+            $('#beerlist').removeClass('brewery-open');
+        } else {
+            $('#beerlist').addClass('brewery-open');
+        }
 
         $('html,body').animate({
             scrollTop: $brewery.offset().top - headerHeight - 8
@@ -677,8 +688,6 @@
 
         $('#scrollit').on('click', 'li', scrollToLetter);
 
-        // $('#drawer').on('click', '.js-trigger-prompt-login', promptLogin);
-
 
         // -------------------------------
         // beerlist stuff
@@ -709,7 +718,7 @@
      *  then render the list on the app
      */
     BEERFEST.getBeerList = function(){
-        $('#beerlist, #scrollit').empty();
+        $('#beerlist ul, #scrollit').empty();
         beerfest_data.child('beerfests/' + BEERFEST.name + '/beerlist').once("value", renderBeers);
     };
 

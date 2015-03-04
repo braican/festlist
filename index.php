@@ -28,9 +28,12 @@
             <span class="app-name"><?php include_svg('logo'); ?></span>
 
             <div class="menu-trigger">
-                <span class="top"></span>
-                <span class="mid"></span>
-                <span class="bottom"></span>
+                <div class="icon-user">
+                    <?php include_svg('icon-user'); ?>
+                </div>
+                <div class="icon-close">
+                    <?php include_svg('icon-close'); ?>
+                </div>
             </div>
 
             <span class="user-email"></span>
@@ -38,9 +41,10 @@
 
         <div class="util-nav">
             <ul>
-                <li class="active" data-list="global"><?php include_svg('globe'); ?></li>
-                <li data-list="hads"><?php include_svg('user'); ?></li>
-                <li data-list="wishlist"><?php include_svg('star'); ?></li>
+                <li class="active" data-list="global" data-title="Beer List" data-module="beerlist"><?php include_svg('icon-bottles'); ?></li>
+                <li data-list="hads" data-title="My Hads" data-module="beerlist"><?php include_svg('icon-hads'); ?></li>
+                <li data-list="wishlist" data-title="My Wishlist" data-module="beerlist"><?php include_svg('icon-star'); ?></li>
+                <!-- <li data-list="more" data-title="More" data-module="more-content"><?php include_svg('icon-more'); ?></li> -->
             </ul>
         </div>
     </div>
@@ -85,7 +89,6 @@
 
 
                 <ul>
-                    <!-- <li id="firebase-login"><a href="#" class="js-trigger-prompt-login">Log In</a></li> -->
                     <li id="firebase-logout"><a href="#">Log Out</a></li>
                 </ul>
             </div>
@@ -95,12 +98,18 @@
 
     <div id="app-main">
         <header id="app-header">
-            <h2 class="active" data-list="global">Global Beer List</h2>
-            <h2 data-list="hads">My Hads</h2>
-            <h2 data-list="wishlist">My Wishlist</h2>
+            <h2>Global Beer List</h2>
         </header>
 
-        <ul id="beerlist" class="beer-list active" data-list="global"></ul>
+        <div class="app-main-container">
+            <div id="beerlist" class="app-content active">
+                <ul class="beer-list"></ul>    
+            </div>
+
+            <!-- <div id="more-content" class="app-content">
+                coming soon
+            </div> -->
+        </div>
         
     </div>
 

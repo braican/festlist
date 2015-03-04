@@ -35,7 +35,7 @@ h1{
 h2{
     font-size: 16px;
     margin: 0;
-    color: #f35353;
+    color: #c92d2d;
 }
 
 a{
@@ -57,7 +57,7 @@ input[type="password"]{
     border-radius: 0;
 }
 button[type="submit"]{
-    background: #f35353;
+    background: #c92d2d;
     cursor: pointer;
     border: 0;
     border-radius: 0;
@@ -73,7 +73,7 @@ button[type="submit"]:focus{
     outline: none;
 }
 form .error{
-    color: #f35353;
+    color: #c92d2d;
     margin: 6px 0;
 }
 form .actions{
@@ -89,11 +89,11 @@ form .actions .loading{
  * --layout
  */
 html, body, #app{
-    min-height: 100%;
+    height: 100%;
 }
 #app{
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     z-index: 2;
 }
 .beer-list .flex-item{
@@ -138,7 +138,7 @@ html, body, #app{
 }
 .app-banner .branding{
     padding: 15px 10px;
-    background: #f35353;
+    background: #c92d2d;
 }
 .app-banner .app-name{
     width: 80px;
@@ -150,6 +150,7 @@ html, body, #app{
     height: 100%;
 }
 .app-banner .util-nav ul{
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -165,13 +166,13 @@ html, body, #app{
     cursor: pointer;
     flex: 1 auto;
     padding: 6px;
-    background: #222;
+    background: #656565;
 }
 .app-banner .util-nav ul li.active{
-    background: #666;
+    background: #444;
 }
 .app-banner .util-nav ul li.active svg path{
-    fill:#222;
+    fill:#666;
 }
 .app-banner .util-nav ul li svg{
     width: auto;
@@ -205,58 +206,55 @@ html, body, #app{
 .menu-trigger{
     float: right;
     width: 20px;
-}
-.menu-trigger > span{
-    display: block;
+    height: 20px;
+    margin-top: -3px;
     position: relative;
+}
+.menu-trigger > div{
+    height: 100%;
     width: 100%;
-    height: 3px;
-    margin-bottom: 3px;
-    background: #fff;
+    position: absolute;
     top: 0;
-
-    -webkit-transform-origin: 50% 50%;
-       -moz-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-         -o-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+    left: 0;
+    -webkit-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
 }
-.menu-trigger > span.mid{
-    -webkit-transition: all .2s .2s;
-         -o-transition: all .2s .2s;
-            transition: all .2s .2s;
-}
-.menu-open .menu-trigger span.mid{
+.menu-trigger .icon-close{
     opacity: 0;
     visibility: hidden;
+    -webkit-transform: rotate(359deg);
+        -ms-transform: rotate(359deg);
+         -o-transform: rotate(359deg);
+            transform: rotate(359deg);
 }
-.menu-trigger span.top,
-.menu-trigger span.bottom{
-    -webkit-transition: -webkit-transform .2s, top .2s .2s;
-         -o-transition: -o-transform .2s, top .2s .2s;
-            transition: transform .2s, top .2s .2s;
+.menu-trigger .icon-user{
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
 }
-.menu-open .menu-trigger span.top,
-.menu-open .menu-trigger span.bottom{
-    -webkit-transition: top .2s, -webkit-transform .2s .2s;
-         -o-transition: top .2s, -o-transform .2s .2s;
-            transition: top .2s, transform .2s .2s;
+.menu-trigger svg{
+    height: 100%;
+}
 
-    
+.menu-open .icon-user{
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: rotate(359deg);
+        -ms-transform: rotate(359deg);
+         -o-transform: rotate(359deg);
+            transform: rotate(359deg);
 }
-.menu-open .menu-trigger span.top{
-    top: 6px;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-}
-.menu-open .menu-trigger span.bottom{
-    top: -6px;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+.menu-open .icon-close{
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+            transform: rotate(0deg);
 }
 
 
@@ -390,21 +388,13 @@ html, body, #app{
 /**
  * --lists
  */
-.beer-list{
+.app-content{
     display: none;
     padding: 8px;
 }
-.beer-list.active{
+.app-content.active{
     display: block;
 }
-
-#app-header h2{
-    display: none;
-}
-#app-header h2.active{
-    display: block;
-}
-
 
 
 
@@ -416,6 +406,8 @@ html, body, #app{
 .brewery{
     border: 1px solid #ccc;
     margin-bottom: 8px;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.2);
+    box-shadow: 0 1px 5px rgba(0,0,0,.2);
 }
 .brewery.inactive{
     display: none;
@@ -438,7 +430,6 @@ html, body, #app{
     font-size: 20px;
 }
 .beers{
-    background: #f9f9f9;
     padding: 8px 8px 0 8px;
 }
 .global .beers{
@@ -454,12 +445,18 @@ html, body, #app{
     cursor: pointer;
 }
 .global .brewery.active{
-    border-color: #999;
-    border-width: 2px;
     border-top:4px solid #c02020;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.5);
+    box-shadow: 0 1px 5px rgba(0,0,0,.5);
+    background: #ddd;
+    border-left: 0;
+    border-right: 0;
 }
-.global .brewery.active .brewery-header{
-    background: #ccc;
+.global .brewery-open .brewery{
+    opacity: .5;
+}
+.global .brewery-open .brewery.active{
+    opacity: 1;
 }
 .global .brewery-header span.expand,
 .global .brewery.active .brewery-header span.collapse{
@@ -501,17 +498,15 @@ html, body, #app{
     position: relative;
     border: 1px solid #ccc;
     background: #fff;
-    -webkit-box-shadow: 0px 1px 3px -2px rgba(0,0,0,.4);
-    box-shadow: 0px 1px 3px -2px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+    box-shadow: 0px 1px 4px rgba(0,0,0,.3);
     margin-bottom: 8px;
 }
 .beer.wishlist .beerwrapper{
     border-left: 12px solid #d8a71d;
-    background: #eee;
 }
 .beer.rate-it .beerwrapper{
     border-left: 12px solid #446b00;
-    background: #eee;
 }
 .beer.wishlist .wishlist svg path{
     fill:#d8a71d;
@@ -601,7 +596,7 @@ html, body, #app{
     display: block;
 }
 .beer-rating > span.selected svg path{
-    fill:#f35353;
+    fill:#c92d2d;
 }
 
 
@@ -731,7 +726,7 @@ html, body, #app{
     position: absolute;
     top: 0;
     left: 0;
-    background: #f35353;
+    background: #c92d2d;
     border-radius: 50em;
 }
 .preloader .preloader-container .animated-preloader:after {
@@ -758,7 +753,7 @@ html, body, #app{
     left: 0;
     z-index: 10;
     border-radius: 50em;
-    background: #f35353;
+    background: #c92d2d;
     -webkit-animation: preloader-inside-red 1s ease-in-out infinite;
     -ms-animation: preloader-inside-red 1s ease-in-out infinite;
     animation: preloader-inside-red 1s ease-in-out infinite;
