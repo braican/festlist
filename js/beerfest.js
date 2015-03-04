@@ -48,6 +48,19 @@
         }
         
     }
+
+    /**
+     * getUrlParam
+     *
+     * Utility function to snag a query string value when passed the parameter
+     */
+    function getUrlParam(name) {
+        var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (!results) {
+            return 0;
+        }
+        return results[1] || 0;
+    }
     
 
 
@@ -245,6 +258,18 @@
      * -------------------------------------------- */
 
 
+    /**
+     * promptSpecialUser 
+     * 
+     * does some things for the user
+     */
+    function promptSpecialUser(){
+        if(!uid){
+            $('.not-special').after('<p class="special-user-register"><a href="#" class="user-register">Register</a></p>').remove();
+        }
+    }
+
+
 
     /**
      * beerfestNav 
@@ -320,17 +345,17 @@
 
 
 
-    /**
-     * promptLogin
-     * 
-     * slide open to reveal the login form
-     * @param event (object)
-     */
-    function promptLogin(event){
-        event.preventDefault();
+    // /**
+    //  * promptLogin
+    //  * 
+    //  * slide open to reveal the login form
+    //  * @param event (object)
+    //  */
+    // function promptLogin(event){
+    //     event.preventDefault();
 
-        $(this).closest('.secondary-slide').toggleClass('reveal-login');
-    }
+    //     $(this).closest('.secondary-slide').toggleClass('reveal-login');
+    // }
 
 
 
@@ -462,11 +487,11 @@
     //
 
     /**
-     * submitLogin 
+     * submitLoginOrRegister 
      * 
-     * submit the login form
+     * submit the form to prompt the login OR the register
      */
-    function submitLogin(event){
+    function submitLoginOrRegister(event){
         event.preventDefault();
 
         var $t       = $(this),
@@ -475,16 +500,31 @@
 
         $t.addClass('loading');
 
+        if($t.hasClass('is-register-form')){
+            doRegister($t, email, password);
+        } else {
+            doLogin($t, email, password);
+        }
+    }
+
+
+    /**
+     * doLogin 
+     * 
+     * do the login
+     * @params $form, email, password
+     */
+    function doLogin($form, email, password){
         beerfest_data.authWithPassword({
             email    : email,
             password : password
         }, function(error, authData) {
-            $t.removeClass('loading');
+            $form.removeClass('loading');
             if (error) {
                 console.log("Login Failed!", error);
-                $t.find('.error').remove();
-                $t.prepend('<div class="error">' + error.message + '</div>');
-                $('input[name="user_password"]', $t).val('');
+                $form.find('.error').remove();
+                $('h2', $form).after('<div class="error">' + error.message + '</div>');
+                $('input[name="user_password"]', $form).val('');
             } else {
                 console.log("Authenticated successfully with payload:", authData);
                 
@@ -498,11 +538,41 @@
 
                 $('.util-nav li[data-list="global"]').trigger('click');
 
-                $('input', $t).val('');
-                $t.removeClass('loading');
+                $('input', $form).val('');
+                $('h2, button', $form).text("Log In");
+                $('.error', $form).remove();
             }
         });
     }
+
+
+    /**
+     * doRegister 
+     * 
+     * do the register
+     * @params $form, email, password
+     */
+    function doRegister($form, email, password){
+        beerfest_data.createUser({
+            email    : email,
+            password : password
+        }, function(error, userData) {
+            $form.removeClass('loading');
+            if (error) {
+                console.log("Error creating user:", error);
+                $form.find('.error').remove();
+                $('h2', $form).after('<div class="error">' + error.message + '</div>');
+                $('input[name="user_password"]', $form).val('');
+            } else {
+                console.log("Successfully created user account with uid:", userData.uid);
+                
+                $form.removeClass('is-register-form').trigger('submit');
+
+            }
+        });
+    }
+
+
 
     /**
      * showWelcome 
@@ -513,6 +583,34 @@
     function showWelcome(email){
         $('#user-info').text('Welcome, ' + email);
         $('.user-email').text(email);
+    }
+
+
+    /**
+     * promptUserRegister 
+     * 
+     * show the registration form
+     * @param event
+     */
+    function promptUserRegister(event){
+        event.preventDefault();
+
+        var $form      = $('#login-form').toggleClass('is-register-form'),
+            formText   = $form.hasClass('is-register-form') ? 'Register' : 'Log In',
+            buttonText = $form.hasClass('is-register-form') ? 'Log In' : 'Register';
+
+        $('.user-register').text(buttonText);
+
+        $form.css({
+            'transform': 'translateX(120%)'
+        });
+
+        setTimeout(function(){
+            $('h2, button', $form).text(formText);
+            $form.css({
+                'transform': 'translateX(0)'
+            });
+        }, 400);
     }
 
 
@@ -551,13 +649,22 @@
         $('body').addClass('anonymous').removeClass('logged-in menu-open');
         $('#user-info').html('Not logged in<br><small>You can still save data on your device.</small>');
         $('.user-email').text('');
+        promptSpecialUser();
         BEERFEST.getBeerList();
     }
 
 
     BEERFEST.init = function(festName){
 
+        var isSpecialUser = getUrlParam('sp-user');
+
+        if(isSpecialUser){
+            promptSpecialUser();
+        }
+
         $(document).on('click', clearAllClicks);
+
+        
 
         // -------------------------------
         // navigation
@@ -570,7 +677,7 @@
 
         $('#scrollit').on('click', 'li', scrollToLetter);
 
-        $('.js-trigger-prompt-login').on('click', promptLogin);
+        // $('#drawer').on('click', '.js-trigger-prompt-login', promptLogin);
 
 
         // -------------------------------
@@ -588,7 +695,9 @@
         // authentication
         //
 
-        $('#login-form').on('submit', submitLogin);
+        $('#login-form').on('submit', submitLoginOrRegister);
+
+        $('.authentication').on('click', '.user-register', promptUserRegister);
     }
 
 
@@ -613,9 +722,6 @@
 
         adjustAppLayout();
 
-        // initialize the drinking! 
-        BEERFEST.init();
-
         if(loginData){
             $('body').addClass('logged-in');
             
@@ -628,6 +734,9 @@
         } else {
             $('body').addClass('anonymous');
         }
+
+        // initialize the drinking! 
+        BEERFEST.init();
 
         BEERFEST.getBeerList();
     });

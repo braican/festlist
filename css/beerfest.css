@@ -348,32 +348,13 @@ html, body, #app{
     margin-left: 32px;
     overflow: hidden;
 }
-.secondary-slide{
-    width: 200%;
-    -webkit-transition: all .4s;
-         -o-transition: all .4s;
-            transition: all .4s;
-}
-.secondary-slide.reveal-login{
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-         -o-transform: translateX(-50%);
-            transform: translateX(-50%);
-}
-.secondary-slide:before,
-.secondary-slide:after{
-    content:"";
-    display: table;
-}
-.secondary-slide:after{
-    clear: both;
-}
-.secondary-slide .slide{
-    text-align: right;
-    float: left;
-    width: 50%;
+.secondary-container .slide{
     padding: 20px;
 }
+.secondary-container .authentication{
+    margin-top: 20px;
+}
+
 
 /* menu */
 .secondary .menu li{
@@ -386,9 +367,20 @@ html, body, #app{
     font-size: 14px;
 }
 
-.logged-in #firebase-login,
+.logged-in .authentication,
 .anonymous #firebase-logout{
     display: none;
+}
+
+
+
+/**
+ * --authentication forms
+ */
+#login-form{
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
 }
 
 
