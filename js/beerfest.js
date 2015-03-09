@@ -209,7 +209,8 @@
      * reset to the global list
      */
     function renderGlobal(){
-        $('#beerlist .brewery').removeClass('inactive');
+        $('#beerlist .brewery').removeClass('inactive active');
+        $('#beerlist .beers').removeClass('active');
     }
 
 
@@ -300,7 +301,9 @@
 
         $('#app-header h2').text(title);
 
-        $('body').removeClass('hads wishlist global more').addClass(list);
+        $('body').removeClass('hads wishlist global more search search-for-brewery search-for-beer').addClass(list);
+
+        $('#input-search').val('');
 
         if(list == 'hads'){
             renderHads();
@@ -310,6 +313,8 @@
             renderGlobal();
         } else if(list == 'more'){
             renderMore();
+        } else if(list == 'search'){
+            $('body').addClass( 'search-for-' + $('.search-nav li.active').data('search') );
         }
     }
 
@@ -332,15 +337,16 @@
         }, 200);
 
         if(letter == "#"){
-            $('body, html, #app-main').animate({
-                'scrollTop': 0
+            $('#app').animate({
+                scrollTop: 0
             });
         } else {
-            $('#beerlist ul > li').each(function(i, e){
+            $('#beerlist .beer-list > li').each(function(i, e){
                 var breweryname = $(e).data('brewery').toLowerCase();
+
                 if(letter == breweryname.charAt(0).toLowerCase()){
-                    $('body, html, #app-main').animate({
-                        'scrollTop': $(e).offset().top - headerHeight - 8
+                    $('#app').animate({
+                        scrollTop: $(e).position().top - headerHeight - 8
                     });
                     return false;
                 }
@@ -397,8 +403,8 @@
             $('#beerlist').addClass('brewery-open');
         }
 
-        $('html,body').animate({
-            scrollTop: $brewery.offset().top - headerHeight - 8
+        $('#app').animate({
+            scrollTop: $brewery.position().top - headerHeight - 8
         });
     }
 
@@ -489,6 +495,71 @@
         }
     }
 
+
+    // -------------------------------
+    // --search
+    //
+
+    /**
+     * changeSearchParams 
+     * 
+     * switch between searching for a beer or a brewery
+     * @param event
+     */
+    function changeSearchParams(event){
+        event.preventDefault();
+
+        var placeholder = $(this).data('placeholder'),
+            searchable  = $(this).data('search');
+
+        $(this).addClass('active').siblings().removeClass('active');
+        $('#input-search').attr('placeholder', placeholder).data('search', searchable);
+        $('body').removeClass('search-for-brewery search-for-beer').addClass('search-for-' + searchable);
+
+        $('#input-search').trigger('keyup');
+    }
+
+
+    /**
+     * searchForBeer 
+     * 
+     * search for beer by typing in the input
+     * @param event
+     */
+    function searchForBeer(event){
+        event.preventDefault();
+
+        var searchable = $(this).data('search');
+            query      = $(this).val().toLowerCase();
+
+        if(query){
+            $('#beerlist .brewery').each(function(i, brewery){
+                var $brewery = $(brewery).removeClass('active');
+
+                if(searchable == 'beer'){
+                    $('.beer', brewery).each(function(ii, beer){
+                        var $beer    = $(beer).removeClass('active'),
+                            beername = $('.beer-name', beer).text().toLowerCase();
+
+                        if(beername.indexOf(query) > -1){
+                            $brewery.addClass('active');
+                            $beer.addClass('active');
+                        }
+                    });    
+                } else {
+                    var brewery = $('.breweryname', $brewery).text().toLowerCase();
+
+                    if(brewery.indexOf(query) > -1){
+                        $brewery.addClass('active');
+                    }
+                }
+            });
+        } else {
+            $('#beerlist .brewery, #beerlist .beer').removeClass('active');
+        }
+
+        
+    }
 
 
 
@@ -701,6 +772,15 @@
 
 
         // -------------------------------
+        // search
+        //
+
+        $('.search-nav li').on('click', changeSearchParams);
+
+        $('#input-search').on('keyup', searchForBeer);
+
+
+        // -------------------------------
         // authentication
         //
 
@@ -718,7 +798,7 @@
      *  then render the list on the app
      */
     BEERFEST.getBeerList = function(){
-        $('#beerlist ul, #scrollit').empty();
+        $('#beerlist .beer-list, #scrollit').empty();
         beerfest_data.child('beerfests/' + BEERFEST.name + '/beerlist').once("value", renderBeers);
     };
 

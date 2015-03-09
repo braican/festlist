@@ -44,7 +44,8 @@
                 <li class="active" data-list="global" data-title="Beer List" data-module="beerlist"><?php include_svg('icon-bottles'); ?></li>
                 <li data-list="hads" data-title="My Hads" data-module="beerlist"><?php include_svg('icon-hads'); ?></li>
                 <li data-list="wishlist" data-title="My Wishlist" data-module="beerlist"><?php include_svg('icon-star'); ?></li>
-                <!-- <li data-list="more" data-title="More" data-module="more-content"><?php include_svg('icon-more'); ?></li> -->
+                <li data-list="search" data-title="Search" data-module="beerlist"><?php include_svg('icon-search'); ?></li>
+                <li data-list="more" data-title="More" data-module="more-content"><?php include_svg('icon-more'); ?></li>
             </ul>
         </div>
     </div>
@@ -103,12 +104,21 @@
 
         <div class="app-main-container">
             <div id="beerlist" class="app-content active">
+                <div class="search-header">
+                    <ul class="search-nav app-cf">
+                        <li class="active" data-search="beer" data-placeholder="Search for a beer">Beer</li>
+                        <li data-search="brewery" data-placeholder="Search for a brewery">Brewery</li>
+                    </ul>
+                    <input data-search="beer" type="text" id="input-search" placeholder="Search for a beer">
+                </div>
                 <ul class="beer-list"></ul>    
             </div>
 
-            <!-- <div id="more-content" class="app-content">
-                coming soon
-            </div> -->
+            <div id="more-content" class="app-content">
+                <ul class="more-content">
+                    <li>Add A Beer</li>
+                </ul>
+            </div>
         </div>
         
     </div>

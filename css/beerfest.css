@@ -196,6 +196,7 @@ html, body, #app{
 }
 #app-main{
     padding-right: 32px;
+    position: relative;
 }
 
 
@@ -402,7 +403,6 @@ html, body, #app{
  * --beer list
  * ------------------------------------------ */
 
-
 .brewery{
     border: 1px solid #ccc;
     margin-bottom: 8px;
@@ -467,6 +467,7 @@ html, body, #app{
 }
 
 
+
 /* user list */
 .hads .brewery,
 .wishlist .brewery{
@@ -487,7 +488,64 @@ html, body, #app{
 }
 
 
+/* search */
+.search .brewery{
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-top: 40px;
+    display: none;
+}
+.search .brewery-header{
+    font-size: 16px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.search .beer{
+    background: #f6f6f6;
+    display: none;
+}
+.search .brewery.active{
+    display: block;
+}
+.search .beer.active{
+    display: block;
+}
 
+
+
+
+
+/**
+ * --search
+ */
+
+.search-header{
+    display: none;
+}
+.search .search-header{
+    display: block;
+}
+
+.search-nav{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.search-nav li{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+}
+.search-nav li.active{
+    background: #656565;
+    color: #fff;
+}
+.search.search-for-brewery .beer{
+    display: block;
+}
 
 
 /* ------------------------------------------
@@ -602,12 +660,34 @@ html, body, #app{
 
 
 
+
+/* ==============================================================
+   --util
+   ============================================================== */
+
+.app-cf:after,
+.app-cf:before{
+    content: "";
+    display: table;
+}
+.app-cf:after{
+    clear: both;
+}
+
+
+
+/* ==============================================================
+   --mediaqueries
+   ============================================================== */
+
 @media screen and (min-width: 820px){
     .beer-info .beer-name,
     .beer-info .beer-extra{
         flex: 1 50%;
     }
 }
+
+
 
 
 
