@@ -112,7 +112,13 @@
                         <li class="active" data-search="beer" data-placeholder="Search for a beer">Beer</li>
                         <li data-search="brewery" data-placeholder="Search for a brewery">Brewery</li>
                     </ul>
-                    <input data-search="beer" type="text" id="input-search" placeholder="Search for a beer">
+                    <div class="input-container">
+                        <span class="clear-input"><?php include_svg('icon-remove'); ?></span>
+                        
+                        <div class="input-wrapper">
+                            <input data-search="beer" type="text" id="input-search" placeholder="Search for a beer">
+                        </div>
+                    </div>
                 </div>
                 <ul class="beer-list"></ul>    
             </div>

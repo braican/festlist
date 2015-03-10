@@ -534,6 +534,7 @@
             query      = $(this).val().toLowerCase();
 
         if(query){
+            $('.input-container').addClass('active');
             $('#beerlist .brewery').each(function(i, brewery){
                 var $brewery = $(brewery).removeClass('active');
 
@@ -556,10 +557,21 @@
                 }
             });
         } else {
+            $('.input-container').removeClass('active');
             $('#beerlist .brewery, #beerlist .beer').removeClass('active');
         }
+    }
 
-        
+    /**
+     * clearSearchInput 
+     * 
+     * clear the search textfield
+     * @param event
+     */
+    function clearSearchInput(event){
+        event.preventDefault();
+
+        $(this).siblings().find('input').val('').trigger('keyup');
     }
 
 
@@ -779,6 +791,8 @@
         $('.search-nav li').on('click', changeSearchParams);
 
         $('#input-search').on('keyup', searchForBeer);
+
+        $('.clear-input').on('click', clearSearchInput);
 
 
         // -------------------------------
