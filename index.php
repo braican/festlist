@@ -92,6 +92,9 @@
                 <ul>
                     <li id="firebase-logout"><a href="#">Log Out</a></li>
                 </ul>
+
+
+                <div class="copyright">All data pulled from <a href="http://www.beeradvocate.com" target="_blank">BeerAdvocate.com</a></div>
             </div>
 
         </div>

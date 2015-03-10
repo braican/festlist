@@ -353,6 +353,9 @@ html, body, #app{
 .secondary-container .authentication{
     margin-top: 20px;
 }
+.secondary-container .copyright{
+    padding-top: 20px;
+}
 
 
 /* menu */
