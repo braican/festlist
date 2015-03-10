@@ -152,7 +152,10 @@
                 <div class="more-element">
                     <div class="option">Spin the Wheel <span class="expand">+</span><span class="collapse">-</span></div>
                     <div class="content">
-                        Spin DAT WHEEL
+                        Don't know what to try next?<br>
+                        <button class="random-button" id="spin-the-wheel">Find a beer</button>
+
+                        <div class="random-result"></div>
                     </div>
                 </div>
                 

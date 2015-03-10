@@ -821,6 +821,17 @@ html, body, #app{
 }
 
 
+/**
+ * --random
+ */
+.random-button{
+    margin-top: 10px;
+}
+.random-result{
+    margin-top: 10px;
+    font-size: 14px;
+}
+
 
 
 /* ==============================================================

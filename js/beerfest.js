@@ -372,7 +372,7 @@
 
                 if(letter == breweryname.charAt(0).toLowerCase()){
                     $('#app').animate({
-                        scrollTop: $(e).position().top - headerHeight - 8
+                        scrollTop: $(e).position().top - headerHeight - 16
                     });
                     return false;
                 }
@@ -791,17 +791,19 @@
          */
         function checkIfDupe(){
             if(FIREBASE_DATA[brewery] && FIREBASE_DATA[brewery].beers){
-                var isDupe = false;
+                var isDupe = false,
+                    index  = 0;
                 
-                $.each(FIREBASE_DATA[brewery].beers, function(index, beerObj) {
+                $.each(FIREBASE_DATA[brewery].beers, function(i, beerObj) {
                     if(beerObj.name == beer){
                         isDupe = true;
                     }
+                    index = i;
                 });
 
-                FIREBASE_DATA[brewery].beers.push({
+                FIREBASE_DATA[brewery].beers[index + 1] = {
                     name: beer
-                });
+                };
                 
                 return isDupe;
             } else {
@@ -817,9 +819,6 @@
         }
     }
 
-    BEERFEST.getData = function(){
-        console.log(FIREBASE_DATA);
-    }
 
 
     /**
@@ -841,6 +840,10 @@
 
         $('.rate', $beerDiv).trigger('click');
         $beerDiv.addClass('highlighted');
+
+        $('#app').animate({
+            scrollTop: $beerDiv.position().top - headerHeight - 8
+        });
     }
 
 
@@ -1084,6 +1087,51 @@
         $('.add-new-beer').on('submit', addNewBeer);
         $('.change-brewery').on('click', changeBrewery);
         $('.add-new-beer').on('click', '.rate-new-beer', rateNewBeer);
+
+        // random
+        $('#spin-the-wheel').on('click', getRandomBeer);
+    }
+
+    /**
+     * getRandomBeer 
+     * 
+     * choose a beer at random
+     * @param event
+     */
+    function getRandomBeer(event){
+        event.preventDefault();
+
+        var randomBrewery = pickRandomProperty(FIREBASE_DATA),
+            beerArray     = FIREBASE_DATA[randomBrewery].beers
+            randomBeer    = beerArray[Math.floor(Math.random() * beerArray.length)];
+
+        $('.random-result').empty().append('Head over to ' + BEERFEST.decodeValue(randomBrewery) + ' and try their ' + randomBeer.name);
+        
+    }
+
+
+    /**
+     * pickRandomProperty 
+     * 
+     * pick a property from an object at random
+     * @param obj - the object form which to grab a rando
+     */
+    function pickRandomProperty(obj){
+        var result,
+            count = 0;
+        for (var prop in obj){
+            if (Math.random() < 1/++count){
+               result = prop;
+            }
+        }
+        return result;
+    }
+
+
+
+
+    BEERFEST.getBeers = function(){
+        console.log(FIREBASE_DATA);
     }
 
 
