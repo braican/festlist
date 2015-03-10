@@ -14,6 +14,9 @@
 
     // firebase data
     var beerfest_data = new Firebase("https://braican-beerfest.firebaseio.com/"),
+        FIREBASE_DATA,
+        BREWERY_LIST,
+        USER_EMAIL,
         uid,
         headerHeight;
 
@@ -82,6 +85,8 @@
             userData,
             currentLetter;
 
+        $('#beerlist .beer-list').empty();
+
         $('.loader').removeClass('hidden');
 
         if(getUserData){
@@ -93,13 +98,19 @@
             addTheBeers();
         }
 
+        FIREBASE_DATA = beerdata;
+
+        BREWERY_LIST = $.map(beerdata, function(beers, brewery){
+            return brewery;
+        });
+
 
         function addTheBeers(){
             
             $.each(beerdata, function(brewery, breweryData){
 
                 var markup      = '<li class="brewery" data-brewery="' + brewery + '"><div class="brewery-header"><span class="breweryname">' + decodeURIComponent(brewery) + '</span><span class="expand">+</span><span class="collapse">-</span></div><ul class="beers">',
-                    firstLetter = brewery.charAt(0).match(/[a-z]/i) ? brewery.charAt(0) : "#";
+                    firstLetter = brewery.toLowerCase().charAt(0).match(/[a-z]/i) ? brewery.toLowerCase().charAt(0) : "#";
 
                 if(firstLetter !== currentLetter && navArray.indexOf(firstLetter) === -1 ){
                     navArray.push(firstLetter);
@@ -121,11 +132,22 @@
                                 '<div class="beer-rating">' + getRatingDropdownMarkup(rating) + '</div>' +
                                 '<div class="beer-info flex-item">' +
                                     '<div class="beer-name">' + beer + '</div>' +
-                                    '<div class="beer-extra flex-item">' +
-                                        '<div class="beer-style">' + beerObj.style + '</div>' +
-                                        '<div class="beer-abv"><em>ABV:</em><br> ' + beerObj.abv + '</div>' +
-                                        '<div class="beer-score"><em>BA Score:</em><br> ' + beerObj.ba_score + '</div>' +
-                                    '</div>' +
+                                    '<div class="beer-extra flex-item">';
+
+                    if(beerObj.style){
+                        markup += '<div class="beer-style">' + beerObj.style + '</div>';
+                    }
+                    if(beerObj.abv){
+                        markup += '<div class="beer-abv"><em>ABV:</em><br> ' + beerObj.abv + '</div>';
+                    }
+                    if(beerObj.ba_score){
+                        markup += '<div class="beer-score"><em>BA Score:</em><br> ' + beerObj.ba_score + '</div>';
+                    }
+                    if(beerObj.addedBy){
+                        markup += '<div class="beer-adder"><em>Added by:</em> ' + beerObj.addedBy + '</div>';
+                    }
+
+                    markup +=       '</div>' +
                                 '</div>' +
                               '</div></li>'
                 });
@@ -136,7 +158,7 @@
             $('.loader').addClass('hidden');
 
             $.each(navArray, function(index, character){
-                $('#scrollit').append('<li data-char="' + character + '">' + character + '</li>');
+                $('#scrollit').append('<li data-char="' + character.toUpperCase() + '">' + character.toUpperCase() + '</li>');
             });
         }
     }
@@ -304,6 +326,8 @@
 
         $('body').removeClass('hads wishlist global more search search-for-brewery search-for-beer').addClass(list);
 
+        $('.more-element.active').removeClass('active');
+
         $('#input-search').val('');
 
         if(list == 'hads'){
@@ -316,6 +340,7 @@
             renderMore();
         } else if(list == 'search'){
             $('body').addClass( 'search-for-' + $('.search-nav li.active').data('search') );
+            $('.brewery.active').removeClass('active');
         }
     }
 
@@ -383,6 +408,9 @@
      * @param event: the object from the click
      */
     function clearAllClicks(event){
+        if(!$(event.target).hasClass('rate-new-beer')){
+            $('.beer').removeClass('highlighted');
+        }
     }   
 
 
@@ -467,7 +495,7 @@
         event.stopPropagation();
 
         var $t         = $(this),
-            $parent    = $t.closest('.beer'),
+            $parent    = $t.closest('.beer').removeClass('highlighted'),
             brewery    = $t.closest('.brewery').data('brewery'),
             beer       = $parent.data('beer'),
             rating     = $t.data('value'),
@@ -574,6 +602,246 @@
         $(this).siblings().find('input').val('').trigger('keyup');
     }
 
+
+
+
+    // -------------------------------
+    // --more
+    //
+
+
+    /**
+     * openMoreContent 
+     * 
+     * description
+     * @param event
+     */
+    function openMoreContent(event){
+        event.preventDefault();
+        $('.message-center').remove();
+        $(this).closest('.more-element').toggleClass('active').siblings('.active').removeClass('active');
+    }
+
+
+
+    /**
+     * focusAddNewBeer 
+     * 
+     * on focus of the input to add a new beer
+     * @param event
+     */
+    function focusAddNewBeer(event){
+        $('.message-center').remove();
+    }
+
+
+
+    /**
+     * getBreweries 
+     * 
+     * on input, get all breweries that match the input
+     * @param event
+     */
+    function getBreweries(event){
+        var input          = BEERFEST.encodeValue( $(this).val() ).toLowerCase(),
+            checkBreweries = BREWERY_LIST.filter(inputInList),
+            $chooseList    = $('#brewery-choose-list').empty();
+
+        if(input){
+            $(this).siblings('.list-holder').addClass('active');
+        } else {
+            $(this).siblings('.list-holder').removeClass('active');
+        }
+
+        if(checkBreweries){
+            $.each(checkBreweries, function() {
+                $chooseList.append('<li data-val="' + this + '">' + BEERFEST.decodeValue(this) + '</li>');
+            });
+            
+        }
+
+        $chooseList.append('<li data-val="other">+ Add Brewery</li>');
+
+
+        /**
+         * inputInList 
+         * 
+         * filter function to test if an array item includes the input from the textbox
+         * @param el : the element in the array
+         */
+        function inputInList(el){
+            return el.toLowerCase().indexOf(input) > -1;
+        }
+    }
+
+
+    /**
+     * chooseBrewery 
+     * 
+     * choose the brewery that makes the beer you're adding
+     * @param event
+     */
+    function chooseBrewery(event){
+        event.preventDefault();
+        var brewery = $(this).data('val');
+
+        if(brewery == 'other'){
+            brewery = $('#input-choose-brewery').val();
+        }
+
+        $('.chosen-brewery').text( BEERFEST.decodeValue(brewery) );
+        $('.add-new-beer').addClass('brewery-chosen').data('new-brewery', brewery);
+        $('#input-choose-brewery').val('');
+        $('.list-holder.active').removeClass('active');
+    }
+
+    /**
+     * changeBrewery 
+     * 
+     * change the brewery
+     * @param event
+     */
+    function changeBrewery(event){
+        event.preventDefault();
+        $('.chosen-brewery').text('');
+        $('.add-new-beer').removeClass('brewery-chosen').removeData('new-brewery');
+    }
+
+
+    /**
+     * addNewBeer 
+     * 
+     * check if the beer exists, if not, add it
+     * @param event
+     */
+    function addNewBeer(event){
+        event.preventDefault();
+
+        var brewery    = $(this).data('new-brewery'),
+            beer       = $('#input-choose-beer', this).val(),
+            addedBy    = '',
+            beerObj    = {
+                name: beer
+            },
+            newBrewery = false,
+            dupeStatus = checkIfDupe();
+
+        $('#input-choose-beer').val('');
+
+        if(USER_EMAIL){
+            beerObj.addedBy = USER_EMAIL;
+            addedBy = '<div class="beer-extra flex-item"><div class="beer-adder"><em>Added by:</em> ' + USER_EMAIL + '</div></div>';
+        }
+
+        $('.message-center').remove();
+
+        if(!dupeStatus){
+
+            beerfest_data.child('beerfests/' + BEERFEST.name + '/beerlist/' + brewery + '/beers').push(beerObj, function(){
+
+                var beerMarkup = '<li class="beer" data-beer="' + BEERFEST.encodeValue(beer) + '">' +
+                                    '<div class="beerwrapper">' +
+                                        '<div class="beer-util"><ul>' +
+                                            '<li class="rate">' + checkSvg + '</li>' +
+                                            '<li class="wishlist">' + starSvg + '</li>' +
+                                        '</ul></div>' +
+                                        '<div class="beer-rating">' + getRatingDropdownMarkup(0) + '</div>' +
+                                        '<div class="beer-info flex-item">' +
+                                            '<div class="beer-name">' + beer + '</div>' + addedBy +
+                                        '</div>' +
+                                    '</div>' +
+                                '</li>';
+                
+                $('.add-new-beer')
+                    .removeClass('brewery-chosen')
+                    .prepend('<div class="message-center">You have successfully added ' + beer + ' by ' + BEERFEST.decodeValue(brewery) + '. <br>' +
+                                '<a href="#" class="rate-new-beer button" data-beer="' + BEERFEST.encodeValue(beer) + '" data-brewery="' + brewery + '">Rate it</a></div>');
+
+                if(newBrewery){
+                    var brewerymarkup = '<li class="brewery" data-brewery="' + brewery + '">' +
+                                            '<div class="brewery-header">' +
+                                                '<span class="breweryname">' + BEERFEST.decodeValue(brewery) + '</span>' +
+                                                '<span class="expand">+</span><span class="collapse">-</span>' +
+                                            '</div>' +
+                                            '<ul class="beers">' + beerMarkup + '</ul>' +
+                                        '</li>';
+                    $('#beerlist .beer-list').append(brewerymarkup);
+                } else{
+                    $('li.brewery[data-brewery="' + brewery + '"] .beers').append(beerMarkup);
+                }
+
+                
+
+
+            });
+        } else {
+            $('.add-new-beer').removeClass('brewery-chosen').prepend('<div class="message-center">That beer already exists.</div>');
+            setTimeout(function(){
+                $('.successful-add').slideUp(function(){
+                    $(this).remove();
+                });
+            }, 4000);
+        }
+
+        
+        /**
+         * checkIfDupe 
+         * 
+         * check to see if the input beer is a duplicate
+         */
+        function checkIfDupe(){
+            if(FIREBASE_DATA[brewery] && FIREBASE_DATA[brewery].beers){
+                var isDupe = false;
+                
+                $.each(FIREBASE_DATA[brewery].beers, function(index, beerObj) {
+                    if(beerObj.name == beer){
+                        isDupe = true;
+                    }
+                });
+
+                FIREBASE_DATA[brewery].beers.push({
+                    name: beer
+                });
+                
+                return isDupe;
+            } else {
+                newBrewery = true;
+                brewery = BEERFEST.encodeValue(brewery);
+                FIREBASE_DATA[brewery] = {
+                    beers: [{
+                        name: beer
+                    }]
+                };
+                return false;
+            }
+        }
+    }
+
+    BEERFEST.getData = function(){
+        console.log(FIREBASE_DATA);
+    }
+
+
+    /**
+     * rateNewBeer 
+     * 
+     * rate the newly added beer by loading up the global list and oening the new beer
+     * @param name paramter description
+     */
+    function rateNewBeer(name){
+        var beer        = $(this).data('beer'),
+            brewery     = $(this).data('brewery'),
+            $breweryDiv = $('.brewery[data-brewery="' + brewery + '"]'),
+            $beerDiv    = $('.beer[data-beer="' + beer + '"]', $breweryDiv);
+
+        $('.message-center').remove();
+
+        $('.util-nav li[data-list="global"]').trigger('click');
+        $('.brewery-header', $breweryDiv).trigger('click');
+
+        $('.rate', $beerDiv).trigger('click');
+        $beerDiv.addClass('highlighted');
+    }
 
 
 
@@ -802,7 +1070,23 @@
         $('#login-form').on('submit', submitLoginOrRegister);
 
         $('.authentication').on('click', '.user-register', promptUserRegister);
+
+        // -------------------------------
+        // more
+        //
+        $('#more-content .more-element .option').on('click', openMoreContent);
+
+        
+        // add new beer
+        $('#input-choose-brewery').on('keyup', getBreweries);
+        $('#input-choose-brewery').on('focus', focusAddNewBeer);
+        $('.choose-brewery').on('click', '.choose-list li', chooseBrewery);
+        $('.add-new-beer').on('submit', addNewBeer);
+        $('.change-brewery').on('click', changeBrewery);
+        $('.add-new-beer').on('click', '.rate-new-beer', rateNewBeer);
     }
+
+
 
 
 
@@ -830,6 +1114,7 @@
             $('body').addClass('logged-in');
             
             uid = loginData.uid;
+            USER_EMAIL = loginData.password.email;
 
             showWelcome(loginData.password.email);
 

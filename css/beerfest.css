@@ -6,12 +6,39 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: sans-serif;
+    line-height: 1.4;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 html{
     overflow-x: hidden;
 }
 body{
     font-family: sans-serif;
     font-size: 12px;
+    line-height: 1;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -56,8 +83,12 @@ input[type="password"]{
     margin-top: 4px;
     border-radius: 0;
 }
-button[type="submit"]{
+button,
+a.button{
+    font-family: sans-serif;
+    font-size: 14px;
     background: #c92d2d;
+    font-weight: bold;
     cursor: pointer;
     border: 0;
     border-radius: 0;
@@ -65,6 +96,7 @@ button[type="submit"]{
     padding: 8px;
     text-transform: uppercase;
     color: #fff;
+    text-decoration: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -186,6 +218,13 @@ html, body, #app{
     color: #fff;
     margin:2px  10px 0 10px;
 }
+.app-banner .util-nav ul li.hide-if-anonymous{
+    display: none;
+}
+.logged-in .app-banner .util-nav ul li.hide-if-anonymous{
+    display: block;
+}
+
 
 
 /**
@@ -308,7 +347,7 @@ html, body, #app{
     height: 20px;
     position: absolute;
     left: 50%;
-    top: 2px;
+    top: 1px;
     margin-left: -10px;
     background: #aaa;
     border-radius: 50%;
@@ -335,7 +374,6 @@ html, body, #app{
 }
 
 .secondary p{
-    line-height: 1.2;
     color: #666;
 }
 
@@ -394,7 +432,7 @@ html, body, #app{
  */
 .app-content{
     display: none;
-    padding: 8px;
+    padding: 0 8px 8px;
 }
 .app-content.active{
     display: block;
@@ -406,20 +444,24 @@ html, body, #app{
  * --beer list
  * ------------------------------------------ */
 
-.brewery{
+.brewery,
+.more-element{
     border: 1px solid #ccc;
     margin-bottom: 8px;
     -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.2);
-    box-shadow: 0 1px 5px rgba(0,0,0,.2);
+            box-shadow: 0 1px 5px rgba(0,0,0,.2);
 }
 .brewery.inactive{
     display: none;
 }
-.brewery-header{
+.brewery-header,
+.more-element .option{
     font-weight: bold;
     padding: 14px 38px 14px 8px;
     position: relative;
 }
+.more-element .option span.expand,
+.more-element .option span.collapse,
 .brewery-header span.expand,
 .brewery-header span.collapse{
     position: absolute;
@@ -429,6 +471,7 @@ html, body, #app{
     font-size: 16px;
     display: none;
 }
+.more-element .option span.collapse,
 .brewery-header span.collapse{   
     font-size: 20px;
 }
@@ -461,10 +504,14 @@ html, body, #app{
 .global .brewery-open .brewery.active{
     opacity: 1;
 }
+
+.more-element .option span.expand,
+.more-element.active .option span.collapse,
 .global .brewery-header span.expand,
 .global .brewery.active .brewery-header span.collapse{
     display: block;
 }
+.more-element.active .option span.expand,
 .global .brewery.active .brewery-header span.expand{
     display: none;
 }
@@ -600,6 +647,10 @@ html, body, #app{
 .beer.wishlist .wishlist svg path{
     fill:#d8a71d;
 }
+.beer.highlighted{
+    -webkit-box-shadow: 0 0 10px #c92d2d;
+    box-shadow: 0 0 10px #c92d2d;
+}
 
 
 
@@ -688,6 +739,86 @@ html, body, #app{
     fill:#c92d2d;
 }
 
+
+
+/**
+ * --more content
+ */
+.more-element .option{
+    cursor: pointer;
+}
+.more-element .content{
+    display: none;
+    padding: 0 8px 8px;
+}
+.more-element.active .content{
+    display: block;
+}
+
+
+
+
+/**
+ * --add new
+ */
+.add-new-beer input[type="text"]{
+    font-size: 16px;
+}
+.add-new-beer .choose-beer,
+.add-new-beer .actions{
+    display: none;
+}
+
+.add-new-beer.brewery-chosen .choose-beer,
+.add-new-beer.brewery-chosen .actions{
+    display: block;
+}
+
+.add-new-beer.brewery-chosen .choose-brewery{
+    display: none;
+}
+
+.chosen-brewery{
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+.message-center{
+    padding-bottom: 10px;
+}
+.message-center .button{
+    margin-top: 6px;
+}
+
+.list-holder{
+    position: relative;
+    display: none;
+}
+.list-holder.active{
+    display: block;
+}
+.list-holder .choose-list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    max-height: 200px;
+    overflow: auto;
+    -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.6);
+            box-shadow: 0 1px 5px rgba(0,0,0,.6);
+}
+.list-holder .choose-list li{
+    padding: 8px;
+    background: #fff;
+    cursor: pointer;
+}
+.list-holder .choose-list li:hover{
+    background: #ddd;
+}
+.list-holder .choose-list li + li{
+    border-top: 1px solid #eee;
+}
 
 
 

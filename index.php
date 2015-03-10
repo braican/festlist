@@ -45,7 +45,7 @@
                 <li data-list="hads" data-title="My Hads" data-module="beerlist"><?php include_svg('icon-hads'); ?></li>
                 <li data-list="wishlist" data-title="My Wishlist" data-module="beerlist"><?php include_svg('icon-star'); ?></li>
                 <li data-list="search" data-title="Search" data-module="beerlist"><?php include_svg('icon-search'); ?></li>
-                <!-- <li data-list="more" data-title="More" data-module="more-content"><?php include_svg('icon-more'); ?></li> -->
+                <li data-list="more" data-title="More" data-module="more-content" class="hide-if-anonymous"><?php include_svg('icon-more'); ?></li>
             </ul>
         </div>
     </div>
@@ -124,9 +124,38 @@
             </div>
 
             <div id="more-content" class="app-content">
-                <ul class="more-content">
-                    <li>Add A Beer</li>
-                </ul>
+                
+                <div class="more-element">
+                    <div class="option">Add a Beer <span class="expand">+</span><span class="collapse">-</span></div>
+                    <div class="content">
+                        <form class="add-new-beer">
+                            <div class="choose-brewery">
+                                <input type="text" placeholder="Brewery" id="input-choose-brewery" autocomplete="off">
+                                <div class="list-holder">
+                                    <ul class="choose-list" id="brewery-choose-list"></ul>
+                                </div>
+                            </div>
+
+                            <div class="choose-beer">
+                                <div class="chosen-brewery"></div>
+                                <div><a href="#" class="change-brewery">Change Brewery</a></div>
+                                <input type="text" placeholder="Beer name" id="input-choose-beer" autocomplete="off">
+                            </div>
+
+                            <div class="actions">
+                                <button type="submit">Add Beer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="more-element">
+                    <div class="option">Spin the Wheel <span class="expand">+</span><span class="collapse">-</span></div>
+                    <div class="content">
+                        Spin DAT WHEEL
+                    </div>
+                </div>
+                
             </div>
         </div>
         
