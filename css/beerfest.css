@@ -430,7 +430,7 @@ html, body, #app{
     font-size: 20px;
 }
 .beers{
-    padding: 8px 8px 0 8px;
+    padding: 8px;
 }
 .global .beers{
     display: none;
@@ -469,14 +469,25 @@ html, body, #app{
 
 
 /* user list */
+.search .brewery,
 .hads .brewery,
 .wishlist .brewery{
-    border-top: 4px solid #c02020;
-    margin-bottom: 20px;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 40px;
 }
-
+.search .brewery-header,
+.hads .brewery-header,
+.wishlist .brewery-header{
+    font-size: 16px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.search .beer,
 .hads .beer,
 .wishlist .beer{
+    background: #f6f6f6;
     display: none;
 }
 .hads .beer.rate-it,
@@ -490,19 +501,6 @@ html, body, #app{
 
 /* search */
 .search .brewery{
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    margin-top: 40px;
-    display: none;
-}
-.search .brewery-header{
-    font-size: 16px;
-    padding-bottom: 0;
-    padding-top: 0;
-}
-.search .beer{
-    background: #f6f6f6;
     display: none;
 }
 .search .brewery.active{
@@ -522,6 +520,7 @@ html, body, #app{
 
 .search-header{
     display: none;
+    margin-bottom: 40px;
 }
 .search .search-header{
     display: block;
@@ -536,15 +535,24 @@ html, body, #app{
     width: 50%;
     float: left;
     text-align: center;
-    padding: 6px;
+    padding: 10px;
     cursor: pointer;
 }
 .search-nav li.active{
-    background: #656565;
+    background: #c92d2d;
     color: #fff;
 }
 .search.search-for-brewery .beer{
     display: block;
+}
+#input-search{
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    margin-top: 20px;
+}
+#input-search:focus{
+    outline: none;
 }
 
 
@@ -554,11 +562,10 @@ html, body, #app{
 
 .beer{
     position: relative;
-    border: 1px solid #ccc;
+    border-top: 1px solid #ccc;
     background: #fff;
     -webkit-box-shadow: 0px 1px 4px rgba(0,0,0,.3);
     box-shadow: 0px 1px 4px rgba(0,0,0,.3);
-    margin-bottom: 8px;
 }
 .beer.wishlist .beerwrapper{
     border-left: 12px solid #d8a71d;

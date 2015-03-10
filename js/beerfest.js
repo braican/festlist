@@ -209,6 +209,7 @@
      * reset to the global list
      */
     function renderGlobal(){
+        $('#beerlist').removeClass('brewery-open');
         $('#beerlist .brewery').removeClass('inactive active');
         $('#beerlist .beers').removeClass('active');
     }

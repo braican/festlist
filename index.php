@@ -45,7 +45,7 @@
                 <li data-list="hads" data-title="My Hads" data-module="beerlist"><?php include_svg('icon-hads'); ?></li>
                 <li data-list="wishlist" data-title="My Wishlist" data-module="beerlist"><?php include_svg('icon-star'); ?></li>
                 <li data-list="search" data-title="Search" data-module="beerlist"><?php include_svg('icon-search'); ?></li>
-                <li data-list="more" data-title="More" data-module="more-content"><?php include_svg('icon-more'); ?></li>
+                <!-- <li data-list="more" data-title="More" data-module="more-content"><?php include_svg('icon-more'); ?></li> -->
             </ul>
         </div>
     </div>
