@@ -1182,7 +1182,59 @@
         BEERFEST.init();
 
         BEERFEST.getBeerList();
+
+        betterHeader();
     });
+
+
+    /**
+     * betterHeader 
+     * 
+     * hide the header
+     */
+    function betterHeader(){
+        var banner   = document.getElementById( 'banner' ),
+            scrollit = document.getElementById('scrollit'),
+            $app     = $('#app');
+
+        if( !banner ) return true;
+
+        var elHeight        = 0,
+            elTop           = 0,
+            dHeight         = 0,
+            wHeight         = 0,
+            wScrollCurrent  = 0,
+            wScrollBefore   = 0,
+            wScrollDiff     = 0;
+
+        $app.on('scroll', function(){
+            
+            elHeight        = banner.offsetHeight;
+            dHeight         = $('#app-main').innerHeight();
+            wHeight         = $app.innerHeight();
+            wScrollCurrent  = $app.scrollTop();
+            wScrollDiff     = wScrollBefore - wScrollCurrent;
+            elTop           = parseInt( window.getComputedStyle( banner ).getPropertyValue( 'top' ) ) + wScrollDiff;
+
+            if( wScrollCurrent <= 0 ){
+                banner.style.top = '0px';
+                scrollit.style.top = '0px';
+            } else if( wScrollDiff > 0 ) {
+                banner.style.top = ( elTop > 0 ? 0 : elTop ) + 'px';
+                scrollit.style.top = ( elTop > 0 ? 0 : elTop ) + 'px';
+            } else if( wScrollDiff < 0 ) {
+                if( wScrollCurrent + wHeight >= dHeight - elHeight ){
+                    banner.style.top = ( ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 ) + 'px';
+                    scrollit.style.top = ( ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 ) + 'px';
+                } else {
+                    banner.style.top = ( Math.abs( elTop ) > elHeight ? -elHeight : elTop ) + 'px';
+                    scrollit.style.top = ( Math.abs( elTop ) > elHeight ? -elHeight : elTop ) + 'px';
+                }
+            }
+
+            wScrollBefore = wScrollCurrent;
+        });
+    }
 
 })(window.BEERFEST = window.BEERFEST || {}, jQuery);
 

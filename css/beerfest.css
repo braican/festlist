@@ -331,6 +331,7 @@ html, body, #app{
     border-right: 1px solid #ccc;
 }
 #scrollit{
+    position: relative;
     padding-top: 10px;
     text-align: center;
 }
