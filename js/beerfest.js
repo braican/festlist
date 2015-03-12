@@ -324,7 +324,7 @@
 
         $('#app-header h2').text(title);
 
-        $('body').removeClass('hads wishlist global more search search-for-brewery search-for-beer').addClass(list);
+        $('body').removeClass('menu-open hads wishlist global more search search-for-brewery search-for-beer').addClass(list);
 
         $('.more-element.active').removeClass('active');
 
@@ -938,18 +938,21 @@
                 console.log("Authenticated successfully with payload:", authData);
                 
                 uid = authData.uid;
-                $('body').removeClass('anonymous menu-open').addClass('logged-in');
-                $('.secondary-slide').removeClass('reveal-login');
+                $('body').removeClass('menu-open');
 
                 showWelcome(authData.password.email);
                 
                 BEERFEST.getBeerList();
 
                 $('.util-nav li[data-list="global"]').trigger('click');
-
-                $('input', $form).val('');
                 $('h2, button', $form).text("Log In");
-                $('.error', $form).remove();
+
+                setTimeout(function(){
+                    $('body').removeClass('anonymous').addClass('logged-in');
+                    $('.error', $form).remove();
+                    $('input', $form).val('');
+                }, 400);
+                
             }
         });
     }
@@ -1055,11 +1058,20 @@
         beerfest_data.unauth();
         
         uid = null;
-        $('body').addClass('anonymous').removeClass('logged-in menu-open');
-        $('#user-info').html('Not logged in<br><small>You can still save data on your device.</small>');
-        $('.user-email').text('');
-        promptSpecialUser();
+
+        $('body').removeClass('menu-open');
+
+        $('.loader').removeClass('hidden');
+
         BEERFEST.getBeerList();
+
+        setTimeout(function(){
+            $('body').addClass('anonymous').removeClass('logged-in');
+            $('#user-info').html('Not logged in<br><small>You can still save data on your device.</small>');
+            $('.user-email').text('');
+            promptSpecialUser();
+            
+        }, 400);
     }
 
 
