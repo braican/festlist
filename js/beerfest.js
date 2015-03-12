@@ -367,7 +367,7 @@
                 scrollTop: 0
             });
         } else {
-            $('#beerlist .beer-list > li').each(function(i, e){
+            $('#beerlist .beer-list .brewery:visible').each(function(i, e){
                 var breweryname = $(e).data('brewery').toLowerCase();
 
                 if(letter == breweryname.charAt(0).toLowerCase()){
@@ -1101,12 +1101,18 @@
     function getRandomBeer(event){
         event.preventDefault();
 
-        var randomBrewery = pickRandomProperty(FIREBASE_DATA),
-            beerArray     = FIREBASE_DATA[randomBrewery].beers
-            randomBeer    = beerArray[Math.floor(Math.random() * beerArray.length)];
+        var randomBrewery    = pickRandomProperty(FIREBASE_DATA),
+            beerArray        = FIREBASE_DATA[randomBrewery].beers
+            randomBeer       = beerArray[Math.floor(Math.random() * beerArray.length)],
+            randomBeerMarkup = 'Head over to ' + BEERFEST.decodeValue(randomBrewery) + ' and try their ' + randomBeer.name,
+            $random          = $('.random-result');
 
-        $('.random-result').empty().append('Head over to ' + BEERFEST.decodeValue(randomBrewery) + ' and try their ' + randomBeer.name);
         
+        $random.addClass('transition load-in').find('.new').html(randomBeerMarkup);
+
+        setTimeout(function(){
+            $random.removeClass('transition load-in').find('.old').html(randomBeerMarkup);
+        }, 200);
     }
 
 

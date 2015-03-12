@@ -830,7 +830,43 @@ html, body, #app{
 .random-result{
     margin-top: 10px;
     font-size: 14px;
+    position: relative;
 }
+.random-result .old{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.random-result .new{
+    opacity: 0;
+
+    -webkit-transform: translateY(-1em);
+        -ms-transform: translateY(-1em);
+         -o-transform: translateY(-1em);
+            transform: translateY(-1em);  
+}
+.random-result.transition > div{
+    -webkit-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+}
+.random-result.load-in .new{
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+         -o-transform: translateY(0px);
+            transform: translateY(0px);
+}
+.random-result.load-in .old{
+    opacity: 0;
+    -webkit-transform: translateY(1em);
+        -ms-transform: translateY(1em);
+         -o-transform: translateY(1em);
+            transform: translateY(1em);
+}
+
+
 
 
 

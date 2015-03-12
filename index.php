@@ -129,6 +129,7 @@
                     <div class="option">Add a Beer <span class="expand">+</span><span class="collapse">-</span></div>
                     <div class="content">
                         <form class="add-new-beer">
+                            <p>Try a beer that's not on the list? Add it here.</p>
                             <div class="choose-brewery">
                                 <input type="text" placeholder="Brewery" id="input-choose-brewery" autocomplete="off">
                                 <div class="list-holder">
@@ -154,8 +155,12 @@
                     <div class="content">
                         Don't know what to try next?<br>
                         <button class="random-button" id="spin-the-wheel">Find a beer</button>
-
-                        <div class="random-result"></div>
+                        
+                        <div class="random-result">
+                            <div class="new"></div>
+                            <div class="old"></div>
+                        </div>
+                        
                     </div>
                 </div>
                 
