@@ -82,6 +82,7 @@ input[type="password"]{
     padding: 6px;
     margin-top: 4px;
     border-radius: 0;
+    font-size: 12px;
 }
 button,
 a.button{
