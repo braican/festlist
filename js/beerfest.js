@@ -1062,15 +1062,14 @@
         $('body').removeClass('menu-open');
 
         $('.loader').removeClass('hidden');
+        $('.user-email').text('');
 
         BEERFEST.getBeerList();
 
         setTimeout(function(){
             $('body').addClass('anonymous').removeClass('logged-in');
             $('#user-info').html('Not logged in<br><small>You can still save data on your device.</small>');
-            $('.user-email').text('');
             promptSpecialUser();
-            
         }, 400);
     }
 
