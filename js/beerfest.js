@@ -130,7 +130,7 @@
                                     '<li class="wishlist">' + starSvg + '</li>' +
                                 '</ul></div>' +
                                 '<div class="beer-rating">' + getRatingDropdownMarkup(rating) + '</div>' +
-                                '<div class="beer-info flex-item">' +
+                                '<div class="beer-info">' +
                                     '<div class="beer-name">' + beer + '</div>' +
                                     '<div class="beer-extra flex-item">';
 
