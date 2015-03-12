@@ -51,10 +51,8 @@
     </div>
 
 
-    <div id="drawer" class="secondary">
-        <div id="side-banner">
-            <ul id="scrollit"></ul>
-        </div>
+    <div id="drawer">
+        <ul id="scrollit"></ul>
     </div>
 
     <div id="app-main">
@@ -128,12 +126,12 @@
 
 
     <div id="login-overlay">
-        <div id="user-info">Not logged in<br><small>You can still save data on your device.</small></div>
+        <div id="user-info" class="login-prompt">Not logged in<br><small>You can still save data on your device.</small></div>
 
         <div class="authentication">
             <form id="login-form">
                 <h2>Log In</h2>
-                <input type="text" name="user_email" placeholder="email address">
+                <input type="email" name="user_email" placeholder="email address">
                 <input type="password" name="user_password" placeholder="password">
                 <div class="actions">
                     
@@ -147,7 +145,7 @@
                     
                     <button type="submit">Log in</button>
                 </div>
-                <a href="#" class="js-trigger-prompt-login">Cancel</a>
+                
             </form>
 
             <div class="about">
@@ -158,7 +156,7 @@
 
 
         <ul>
-            <li id="firebase-logout"><a href="#">Log Out</a></li>
+            <li id="firebase-logout"><a href="#" class="button">Log Out</a></li>
         </ul>
 
 

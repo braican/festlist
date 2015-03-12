@@ -383,12 +383,12 @@
 
 
     /**
-     * engageMobileMenu 
+     * engageOverlayLogin 
      * 
      * do the mobile menu
      * @param event: the object from the click
      */
-    function engageMobileMenu(event){
+    function engageOverlayLogin(event){
         event.preventDefault();
         $('body').toggleClass('menu-open');
     }
@@ -847,6 +847,48 @@
     }
 
 
+    /**
+     * getRandomBeer 
+     * 
+     * choose a beer at random
+     * @param event
+     */
+    function getRandomBeer(event){
+        event.preventDefault();
+
+        var randomBrewery    = pickRandomProperty(FIREBASE_DATA),
+            beerArray        = FIREBASE_DATA[randomBrewery].beers
+            randomBeer       = beerArray[Math.floor(Math.random() * beerArray.length)],
+            randomBeerMarkup = 'Head over to ' + BEERFEST.decodeValue(randomBrewery) + ' and try their ' + randomBeer.name,
+            $random          = $('.random-result');
+
+        
+        $random.addClass('transition load-in').find('.new').html(randomBeerMarkup);
+
+        setTimeout(function(){
+            $random.removeClass('transition load-in').find('.old').html(randomBeerMarkup);
+        }, 200);
+    }
+
+
+    /**
+     * pickRandomProperty 
+     * 
+     * pick a property from an object at random
+     * @param obj - the object form which to grab a rando
+     */
+    function pickRandomProperty(obj){
+        var result,
+            count = 0;
+        for (var prop in obj){
+            if (Math.random() < 1/++count){
+               result = prop;
+            }
+        }
+        return result;
+    }
+
+
 
     // -------------------------------
     // --LOGIN / REGISTER
@@ -866,6 +908,7 @@
 
         $t.addClass('loading');
 
+        
         if($t.hasClass('is-register-form')){
             doRegister($t, email, password);
         } else {
@@ -1006,7 +1049,7 @@
     BEERFEST.logout = function(event){
         if(event){
             event.preventDefault();
-            engageMobileMenu(event);
+            engageOverlayLogin(event);
         }
 
         beerfest_data.unauth();
@@ -1036,7 +1079,7 @@
         // navigation
         //
         $('.app-banner .util-nav ul li').on('click', beerfestNav);
-        $('.menu-trigger').on('click', engageMobileMenu);
+        $('.menu-trigger').on('click', engageOverlayLogin);
 
         // $('#clearall').on('click', BEERFEST.clearData);
         $('#firebase-logout a').on('click', BEERFEST.logout);
@@ -1092,48 +1135,6 @@
         $('#spin-the-wheel').on('click', getRandomBeer);
     }
 
-    /**
-     * getRandomBeer 
-     * 
-     * choose a beer at random
-     * @param event
-     */
-    function getRandomBeer(event){
-        event.preventDefault();
-
-        var randomBrewery    = pickRandomProperty(FIREBASE_DATA),
-            beerArray        = FIREBASE_DATA[randomBrewery].beers
-            randomBeer       = beerArray[Math.floor(Math.random() * beerArray.length)],
-            randomBeerMarkup = 'Head over to ' + BEERFEST.decodeValue(randomBrewery) + ' and try their ' + randomBeer.name,
-            $random          = $('.random-result');
-
-        
-        $random.addClass('transition load-in').find('.new').html(randomBeerMarkup);
-
-        setTimeout(function(){
-            $random.removeClass('transition load-in').find('.old').html(randomBeerMarkup);
-        }, 200);
-    }
-
-
-    /**
-     * pickRandomProperty 
-     * 
-     * pick a property from an object at random
-     * @param obj - the object form which to grab a rando
-     */
-    function pickRandomProperty(obj){
-        var result,
-            count = 0;
-        for (var prop in obj){
-            if (Math.random() < 1/++count){
-               result = prop;
-            }
-        }
-        return result;
-    }
-
-
 
 
     BEERFEST.getBeers = function(){
@@ -1158,7 +1159,8 @@
 
     $(document).ready(function(){
 
-        var loginData = beerfest_data.getAuth();
+        var loginData = beerfest_data.getAuth(),
+            windowH   = $(window).height();
 
         headerHeight = $('#banner').outerHeight();
 
@@ -1184,6 +1186,10 @@
         BEERFEST.getBeerList();
 
         betterHeader();
+
+        $('#login-overlay').css({
+            'top' : '-' + windowH + 'px'
+        });
     });
 
 
