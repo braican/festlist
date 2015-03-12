@@ -129,11 +129,11 @@ html, body, #app{
     z-index: 2;
 }
 .beer-list .flex-item{
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     align-items: center;
 }
 #app-main{
@@ -186,11 +186,12 @@ html, body, #app{
     margin: 0;
     padding: 0;
     list-style: none;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
     align-items: center;
 }
 .app-banner .util-nav ul li{
@@ -336,7 +337,7 @@ html, body, #app{
 #scrollit li{
     color: #404040;
     display: block;
-    padding: 4px 0;
+    padding: 2px 0;
     margin: 0 auto;
     position: relative;
     cursor: default;
