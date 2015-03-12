@@ -92,7 +92,7 @@ input[type="email"]{
 button,
 a.button{
     display: inline-block;
-    padding: 6px 12px;
+    padding: 10px 16px;
     margin-bottom: 0;
     font-size: 14px;
     line-height: 1;
@@ -113,7 +113,9 @@ a.button{
     color: #fff;
     text-decoration: none;
 }
-button[type="submit"]:focus{
+button:focus,
+a.button:focus,
+input:focus{
     outline: none;
 }
 form .error{
