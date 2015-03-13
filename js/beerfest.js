@@ -479,7 +479,19 @@
     function toggleRateBeer(event){
         event.preventDefault();
 
-        $(this).closest('.beer').toggleClass('rate-it');
+        var $beer      = $(this).closest('.beer'),
+            brewery    = $beer.closest('.brewery').data('brewery'),
+            beer       = $beer.data('beer'),
+            uniqueBeer = brewery + '_' + beer,
+            hads       = uid ? beerfest_user_data().child('hads/' + uniqueBeer) : false;
+
+        $beer.toggleClass('rate-it');
+
+        if(hads){
+            hads.set("done");
+        } else {
+            localStorage.setItem(uniqueBeer, 0); 
+        }
     }
 
 
@@ -519,7 +531,7 @@
             if(hads){
                 hads.set(rating);
             } else {
-                localStorage.setItem(uniqueBeer, rating); 
+                localStorage.setItem(uniqueBeer, rating);
             }
         }
     }
