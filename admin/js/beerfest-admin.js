@@ -25,7 +25,8 @@
                 url: "http://www.beeradvocate.com/ebf/beer/"
             }, 
             success   : function(data) {
-                $('#baContent table tr', data).each(function(index, $tr){
+
+                $('#ba-content table tr', data).each(function(index, $tr){
 
                     if($('h6', $tr).length > 0){
                         // brewery = encodeURIComponent( $('h6', $tr).text().replace('Co.', 'Company') );

@@ -334,6 +334,7 @@ html, body, #app{
 .menu-trigger .icon-user{
     opacity: 1;
     visibility: visible;
+    cursor: pointer;
     -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
          -o-transform: rotate(0deg);
