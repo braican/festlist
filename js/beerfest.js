@@ -4,7 +4,7 @@
 //
 (function(BEERFEST, $, undefined$){
 
-    BEERFEST.name = "ebf-2015";
+    BEERFEST.name = "acbf-2015";
 
     // svg stuff
     var svgColor  = '#cccccc',

@@ -1,6 +1,8 @@
 
 (function(BEERFEST_ADMIN, $, undefined){
 
+    var BA_EVENT_URL = 'http://www.beeradvocate.com/acbf/beer/';
+
     BEERFEST_ADMIN.beerObj = {};
 
     BEERFEST_ADMIN.getBeers = function(){
@@ -22,7 +24,7 @@
             'dataType': 'html',
             'url'     : 'ajax/proxy.php',
             'data'    : {
-                url: "http://www.beeradvocate.com/ebf/beer/"
+                url: BA_EVENT_URL
             }, 
             success   : function(data) {
 
