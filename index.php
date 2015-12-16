@@ -1,6 +1,3 @@
-
-<?php include "util/functions.php"; ?>
-
 <!doctype html>
 <html lang="en">
 <head>

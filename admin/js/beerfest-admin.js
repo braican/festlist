@@ -31,28 +31,23 @@
                 $('#ba-content table tr', data).each(function(index, $tr){
 
                     if($('h6', $tr).length > 0){
-                        // brewery = encodeURIComponent( $('h6', $tr).text().replace('Co.', 'Company') );
                         brewery = BEERFEST.encodeValue( $('h6', $tr).text() );
                         BEERFEST_ADMIN.beerObj[brewery] = {
                             "beers":[]
                         };
                     } else {
-                        var beerUrl = $('a', $tr).filter(function(){
-                            return this.href.indexOf('/beer/profile/') > -1;
-                        }).attr('href');
+                        var beerName  = $('td', $tr).eq(0).text(),
+                            beerStyle = $('td', $tr).eq(1).text(),
+                            beerAbv   = $('td', $tr).eq(2).text(),
+                            beerScore = $('td', $tr).eq(3).text();
 
-                        if(beerUrl){
-                            var beerName  = $('td', $tr).eq(0).text(),
-                                beerStyle = $('td', $tr).eq(1).text(),
-                                beerAbv   = $('td', $tr).eq(2).text();
-
-                            getBeerInfo({
-                                "name" : beerName,
-                                "style": beerStyle,
-                                "abv"  : beerAbv
-                            }, beerUrl, brewery).done(function(){
-                                console.log("done");
-                            });
+                        if( BEERFEST_ADMIN.beerObj[brewery]){
+                            BEERFEST_ADMIN.beerObj[brewery]["beers"].push({
+                                "name"     : beerName,
+                                "style"    : beerStyle,
+                                "abv"      : beerAbv,
+                                "ba_score" : beerScore
+                            });    
                         }
                     }
                 });

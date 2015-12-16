@@ -1,10 +1,18 @@
 
+
+(function(BEERFEST, $, undefined){
+
+})(window.BEERFEST = window.BEERFEST || {}, jQuery)
+
+
+
+
 //
 // BEERFEST - namespace
 //
 (function(BEERFEST, $, undefined$){
 
-    BEERFEST.name = "acbf-2015";
+    BEERFEST.name = "ebf-2016";
 
     // svg stuff
     var svgColor  = '#cccccc',
