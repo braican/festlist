@@ -23,7 +23,7 @@ gulp.task('watch', function () {
 // svg store
 gulp.task('svgstore', function () {
     return gulp.src('svg/**/*.svg')
-            .pipe(rename({prefix: 'icon--'}))
+            .pipe(rename({prefix: 'svg--'}))
             .pipe( svgmin() )
             .pipe(svgstore({
                 inlineSvg: true

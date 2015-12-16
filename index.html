@@ -10,6 +10,9 @@
 </head>
 <body class="global">
 
+<!-- this is the element that we will put the svg sprite into -->
+<div style="height: 0; width: 0; position: absolute; visibility: hidden" id="svg-sprite"></div>
+
 <div class="loader">
     <div class="preloader">
       <div class="preloader-container">
@@ -22,14 +25,14 @@
 
     <div id="banner" class="app-banner">
         <div class="branding">
-            <span class="app-name"><?php include_svg('logo'); ?></span>
+            <span class="app-name"><svg class="beerfest-logo"><use xlink:href="#svg--logo"></use></svg></span>
 
             <div class="menu-trigger">
                 <div class="icon-user">
-                    <?php include_svg('icon-user'); ?>
+                    <svg class="icon--user"><use xlink:href="#svg--icon--user"></use></svg>
                 </div>
                 <div class="icon-close">
-                    <?php include_svg('icon-close'); ?>
+                    <svg class="icon--close"><use xlink:href="#svg--icon--close"></use></svg>
                 </div>
             </div>
 
@@ -38,11 +41,11 @@
 
         <div class="util-nav">
             <ul>
-                <li class="active" data-list="global" data-title="Beer List" data-module="beerlist"><?php include_svg('icon-bottles'); ?></li>
-                <li data-list="hads" data-title="My Hads" data-module="beerlist"><?php include_svg('icon-hads'); ?></li>
-                <li data-list="wishlist" data-title="My Wishlist" data-module="beerlist"><?php include_svg('icon-star'); ?></li>
-                <li data-list="search" data-title="Search" data-module="beerlist"><?php include_svg('icon-search'); ?></li>
-                <li data-list="more" data-title="More" data-module="more-content" class="hide-if-anonymous"><?php include_svg('icon-more'); ?></li>
+                <li class="active" data-list="global" data-title="Beer List" data-module="beerlist"><svg class="icon--beerlist"><use xlink:href="#svg--icon--bottles"></use></svg></li>
+                <li data-list="hads" data-title="My Hads" data-module="beerlist"><svg class="icon--hads"><use xlink:href="#svg--icon--hads"></use></svg></li>
+                <li data-list="wishlist" data-title="My Wishlist" data-module="beerlist"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                <li data-list="search" data-title="Search" data-module="beerlist"><svg class="icon--search"><use xlink:href="#svg--icon--search"></use></svg></li>
+                <li data-list="more" data-title="More" data-module="more-content" class="hide-if-anonymous"><svg class="icon--more"><use xlink:href="#svg--icon--more"></use></svg>
             </ul>
         </div>
     </div>
@@ -65,7 +68,7 @@
                         <li data-search="brewery" data-placeholder="Search for a brewery">Brewery</li>
                     </ul>
                     <div class="input-container">
-                        <span class="clear-input"><?php include_svg('icon-remove'); ?></span>
+                        <span class="clear-input"><svg class="icon--remove"><use xlink:href="#svg--icon--remove"></use></svg></span>
                         
                         <div class="input-wrapper">
                             <input data-search="beer" type="text" id="input-search" placeholder="Search for a beer">
@@ -167,6 +170,42 @@
 <script src="js/jquery.js"></script>
 <script src="js/util.js"></script>
 <script src="js/beerfest.js"></script>
+
+
+<script>
+    // open a new xmlhttprequest
+    var request    = new XMLHttpRequest();
+
+    // select the document we're going to put the sprite into
+    var spriteDiv  = document.getElementById("svg-sprite");
+
+    // the path to the source svg sprite
+    var spritePath = "svg/build/icons.svg";
+
+    // load up the svg
+    request.open('GET', spritePath, true);
+
+    // when the request has been loaded, check to see if the svg has been
+    //  loaded alright (based on the given status). If it's good, set the
+    //  DOM element's innerHTML to the content from the loaded svg.
+    //  Otherwise, throw an error.
+    request.onload = function() {
+        if (this.status >= 200 && this.status < 400) {
+            var resp = this.response;
+            spriteDiv.innerHTML = resp;
+        } else {
+            console.error("There was an error getting the icons");
+        }
+    };
+
+    // just a check for a request error
+    request.onerror = function() {
+        console.error("There was an error getting the icons");
+    };
+
+    // send the request!
+    request.send();
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

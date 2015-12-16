@@ -1,8 +1,10 @@
 
 
-(function(BEERFEST, $, undefined){
+;(function(BEERFEST, $, undefined){
 
-})(window.BEERFEST = window.BEERFEST || {}, jQuery)
+
+
+})(window.BEERFEST = window.BEERFEST || {}, jQuery);
 
 
 
@@ -10,7 +12,8 @@
 //
 // BEERFEST - namespace
 //
-(function(BEERFEST, $, undefined$){
+;(function(BEERFEST, $, undefined$){
+    console.log("test");
 
     BEERFEST.name = "ebf-2016";
 
