@@ -1,0 +1,34 @@
+/* ==============================================================
+   --layout
+   ============================================================== */
+
+html, body, #app{
+    height: 100%;
+}
+#app{
+    position: relative;
+    overflow: auto;
+    z-index: 2;
+
+    .menu-open &{
+        overflow: hidden;
+    }
+}
+
+
+.flex-layout{
+
+    @include flexbox();
+
+    .col-fluid{
+        @include flex( 1 0 auto );
+    }
+}
+
+.beer-list .flex-item{
+    
+    align-items: center;
+}
+#app-main{
+    background: $white;
+}

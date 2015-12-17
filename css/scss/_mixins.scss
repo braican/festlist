@@ -1,0 +1,20 @@
+/* ==============================================================
+   --mixins
+   ============================================================== */
+
+@mixin flexbox(){
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+
+@mixin flex( $attrs ){
+    -webkit-box-flex: $attrs;     /* OLD - iOS 6-, Safari 3.1-6 */
+       -moz-box-flex: $attrs;     /* OLD - Firefox 19- */
+        -webkit-flex: $attrs;     /* Chrome */
+            -ms-flex: $attrs;     /* IE 10 */
+                flex: $attrs;
+}
