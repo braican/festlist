@@ -9,26 +9,31 @@ html, body, #app{
     position: relative;
     overflow: auto;
     z-index: 2;
-
-    .menu-open &{
-        overflow: hidden;
-    }
 }
 
 
-.flex-layout{
+.l-flex{
 
     @include flexbox();
 
-    .col-fluid{
+    .l-col-fluid{
         @include flex( 1 0 auto );
+    }
+    .l-col-fit{
+        @include flex( 0 1 auto );
     }
 }
 
-.beer-list .flex-item{
-    
+.l-center{
+    -webkit-justify-content: center;
+            justify-content: center;
     align-items: center;
 }
-#app-main{
-    background: $white;
+
+.l-pad-left{
+    padding-left: 20px;
+}
+
+.col-1-5{
+    width: 20%;
 }

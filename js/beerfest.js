@@ -2,6 +2,51 @@
 
 ;(function(BEERFEST, $, undefined){
 
+    BEERFEST.name = "ebf-2016";
+
+    var app = angular.module('beerfest', ['firebase']);
+
+    var ref_allBeers = new Firebase("https://braican-beerfest.firebaseio.com");
+
+    app.controller( 'BeerfestController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
+        var self = this;
+
+        // loaded
+        self.loaded = false;
+
+        // an array of all beers
+        self.allBeers = [];
+
+        // the beer data, from firebase
+        self.beerData = $firebaseObject( ref_allBeers );
+
+        // lets load the data in
+        self.beerData.$loaded().then(function(){
+            self.loaded = true;
+
+            // get the specific beerfest data into a variable so we
+            //  can get it easier in the template.
+            self.allBeers = self.beerData.beerfests[BEERFEST.name].beerlist;
+        }).catch(function(error){
+            console.error("Error: " + error);
+        });
+
+    } ]);
+
+
+    // -------------------------------
+    // filters
+    //
+
+    /**
+     * filter to decode a string
+     */
+    app.filter( 'decode', function(){
+        return function( val ){
+            return decodeURIComponent(val);
+        }
+    });
+
 
 
 })(window.BEERFEST = window.BEERFEST || {}, jQuery);
@@ -13,7 +58,7 @@
 //
 ;(function(BEERFEST, $, undefined$){
 
-    // BEERFEST.name = "ebf-2016";
+    
 
     // // svg stuff
     // var svgColor  = '#cccccc',
