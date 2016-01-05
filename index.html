@@ -46,17 +46,29 @@
 
         <div class="app-main" ng-controller="BeerfestController as beerfest">
 
-            <div class="all-beers">
-                <header>
-                    <h4>All Beers</h4>
-                </header>
+            <div class="all-beers app-beerlist">
                 <ul class="all-breweries">
-                    <li class="brewery" ng-repeat="(brewery, beers) in beerfest.allBeers">
-                        <span class="brewery-name">{{brewery | decode}}</span>
+                    <li class="brewery" ng-repeat="(brewery, beers) in beerfest.allBeers" ng-class="{active: beers.active}">
+                        <header class="brewery-name" ng-click="beerfest.toggleActiveBrewery( brewery )">
+                            {{brewery | decode}}
 
-                        <ul class="brewery-list">
+                            <span class="open-close-indicator"></span>
+                        </header>
+
+                        <ul class="brewery-beers">
                             <li class="beer" ng-repeat="(index, beer) in beers.beers">
-                                <span class="beer-name">{{beer.name}}</span>
+                                <div class="beer-name"><strong>{{beer.name}}</strong></div>
+                                <div class="beer-stats l-flex">
+                                    <div class="l-col-fluid col-1-2">{{beer.style}}</div>
+                                    <div class="l-col-fit">
+                                        <label for="">ABV</label>
+                                        {{beer.abv}}
+                                    </div>
+                                    <div class="l-col-fit">
+                                        <label for="">Score</label>
+                                        {{beer.ba_score}}
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </li>

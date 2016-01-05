@@ -2,7 +2,7 @@
    --variables
    ============================================================== */
 
-$font-size: 16px;
+$font-size: 14px;
 $line-height: 1.4;
 
 
@@ -12,8 +12,9 @@ $line-height: 1.4;
 
 $text-color: #222;
 
-$color-main: #db162f;
+$color-main: #b41f24;
 
 $color-secondary: #355691;
 $color-gray: #3f4045;
+$color-light-gray: lighten($color-gray, 50%);
 $color-white: #f4faff;

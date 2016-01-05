@@ -22,6 +22,15 @@ html, body, #app{
     .l-col-fit{
         @include flex( 0 1 auto );
     }
+
+    .col-1-2{
+        flex-basis: 50%;
+    }
+
+    .col-1-5{
+        flex-basis: 20%;
+        width: 20%;
+    }
 }
 
 .l-center{
@@ -34,6 +43,3 @@ html, body, #app{
     padding-left: 20px;
 }
 
-.col-1-5{
-    width: 20%;
-}

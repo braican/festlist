@@ -25,6 +25,7 @@ img, svg{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
     
     .branding{
         padding: 10px;
@@ -62,4 +63,131 @@ img, svg{
             max-height: 26px;
         }
     }
+}
+
+
+/* --------------------------------------------
+ * --main
+ * -------------------------------------------- */
+
+.app-main{
+    padding-top: 100px;
+}
+
+
+/* --------------------------------------------
+ * --beer list
+ * -------------------------------------------- */
+
+.app-beerlist{
+
+    .brewery{
+        position: relative;
+
+        .brewery-name{
+            padding: 16px 48px 16px 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        & + .brewery .brewery-name:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 10px;
+            right: 10px;
+            border-top:1px solid $color-light-gray;
+        }
+
+        &.active{
+            z-index: 2;
+            background-color: #eae7e5;
+            margin-bottom: -1px;
+
+            .brewery-name{
+                font-weight: bold;
+                
+                &:before{
+                    left: 0;
+                    right: 0;
+                    border-top-color: $color-main;
+                }
+            }
+            .brewery-beers{
+                display: block;
+            }
+        }
+    }
+    
+
+    .brewery-beers{
+        display: none;
+        margin: 0 20px;
+
+        .beer{
+            padding: 10px 0;
+
+            & + .beer{
+                border-top: 1px solid $color-light-gray;
+            }
+
+            label{
+                font-size: .8em;
+                font-style: italic;
+                display: block;
+            }
+
+            .l-col-fit{
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
+    }
+}
+
+
+
+/* --------------------------------------------
+ * --open / close indicator
+ * -------------------------------------------- */
+
+.open-close-indicator{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 10px;
+    top: 50%;
+    margin-top: -7px;
+
+
+    &:after,
+    &:before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $color-light-gray;
+
+        .active &{
+            background-color: $color-main;
+        }
+    }
+
+    &:after{
+        top: 50%;
+        left: 0;
+    }
+
+    &:before{
+        top: 7px;
+        @include transform( rotate(90deg) );
+        @include transition( opacity .4s );
+
+        .active &{
+            opacity: 0;
+        }
+    }
+
+
 }

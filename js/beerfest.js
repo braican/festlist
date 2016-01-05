@@ -14,8 +14,8 @@
         // loaded
         self.loaded = false;
 
-        // an array of all beers
-        self.allBeers = [];
+        // an object of all beers
+        self.allBeers = {};
 
         // the beer data, from firebase
         self.beerData = $firebaseObject( ref_allBeers );
@@ -30,6 +30,22 @@
         }).catch(function(error){
             console.error("Error: " + error);
         });
+
+
+
+        /**
+         * make the clicked brewery active or inactive, depending on
+         *  the current state
+         */
+        self.toggleActiveBrewery = function( brewery ){
+            var brewery = self.allBeers[ brewery ];
+
+            if( brewery.active ){
+                brewery.active = false;
+            } else {
+                brewery.active = true;
+            }
+        }
 
     } ]);
 
