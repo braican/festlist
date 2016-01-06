@@ -126,6 +126,7 @@ img, svg{
 
         .beer{
             padding: 10px 0;
+            position: relative;
 
             & + .beer{
                 border-top: 1px solid $color-light-gray;
@@ -137,11 +138,41 @@ img, svg{
                 display: block;
             }
 
-            .l-col-fit{
-                padding-left: 8px;
-                padding-right: 8px;
+            .second-row{
+                padding-top: 10px;
+                min-height: 48px;
             }
-        }
+
+            .beer-stats > div + div{
+                padding-left: 12px;
+            }
+
+            .beer-actionable{
+                flex-basis:38px;
+                width: 38px;
+                text-align: left;
+
+                li{
+                    cursor: pointer;
+                    & + li{
+                        margin-top: 6px;
+                    }
+                }
+
+                svg{
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+
+            .rating{
+                display: none;
+                svg{
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        } // beer
     }
 }
 

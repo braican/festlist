@@ -17,10 +17,13 @@ html, body, #app{
     @include flexbox();
 
     .l-col-fluid{
-        @include flex( 1 0 auto );
+        @include flex( 1 1 auto );
     }
     .l-col-fit{
         @include flex( 0 1 auto );
+    }
+    .l-col-fixed{
+        @include flex(0 0 auto);
     }
 
     .col-1-2{

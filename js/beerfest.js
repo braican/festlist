@@ -4,29 +4,49 @@
 
     BEERFEST.name = "ebf-2016";
 
+    // -------------------------------
+    // globals
+    //
+
+    var uid;
+
+
+    // -------------------------------
+    // angular
+    //
+
     var app = angular.module('beerfest', ['firebase']);
 
-    var ref_allBeers = new Firebase("https://braican-beerfest.firebaseio.com");
+    var BEERFEST_DATA = new Firebase("https://braican-beerfest.firebaseio.com");
 
     app.controller( 'BeerfestController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
-        var self = this;
+        
+        $scope.test = "test";
 
         // loaded
-        self.loaded = false;
+        $scope.loaded = false;
 
+    } ]);
+
+
+    app.controller( 'BeerlistController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
+        
         // an object of all beers
-        self.allBeers = {};
+        $scope.allBeers = {};
+
+        // an object of all the current user's beers
+        $scope.userBeers = {};
 
         // the beer data, from firebase
-        self.beerData = $firebaseObject( ref_allBeers );
+        $scope.beerData = $firebaseObject( BEERFEST_DATA );
 
         // lets load the data in
-        self.beerData.$loaded().then(function(){
-            self.loaded = true;
+        $scope.beerData.$loaded().then(function(){
+            $scope.loaded = true;
 
             // get the specific beerfest data into a variable so we
             //  can get it easier in the template.
-            self.allBeers = self.beerData.beerfests[BEERFEST.name].beerlist;
+            $scope.allBeers = $scope.beerData.beerfests[BEERFEST.name].beerlist;
         }).catch(function(error){
             console.error("Error: " + error);
         });
@@ -37,8 +57,8 @@
          * make the clicked brewery active or inactive, depending on
          *  the current state
          */
-        self.toggleActiveBrewery = function( brewery ){
-            var brewery = self.allBeers[ brewery ];
+        $scope.toggleActiveBrewery = function( brewery ){
+            var brewery = $scope.allBeers[ brewery ];
 
             if( brewery.active ){
                 brewery.active = false;
@@ -47,7 +67,14 @@
             }
         }
 
-    } ]);
+
+        /**
+         * select a beer as "had"
+         */
+        $scope.drinkBeer = function( beer ){
+            // beer.name = "test";
+        }
+    }]);
 
 
     // -------------------------------
@@ -60,6 +87,36 @@
     app.filter( 'decode', function(){
         return function( val ){
             return decodeURIComponent(val);
+        }
+    });
+
+
+
+    // -------------------------------
+    // regular functions
+    //
+
+    /**
+     * adjust the app layout based on the header size and stuff like that
+     */
+    function adjustAppLayout(){
+        var headerHeight = $('.app-banner').height();
+        $('.app-main').css('paddingTop', headerHeight + 'px');
+    }
+
+
+
+    // -------------------------------
+    // jQuery
+    //
+
+    $(document).ready(function(){
+        var loginData = BEERFEST_DATA.getAuth();
+
+        adjustAppLayout();
+
+        if( loginData ){
+
         }
     });
 
@@ -281,19 +338,6 @@
 
     //     return markup;
     // }
-
-
-    // /**
-    //  * adjustAppLayout 
-    //  * 
-    //  * adjust the app layout based on the header size and stuff like that
-    //  */
-    // function adjustAppLayout(){
-    //     $('#side-banner').css('top', headerHeight + 'px');
-    //     $('#app-main, #drawer').css('paddingTop', headerHeight + 'px');
-    // }
-
-
 
     // /**
     //  * renderGlobal 
@@ -1257,7 +1301,7 @@
 
     //     headerHeight = $('#banner').outerHeight();
 
-    //     adjustAppLayout();
+    
 
     //     if(loginData){
     //         $('body').addClass('logged-in');
@@ -1286,54 +1330,6 @@
     // });
 
 
-    // /**
-    //  * betterHeader 
-    //  * 
-    //  * hide the header
-    //  */
-    // function betterHeader(){
-    //     var banner   = document.getElementById( 'banner' ),
-    //         scrollit = document.getElementById('scrollit'),
-    //         $app     = $('#app');
-
-    //     if( !banner ) return true;
-
-    //     var elHeight        = 0,
-    //         elTop           = 0,
-    //         dHeight         = 0,
-    //         wHeight         = 0,
-    //         wScrollCurrent  = 0,
-    //         wScrollBefore   = 0,
-    //         wScrollDiff     = 0;
-
-    //     $app.on('scroll', function(){
-            
-    //         elHeight        = banner.offsetHeight;
-    //         dHeight         = $('#app-main').innerHeight();
-    //         wHeight         = $app.innerHeight();
-    //         wScrollCurrent  = $app.scrollTop();
-    //         wScrollDiff     = wScrollBefore - wScrollCurrent;
-    //         elTop           = parseInt( window.getComputedStyle( banner ).getPropertyValue( 'top' ) ) + wScrollDiff;
-
-    //         if( wScrollCurrent <= 0 ){
-    //             banner.style.top = '0px';
-    //             scrollit.style.top = '0px';
-    //         } else if( wScrollDiff > 0 ) {
-    //             banner.style.top = ( elTop > 0 ? 0 : elTop ) + 'px';
-    //             scrollit.style.top = ( elTop > 0 ? 0 : elTop ) + 'px';
-    //         } else if( wScrollDiff < 0 ) {
-    //             if( wScrollCurrent + wHeight >= dHeight - elHeight ){
-    //                 banner.style.top = ( ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 ) + 'px';
-    //                 scrollit.style.top = ( ( elTop = wScrollCurrent + wHeight - dHeight ) < 0 ? elTop : 0 ) + 'px';
-    //             } else {
-    //                 banner.style.top = ( Math.abs( elTop ) > elHeight ? -elHeight : elTop ) + 'px';
-    //                 scrollit.style.top = ( Math.abs( elTop ) > elHeight ? -elHeight : elTop ) + 'px';
-    //             }
-    //         }
-
-    //         wScrollBefore = wScrollCurrent;
-    //     });
-    // }
 
 })(window.BEERFEST = window.BEERFEST || {}, jQuery);
 

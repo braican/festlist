@@ -20,8 +20,7 @@
     <div style="height: 0; width: 0; position: absolute; visibility: hidden" id="svg-sprite"></div>
 
 
-    <div id="app">
-
+    <div id="app" ng-controller="BeerfestController as beerfest">
         <header class="app-banner">
             <div class="branding l-flex l-center">
                 <div class="l-col-fluid"><svg class="beerfest-logo"><use xlink:href="#svg--logo"></use></svg></div>
@@ -44,31 +43,57 @@
         </header><!-- .app-banner -->
 
 
-        <div class="app-main" ng-controller="BeerfestController as beerfest">
+        <div class="app-main" ng-controller="BeerlistController as beerlist">
 
             <div class="all-beers app-beerlist">
                 <ul class="all-breweries">
-                    <li class="brewery" ng-repeat="(brewery, beers) in beerfest.allBeers" ng-class="{active: beers.active}">
-                        <header class="brewery-name" ng-click="beerfest.toggleActiveBrewery( brewery )">
+                    <li class="brewery" ng-repeat="(brewery, beers) in allBeers" ng-class="{active: beers.active}">
+                        <header class="brewery-name" ng-click="toggleActiveBrewery( brewery )">
                             {{brewery | decode}}
 
                             <span class="open-close-indicator"></span>
                         </header>
 
                         <ul class="brewery-beers">
-                            <li class="beer" ng-repeat="(index, beer) in beers.beers">
-                                <div class="beer-name"><strong>{{beer.name}}</strong></div>
-                                <div class="beer-stats l-flex">
-                                    <div class="l-col-fluid col-1-2">{{beer.style}}</div>
-                                    <div class="l-col-fit">
-                                        <label for="">ABV</label>
-                                        {{beer.abv}}
-                                    </div>
-                                    <div class="l-col-fit">
-                                        <label for="">Score</label>
-                                        {{beer.ba_score}}
-                                    </div>
+                            <li class="beer l-flex" ng-repeat="(index, beer) in beers.beers">
+                                <div class="beer-actionable l-col-fixed">
+                                    <ul>
+                                        <li><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                        <li ng-click="beerlist.drinkBeer( beer )"><svg class="icon--checkmark"><use xlink:href="#svg--icon--checkmark"></use></svg></li>
+                                    </ul>
                                 </div>
+
+                                <div class="beer-info l-col-fluid">
+                                    <div class="beer-name">
+                                        <strong>{{beer.name}}</strong>
+                                    </div><!-- .beer-name -->
+
+                                    <div class="second-row">
+
+                                        <div class="beer-stats l-flex">
+                                            <div class="l-col-fluid col-1-2">{{beer.style}}</div>
+                                            <div class="l-col-fit">
+                                                <label for="">ABV</label>
+                                                {{beer.abv}}
+                                            </div>
+                                            <div class="l-col-fit">
+                                                <label for="">Score</label>
+                                                {{beer.ba_score}}
+                                            </div>
+                                        </div><!-- .beer-stats -->
+
+                                        <div class="rating">
+                                            <ul class="l-flex">
+                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                            </ul>
+                                        </div><!-- .rating -->
+
+                                    </div><!-- .second-row -->
+                                </div><!-- .beer-info -->
                             </li>
                         </ul>
                     </li>
