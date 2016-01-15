@@ -79,101 +79,161 @@ img, svg{
  * --beer list
  * -------------------------------------------- */
 
-.app-beerlist{
 
-    .brewery{
+
+.brewery{
+    position: relative;
+
+    .brewery-name{
+        padding: 16px 48px 16px 20px;
         position: relative;
+        cursor: pointer;
+    }
+
+    & + .brewery .brewery-name:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 10px;
+        right: 10px;
+        border-top: 1px solid $color-light-gray;
+    }
+
+    &.active{
+        z-index: 2;
+        background-color: $color-white;
+        margin-bottom: -1px;
+        border-bottom: 2px solid $color-main;
 
         .brewery-name{
-            padding: 16px 48px 16px 20px;
-            position: relative;
-            cursor: pointer;
-        }
-
-        & + .brewery .brewery-name:before{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 10px;
-            right: 10px;
-            border-top:1px solid $color-light-gray;
-        }
-
-        &.active{
-            z-index: 2;
-            background-color: #eae7e5;
-            margin-bottom: -1px;
-
-            .brewery-name{
-                font-weight: bold;
-                
-                &:before{
-                    left: 0;
-                    right: 0;
-                    border-top-color: $color-main;
-                }
+            font-weight: bold;
+            &:before{
+                left: 0;
+                right: 0;
+                border-top-width: 2px;
+                border-top-color: $color-main;
             }
-            .brewery-beers{
-                display: block;
-            }
+        }
+        .brewery-beers{
+            display: block;
         }
     }
+}
     
 
-    .brewery-beers{
-        display: none;
-        margin: 0 20px;
+.brewery-beers{
 
-        .beer{
-            padding: 10px 0;
+    .beers--all &{
+        display: none;    
+    }
+    
+    margin: 0 20px;
+
+    .beer{
+        padding: 10px 0;
+        position: relative;
+        border-top: 1px solid $color-light-gray;
+
+        label{
+            font-size: .8em;
+            font-style: italic;
+            display: block;
+        }
+
+        .second-row{
+            padding-top: 10px;
+            min-height: 48px;
             position: relative;
+        }
 
-            & + .beer{
-                border-top: 1px solid $color-light-gray;
-            }
 
-            label{
-                font-size: .8em;
-                font-style: italic;
-                display: block;
-            }
+        .beer-stats {
+            opacity: 1;
+            visibility: visible;
+            @include transition( all, .4s );
 
-            .second-row{
-                padding-top: 10px;
-                min-height: 48px;
-            }
-
-            .beer-stats > div + div{
+            & > div + div{
                 padding-left: 12px;
             }
+        }
 
-            .beer-actionable{
-                flex-basis:38px;
-                width: 38px;
-                text-align: left;
+        .beer-actionable{
+            flex-basis:32px;
+            width: 32px;
+            text-align: center;
+            padding-right: 10px;
 
-                li{
-                    cursor: pointer;
-                    & + li{
-                        margin-top: 6px;
-                    }
-                }
-
-                svg{
-                    width: 22px;
-                    height: 22px;
+            li{
+                cursor: pointer;
+                & + li{
+                    margin-top: 6px;
                 }
             }
 
+            svg{
+                fill: $color-gray;
+                width: 22px;
+                height: 22px;
+            }
+
+            .beer-rating{
+                font-weight: bold;
+                color: $color-green;
+            }
+        }
+
+        .rating{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 10px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition( all, .4s );
+
+            li + li{
+                margin-left: 10px;
+            }
+
+            svg{
+                @include transition( fill .2s);
+                width: 26px;
+                height: 26px;
+            }
+
+            .rated svg{
+                fill: $color-yellow;
+            }
+        }
+        
+        // prompt the rating
+        &.prompt-rating {
             .rating{
-                display: none;
-                svg{
-                    width: 26px;
-                    height: 26px;
-                }
+                opacity: 1;
+                visibility: visible;
             }
-        } // beer
-    }
+            .beer-stats{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        
+        // beer status things
+        &.wishlisted .beer-actionable .icon--starred{
+            fill: $color-yellow;
+        }
+
+        &.had {
+            .trigger-wishlist{
+                display: none;
+            }
+            .icon--checkmark{
+                fill: $color-green;
+            }
+        }
+
+    } // beer
 }
 
 
@@ -186,7 +246,7 @@ img, svg{
     position: absolute;
     width: 14px;
     height: 14px;
-    right: 10px;
+    right: 20px;
     top: 50%;
     margin-top: -7px;
 

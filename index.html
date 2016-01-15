@@ -33,9 +33,9 @@
 
             <div class="app-nav">
                 <ul class="l-flex">
-                    <li class="l-col-fluid col-1-5"><svg class="icon--beerlist"><use xlink:href="#svg--icon--bottles"></use></svg></li>
-                    <li class="l-col-fluid col-1-5"><svg class="icon--hads"><use xlink:href="#svg--icon--hads"></use></svg></li>
-                    <li class="l-col-fluid col-1-5"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                    <li class="l-col-fluid col-1-5" ng-click="appView = 'all-beers'"><svg class="icon--beerlist"><use xlink:href="#svg--icon--bottles"></use></svg></li>
+                    <li class="l-col-fluid col-1-5" ng-click="appView = 'hads'"><svg class="icon--hads"><use xlink:href="#svg--icon--hads"></use></svg></li>
+                    <li class="l-col-fluid col-1-5" ng-click="appView = 'wishlist'"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
                     <li class="l-col-fluid col-1-5"><svg class="icon--search"><use xlink:href="#svg--icon--search"></use></svg></li>
                     <li class="l-col-fluid col-1-5"><svg class="icon--more"><use xlink:href="#svg--icon--more"></use></svg>
                 </ul>
@@ -43,69 +43,15 @@
         </header><!-- .app-banner -->
 
 
-        <div class="app-main" ng-controller="BeerlistController as beerlist">
+        <div class="app-main" ng-controller="BeerlistController">
 
-            <div class="all-beers app-beerlist">
-                <ul class="all-breweries">
-                    <li class="brewery" ng-repeat="(brewery, beers) in allBeers" ng-class="{active: beers.active}">
-                        <header class="brewery-name" ng-click="toggleActiveBrewery( brewery )">
-                            {{brewery | decode}}
+            <div class="beers--all app-beerlist" beerlist ng-controller="AllBeersController" ng-show="appView === 'all-beers'"></div><!-- .beers-all -->
+            <div class="beers--hads app-beerlist" beerlist ng-controller="HadsController" ng-show="appView === 'hads'" ></div><!-- .beers-hads -->
+            <div class="beers--wishlist app-beerlist" beerlist ng-controller="WishlistController" ng-show="appView === 'wishlist'"></div><!-- .beers-wishlist -->
 
-                            <span class="open-close-indicator"></span>
-                        </header>
-
-                        <ul class="brewery-beers">
-                            <li class="beer l-flex" ng-repeat="(index, beer) in beers.beers">
-                                <div class="beer-actionable l-col-fixed">
-                                    <ul>
-                                        <li><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                        <li ng-click="beerlist.drinkBeer( beer )"><svg class="icon--checkmark"><use xlink:href="#svg--icon--checkmark"></use></svg></li>
-                                    </ul>
-                                </div>
-
-                                <div class="beer-info l-col-fluid">
-                                    <div class="beer-name">
-                                        <strong>{{beer.name}}</strong>
-                                    </div><!-- .beer-name -->
-
-                                    <div class="second-row">
-
-                                        <div class="beer-stats l-flex">
-                                            <div class="l-col-fluid col-1-2">{{beer.style}}</div>
-                                            <div class="l-col-fit">
-                                                <label for="">ABV</label>
-                                                {{beer.abv}}
-                                            </div>
-                                            <div class="l-col-fit">
-                                                <label for="">Score</label>
-                                                {{beer.ba_score}}
-                                            </div>
-                                        </div><!-- .beer-stats -->
-
-                                        <div class="rating">
-                                            <ul class="l-flex">
-                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                                <li class="col-1-5 l-col-fluid"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                            </ul>
-                                        </div><!-- .rating -->
-
-                                    </div><!-- .second-row -->
-                                </div><!-- .beer-info -->
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
         </div><!-- .app-main -->
 
     </div><!-- #app -->
-
-
-
-
 
 
     <script>

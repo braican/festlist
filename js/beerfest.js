@@ -20,22 +20,25 @@
     var BEERFEST_DATA = new Firebase("https://braican-beerfest.firebaseio.com");
 
     app.controller( 'BeerfestController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
-        
-        $scope.test = "test";
-
         // loaded
         $scope.loaded = false;
+
+        // the current app view
+        //  - all-beers
+        //  - hads
+        //  - wishlist
+        $scope.appView = 'all-beers';
 
     } ]);
 
 
-    app.controller( 'BeerlistController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
+    app.controller( 'BeerlistController', ['$firebaseObject', '$scope', '$timeout', function( $firebaseObject, $scope, $timeout ){
         
-        // an object of all beers
-        $scope.allBeers = {};
-
         // an object of all the current user's beers
-        $scope.userBeers = {};
+        $scope.userHads = {};
+
+        // an object of all the user's wishlisted beers
+        $scope.userWishlist = {};
 
         // the beer data, from firebase
         $scope.beerData = $firebaseObject( BEERFEST_DATA );
@@ -46,34 +49,262 @@
 
             // get the specific beerfest data into a variable so we
             //  can get it easier in the template.
-            $scope.allBeers = $scope.beerData.beerfests[BEERFEST.name].beerlist;
+            $scope.beerlist = $scope.beerData.beerfests[BEERFEST.name].beerlist;
+
         }).catch(function(error){
             console.error("Error: " + error);
         });
 
-
-
         /**
          * make the clicked brewery active or inactive, depending on
          *  the current state
+         * @param event (object)
+         *    - the event object from the click
          */
-        $scope.toggleActiveBrewery = function( brewery ){
-            var brewery = $scope.allBeers[ brewery ];
+        $scope.toggleActiveBrewery = function( event ){
+            $(event.target).closest('.brewery').toggleClass('active');
+        }
 
-            if( brewery.active ){
-                brewery.active = false;
-            } else {
-                brewery.active = true;
+
+        /**
+         * wishlist a beer
+         * @param beer (object)
+         *    - the beer object
+         * @param brewery (string)
+         *    - an encoded string of the brewery
+         */
+        $scope.wishlistBeer = function( beer, brewery ){
+            var wishlist = $scope.userWishlist,
+                beerName = BEERFEST.encode( beer.name );
+
+            // no beers from this brewery have been wishlisted
+            if( wishlist[brewery] === undefined ){
+                wishlist[brewery] = { beers: {} };
+                wishlist[brewery].beers[beerName] = beer;
             }
+            // at least one beer from this brewery has been wishlisted
+            else {
+
+                // this beer has not been wishlisted, so add it
+                if( wishlist[brewery].beers[beerName] === undefined ){
+                    wishlist[brewery].beers[beerName] = beer;
+                }
+                // this beer has been wishlisted, so remove it
+                else {
+                    delete wishlist[brewery].beers[beerName];
+
+                    // if there are no more beers wishlisted for this
+                    //  brewery, remove the brewery
+                    if( Object.keys( wishlist[brewery].beers ).length === 0 ){
+                        delete $scope.userWishlist[brewery];
+                    }
+                }
+            }
+
+            $scope.saveData();
         }
 
 
         /**
          * select a beer as "had"
+         * @param beer (object)
+         *    - the beer object
+         * @param brewery (string)
+         *    - an encoded string of the brewery
          */
-        $scope.drinkBeer = function( beer ){
-            // beer.name = "test";
+        $scope.drinkBeer = function( beer, brewery ){
+
+            var hadslist = $scope.userHads,
+                beerName = BEERFEST.encode( beer.name );
+
+            // no beers from this brewery have been had
+            if( hadslist[brewery] === undefined ){
+                hadslist[brewery] = { beers: {} };
+                hadslist[brewery].beers[beerName] = beer;
+                hadslist[brewery].beers[beerName].isRating = true;
+                hadslist[brewery].beers[beerName].rating = 0;
+            }
+            // at least one beer from this brewery has been wishlisted
+            else {
+
+                // this beer has not been had, so add it
+                if( hadslist[brewery].beers[beerName] === undefined ){
+                    hadslist[brewery].beers[beerName] = beer;
+                    hadslist[brewery].beers[beerName].isRating = true;
+                    hadslist[brewery].beers[beerName].rating = 0;
+                }
+                // this beer has been had, so remove it
+                else {
+                    delete hadslist[brewery].beers[beerName];
+
+                    // if there are no more beers had from this
+                    //  brewery, remove the brewery
+                    if( Object.keys( hadslist[brewery].beers ).length === 0 ){
+                        delete $scope.userWishlist[brewery];
+                    }
+                }
+            }
+
+            $scope.saveData();
         }
+
+
+        /**
+         * get the rating for the passed beer
+         * @param beer (object)
+         *    - the beer object
+         * @param brewery (string)
+         *    - an encoded string of the brewery
+         */
+        $scope.beerRating = function( beer, brewery ){
+            var hadslist = $scope.userHads,
+                beerName = BEERFEST.encode( beer.name );
+
+            if( hadslist[brewery] === undefined || hadslist[brewery].beers[beerName] === undefined ){
+                return false;
+            }
+
+            $scope.saveData();
+
+            return hadslist[brewery].beers[beerName].rating;
+        }
+
+
+        /**
+         * rates the beer
+         * @param beer (object)
+         *    - the beer object
+         * @param brewery (string)
+         *    - an encoded string of the brewery
+         * @param rating (number)
+         *    - the rating for this beer
+         */
+        $scope.rateBeer = function( beer, brewery, rating ){
+            var hadslist = $scope.userHads,
+                beerName = BEERFEST.encode( beer.name );
+
+            if( hadslist[brewery] === undefined || hadslist[brewery].beers[beerName] === undefined ){
+                return false;
+            }
+
+            hadslist[brewery].beers[beerName].rating = rating;
+
+            $scope.saveData();
+
+            $timeout(function(){
+                hadslist[brewery].beers[beerName].isRating = false;
+
+                $scope.saveData();
+            }, 600);
+        }
+
+
+        /**
+         * open the rating stuff again
+         * @param beer (object)
+         *    - the beer object
+         * @param brewery (string)
+         *    - an encoded string of the brewery
+         */
+        $scope.openRating = function( beer, brewery ){
+            var hadslist = $scope.userHads,
+                beerName = BEERFEST.encode( beer.name );
+
+            if( hadslist[brewery] === undefined || hadslist[brewery].beers[beerName] === undefined ){
+                return false;
+            }
+
+            hadslist[brewery].beers[beerName].isRating = true;
+        }
+
+
+        /**
+         * check to see if this rating star should be highligted
+         *  based on the beer's rating
+         * @param beer (object)
+         *    - the beer object
+         * @param brewery (string)
+         *    - an encoded string of the brewery
+         * @param rating (number)
+         *    - the rating icon we're checking
+         */
+        $scope.getRatingClass = function( beer, brewery, rating ){
+            var hadslist = $scope.userHads,
+                beerName = BEERFEST.encode( beer.name );
+
+            if( hadslist[brewery] === undefined || hadslist[brewery].beers[beerName] === undefined ){
+                return false;
+            }
+
+            var beerRating = hadslist[brewery].beers[beerName].rating;
+
+            return rating <= beerRating ? "rated" : false;
+        }
+
+
+
+
+
+        /**
+         * assign classes to this beer
+         * @param beer (object)
+         *    - the beer object
+         * @param brewery (string)
+         *    - an encoded string of the brewery
+         */
+        $scope.beerClasses = function( beer, brewery ){
+            var classes  = "",
+                wishlist = $scope.userWishlist,
+                hadslist = $scope.userHads,
+                beerName = BEERFEST.encode(beer.name);
+
+            if( wishlist[brewery] !== undefined && wishlist[brewery].beers[beerName] !== undefined ){
+                classes += ' wishlisted';
+            }
+            if( hadslist[brewery] !== undefined && hadslist[brewery].beers[beerName] !== undefined ){
+                classes += ' had';
+
+                if( hadslist[brewery].beers[beerName].isRating ){
+                    classes += ' prompt-rating';
+                }
+            }
+
+            return classes;
+        }
+
+
+        /**
+         * save the data, either to localstorage or to firebase
+         */
+        $scope.saveData = function(){
+            var hads     = $scope.userHads,
+                wishlist = $scope.userWishlist;
+
+            console.log(hads);
+            console.log(wishlist);
+            
+        }
+
+        // -------------------------------
+        // PUBLIC
+        //
+        window.getWishlist = function(){
+            return $scope.userWishlist;
+        }
+        window.getHads = function(){
+            return $scope.userHads;
+        }
+    }]);
+
+
+    app.controller( 'AllBeersController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
+        $scope.view = 'all';
+    }]);
+    app.controller( 'HadsController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
+        $scope.beerlist = $scope.userHads;
+    }]);
+    app.controller( 'WishlistController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
+        $scope.beerlist = $scope.userWishlist;
     }]);
 
 
@@ -86,8 +317,19 @@
      */
     app.filter( 'decode', function(){
         return function( val ){
-            return decodeURIComponent(val);
+            return BEERFEST.decode(val);
         }
+    });
+
+
+    // -------------------------------
+    // directives
+    //
+
+    app.directive( "beerlist", function( $compile ){
+        return {
+            templateUrl: 'templates/beer-view.html'
+        };
     });
 
 
@@ -1337,11 +1579,11 @@
 (function(BEERFEST, $, undefined){
 
 
-    BEERFEST.encodeValue = function(string){
+    BEERFEST.encode = function(string){
         return encodeURIComponent(string).replace(/\./g, '%2E');
     };
 
-    BEERFEST.decodeValue = function(string){
+    BEERFEST.decode = function(string){
         return decodeURIComponent(string.replace('%2E', '.'));
     };
 
