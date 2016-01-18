@@ -20,8 +20,68 @@ ul, ol{
 }
 
 
+
+/* --------------------------------------------
+ * --headers
+ * -------------------------------------------- */
+
+h6{
+    color: $color-main;
+    font-weight: 700;
+}
+
+
 /* --------------------------------------------
  * --icons
  * -------------------------------------------- */
 
 
+/* ------------------------------------------
+ * --forms
+ * ------------------------------------------ */
+
+// lets reset
+input[type="email"],
+input[type="password"],
+input[type="text"],
+button{
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    width: 100%;
+    display: block;
+    padding: 8px;
+    margin: 6px 0;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+button:focus{
+    outline:none;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"]{
+    background-color: #fff;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+}
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus{
+    border-bottom-color: $color-light-gray;
+}
+
+// hack for autocomplete stuff
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+button{
+    background-color: $color-main;
+    color: #fff;
+}

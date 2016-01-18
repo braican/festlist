@@ -23,29 +23,84 @@
         // loaded
         $scope.loaded = false;
 
+        $scope.drawerActive = false;
+
         // the current app view
         //  - all-beers
         //  - hads
         //  - wishlist
         $scope.appView = 'all-beers';
 
-    } ]);
+
+        $scope.currentUser = null;
+
+
+        /**
+         * get the classes for the app div
+         */
+        $scope.getAppClasses = function(){
+            var classes = '';
+
+            if( $scope.loaded === true )
+                classes += ' appLoaded';
+
+            if( $scope.drawerActive === true )
+                classes += ' drawerActive';
+
+            return classes;
+        }
+
+    } ]); // BeerfestController
+
+
+    app.controller( 'AuthController', ['$scope', '$firebaseAuth', function( $scope, $firebaseAuth ){
+
+        var auth = $firebaseAuth( BEERFEST_DATA );
+
+        $scope.ctrlError = null;
+
+
+        var authData = auth.$getAuth();
+
+
+        if (authData) {
+          console.log("Logged in as:", authData.uid);
+          $scope.$parent.currentUser = authData;
+        }
+
+        /**
+         * sign in
+         */
+        $scope.login = function(){
+
+            auth.$authWithPassword({
+                email    : $scope.email,
+                password : $scope.password
+            }).then( function( user ){
+                $scope.$parent.currentUser = user;
+            }, function( error ){
+                console.log( error );
+                $scope.ctrlError = error;
+            });
+        }
+
+    } ]); // AuthController
 
 
     app.controller( 'BeerlistController', ['$firebaseObject', '$scope', '$timeout', function( $firebaseObject, $scope, $timeout ){
         
         // an object of all the current user's beers
-        $scope.userHads = {};
+        $scope.userHads = getUserHads();
 
         // an object of all the user's wishlisted beers
-        $scope.userWishlist = {};
+        $scope.userWishlist = getUserWishlist();
 
         // the beer data, from firebase
         $scope.beerData = $firebaseObject( BEERFEST_DATA );
 
         // lets load the data in
         $scope.beerData.$loaded().then(function(){
-            $scope.loaded = true;
+            $scope.$parent.loaded = true;
 
             // get the specific beerfest data into a variable so we
             //  can get it easier in the template.
@@ -140,7 +195,7 @@
                     // if there are no more beers had from this
                     //  brewery, remove the brewery
                     if( Object.keys( hadslist[brewery].beers ).length === 0 ){
-                        delete $scope.userWishlist[brewery];
+                        delete hadslist[brewery];
                     }
                 }
             }
@@ -163,8 +218,6 @@
             if( hadslist[brewery] === undefined || hadslist[brewery].beers[beerName] === undefined ){
                 return false;
             }
-
-            $scope.saveData();
 
             return hadslist[brewery].beers[beerName].rating;
         }
@@ -274,27 +327,49 @@
 
 
         /**
-         * save the data, either to localstorage or to firebase
+         * save the data, either to localStorage or to firebase
          */
         $scope.saveData = function(){
             var hads     = $scope.userHads,
                 wishlist = $scope.userWishlist;
 
-            console.log(hads);
-            console.log(wishlist);
+            localStorage.userHads = JSON.stringify( hads );
+            localStorage.userWishlist = JSON.stringify( wishlist );
             
         }
 
+
+
         // -------------------------------
-        // PUBLIC
+        // getters
         //
-        window.getWishlist = function(){
-            return $scope.userWishlist;
+
+        /**
+         * gets the user's hads
+         * @return object
+         */
+        function getUserHads(){
+            if( localStorage.userHads ){
+                return JSON.parse( localStorage.userHads );
+            }
+
+            return {};
         }
-        window.getHads = function(){
-            return $scope.userHads;
+
+
+        /**
+         * gets the user's wishlist
+         * @return object
+         */
+        function getUserWishlist(){
+            if( localStorage.userWishlist ){
+                return JSON.parse( localStorage.userWishlist );
+            }
+
+            return {};
         }
-    }]);
+        
+    }]); // BeerlistController
 
 
     app.controller( 'AllBeersController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
@@ -343,7 +418,7 @@
      */
     function adjustAppLayout(){
         var headerHeight = $('.app-banner').height();
-        $('.app-main').css('paddingTop', headerHeight + 'px');
+        $('.app-main, .app-drawer').css('paddingTop', headerHeight + 'px');
     }
 
 

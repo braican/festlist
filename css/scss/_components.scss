@@ -40,8 +40,16 @@ img, svg{
 
     .util-nav li{
         display: inline-block;
+
+        span{
+            vertical-align: middle;
+            color: #fff;
+            font-size: .8em;
+            opacity: .6;
+        }
         
         svg{
+            vertical-align: middle;
             width: 20px;
             max-height: 20px;
             fill:$color-white;
@@ -56,6 +64,14 @@ img, svg{
             padding: 10px;
             @include flexbox();
             justify-content: center;
+
+            &.active{
+                background: #222;
+
+                svg{
+                    fill: #fff;
+                }
+            }
         }
 
         svg{
@@ -67,11 +83,48 @@ img, svg{
 
 
 /* --------------------------------------------
+ * --loading
+ * -------------------------------------------- */
+
+.app-loading{
+    position: absolute;
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    background-color: $color-main;
+    opacity: 1;
+    visibility: visible;
+    @include transition(all .4s);
+
+    .appLoaded &{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .beerfest-logo{
+        fill: #fff;
+        height: 40px;
+    }
+
+    p{
+        margin-top: 1em;
+    }
+}
+
+
+/* --------------------------------------------
  * --main
  * -------------------------------------------- */
 
 .app-main{
     padding-top: 100px;
+    overflow: auto;
+    height: 100%;
 }
 
 
@@ -123,11 +176,12 @@ img, svg{
 
 .brewery-beers{
 
+    margin: 0 20px;
+
     .beers--all &{
         display: none;    
     }
-    
-    margin: 0 20px;
+
 
     .beer{
         padding: 10px 0;
@@ -239,7 +293,7 @@ img, svg{
 
 
 /* --------------------------------------------
- * --open / close indicator
+ * --open / close indicator (the plus/minus in the beer view)
  * -------------------------------------------- */
 
 .open-close-indicator{
@@ -282,3 +336,4 @@ img, svg{
 
 
 }
+
