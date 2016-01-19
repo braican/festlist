@@ -15,7 +15,9 @@
     // angular
     //
 
-    var app = angular.module('beerfest', ['firebase']);
+    var app = angular.module('beerfest', ['firebase']).run(function() {
+        Origami.fastclick(document.body);
+    });
 
     var BEERFEST_DATA = new Firebase("https://braican-beerfest.firebaseio.com");
 
@@ -170,6 +172,11 @@
                 }
             }
 
+            if( $scope.$parent.currentUser ){
+                var uid = $scope.$parent.currentUser.uid;
+                $scope.beerfestData.users[ uid  ].fests[ BEERFEST.name ].wishlist = wishlist;
+            }
+
             $scope.saveData();
         }
 
@@ -229,7 +236,7 @@
             var hadslist = $scope.userHads,
                 beerName = BEERFEST.encode( beer.name );
 
-            if( hadslist[brewery] === undefined || hadslist[brewery].beers[beerName] === undefined ){
+            if( hadslist === undefined || hadslist[brewery] === undefined || hadslist[brewery].beers[beerName] === undefined ){
                 return false;
             }
 
@@ -257,7 +264,10 @@
             hadslist[brewery].beers[beerName].rating = rating;
             hadslist[brewery].beers[beerName].isRating = false;
 
-            $scope.beerfestData.users['simplelogin:1'].fests['ebf-2016'].hads = hadslist;
+            if( $scope.$parent.currentUser ){
+                var uid = $scope.$parent.currentUser.uid;
+                $scope.beerfestData.users[ uid  ].fests[ BEERFEST.name ].hads = hadslist;
+            }
 
             $scope.saveData();
         }
@@ -296,7 +306,7 @@
             var hadslist = $scope.userHads,
                 beerName = BEERFEST.encode( beer.name );
 
-            if( hadslist[brewery] === undefined || hadslist[brewery].beers[beerName] === undefined ){
+            if( hadslist === undefined || hadslist[brewery] === undefined || hadslist[brewery].beers[beerName] === undefined ){
                 return false;
             }
 
@@ -322,10 +332,12 @@
                 hadslist = $scope.userHads,
                 beerName = BEERFEST.encode(beer.name);
 
-            if( wishlist[brewery] !== undefined && wishlist[brewery].beers[beerName] !== undefined ){
+            if( wishlist !== undefined && wishlist[brewery] !== undefined && wishlist[brewery].beers[beerName] !== undefined ){
                 classes += ' wishlisted';
             }
-            if( hadslist[brewery] !== undefined && hadslist[brewery].beers[beerName] !== undefined ){
+
+
+            if( hadslist !== undefined && hadslist[brewery] !== undefined && hadslist[brewery].beers[beerName] !== undefined ){
                 classes += ' had';
 
                 if( hadslist[brewery].beers[beerName].isRating ){

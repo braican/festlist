@@ -175,13 +175,8 @@ img, svg{
     
 
 .brewery-beers{
-
     margin: 0 20px;
-
-    .beers--all &{
-        display: none;    
-    }
-
+    display: none;
 
     .beer{
         padding: 10px 0;
