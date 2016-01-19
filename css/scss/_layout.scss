@@ -2,6 +2,10 @@
    --layout
    ============================================================== */
 
+html, body, #app{
+    height: 100%;
+}
+
 #app{
     position: relative;
     overflow: hidden;
@@ -33,7 +37,7 @@
  */
 
 .app-drawer{
-    position: fixed;
+    position: absolute;
     background: $color-white;
     top: 0;
     bottom: 0;
@@ -95,8 +99,8 @@
 .l-center{
     -webkit-justify-content: center;
             justify-content: center;
-    -webkit-align-items:center;
-           align-items: center;
+            -webkit-align-items:center;
+    align-items: center;
 }
 
 .l-pad-left{

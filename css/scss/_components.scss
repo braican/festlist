@@ -21,7 +21,7 @@ img, svg{
  * -------------------------------------------- */
 
 .app-banner{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -88,7 +88,7 @@ img, svg{
  * -------------------------------------------- */
 
 .app-loading{
-    position: fixed;
+    position: absolute;
     text-align: center;
     padding: 40px;
     color: #fff;
