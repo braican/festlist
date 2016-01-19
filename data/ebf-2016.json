@@ -1,482 +1,296 @@
 {
-  "21st%20Amendment%20Brewery": {
+  "2SP%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Brew Free Or Die IPA",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "3.85"
-      },
-      {
-        "name": "Down To Earth Session IPA",
-        "style": "American IPA",
-        "abv": "4.40%",
-        "ba_score": "3.86"
-      },
-      {
-        "name": "Hell Or High Watermelon Wheat Beer",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.90%",
-        "ba_score": "3.29"
-      },
-      {
-        "name": "Monk's Blood",
-        "style": "Belgian Strong Dark Ale",
-        "abv": "8.30%",
-        "ba_score": "3.8"
-      }
-    ]
-  },
-  "3%20Stars%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Above The Clouds",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.30%",
-        "ba_score": "3.98"
-      },
-      {
-        "name": "Desolation",
-        "style": "American Porter",
-        "abv": "9.60%",
-        "ba_score": "4.18"
-      },
-      {
-        "name": "Peppercorn Saison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.50%",
-        "ba_score": "3.81"
-      }
-    ]
-  },
-  "603%20Brewery": {
-    "beers": [
-      {
-        "name": "18 Mile Ale",
-        "style": "Rye Beer",
-        "abv": "6.60%",
-        "ba_score": "3.44"
-      },
-      {
-        "name": "603 Cogway IPA",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.51"
-      },
-      {
-        "name": "Summatime Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "4.50%",
-        "ba_score": "3.55"
-      },
-      {
-        "name": "Winni Ale",
-        "style": "American Amber / Red Ale",
-        "abv": "6.60%",
-        "ba_score": "3.73"
-      }
-    ]
-  },
-  "Abandoned%20Building%20Brewery": {
-    "beers": [
-      {
-        "name": "Brickyard Imperial IPA",
+        "name": "Bellcracker Double IPA",
         "style": "American Double / Imperial IPA",
         "abv": "8.70%",
+        "ba_score": "4.27"
+      },
+      {
+        "name": "Brett Butler",
+        "style": "Belgian Pale Ale",
+        "abv": "4.00%",
         "ba_score": "-"
       },
       {
-        "name": "Dirty Girl IPA",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.91"
+        "name": "Creamsicle Weiss",
+        "style": "Berliner Weissbier",
+        "abv": "4.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Lola's Saison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "5.00%",
-        "ba_score": "4.06"
-      },
-      {
-        "name": "Nightshade",
-        "style": "American Stout",
-        "abv": "7.20%",
-        "ba_score": "3.99"
-      },
-      {
-        "name": "Odin Quadruple",
-        "style": "Quadrupel (Quad)",
-        "abv": "9.50%",
-        "ba_score": "4.31"
-      },
-      {
-        "name": "Trap Door Tripel",
-        "style": "Tripel",
-        "abv": "8.50%",
-        "ba_score": "3.56"
+        "name": "The Russian",
+        "style": "Russian Imperial Stout",
+        "abv": "9.00%",
+        "ba_score": "4.29"
       }
     ]
   },
-  "Aeronaut%20Brewing%20Company": {
+  "7venth%20(Seventh)%20Sun%20Brewery": {
     "beers": [
       {
-        "name": "Jackdaw London Porter",
-        "style": "English Porter",
-        "abv": "4.70%",
-        "ba_score": "3.67"
-      },
-      {
-        "name": "Saison Of The Western Ghats",
+        "name": "Barrel Aged Soul Cleaver",
         "style": "Saison / Farmhouse Ale",
-        "abv": "5.50%",
-        "ba_score": "4.09"
+        "abv": "6.50%",
+        "ba_score": "-"
       },
       {
-        "name": "Session With Dr. Nandu",
-        "style": "American Pale Ale (APA)",
-        "abv": "4.60%",
-        "ba_score": "3.83"
+        "name": "Digital Face",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "7.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Summer In Cologne",
-        "style": "Kölsch",
-        "abv": "4.80%",
-        "ba_score": "4"
+        "name": "Flying Buffalo",
+        "style": "American Porter",
+        "abv": "10.00%",
+        "ba_score": "4.65"
+      },
+      {
+        "name": "Graffiti Orange",
+        "style": "American Pale Wheat Ale",
+        "abv": "5.90%",
+        "ba_score": "3.57"
+      },
+      {
+        "name": "Imaginary Friends",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "7.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Ridin' The Wake",
+        "style": "Berliner Weissbier",
+        "abv": "3.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Rum Barrel Aged Belgian Cherry Chocolate Porter",
+        "style": "American Porter",
+        "abv": "8.10%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Rum Barrel Aged Mangrove",
+        "style": "American Double / Imperial IPA",
+        "abv": "10.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Yule Shoot Your Eye Out",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "6.00%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Against%20The%20Grain%20Brewery%20%26%20Smokehouse": {
+    "beers": [
+      {
+        "name": "1 Brazillion Dollars",
+        "style": "Wheatwine",
+        "abv": "12.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "70K",
+        "style": "American Double / Imperial Stout",
+        "abv": "13.00%",
+        "ba_score": "4.32"
+      },
+      {
+        "name": "Against The Grain / Aviary & Fountainhead: There Gose The Neighborhood",
+        "style": "Gose",
+        "abv": "4.50%",
+        "ba_score": "3.78"
+      },
+      {
+        "name": "Bo & Luke",
+        "style": "Russian Imperial Stout",
+        "abv": "13.00%",
+        "ba_score": "4.31"
+      },
+      {
+        "name": "Bo And Luke - Sassafradish",
+        "style": "American Double / Imperial Stout",
+        "abv": "13.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Kamen Knuddeln Kentucky Common",
+        "style": "American Wild Ale",
+        "abv": "6.20%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Raucho Man Brandy Savage",
+        "style": "Smoked Beer",
+        "abv": "8.70%",
+        "ba_score": "3.68"
+      },
+      {
+        "name": "Rico Sauvin",
+        "style": "American Double / Imperial IPA",
+        "abv": "8.20%",
+        "ba_score": "4.05"
+      },
+      {
+        "name": "Sho' Nuff",
+        "style": "Belgian Pale Ale",
+        "abv": "4.90%",
+        "ba_score": "3.47"
       }
     ]
   },
   "Allagash%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Allagash Odyssey",
+        "name": "Allagash  St. Klippenstein",
         "style": "Belgian Strong Dark Ale",
         "abv": "9.00%",
-        "ba_score": "4.25"
-      },
-      {
-        "name": "Allagash Saison Ale",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.10%",
-        "ba_score": "3.91"
-      },
-      {
-        "name": "Allagash Session Brett",
-        "style": "American Wild Ale",
-        "abv": "4.50%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Allagash White",
-        "style": "Witbier",
-        "abv": "5.00%",
-        "ba_score": "4.12"
-      }
-    ]
-  },
-  "Alltech's%20Lexington%20Brewing%20and%20Distilling%20Co%2E": {
-    "beers": [
-      {
-        "name": "Kentucky Bourbon Barrel Ale",
-        "style": "English Strong Ale",
-        "abv": "8.19%",
-        "ba_score": "3.62"
-      },
-      {
-        "name": "Kentucky Bourbon Barrel Stout",
-        "style": "American Double / Imperial Stout",
-        "abv": "8.00%",
-        "ba_score": "3.53"
-      },
-      {
-        "name": "Kentucky Kolsch",
-        "style": "Kölsch",
-        "abv": "4.72%",
-        "ba_score": "3.13"
-      },
-      {
-        "name": "Kentucky Old Fashioned Barrel Ale",
-        "style": "American Strong Ale",
-        "abv": "10.00%",
-        "ba_score": "3.79"
-      }
-    ]
-  },
-  "Amherst%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Alien IPA",
-        "style": "American IPA",
-        "abv": "7.50%",
-        "ba_score": "4"
-      },
-      {
-        "name": "Jess",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "4.01"
-      },
-      {
-        "name": "Pistachio Crème Pie",
-        "style": "Herbed / Spiced Beer",
-        "abv": "5.20%",
-        "ba_score": "4.69"
-      },
-      {
-        "name": "Toasted Coconut Porter",
-        "style": "American Porter",
-        "abv": "5.80%",
         "ba_score": "-"
       },
       {
-        "name": "Wedding Witte",
-        "style": "Witbier",
-        "abv": "5.20%",
-        "ba_score": "2.91"
+        "name": "Astrid",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "9.70%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Little Brett",
+        "style": "American Wild Ale",
+        "abv": "4.60%",
+        "ba_score": "3.89"
+      },
+      {
+        "name": "Uncommon Crow",
+        "style": "American Wild Ale",
+        "abv": "7.70%",
+        "ba_score": "-"
       }
     ]
   },
-  "Anchor%20Brewing%20Company": {
+  "Almanac%20Beer%20Co%2E": {
     "beers": [
       {
-        "name": "Anchor California Lager",
-        "style": "American Pale Lager",
-        "abv": "4.90%",
-        "ba_score": "3.74"
+        "name": "Barbary Coast",
+        "style": "American Double / Imperial Stout",
+        "abv": "10.00%",
+        "ba_score": "3.87"
       },
       {
-        "name": "Anchor IPA",
-        "style": "American IPA",
+        "name": "Elephant Heart De Brettaville",
+        "style": "Saison / Farmhouse Ale",
         "abv": "6.50%",
-        "ba_score": "3.66"
+        "ba_score": "-"
       },
       {
-        "name": "Anchor Summer Beer",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.60%",
-        "ba_score": "3.38"
+        "name": "Hoppy Sour: Mosaic",
+        "style": "American Wild Ale",
+        "abv": "7.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Flying Cloud San Francisco Stout",
-        "style": "Foreign / Export Stout",
-        "abv": "7.40%",
-        "ba_score": "4"
+        "name": "Valley Of The Heart's Delight",
+        "style": "American Wild Ale",
+        "abv": "7.00%",
+        "ba_score": "4.25"
       }
     ]
   },
   "Anderson%20Valley%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Anderson Valley Wild Turkey Bourbon Barrel Stout",
-        "style": "American Stout",
-        "abv": "6.90%",
-        "ba_score": "3.76"
-      },
-      {
-        "name": "Hop Ottin' IPA",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "3.99"
-      },
-      {
-        "name": "Summer Solstice",
-        "style": "Cream Ale",
-        "abv": "5.00%",
-        "ba_score": "3.67"
-      },
-      {
-        "name": "The Kimmie, The Yink & The Holy Gose",
+        "name": "Briney Melon Gose",
         "style": "Gose",
         "abv": "4.20%",
-        "ba_score": "3.82"
-      }
-    ]
-  },
-  "Atwater%20Brewery": {
-    "beers": [
-      {
-        "name": "Atwater Hop-A-Peel",
-        "style": "American Double / Imperial IPA",
-        "abv": "7.50%",
-        "ba_score": "3.31"
-      },
-      {
-        "name": "Atwater Vanilla Java Porter",
-        "style": "American Porter",
-        "abv": "4.80%",
-        "ba_score": "3.24"
-      },
-      {
-        "name": "Dirty Blonde Ale",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.50%",
-        "ba_score": "3.07"
-      },
-      {
-        "name": "Whango",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.80%",
-        "ba_score": "3.07"
-      }
-    ]
-  },
-  "Back%20East%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Back East Ale",
-        "style": "American Amber / Red Ale",
-        "abv": "5.00%",
-        "ba_score": "3.73"
-      },
-      {
-        "name": "Misty Mountain IPA",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "3.72"
-      },
-      {
-        "name": "Palate Mallet",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.60%",
-        "ba_score": "3.97"
-      },
-      {
-        "name": "Porter",
-        "style": "American Porter",
-        "abv": "6.00%",
-        "ba_score": "3.95"
-      }
-    ]
-  },
-  "Backlash%20Beer%20Company": {
-    "beers": [
-      {
-        "name": "Death",
-        "style": "Russian Imperial Stout",
-        "abv": "9.50%",
         "ba_score": "4.06"
       },
       {
-        "name": "Groundswell",
-        "style": "Belgian Strong Pale Ale",
-        "abv": "6.40%",
-        "ba_score": "3.93"
+        "name": "Brother David's Belgian-style Double Ale",
+        "style": "Dubbel",
+        "abv": "9.00%",
+        "ba_score": "3.63"
       },
       {
-        "name": "Ricochet",
-        "style": "American IPA",
-        "abv": "7.20%",
-        "ba_score": "3.84"
-      }
-    ]
-  },
-  "Bad%20Martha%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Island IPA",
-        "style": "American IPA",
-        "abv": "5.50%",
-        "ba_score": "3.54"
+        "name": "Horse Tongue Thribble Currant",
+        "style": "American Wild Ale",
+        "abv": "10.50%",
+        "ba_score": "4.16"
       },
       {
-        "name": "Martha's Vineyard Ale",
-        "style": "Extra Special / Strong Bitter (ESB)",
-        "abv": "5.30%",
-        "ba_score": "3.62"
-      },
-      {
-        "name": "Vineyard Summer Ale",
-        "style": "American Blonde Ale",
-        "abv": "4.50%",
-        "ba_score": "-"
+        "name": "Huge Arker",
+        "style": "Russian Imperial Stout",
+        "abv": "13.50%",
+        "ba_score": "4.1"
       }
     ]
   },
   "Ballast%20Point%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Even Keel Session IPA",
-        "style": "American Pale Ale (APA)",
-        "abv": "3.80%",
-        "ba_score": "3.85"
+        "name": "Barmy Ale",
+        "style": "Fruit / Vegetable Beer",
+        "abv": "12.00%",
+        "ba_score": "3.78"
       },
       {
-        "name": "Grapefruit Sculpin",
-        "style": "American IPA",
+        "name": "Indra Kunindra",
+        "style": "Foreign / Export Stout",
         "abv": "7.00%",
-        "ba_score": "4.29"
+        "ba_score": "3.79"
       },
       {
-        "name": "Grunion Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.50%",
-        "ba_score": "4.11"
+        "name": "Sour Wench Blackberry Ale",
+        "style": "Fruit / Vegetable Beer",
+        "abv": "5.40%",
+        "ba_score": "3.53"
       },
       {
-        "name": "Sculpin IPA",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "4.38"
+        "name": "Victory At Sea - Coconut",
+        "style": "American Porter",
+        "abv": "10.00%",
+        "ba_score": "4.09"
+      },
+      {
+        "name": "Victory At Sea - Peanut Butter",
+        "style": "American Double / Imperial Stout",
+        "abv": "10.50%",
+        "ba_score": "3.93"
       }
     ]
   },
   "Banded%20Horn%20Brewing%20Co%2E": {
     "beers": [
       {
-        "name": "Daikaiju",
-        "style": "American IPA",
-        "abv": "8.70%",
-        "ba_score": "4.19"
+        "name": "Banded Souls",
+        "style": "American Double / Imperial IPA",
+        "abv": "8.00%",
+        "ba_score": "4.05"
       },
       {
-        "name": "Pepperell Pilsner",
-        "style": "German Pilsener",
-        "abv": "4.60%",
-        "ba_score": "3.74"
-      },
-      {
-        "name": "The Mountain",
+        "name": "Barrel Aged Mountain",
         "style": "Russian Imperial Stout",
         "abv": "12.00%",
-        "ba_score": "3.92"
+        "ba_score": "3.95"
       },
       {
-        "name": "Veridian IPA",
+        "name": "Brett Loves Veridian",
         "style": "American IPA",
         "abv": "6.00%",
-        "ba_score": "3.96"
+        "ba_score": "-"
       },
       {
-        "name": "Wicked Bueno",
-        "style": "Light Lager",
-        "abv": "4.30%",
-        "ba_score": "2.8"
-      }
-    ]
-  },
-  "Banner%20Beer%20Company": {
-    "beers": [
-      {
-        "name": "Banner All Nighter ESB",
-        "style": "Extra Special / Strong Bitter (ESB)",
-        "abv": "5.00%",
-        "ba_score": "3.68"
+        "name": "Ghost Window",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "5.50%",
+        "ba_score": "4.11"
       },
       {
-        "name": "Banner American Rye",
-        "style": "Rye Beer",
-        "abv": "4.00%",
-        "ba_score": "3.33"
-      },
-      {
-        "name": "Banner American Summer",
-        "style": "American Blonde Ale",
-        "abv": "3.70%",
-        "ba_score": "2.95"
-      },
-      {
-        "name": "Banner IPA",
-        "style": "American IPA",
-        "abv": "4.50%",
+        "name": "Reclaimer",
+        "style": "American Wild Ale",
+        "abv": "14.00%",
         "ba_score": "-"
       }
     ]
@@ -484,1728 +298,918 @@
   "Barreled%20Souls%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Big Bang",
-        "style": "American Barleywine",
-        "abv": "11.90%",
+        "name": "Bourbon Barrel Aged Dark Matter",
+        "style": "American Strong Ale",
+        "abv": "11.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Bourbon Barrel Aged M.C.A.M",
+        "style": "American Porter",
+        "abv": "8.60%",
+        "ba_score": "4.45"
+      },
+      {
+        "name": "Bourbon Barrel Aged Munro",
+        "style": "Scotch Ale / Wee Heavy",
+        "abv": "10.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Deep Space",
+        "style": "American Double / Imperial Stout",
+        "abv": "12.80%",
+        "ba_score": "-"
+      },
+      {
+        "name": "MEmosa",
+        "style": "American Blonde Ale",
+        "abv": "5.70%",
+        "ba_score": "4"
+      },
+      {
+        "name": "Stay Puft",
+        "style": "American Double / Imperial Stout",
+        "abv": "10.20%",
+        "ba_score": "4.45"
+      },
+      {
+        "name": "Teotihuacan",
+        "style": "American Double / Imperial Stout",
+        "abv": "11.80%",
+        "ba_score": "3.83"
+      }
+    ]
+  },
+  "Barrier%20Brewing%20Company": {
+    "beers": [
+      {
+        "name": "10,000ft Beard",
+        "style": "Scotch Ale / Wee Heavy",
+        "abv": "9.70%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Atypical",
+        "style": "American IPA",
+        "abv": "7.20%",
+        "ba_score": "4.22"
+      },
+      {
+        "name": "Money",
+        "style": "American IPA",
+        "abv": "7.30%",
+        "ba_score": "4.31"
+      },
+      {
+        "name": "Morticia",
+        "style": "Russian Imperial Stout",
+        "abv": "10.10%",
         "ba_score": "4.18"
       },
       {
-        "name": "Dark Matter",
-        "style": "American Porter",
-        "abv": "10.20%",
-        "ba_score": "4.23"
-      },
-      {
-        "name": "Half Nelson",
+        "name": "StateSide Trees",
         "style": "American Pale Ale (APA)",
-        "abv": "5.10%",
-        "ba_score": "3.96"
+        "abv": "6.50%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Beau's%20All%20Natural%20Brewing%20Company": {
+    "beers": [
+      {
+        "name": "The Beer That Shall Not Be Named",
+        "style": "Belgian Strong Pale Ale",
+        "abv": "9.90%",
+        "ba_score": "-"
       },
       {
-        "name": "MC AM",
-        "style": "American Porter",
-        "abv": "7.80%",
-        "ba_score": "4.2"
+        "name": "Two Tonnes Of Fun",
+        "style": "American Barleywine",
+        "abv": "10.50%",
+        "ba_score": "-"
       },
       {
-        "name": "Munro",
-        "style": "Scotch Ale / Wee Heavy",
+        "name": "Wild Oats Series No. 59 - New Lang Syne",
+        "style": "Tripel",
         "abv": "9.00%",
-        "ba_score": "4.23"
-      },
-      {
-        "name": "Paper Planes",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.90%",
         "ba_score": "4.07"
       },
       {
-        "name": "Rosalita",
-        "style": "American Blonde Ale",
-        "abv": "4.00%",
-        "ba_score": "4.28"
-      },
-      {
-        "name": "Space Gose",
-        "style": "Gose",
-        "abv": "4.90%",
-        "ba_score": "4.13"
-      }
-    ]
-  },
-  "Baxter%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Stowaway I.P.A.",
-        "style": "American IPA",
-        "abv": "6.90%",
-        "ba_score": "3.82"
-      },
-      {
-        "name": "Summer Swelter Ale",
-        "style": "Herbed / Spiced Beer",
-        "abv": "4.70%",
-        "ba_score": "3.71"
-      },
-      {
-        "name": "Tarnation California-Style Lager",
-        "style": "California Common / Steam Beer",
-        "abv": "5.30%",
-        "ba_score": "3.62"
-      },
-      {
-        "name": "The Lonely Goatherd",
-        "style": "Maibock / Helles Bock",
-        "abv": "7.00%",
-        "ba_score": "3.97"
-      }
-    ]
-  },
-  "Bear%20Republic%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Brandy Barrel Aged Grizz",
-        "style": "Belgian Dark Ale",
-        "abv": "9.50%",
-        "ba_score": "3.93"
-      },
-      {
-        "name": "Hop Shovel",
-        "style": "American IPA",
-        "abv": "7.50%",
-        "ba_score": "4.21"
-      },
-      {
-        "name": "Mach 10",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.20%",
-        "ba_score": "3.93"
-      },
-      {
-        "name": "Tartare",
-        "style": "Berliner Weissbier",
-        "abv": "4.00%",
-        "ba_score": "4.28"
-      }
-    ]
-  },
-  "Bentley%20Brewing%20Company%20%2F%20Dark%20Horse%20Tavern": {
-    "beers": [
-      {
-        "name": "Fancy Pants",
-        "style": "American Wild Ale",
-        "abv": "11.00%",
-        "ba_score": "4.12"
-      },
-      {
-        "name": "Half Nelson",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.50%",
-        "ba_score": "3.7"
-      },
-      {
-        "name": "Joy Ryed Spring Saison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "7.00%",
-        "ba_score": "3.83"
-      },
-      {
-        "name": "Shot In The Dark",
-        "style": "American Stout",
-        "abv": "6.00%",
-        "ba_score": "-"
-      }
-    ]
-  },
-  "Berkley%20Beer%20Company": {
-    "beers": [
-      {
-        "name": "Abbey Strong Ale",
-        "style": "Belgian Strong Dark Ale",
-        "abv": "10.00%",
-        "ba_score": "4.37"
-      },
-      {
-        "name": "Berkley IPA",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "3.56"
-      },
-      {
-        "name": "Coffee Porter",
-        "style": "American Porter",
-        "abv": "6.00%",
-        "ba_score": "3.62"
-      },
-      {
-        "name": "Farmhouse Ale",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "5.00%",
-        "ba_score": "4.04"
-      },
-      {
-        "name": "Hog Oiler",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.00%",
-        "ba_score": "-"
-      }
-    ]
-  },
-  "Big%20Elm%20Brewing": {
-    "beers": [
-      {
-        "name": "American Lager",
-        "style": "American Pale Lager",
-        "abv": "5.00%",
-        "ba_score": "4.05"
-      },
-      {
-        "name": "Gerry Dog Stout",
-        "style": "Oatmeal Stout",
-        "abv": "6.50%",
-        "ba_score": "3.71"
-      },
-      {
-        "name": "IPA",
-        "style": "American IPA",
-        "abv": "7.00%",
+        "name": "Wild Oats Series No. 8 - Bog Father Eastern Ontario Gruit",
+        "style": "Scottish Gruit / Ancient Herbed Ale",
+        "abv": "8.50%",
         "ba_score": "3.76"
-      },
-      {
-        "name": "Sofa King",
-        "style": "American IPA",
-        "abv": "4.50%",
-        "ba_score": "3.7"
       }
     ]
   },
   "Boston%20Beer%20Company%20(Samuel%20Adams)": {
     "beers": [
       {
-        "name": "Samuel Adams Boston Lager",
-        "style": "Vienna Lager",
-        "abv": "4.90%",
-        "ba_score": "3.8"
+        "name": "Samuel Adams American Kriek (Nitro)",
+        "style": "American Wild Ale",
+        "abv": "7.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Samuel Adams Honey Queen",
-        "style": "Braggot",
-        "abv": "7.50%",
-        "ba_score": "3.72"
+        "name": "Samuel Adams Wee Heavy (Imperial Series)",
+        "style": "Scotch Ale / Wee Heavy",
+        "abv": "10.00%",
+        "ba_score": "3.73"
       },
       {
-        "name": "Samuel Adams Potbelly Porter",
-        "style": "American Porter",
-        "abv": "8.00%",
-        "ba_score": "3.93"
-      },
-      {
-        "name": "Samuel Adams Rebel IPA",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.63"
-      },
-      {
-        "name": "Samuel Adams Summer Ale",
-        "style": "American Pale Wheat Ale",
-        "abv": "5.30%",
-        "ba_score": "3.37"
-      },
-      {
-        "name": "The Sphinx",
-        "style": "Belgian Pale Ale",
-        "abv": "6.00%",
-        "ba_score": "3.63"
+        "name": "The Vixen Chocolate Chili Bock",
+        "style": "Bock",
+        "abv": "8.50%",
+        "ba_score": "3.7"
       }
     ]
   },
-  "Boulevard%20Brewing%20Co%2E": {
+  "Breakside%20Brewery": {
     "beers": [
       {
-        "name": "Ginger-Lemon Radler",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.10%",
-        "ba_score": "3.68"
+        "name": "Beaujolais Avec Brett: Strong Wild Ale With Gamay Grapes",
+        "style": "American Wild Ale",
+        "abv": "8.20%",
+        "ba_score": "3.88"
       },
       {
-        "name": "Heavy Lifting IPA",
-        "style": "American IPA",
-        "abv": "6.20%",
-        "ba_score": "3.91"
+        "name": "Bellwether: Gin Barrel-Aged Sour Double Wit",
+        "style": "Witbier",
+        "abv": "8.40%",
+        "ba_score": "4.26"
       },
       {
-        "name": "Saison-Brett",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "8.50%",
-        "ba_score": "4.29"
+        "name": "Bourbon Barrel-Aged Aztec: Strong Ale Aged In Bourbon Barrels W/ Chocolate",
+        "style": "American Strong Ale",
+        "abv": "10.80%",
+        "ba_score": "-"
       },
       {
-        "name": "Tank 7 Farmhouse Ale",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "8.50%",
-        "ba_score": "4.15"
-      },
-      {
-        "name": "The Calling",
+        "name": "The Pathfinder: Double IPA Aged In Gin Barrels",
         "style": "American Double / Imperial IPA",
-        "abv": "8.50%",
-        "ba_score": "4.08"
+        "abv": "8.70%",
+        "ba_score": "-"
       }
     ]
   },
-  "Brewery%20Ommegang": {
+  "Brewery%20Vivant": {
     "beers": [
       {
-        "name": "Fleur De Houblon",
-        "style": "Belgian Pale Ale",
-        "abv": "6.80%",
+        "name": "Love Shadow",
+        "style": "Russian Imperial Stout",
+        "abv": "10.00%",
+        "ba_score": "4.62"
+      },
+      {
+        "name": "No Training Wheels",
+        "style": "American IPA",
+        "abv": "6.70%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Wizard Burial Ground",
+        "style": "Quadrupel (Quad)",
+        "abv": "10.40%",
+        "ba_score": "4.26"
+      }
+    ]
+  },
+  "Burley%20Oak%20Brewery": {
+    "beers": [
+      {
+        "name": "Bulletproof Tiger",
+        "style": "American Double / Imperial IPA",
+        "abv": "10.00%",
         "ba_score": "4.04"
       },
       {
-        "name": "Joemmegang",
-        "style": "Belgian Dark Ale",
-        "abv": "7.50%",
-        "ba_score": "3.79"
-      },
-      {
-        "name": "Ommegang Adoration Ale",
-        "style": "Belgian Strong Dark Ale",
-        "abv": "10.00%",
-        "ba_score": "4.07"
-      },
-      {
-        "name": "Tripel Perfection",
-        "style": "Tripel",
-        "abv": "8.90%",
-        "ba_score": "4.1"
-      },
-      {
-        "name": "Upside Brown",
-        "style": "Bière de Garde",
+        "name": "Fair Trade",
+        "style": "Milk / Sweet Stout",
         "abv": "7.00%",
-        "ba_score": "3.79"
-      }
-    ]
-  },
-  "Brewmaster%20Jack": {
-    "beers": [
-      {
-        "name": "Ambrewsia",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "3.91"
+        "ba_score": "-"
       },
       {
-        "name": "Hoppiness Is A Warm Pun",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.20%",
-        "ba_score": "4.27"
+        "name": "Pants Are Cumbersome (Collaboration W/ Dogfish Head)",
+        "style": "American Stout",
+        "abv": "6.50%",
+        "ba_score": "-"
       },
       {
-        "name": "Jan",
-        "style": "Czech Pilsener",
-        "abv": "4.50%",
-        "ba_score": "3.81"
-      },
-      {
-        "name": "Tennessee Prinse",
-        "style": "Quadrupel (Quad)",
-        "abv": "11.50%",
-        "ba_score": "4.12"
-      },
-      {
-        "name": "The Little Brother",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.50%",
-        "ba_score": "4.07"
-      },
-      {
-        "name": "Total Eclipse Rye Porter",
-        "style": "American Porter",
-        "abv": "6.00%",
+        "name": "Raspberries Of The Lost Tart",
+        "style": "American Wild Ale",
+        "abv": "3.20%",
         "ba_score": "3.9"
-      }
-    ]
-  },
-  "Bridge%20Brew%20Works%20LLC": {
-    "beers": [
-      {
-        "name": "Black Diamond Lager",
-        "style": "Schwarzbier",
-        "abv": "5.00%",
-        "ba_score": "3.95"
       },
       {
-        "name": "Mountain Momma",
-        "style": "English Pale Ale",
-        "abv": "5.80%",
-        "ba_score": "3.92"
-      },
-      {
-        "name": "Peregrine Porter",
-        "style": "Baltic Porter",
-        "abv": "7.20%",
-        "ba_score": "3.97"
-      },
-      {
-        "name": "The Blunt",
-        "style": "American Amber / Red Ale",
-        "abv": "5.50%",
-        "ba_score": "3.53"
-      }
-    ]
-  },
-  "Brooklyn%20Brewery": {
-    "beers": [
-      {
-        "name": "Brooklyn Blast!",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.40%",
+        "name": "Sorry Chicky",
+        "style": "Berliner Weissbier",
+        "abv": "4.40%",
         "ba_score": "4.03"
       },
       {
-        "name": "Brooklyn Lager",
-        "style": "American Amber / Red Lager",
-        "abv": "5.20%",
-        "ba_score": "3.8"
-      },
-      {
-        "name": "Brooklyn Quintaceratops",
-        "style": "Quadrupel (Quad)",
-        "abv": "11.00%",
-        "ba_score": "3.55"
-      },
-      {
-        "name": "Brooklyn Sorachi Ace",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "7.20%",
-        "ba_score": "4.09"
-      },
-      {
-        "name": "Brooklyn Summer Ale",
-        "style": "English Pale Ale",
-        "abv": "5.00%",
-        "ba_score": "3.58"
-      },
-      {
-        "name": "I Wanna Rye-It",
-        "style": "Rye Beer",
-        "abv": "7.50%",
-        "ba_score": "3.76"
-      },
-      {
-        "name": "Wild Horse Running Porter (Bluejacket / New Belgium Collaboration)",
-        "style": "American Wild Ale",
-        "abv": "6.50%",
-        "ba_score": "3.75"
-      }
-    ]
-  },
-  "Buzzards%20Bay%20Brewing": {
-    "beers": [
-      {
-        "name": "Buzzards Bay IPA",
+        "name": "Wild Thang",
         "style": "American IPA",
         "abv": "6.20%",
-        "ba_score": "4.05"
-      },
-      {
-        "name": "The Golden Flounder",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.90%",
-        "ba_score": "3.64"
+        "ba_score": "3.96"
       }
     ]
   },
   "Cambridge%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Flower Child IPA",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "4.05"
+        "name": "Cerise Cassée American Sour Ale",
+        "style": "American Wild Ale",
+        "abv": "9.00%",
+        "ba_score": "4.19"
       },
       {
-        "name": "Hefeweizen",
-        "style": "Hefeweizen",
-        "abv": "5.75%",
-        "ba_score": "4.08"
-      },
-      {
-        "name": "Morning Dew",
-        "style": "Belgian Pale Ale",
-        "abv": "5.50%",
-        "ba_score": "4.13"
-      },
-      {
-        "name": "Remain In Light",
-        "style": "American Pale Lager",
-        "abv": "5.00%",
-        "ba_score": "3.68"
-      },
-      {
-        "name": "Sgt. Pepper",
+        "name": "Le Saisonniere",
         "style": "Saison / Farmhouse Ale",
-        "abv": "6.00%",
-        "ba_score": "3.79"
-      },
-      {
-        "name": "Spock's Brain IPA",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "4.1"
+        "abv": "4.80%",
+        "ba_score": "3.99"
       },
       {
         "name": "The Brett Conspriracy",
         "style": "American Wild Ale",
         "abv": "5.75%",
-        "ba_score": "3.66"
+        "ba_score": "3.65"
       },
       {
-        "name": "The Machinery Of Night",
-        "style": "American Wild Ale",
-        "abv": "6.50%",
-        "ba_score": "4.16"
-      }
-    ]
-  },
-  "Cape%20Ann%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Dead Eye Double IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.00%",
-        "ba_score": "4.22"
-      },
-      {
-        "name": "Fisherman's Brew",
-        "style": "American Amber / Red Lager",
-        "abv": "5.50%",
-        "ba_score": "3.56"
-      },
-      {
-        "name": "Fisherman's Eclipse",
-        "style": "Schwarzbier",
-        "abv": "4.50%",
-        "ba_score": "3.88"
-      },
-      {
-        "name": "Fisherman's IPA",
-        "style": "American IPA",
+        "name": "Weekapaug Gruit Ale",
+        "style": "Scottish Gruit / Ancient Herbed Ale",
         "abv": "6.00%",
-        "ba_score": "3.41"
-      },
-      {
-        "name": "Fisherman's Pilsner",
-        "style": "German Pilsener",
-        "abv": "5.00%",
-        "ba_score": "3.51"
-      },
-      {
-        "name": "Fisherman's Sunrise Saison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.50%",
-        "ba_score": "3.75"
-      }
-    ]
-  },
-  "Cisco%20Brewers%20Inc%2E": {
-    "beers": [
-      {
-        "name": "Grey Lady",
-        "style": "Witbier",
-        "abv": "4.50%",
-        "ba_score": "3.52"
-      },
-      {
-        "name": "Island Reserve: Madaquet India Pale Ale",
-        "style": "American IPA",
-        "abv": "7.70%",
-        "ba_score": "4.05"
-      },
-      {
-        "name": "Island Reserve: Russian Imperial Stout",
-        "style": "Russian Imperial Stout",
-        "abv": "13.50%",
-        "ba_score": "3.38"
-      },
-      {
-        "name": "Island Reserve: Tripel",
-        "style": "Tripel",
-        "abv": "9.50%",
-        "ba_score": "3.8"
-      },
-      {
-        "name": "Sankaty Light",
-        "style": "Light Lager",
-        "abv": "3.80%",
-        "ba_score": "3.49"
-      },
-      {
-        "name": "Summer Of Lager",
-        "style": "Czech Pilsener",
-        "abv": "5.60%",
-        "ba_score": "3.77"
-      }
-    ]
-  },
-  "Coastal%20Extreme%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Newport Storm '14",
-        "style": "Hefeweizen",
-        "abv": "11.40%",
-        "ba_score": "3.68"
-      },
-      {
-        "name": "Newport Storm Hurricane Amber Ale",
-        "style": "American Amber / Red Ale",
-        "abv": "5.20%",
-        "ba_score": "3.18"
-      },
-      {
-        "name": "Newport Storm India Point Ale",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.69"
-      },
-      {
-        "name": "Newport Storm Rhode Island Blueberry",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.60%",
-        "ba_score": "3.39"
-      },
-      {
-        "name": "Newport Storm Summer Hefeweizen",
-        "style": "Hefeweizen",
-        "abv": "4.50%",
-        "ba_score": "3.31"
-      },
-      {
-        "name": "Sour Puss",
-        "style": "American Wild Ale",
-        "abv": "6.00%",
-        "ba_score": "3.71"
-      }
-    ]
-  },
-  "Coronado%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Idiot IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.50%",
-        "ba_score": "3.93"
-      },
-      {
-        "name": "Islander IPA",
-        "style": "American IPA",
-        "abv": "7.00%",
         "ba_score": "3.82"
       },
       {
-        "name": "Orange Avenue Wit",
-        "style": "Witbier",
-        "abv": "5.20%",
-        "ba_score": "3.49"
-      },
-      {
-        "name": "Señor Saison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.70%",
-        "ba_score": "3.73"
+        "name": "YouEnjoyMyStout - Coconut",
+        "style": "American Double / Imperial Stout",
+        "abv": "10.50%",
+        "ba_score": "-"
       }
     ]
   },
-  "DC%20Brau%20Brewing%20Co%2E": {
+  "Captain%20Lawrence%20Brewing%20Co%2E": {
     "beers": [
       {
-        "name": "Brau Pils",
-        "style": "German Pilsener",
-        "abv": "4.60%",
-        "ba_score": "3.83"
+        "name": "Frost Monster",
+        "style": "American Double / Imperial Stout",
+        "abv": "12.00%",
+        "ba_score": "3.95"
       },
       {
-        "name": "El Hefe Speaks",
-        "style": "Hefeweizen",
-        "abv": "5.20%",
-        "ba_score": "3.62"
+        "name": "Rosso E Marrone",
+        "style": "Flanders Oud Bruin",
+        "abv": "10.00%",
+        "ba_score": "4.23"
       },
       {
-        "name": "On The Wings Of Armageddon",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.20%",
-        "ba_score": "4.32"
-      },
-      {
-        "name": "Penn Quarter Porter",
-        "style": "American Porter",
-        "abv": "5.50%",
-        "ba_score": "3.92"
-      }
-    ]
-  },
-  "Devil's%20Canyon%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Belle",
-        "style": "Bière de Champagne / Bière Brut",
-        "abv": "6.00%",
-        "ba_score": "3.56"
-      },
-      {
-        "name": "California Sunshine Rye IPA",
-        "style": "American IPA",
-        "abv": "7.10%",
-        "ba_score": "3.38"
-      },
-      {
-        "name": "Deadicated Amber Ale",
+        "name": "Trans-Atlantic Imperial Red",
         "style": "American Amber / Red Ale",
-        "abv": "5.50%",
-        "ba_score": "3.54"
+        "abv": "7.00%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Carton%20Brewing%20Company": {
+    "beers": [
+      {
+        "name": "Boat Beer",
+        "style": "American Pale Ale (APA)",
+        "abv": "4.20%",
+        "ba_score": "4.1"
       },
       {
-        "name": "Full Boar Scotch Ale",
+        "name": "Cafe Y Churro",
+        "style": "Cream Ale",
+        "abv": "12.00%",
+        "ba_score": "4.73"
+      },
+      {
+        "name": "Grape Swisher",
+        "style": "Rauchbier",
+        "abv": "6.20%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Rub",
+        "style": "Smoked Beer",
+        "abv": "5.40%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Stormy",
+        "style": "American Porter",
+        "abv": "10.00%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Crux%20Fermentation%20Project": {
+    "beers": [
+      {
+        "name": "[BANISHED] Doublecross",
+        "style": "Belgian Strong Dark Ale",
+        "abv": "12.00%",
+        "ba_score": "4.02"
+      },
+      {
+        "name": "[BANISHED] Freakcake #3 - Aged On Oregon Cranberries",
+        "style": "Flanders Oud Bruin",
+        "abv": "10.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "[BANISHED] Nordic Saison",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "6.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "[BANISHED] Tough Love",
+        "style": "Russian Imperial Stout",
+        "abv": "11.50%",
+        "ba_score": "4.24"
+      }
+    ]
+  },
+  "Dark%20Horse%20Brewing%20Company": {
+    "beers": [
+      {
+        "name": "Bourbon Barrel Scotty Karate Scotch Ale",
         "style": "Scotch Ale / Wee Heavy",
-        "abv": "7.40%",
-        "ba_score": "3.61"
+        "abv": "12.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Dark Horse Bourbon Barrel Aged Plead The 5th",
+        "style": "Russian Imperial Stout",
+        "abv": "12.00%",
+        "ba_score": "4.48"
+      },
+      {
+        "name": "Rubescent Zhaftig Ghastly Blood Stout",
+        "style": "American Double / Imperial Stout",
+        "abv": "10.50%",
+        "ba_score": "3.4"
+      },
+      {
+        "name": "Sarsaparilla 666 Bourbon Barrel Root Beer Stout",
+        "style": "American Double / Imperial Stout",
+        "abv": "12.00%",
+        "ba_score": "4.05"
       }
     ]
   },
   "Dogfish%20Head%20Craft%20Brewery": {
     "beers": [
       {
-        "name": "American Beauty",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.00%",
-        "ba_score": "3.85"
-      },
-      {
-        "name": "Namaste",
-        "style": "Witbier",
-        "abv": "4.80%",
-        "ba_score": "3.86"
-      },
-      {
-        "name": "Raison D'Extra",
-        "style": "Belgian Strong Dark Ale",
-        "abv": "18.00%",
-        "ba_score": "3.99"
-      },
-      {
-        "name": "Sixty-One (61)",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.64"
-      }
-    ]
-  },
-  "Down%20the%20Road%20Brewery": {
-    "beers": [
-      {
-        "name": "Fee Des Fleurs",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "8.50%",
-        "ba_score": "3.97"
-      },
-      {
-        "name": "Pukwudgie Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "4.50%",
-        "ba_score": "3.73"
-      },
-      {
-        "name": "Rasenmäher Kölsch",
-        "style": "Kölsch",
-        "abv": "4.50%",
+        "name": "Festina Lente",
+        "style": "Lambic - Fruit",
+        "abv": "7.00%",
         "ba_score": "3.88"
-      }
-    ]
-  },
-  "Ebenezer's%20Brewpub%20%2F%20Lively%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Dr Dankenstein",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.60%",
-        "ba_score": "4.22"
       },
       {
-        "name": "Filthy Rich",
+        "name": "Higher Math",
+        "style": "American Strong Ale",
+        "abv": "17.00%",
+        "ba_score": "3.7"
+      },
+      {
+        "name": "Hoo Lawd",
+        "style": "American Black Ale",
+        "abv": "9.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Liquor De M’Alstroms",
+        "style": "American Malt Liquor",
+        "abv": "8.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Miles Davis' Bitches Brew",
         "style": "American Double / Imperial Stout",
-        "abv": "11.40%",
-        "ba_score": "4.64"
-      },
-      {
-        "name": "Hasenjager",
-        "style": "German Pilsener",
-        "abv": "4.80%",
+        "abv": "9.00%",
         "ba_score": "4.13"
       },
       {
-        "name": "Space Taxi",
-        "style": "Quadrupel (Quad)",
-        "abv": "12.00%",
-        "ba_score": "4.51"
+        "name": "Oak Aged Noble Rot",
+        "style": "Fruit / Vegetable Beer",
+        "abv": "9.30%",
+        "ba_score": "-"
       },
       {
-        "name": "White Fire Alien",
-        "style": "Witbier",
-        "abv": "5.30%",
-        "ba_score": "3.88"
+        "name": "Romantic Chemistry",
+        "style": "American IPA",
+        "abv": "7.20%",
+        "ba_score": "-"
       }
     ]
   },
-  "Element%20Brewing%20Company": {
+  "Due%20South%20Brewing%20Co%2E": {
     "beers": [
       {
-        "name": "6:56 (2014) - Summer Pilsner Fusion",
-        "style": "American Double / Imperial Pilsner",
-        "abv": "15.25%",
-        "ba_score": "4.09"
+        "name": "Barrel Aged Blackberry Barleywine",
+        "style": "American Barleywine",
+        "abv": "9.40%",
+        "ba_score": "-"
       },
       {
-        "name": "Acidum",
-        "style": "American Wild Ale",
-        "abv": "8.25%",
-        "ba_score": "4.15"
-      },
-      {
-        "name": "Dark Element",
-        "style": "American Black Ale",
-        "abv": "9.00%",
-        "ba_score": "4.06"
-      },
-      {
-        "name": "Extra Special Oak (ESO)",
-        "style": "English Strong Ale",
-        "abv": "7.75%",
-        "ba_score": "3.8"
-      },
-      {
-        "name": "Plasma",
-        "style": "American IPA",
-        "abv": "9.30%",
-        "ba_score": "3.88"
-      },
-      {
-        "name": "Red Giant",
-        "style": "American Amber / Red Ale",
-        "abv": "8.25%",
+        "name": "Category 5 IPA - White Oak",
+        "style": "American Double / Imperial IPA",
+        "abv": "8.50%",
         "ba_score": "3.96"
       },
       {
-        "name": "Summer Pilsner Fusion",
-        "style": "American Double / Imperial Pilsner",
-        "abv": "9.10%",
-        "ba_score": "3.92"
+        "name": "Coconut Bay Breeze",
+        "style": "Fruit / Vegetable Beer",
+        "abv": "4.80%",
+        "ba_score": "3.52"
       },
       {
-        "name": "Vernal",
-        "style": "Wheatwine",
-        "abv": "11.75%",
-        "ba_score": "3.72"
+        "name": "Peanut Butter Pepper Ale",
+        "style": "Fruit / Vegetable Beer",
+        "abv": "8.20%",
+        "ba_score": "-"
       }
     ]
   },
-  "Enlightenment%20Ales": {
+  "Earth%20Eagle%20Brewings": {
     "beers": [
       {
-        "name": "Cosmos",
-        "style": "Foreign / Export Stout",
+        "name": "Brunswick Mumme",
+        "style": "Altbier",
+        "abv": "8.10%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Porter Cochon",
+        "style": "American Porter",
         "abv": "7.50%",
-        "ba_score": "4.06"
+        "ba_score": "3.23"
       },
       {
-        "name": "Enlightenment Brut (Bière De Champagne)",
-        "style": "Bière de Champagne / Bière Brut",
+        "name": "Sour Puss",
+        "style": "Flanders Red Ale",
+        "abv": "5.40%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Epic%20Brewing%20Company": {
+    "beers": [
+      {
+        "name": "Big Bad Baptist",
+        "style": "American Double / Imperial Stout",
+        "abv": "11.80%",
+        "ba_score": "4.3"
+      },
+      {
+        "name": "Brainless On Peaches Belgian-Style Ale",
+        "style": "Fruit / Vegetable Beer",
         "abv": "11.00%",
-        "ba_score": "4.15"
+        "ba_score": "3.55"
       },
       {
-        "name": "Hofmann",
-        "style": "American Pale Ale (APA)",
-        "abv": "7.40%",
-        "ba_score": "4.2"
-      },
-      {
-        "name": "Illumination (Farmhouse IPA)",
-        "style": "Belgian IPA",
-        "abv": "6.80%",
+        "name": "Elder Brett: Saison-Brett Golden Ale",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "9.00%",
         "ba_score": "4.03"
       },
       {
-        "name": "Rite Of Spring",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.80%",
-        "ba_score": "4.2"
-      },
-      {
-        "name": "Titania",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "5.60%",
-        "ba_score": "3.98"
-      },
-      {
-        "name": "Transcendence",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.20%",
-        "ba_score": "4.22"
-      }
-    ]
-  },
-  "Fiddlehead%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Brett Berried Alive",
-        "style": "American Wild Ale",
-        "abv": "5.80%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Brett On The Dance Floor",
-        "style": "American Wild Ale",
-        "abv": "6.20%",
-        "ba_score": "4.1"
-      },
-      {
-        "name": "Hodad Porter",
-        "style": "American Porter",
-        "abv": "5.50%",
-        "ba_score": "4.12"
-      },
-      {
-        "name": "Second Fiddle",
+        "name": "Imperial IPA",
         "style": "American Double / Imperial IPA",
-        "abv": "8.20%",
-        "ba_score": "4.42"
+        "abv": "9.50%",
+        "ba_score": "3.81"
+      },
+      {
+        "name": "Sour Brainless On Peaches",
+        "style": "American Wild Ale",
+        "abv": "7.50%",
+        "ba_score": "4.07"
+      },
+      {
+        "name": "Tart N' Juicy Sour IPA",
+        "style": "American IPA",
+        "abv": "4.50%",
+        "ba_score": "-"
       }
     ]
   },
   "Finback%20Brewery": {
     "beers": [
       {
-        "name": "Auspicious Day",
+        "name": "BQE - Barrel Aged",
+        "style": "American Double / Imperial Stout",
+        "abv": "10.00%",
+        "ba_score": "4.33"
+      },
+      {
+        "name": "BQExC",
+        "style": "American Double / Imperial Stout",
+        "abv": "10.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Oscillation 003",
         "style": "American Double / Imperial IPA",
-        "abv": "9.80%",
-        "ba_score": "4.16"
-      },
+        "abv": "8.50%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Firestone%20Walker%20Brewing%20Co%2E": {
+    "beers": [
       {
-        "name": "Close Of Day",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "7.50%",
-        "ba_score": "3.82"
-      },
-      {
-        "name": "Moby Hop",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.30%",
-        "ba_score": "3.97"
-      },
-      {
-        "name": "Plumb And Proper",
+        "name": "Krieky Bones",
         "style": "American Wild Ale",
-        "abv": "6.30%",
-        "ba_score": "4.13"
-      }
-    ]
-  },
-  "Finch's%20Beer%20Co%2E": {
-    "beers": [
-      {
-        "name": "Fascist Pig Ale",
-        "style": "American Amber / Red Ale",
-        "abv": "8.00%",
-        "ba_score": "3.7"
+        "abv": "5.70%",
+        "ba_score": "4.2"
       },
       {
-        "name": "Hardcore Chimera",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.00%",
-        "ba_score": "4.03"
+        "name": "La Piccola Pepe Di Sichuan",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "6.20%",
+        "ba_score": "4.26"
       },
       {
-        "name": "Secret Stache Stout",
-        "style": "American Stout",
-        "abv": "5.30%",
-        "ba_score": "3.88"
+        "name": "La Piccola Virtuosa",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "6.20%",
+        "ba_score": "4.21"
       },
       {
-        "name": "Wet Hot American Wheat",
-        "style": "American Pale Wheat Ale",
-        "abv": "5.00%",
-        "ba_score": "3.59"
-      }
-    ]
-  },
-  "Firefly%20Hollow%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Cone Flakes IIPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "7.70%",
-        "ba_score": "3.74"
-      },
-      {
-        "name": "Lizard's Breath IPA",
-        "style": "American IPA",
-        "abv": "6.60%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Red Lantern",
-        "style": "Irish Red Ale",
-        "abv": "5.50%",
-        "ba_score": "4.13"
-      },
-      {
-        "name": "Toadstool Oat Stout",
-        "style": "Oatmeal Stout",
-        "abv": "5.50%",
-        "ba_score": "3.98"
+        "name": "Parabola",
+        "style": "Russian Imperial Stout",
+        "abv": "14.00%",
+        "ba_score": "4.54"
       }
     ]
   },
   "Foolproof%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Backyahd India Pale Ale",
+        "name": "Emperor Of The Yahd",
+        "style": "American Double / Imperial IPA",
+        "abv": "9.00%",
+        "ba_score": "4.02"
+      },
+      {
+        "name": "LFU Wild Oak",
+        "style": "American Wild Ale",
+        "abv": "8.00%",
+        "ba_score": "4.11"
+      },
+      {
+        "name": "Mango Chili Prince",
         "style": "American IPA",
         "abv": "6.00%",
-        "ba_score": "3.64"
+        "ba_score": "-"
       },
       {
-        "name": "Barstool American Golden Ale",
-        "style": "American Blonde Ale",
-        "abv": "4.50%",
-        "ba_score": "3.3"
+        "name": "Shuckolate Chocolate-Oyster Stout",
+        "style": "American Stout",
+        "abv": "6.00%",
+        "ba_score": "3.74"
+      }
+    ]
+  },
+  "Forbidden%20Root": {
+    "beers": [
+      {
+        "name": "Celery Radler",
+        "style": "Fruit / Vegetable Beer",
+        "abv": "2.80%",
+        "ba_score": "-"
       },
       {
-        "name": "King Of The Yahd",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.50%",
-        "ba_score": "3.62"
+        "name": "Forbidden Root",
+        "style": "Herbed / Spiced Beer",
+        "abv": "5.20%",
+        "ba_score": "3.47"
       },
       {
-        "name": "La Ferme Urbaine Farmhouse Ale",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "7.80%",
-        "ba_score": "3.79"
+        "name": "Gin & Juice",
+        "style": "Witbier",
+        "abv": "6.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Raincloud Robust Porter",
-        "style": "American Porter",
-        "abv": "6.50%",
-        "ba_score": "3.85"
+        "name": "Wildflower Pale Ale",
+        "style": "American Pale Ale (APA)",
+        "abv": "5.60%",
+        "ba_score": "3.74"
       }
     ]
   },
   "Foundation%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Eddy",
+        "name": "Dark Side Corruption",
         "style": "Saison / Farmhouse Ale",
-        "abv": "5.70%",
-        "ba_score": "3.94"
+        "abv": "9.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Epiphany",
+        "name": "Delusions Of Grandeur",
         "style": "American Double / Imperial IPA",
-        "abv": "8.00%",
-        "ba_score": "4.47"
+        "abv": "8.50%",
+        "ba_score": "-"
       },
       {
-        "name": "Forge",
+        "name": "Fury",
         "style": "Russian Imperial Stout",
-        "abv": "10.10%",
-        "ba_score": "4.2"
-      },
-      {
-        "name": "Wanderlust",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "4.50%",
-        "ba_score": "3.98"
+        "abv": "10.00%",
+        "ba_score": "-"
       }
     ]
   },
   "Founders%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Founders All Day IPA",
-        "style": "American IPA",
-        "abv": "4.70%",
-        "ba_score": "3.88"
-      },
-      {
-        "name": "Founders Dirty Bastard",
-        "style": "Scotch Ale / Wee Heavy",
-        "abv": "8.50%",
-        "ba_score": "4.03"
-      },
-      {
-        "name": "Founders Mosaic Promise",
-        "style": "American IPA",
-        "abv": "5.50%",
-        "ba_score": "4.03"
-      },
-      {
-        "name": "Founders Rübæus",
+        "name": "Founders Blushing Monk",
         "style": "Fruit / Vegetable Beer",
-        "abv": "5.70%",
-        "ba_score": "3.87"
+        "abv": "9.20%",
+        "ba_score": "4.14"
+      },
+      {
+        "name": "Project PAM",
+        "style": "American Black Ale",
+        "abv": "10.80%",
+        "ba_score": "4.2"
+      },
+      {
+        "name": "Spike Cutlass",
+        "style": "American Barleywine",
+        "abv": "12.00%",
+        "ba_score": "4.39"
       }
     ]
   },
   "Four%20Quarters%20Brewing%20Co%2E": {
     "beers": [
       {
-        "name": "4 Quarterez Mojito",
+        "name": "4 Quarterez Mojito Sour",
         "style": "American Wild Ale",
-        "abv": "4.50%",
+        "abv": "4.40%",
         "ba_score": "4.23"
       },
       {
-        "name": "Barleygirl",
-        "style": "Belgian IPA",
-        "abv": "8.00%",
-        "ba_score": "3.66"
+        "name": "Batch 13",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "6.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Chrysalis",
+        "name": "Chrysalis - Bourbon Barrel-aged",
         "style": "Smoked Beer",
-        "abv": "5.80%",
-        "ba_score": "3.88"
+        "abv": "5.50%",
+        "ba_score": "-"
       },
       {
-        "name": "Darkest Heart Bourbon Barrel Aged",
-        "style": "Russian Imperial Stout",
-        "abv": "10.00%",
-        "ba_score": "4.47"
-      },
-      {
-        "name": "Dreams",
-        "style": "American Wild Ale",
-        "abv": "6.10%",
-        "ba_score": "4.69"
-      },
-      {
-        "name": "Funky Monkey",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "5.20%",
-        "ba_score": "4.15"
-      },
-      {
-        "name": "Great Bear",
+        "name": "Cookie Bear",
         "style": "American Brown Ale",
         "abv": "6.00%",
         "ba_score": "-"
       },
       {
-        "name": "Janus : Future",
+        "name": "Fleur De Lis",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "3.50%",
+        "ba_score": "4.06"
+      },
+      {
+        "name": "Moscow Mule",
         "style": "Saison / Farmhouse Ale",
         "abv": "4.80%",
+        "ba_score": "4.77"
+      },
+      {
+        "name": "Opus Humulus - Double Dry-Hopped",
+        "style": "Belgian IPA",
+        "abv": "3.90%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Pineapple Jalapeño Gose",
+        "style": "Gose",
+        "abv": "4.50%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Free%20Will%20Brewing%20Co%2E": {
+    "beers": [
+      {
+        "name": "Black Friday",
+        "style": "Quadrupel (Quad)",
+        "abv": "12.00%",
+        "ba_score": "3.93"
+      },
+      {
+        "name": "Blood & Guts",
+        "style": "American Wild Ale",
+        "abv": "6.00%",
+        "ba_score": "3.8"
+      },
+      {
+        "name": "C.O.B. (Coffee Oatmeal Brown)",
+        "style": "American Brown Ale",
+        "abv": "8.30%",
+        "ba_score": "3.88"
+      },
+      {
+        "name": "Olly Oud Bruin",
+        "style": "Flanders Oud Bruin",
+        "abv": "7.90%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Ralphius",
+        "style": "Russian Imperial Stout",
+        "abv": "14.20%",
+        "ba_score": "4.45"
+      },
+      {
+        "name": "Safeword",
+        "style": "American Double / Imperial IPA",
+        "abv": "10.00%",
+        "ba_score": "4.16"
+      }
+    ]
+  },
+  "Funky%20Buddha%20Brewery": {
+    "beers": [
+      {
+        "name": "Bourbon Barrel-Aged Gruit",
+        "style": "Scottish Gruit / Ancient Herbed Ale",
+        "abv": "10.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Lemon Meringue Blond",
+        "style": "American Blonde Ale",
+        "abv": "5.00%",
+        "ba_score": "3.75"
+      },
+      {
+        "name": "Love Below",
+        "style": "Russian Imperial Stout",
+        "abv": "10.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Strawberry Shortcake Wheat Wine",
+        "style": "Wheatwine",
+        "abv": "9.00%",
+        "ba_score": "4.01"
+      }
+    ]
+  },
+  "Grimm%20Artisanal%20Ales": {
+    "beers": [
+      {
+        "name": "Echoplex",
+        "style": "American Wild Ale",
+        "abv": "5.30%",
         "ba_score": "4.24"
       },
       {
-        "name": "Janus : Past",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "4.80%",
-        "ba_score": "4.2"
-      },
-      {
-        "name": "Misery Sour",
-        "style": "American Wild Ale",
-        "abv": "4.70%",
-        "ba_score": "4.4"
-      },
-      {
-        "name": "Opus Dei",
-        "style": "Belgian Pale Ale",
-        "abv": "3.90%",
-        "ba_score": "3.45"
-      },
-      {
-        "name": "Opus Ferum",
-        "style": "Belgian Pale Ale",
-        "abv": "4.00%",
-        "ba_score": "3.92"
-      },
-      {
-        "name": "Opus Humulus",
-        "style": "Belgian IPA",
-        "abv": "3.90%",
-        "ba_score": "3.73"
-      },
-      {
-        "name": "Sundog",
-        "style": "American Pale Ale (APA)",
-        "abv": "7.50%",
-        "ba_score": "4.41"
-      }
-    ]
-  },
-  "Full%20Sail%20Brewery%20%26%20Tasting%20Room%20%26%20Pub": {
-    "beers": [
-      {
-        "name": "Full Sail Amber",
-        "style": "American Amber / Red Ale",
-        "abv": "5.50%",
-        "ba_score": "3.75"
-      },
-      {
-        "name": "Full Sail ESB",
-        "style": "Extra Special / Strong Bitter (ESB)",
-        "abv": "6.50%",
-        "ba_score": "3.73"
-      },
-      {
-        "name": "Full Sail IPA",
+        "name": "Lumen",
         "style": "American IPA",
-        "abv": "6.00%",
-        "ba_score": "3.53"
+        "abv": "6.40%",
+        "ba_score": "4.42"
       },
       {
-        "name": "Pilsner",
-        "style": "American Pale Lager",
-        "abv": "6.00%",
-        "ba_score": "3.95"
-      },
-      {
-        "name": "Session Black Lager",
-        "style": "Schwarzbier",
-        "abv": "5.40%",
-        "ba_score": "3.67"
-      },
-      {
-        "name": "Session Cream",
-        "style": "Cream Ale",
-        "abv": "5.40%",
-        "ba_score": "3.61"
-      },
-      {
-        "name": "Session IPA",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.10%",
-        "ba_score": "3.25"
-      }
-    ]
-  },
-  "Gardner%20Ale%20House": {
-    "beers": [
-      {
-        "name": "Abbey Rye",
-        "style": "Belgian Pale Ale",
-        "abv": "6.60%",
-        "ba_score": "3.38"
-      },
-      {
-        "name": "Chocolate Porter",
-        "style": "American Porter",
-        "abv": "5.70%",
-        "ba_score": "3.99"
-      },
-      {
-        "name": "Face-off",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.50%",
-        "ba_score": "4.15"
-      },
-      {
-        "name": "Vienna Lager",
-        "style": "Vienna Lager",
-        "abv": "5.50%",
-        "ba_score": "4.14"
-      }
-    ]
-  },
-  "Gneiss%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Atmosbier",
-        "style": "Smoked Beer",
-        "abv": "4.00%",
-        "ba_score": "3.81"
-      },
-      {
-        "name": "Stryeation",
-        "style": "Roggenbier",
-        "abv": "5.30%",
-        "ba_score": "3.84"
-      },
-      {
-        "name": "Tectonic Tomahawk",
-        "style": "American IPA",
-        "abv": "6.70%",
-        "ba_score": "3.83"
-      },
-      {
-        "name": "Weiss",
-        "style": "Hefeweizen",
-        "abv": "4.80%",
-        "ba_score": "4.55"
-      }
-    ]
-  },
-  "Great%20Rhythm%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "AMPLIFIED Amber Ale",
-        "style": "American Amber / Red Ale",
-        "abv": "5.00%",
-        "ba_score": "3.35"
-      },
-      {
-        "name": "Doublestop",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.00%",
-        "ba_score": "3.96"
-      },
-      {
-        "name": "Grateful Stout",
-        "style": "American Stout",
-        "abv": "6.50%",
-        "ba_score": "4.08"
-      },
-      {
-        "name": "Hopstock IPA",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.74"
-      },
-      {
-        "name": "Resonation",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.20%",
-        "ba_score": "4"
-      }
-    ]
-  },
-  "Green%20Flash%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Green Flash Le Freak",
-        "style": "Belgian IPA",
-        "abv": "9.20%",
-        "ba_score": "4.03"
-      },
-      {
-        "name": "Jibe Session IPA",
-        "style": "American IPA",
-        "abv": "4.00%",
-        "ba_score": "3.69"
-      },
-      {
-        "name": "Road Warrior Imperial Rye India Pale Ale",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.00%",
-        "ba_score": "4.07"
-      },
-      {
-        "name": "Silva Stout",
+        "name": "Maple Bourbon Double Negative",
         "style": "American Double / Imperial Stout",
-        "abv": "10.10%",
+        "abv": "11.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Super Spruce",
+        "style": "Gose",
+        "abv": "4.70%",
         "ba_score": "4.3"
       }
     ]
   },
-  "Grey%20Sail%20Brewing%20of%20Rhode%20Island": {
+  "Hardywood%20Park%20Craft%20Brewery": {
     "beers": [
       {
-        "name": "Flagship Ale",
-        "style": "Cream Ale",
-        "abv": "4.90%",
-        "ba_score": "3.41"
+        "name": "Bourbon GBS (Gingerbread Stout)",
+        "style": "Milk / Sweet Stout",
+        "abv": "10.20%",
+        "ba_score": "4.29"
       },
       {
-        "name": "Flying Jenny Extra Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.30%",
-        "ba_score": "3.89"
+        "name": "Passionfruit And Mosaic Berliner Weisse",
+        "style": "Berliner Weissbier",
+        "abv": "3.50%",
+        "ba_score": "-"
       },
       {
-        "name": "Great Ketch",
-        "style": "American Double / Imperial Pilsner",
-        "abv": "8.50%",
-        "ba_score": "4.3"
+        "name": "Trickery",
+        "style": "Milk / Sweet Stout",
+        "abv": "13.50%",
+        "ba_score": "4.47"
       },
       {
-        "name": "Hazy Day Belgian Wit",
-        "style": "Witbier",
-        "abv": "4.00%",
-        "ba_score": "3.56"
-      }
-    ]
-  },
-  "Gritty%20McDuff's%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Gritty McDuff's Best Bitter",
-        "style": "English Bitter",
-        "abv": "5.00%",
-        "ba_score": "3.65"
-      },
-      {
-        "name": "Gritty McDuff's Black Fly Stout",
-        "style": "Irish Dry Stout",
-        "abv": "4.10%",
-        "ba_score": "3.83"
-      },
-      {
-        "name": "Gritty McDuff's Maine's Best IPA",
+        "name": "Tropical Great Return",
         "style": "American IPA",
-        "abv": "6.80%",
-        "ba_score": "3.23"
-      }
-    ]
-  },
-  "Harpoon%20Brewery%20%26%20Beer%20Hall": {
-    "beers": [
-      {
-        "name": "Harpoon IPA",
-        "style": "English India Pale Ale (IPA)",
-        "abv": "5.90%",
-        "ba_score": "3.63"
-      },
-      {
-        "name": "Harpoon Leviathan - Imperial IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "10.00%",
-        "ba_score": "4.04"
-      },
-      {
-        "name": "Harpoon Take 5 Session IPA",
-        "style": "American IPA",
-        "abv": "4.30%",
-        "ba_score": "3.75"
-      },
-      {
-        "name": "UFO Big Squeeze Shandy",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.50%",
-        "ba_score": "3.42"
-      },
-      {
-        "name": "UFO White",
-        "style": "Witbier",
-        "abv": "4.80%",
-        "ba_score": "3.59"
+        "abv": "7.50%",
+        "ba_score": "-"
       }
     ]
   },
   "Heavy%20Seas%20Beer": {
     "beers": [
       {
-        "name": "CrossBones Session IPA",
-        "style": "American IPA",
-        "abv": "4.50%",
-        "ba_score": "3.51"
-      },
-      {
-        "name": "Heavy Seas - Blackbeard’s Breakfast Barrel Aged Imperial Coffee Porter",
-        "style": "American Porter",
-        "abv": "10.00%",
-        "ba_score": "4.16"
-      },
-      {
-        "name": "Heavy Seas Loose Cannon - American Hop3 Ale",
-        "style": "American IPA",
-        "abv": "7.25%",
-        "ba_score": "4.02"
-      }
-    ]
-  },
-  "Henniker%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Amber Apparition",
-        "style": "American Amber / Red Ale",
-        "abv": "5.20%",
-        "ba_score": "3.43"
-      },
-      {
-        "name": "Artisan Ale",
-        "style": "Belgian Pale Ale",
-        "abv": "4.20%",
-        "ba_score": "3.58"
-      },
-      {
-        "name": "Gentleman Farmer",
+        "name": "Desert Island Series: \"New World\" Saison",
         "style": "Saison / Farmhouse Ale",
         "abv": "6.50%",
-        "ba_score": "3.96"
+        "ba_score": "3.59"
       },
       {
-        "name": "Hop Slinger India Pale Ale",
+        "name": "Double Cannon",
+        "style": "American Double / Imperial IPA",
+        "abv": "9.50%",
+        "ba_score": "3.91"
+      },
+      {
+        "name": "Grapefruit Cannon",
         "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.58"
-      },
-      {
-        "name": "Whipple's Wheat",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.80%",
+        "abv": "7.25%",
         "ba_score": "3.81"
       },
       {
-        "name": "Working Man's Porter",
-        "style": "English Porter",
-        "abv": "5.20%",
-        "ba_score": "3.88"
+        "name": "Heavy Seas - Siren Noire Imperial Chocolate Stout",
+        "style": "American Double / Imperial Stout",
+        "abv": "9.50%",
+        "ba_score": "3.84"
       }
     ]
   },
   "Hidden%20Cove%20Brewing%20Co%2E%20%2F%20Fire%20N%20Brew": {
     "beers": [
       {
-        "name": "Castoff Session  IPA",
-        "style": "American IPA",
-        "abv": "4.50%",
-        "ba_score": "3.84"
-      },
-      {
-        "name": "Patroon IPA",
-        "style": "American IPA",
+        "name": "Berried Treasure",
+        "style": "American Wild Ale",
         "abv": "6.00%",
-        "ba_score": "3.76"
+        "ba_score": "3.83"
       },
       {
-        "name": "Stave Bourbon Pecan",
-        "style": "American Porter",
-        "abv": "9.50%",
-        "ba_score": "2.95"
+        "name": "Bouillon",
+        "style": "American Wild Ale",
+        "abv": "6.00%",
+        "ba_score": "4.22"
       },
       {
-        "name": "Summer Ale",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.00%",
-        "ba_score": "3.98"
-      }
-    ]
-  },
-  "High%20Horse%20Brewing": {
-    "beers": [
-      {
-        "name": "Anti-Imperialist IPA",
-        "style": "American IPA",
-        "abv": "4.10%",
-        "ba_score": "3.98"
-      },
-      {
-        "name": "Mr White",
-        "style": "Witbier",
-        "abv": "4.75%",
-        "ba_score": "3.91"
-      },
-      {
-        "name": "Satisfaction IPA",
-        "style": "American IPA",
-        "abv": "7.20%",
-        "ba_score": "3.95"
-      },
-      {
-        "name": "The Business",
-        "style": "American Double / Imperial Stout",
-        "abv": "9.25%",
-        "ba_score": "3.95"
-      },
-      {
-        "name": "The Minx",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.50%",
+        "name": "Jali Apricot Jalapeño Beer",
+        "style": "American Wild Ale",
+        "abv": "9.00%",
         "ba_score": "3.6"
-      }
-    ]
-  },
-  "Humboldt%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "500 BC Double IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.30%",
-        "ba_score": "3.88"
       },
       {
-        "name": "Black Xantus",
-        "style": "American Double / Imperial Stout",
-        "abv": "11.00%",
-        "ba_score": "4.12"
-      },
-      {
-        "name": "Humboldt Brown (Hemp Ale)",
-        "style": "American Brown Ale",
-        "abv": "5.70%",
-        "ba_score": "3.46"
-      },
-      {
-        "name": "Nectar IPA",
-        "style": "American IPA",
-        "abv": "6.70%",
-        "ba_score": "3.8"
-      },
-      {
-        "name": "Red Nectar",
-        "style": "American Amber / Red Ale",
-        "abv": "5.40%",
-        "ba_score": "3.65"
-      }
-    ]
-  },
-  "Idle%20Hands%20Craft%20Ales": {
-    "beers": [
-      {
-        "name": "Adelais",
-        "style": "Kellerbier / Zwickelbier",
-        "abv": "5.20%",
-        "ba_score": "3.64"
-      },
-      {
-        "name": "Bourbon Barrel-Aged Triplication",
+        "name": "Trinal",
         "style": "Tripel",
         "abv": "10.00%",
-        "ba_score": "3.78"
-      },
-      {
-        "name": "D'aison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.70%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Darkness Prevails",
-        "style": "Belgian Strong Dark Ale",
-        "abv": "8.00%",
-        "ba_score": "3.95"
-      },
-      {
-        "name": "Four Horsemen",
-        "style": "Quadrupel (Quad)",
-        "abv": "NL",
-        "ba_score": "-"
-      },
-      {
-        "name": "Leather (3rd Anniversary)",
-        "style": "English Porter",
-        "abv": "6.70%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Roggenwein",
-        "style": "Rye Beer",
-        "abv": "12.00%",
-        "ba_score": "3.46"
-      },
-      {
-        "name": "Triplication",
-        "style": "Tripel",
-        "abv": "9.00%",
-        "ba_score": "3.94"
-      }
-    ]
-  },
-  "Ipswich%20Ale%20Brewery": {
-    "beers": [
-      {
-        "name": "Ipswich Blueberry Shandy",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "5.40%",
-        "ba_score": "3.5"
-      },
-      {
-        "name": "Ipswich Oatmeal Stout",
-        "style": "Oatmeal Stout",
-        "abv": "7.00%",
-        "ba_score": "4.17"
-      },
-      {
-        "name": "Ipswich S.I.P.A.",
-        "style": "American IPA",
-        "abv": "3.90%",
-        "ba_score": "3.91"
-      },
-      {
-        "name": "Route 101 IPA",
-        "style": "American IPA",
-        "abv": "6.00%",
-        "ba_score": "4.05"
-      }
-    ]
-  },
-  "Iron%20Duke%20Brewing": {
-    "beers": [
-      {
-        "name": "Dead Nuts",
-        "style": "American IPA",
-        "abv": "5.60%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Rusty Horseshoe",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.00%",
-        "ba_score": "3.79"
-      },
-      {
-        "name": "Truss",
-        "style": "American Barleywine",
-        "abv": "8.00%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "White Rye",
-        "style": "Rye Beer",
-        "abv": "5.60%",
-        "ba_score": "4"
-      }
-    ]
-  },
-  "Ithaca%20Beer%20Company": {
-    "beers": [
-      {
-        "name": "Apricot Wheat",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.90%",
-        "ba_score": "3.24"
-      },
-      {
-        "name": "Cayuga Cruiser Berliner-style Weisse",
-        "style": "Berliner Weissbier",
-        "abv": "4.20%",
-        "ba_score": "3.61"
-      },
-      {
-        "name": "Flower Power India Pale Ale",
-        "style": "American IPA",
-        "abv": "7.50%",
-        "ba_score": "4.18"
+        "ba_score": "3.86"
       }
     ]
   },
   "Jack's%20Abby%20Brewing": {
     "beers": [
       {
-        "name": "Barrel-Aged Framinghammer",
-        "style": "Baltic Porter",
-        "abv": "10.00%",
-        "ba_score": "4.31"
+        "name": "ABS",
+        "style": "American Wild Ale",
+        "abv": "5.50%",
+        "ba_score": "-"
       },
       {
-        "name": "Cocoa-Nut Barrel Aged Framinghammer",
+        "name": "Barrel-Aged Framinghammer - Orange Peppermint Bark",
         "style": "Baltic Porter",
         "abv": "10.00%",
-        "ba_score": "4.43"
+        "ba_score": "-"
+      },
+      {
+        "name": "Barrel-Aged Framinghammer - The Italiano",
+        "style": "Baltic Porter",
+        "abv": "10.00%",
+        "ba_score": "3.63"
+      },
+      {
+        "name": "Brewery Maker",
+        "style": "American Amber / Red Lager",
+        "abv": "14.00%",
+        "ba_score": "-"
       },
       {
         "name": "Excess IPL",
         "style": "American Pale Lager",
         "abv": "7.20%",
-        "ba_score": "4.16"
-      },
-      {
-        "name": "House Lager",
-        "style": "Munich Helles Lager",
-        "abv": "5.20%",
-        "ba_score": "3.95"
+        "ba_score": "4.15"
       },
       {
         "name": "Peanut Butter & Jelly Barrel Aged Framinghammer",
@@ -2214,2260 +1218,1188 @@
         "ba_score": "4.14"
       },
       {
-        "name": "Sour Barrel Project #1 - Golden Lager",
+        "name": "Sour Barrel Project #5",
         "style": "American Wild Ale",
+        "abv": "5.50%",
+        "ba_score": "4.23"
+      },
+      {
+        "name": "Triple Dry Hopped Hoponius Union",
+        "style": "American Pale Lager",
+        "abv": "6.70%",
+        "ba_score": "4.61"
+      }
+    ]
+  },
+  "Jackie%20O's%20Pub%20%26%20Brewery": {
+    "beers": [
+      {
+        "name": "Cucumber Ginger Berliner Weisse",
+        "style": "Berliner Weissbier",
         "abv": "5.00%",
-        "ba_score": "3.78"
+        "ba_score": "4.45"
+      },
+      {
+        "name": "Dark Apparition - Nuts",
+        "style": "Russian Imperial Stout",
+        "abv": "10.50%",
+        "ba_score": "4.24"
+      },
+      {
+        "name": "Evelyn",
+        "style": "American Wild Ale",
+        "abv": "7.00%",
+        "ba_score": "4.18"
+      },
+      {
+        "name": "Hogwash",
+        "style": "Smoked Beer",
+        "abv": "4.50%",
+        "ba_score": "3.76"
       }
     ]
   },
-  "Kennebec%20River%20Brewery": {
+  "Kane%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Bawston Bock",
-        "style": "Maibock / Helles Bock",
-        "abv": "7.20%",
-        "ba_score": "3.75"
+        "name": "1460",
+        "style": "Quadrupel (Quad)",
+        "abv": "12.00%",
+        "ba_score": "4.45"
       },
       {
-        "name": "Class V Stout",
-        "style": "American Stout",
-        "abv": "5.60%",
-        "ba_score": "-"
-      },
-      {
-        "name": "Magic Hole IPA",
-        "style": "American IPA",
-        "abv": "6.00%",
-        "ba_score": "3.61"
-      },
-      {
-        "name": "Sledhead Red",
-        "style": "American Amber / Red Ale",
-        "abv": "5.20%",
-        "ba_score": "3.56"
-      },
-      {
-        "name": "Whitewater Wheat",
-        "style": "Witbier",
-        "abv": "5.20%",
-        "ba_score": "3.2"
-      }
-    ]
-  },
-  "Lagunitas%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Lagunitas IPA",
-        "style": "American IPA",
-        "abv": "6.20%",
-        "ba_score": "3.86"
-      },
-      {
-        "name": "Lagunitas PILS (Czech Style Pilsner)",
-        "style": "Czech Pilsener",
-        "abv": "6.20%",
-        "ba_score": "3.64"
-      },
-      {
-        "name": "ScareCity #2 Rye Cocoa Porter",
-        "style": "American Porter",
-        "abv": "10.19%",
-        "ba_score": "4.12"
-      },
-      {
-        "name": "ScareCity #3: High West-ified Imperial Coffee Stout",
+        "name": "A Night To End All Dawns",
         "style": "American Double / Imperial Stout",
-        "abv": "12.10%",
+        "abv": "12.40%",
         "ba_score": "4.38"
       },
       {
-        "name": "ScareCity #4 Wheatwine",
-        "style": "Wheatwine",
-        "abv": "9.70%",
-        "ba_score": "3.83"
-      }
-    ]
-  },
-  "Lawson's%20Finest%20Liquids": {
-    "beers": [
-      {
-        "name": "Maple Nipple Ale",
-        "style": "Herbed / Spiced Beer",
-        "abv": "8.00%",
-        "ba_score": "3.67"
-      },
-      {
-        "name": "Permagrin Rye Pale Ale",
-        "style": "Rye Beer",
-        "abv": "6.00%",
-        "ba_score": "4.05"
-      },
-      {
-        "name": "Rhubarb Basil Saison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "5.50%",
-        "ba_score": "4.03"
-      },
-      {
-        "name": "Shhhhhhhhhh.....",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.00%",
-        "ba_score": "4.5"
-      },
-      {
-        "name": "Sip Of Sunshine",
-        "style": "American IPA",
-        "abv": "8.00%",
-        "ba_score": "4.58"
-      },
-      {
-        "name": "Super Session #2",
-        "style": "American IPA",
-        "abv": "4.80%",
-        "ba_score": "4.1"
-      },
-      {
-        "name": "Triple Sunshine IPA",
+        "name": "HopLab: Triple IPA",
         "style": "American Double / Imperial IPA",
         "abv": "10.50%",
-        "ba_score": "4.68"
+        "ba_score": "4.37"
+      },
+      {
+        "name": "Mexican Brunch",
+        "style": "American Porter",
+        "abv": "9.20%",
+        "ba_score": "4.72"
       }
     ]
   },
-  "Left%20Hand%20Brewing%20Company": {
+  "Kent%20Falls%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Fade To Black (Volume 1 - Foreign Export Stout)",
-        "style": "Foreign / Export Stout",
-        "abv": "8.50%",
-        "ba_score": "4.08"
-      },
-      {
-        "name": "Good Juju (Ginger Ale)",
-        "style": "Herbed / Spiced Beer",
-        "abv": "4.50%",
-        "ba_score": "3.41"
-      },
-      {
-        "name": "Great JuJu Imperial Ginger Pale Ale",
-        "style": "Herbed / Spiced Beer",
-        "abv": "7.20%",
-        "ba_score": "3.78"
-      },
-      {
-        "name": "Milk Stout Nitro",
-        "style": "Milk / Sweet Stout",
-        "abv": "6.00%",
-        "ba_score": "4.09"
-      },
-      {
-        "name": "Polestar Pilsner",
-        "style": "German Pilsener",
-        "abv": "5.50%",
-        "ba_score": "3.65"
-      },
-      {
-        "name": "Twin Sisters Double IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.60%",
-        "ba_score": "3.78"
-      }
-    ]
-  },
-  "Long%20Trail%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Berliner Weisse",
-        "style": "Berliner Weissbier",
-        "abv": "3.40%",
-        "ba_score": "3.29"
-      },
-      {
-        "name": "Farm House Belgian Pale Ale",
-        "style": "Belgian Pale Ale",
-        "abv": "5.80%",
-        "ba_score": "3.42"
-      },
-      {
-        "name": "Limbo IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "7.60%",
-        "ba_score": "4.09"
-      },
-      {
-        "name": "SMasH - Single Malt Pilsner Single Hop Galaxy",
+        "name": "Coffeemaker",
         "style": "American IPA",
-        "abv": "6.80%",
+        "abv": "5.60%",
         "ba_score": "3.93"
       },
       {
-        "name": "Space Juice",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.70%",
-        "ba_score": "4.19"
-      }
-    ]
-  },
-  "Lord%20Hobo%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Ball & Biscuit",
-        "style": "American IPA",
-        "abv": "7.20%",
-        "ba_score": "3.65"
-      },
-      {
-        "name": "Boomsauce",
-        "style": "American IPA",
-        "abv": "7.40%",
-        "ba_score": "3.78"
-      },
-      {
-        "name": "Consolation Prize",
-        "style": "American IPA",
-        "abv": "9.20%",
-        "ba_score": "3.89"
-      },
-      {
-        "name": "Glorious",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.50%",
-        "ba_score": "3.75"
-      },
-      {
-        "name": "Steal This Can",
-        "style": "American IPA",
-        "abv": "6.40%",
-        "ba_score": "3.71"
-      }
-    ]
-  },
-  "Lost%20Nation%20Brewing": {
-    "beers": [
-      {
-        "name": "Gose",
-        "style": "Gose",
-        "abv": "4.60%",
-        "ba_score": "4.01"
-      },
-      {
-        "name": "Lost Galaxy",
-        "style": "American IPA",
-        "abv": "4.50%",
-        "ba_score": "4.11"
-      },
-      {
-        "name": "Petit Ardennes",
-        "style": "Belgian Pale Ale",
-        "abv": "4.20%",
-        "ba_score": "4.08"
-      },
-      {
-        "name": "Rustic Ale",
-        "style": "American Amber / Red Ale",
-        "abv": "5.40%",
-        "ba_score": "3.75"
-      }
-    ]
-  },
-  "Magic%20Hat%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "#9",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "5.10%",
-        "ba_score": "3.4"
-      },
-      {
-        "name": "Big Hundo",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.00%",
-        "ba_score": "3.88"
-      },
-      {
-        "name": "Circus Boy",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.50%",
-        "ba_score": "3.42"
-      },
-      {
-        "name": "Dream Machine",
-        "style": "American Amber / Red Lager",
-        "abv": "5.70%",
-        "ba_score": "3.36"
-      },
-      {
-        "name": "Electric Peel",
-        "style": "American IPA",
-        "abv": "6.00%",
-        "ba_score": "3.67"
-      },
-      {
-        "name": "Stealin' Time Summer Wheat",
-        "style": "American Pale Wheat Ale",
-        "abv": "5.50%",
-        "ba_score": "3.23"
-      }
-    ]
-  },
-  "Maine%20Beer%20Company": {
-    "beers": [
-      {
-        "name": "Another One",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "4.28"
-      },
-      {
-        "name": "Lunch",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "4.34"
-      },
-      {
-        "name": "Red Wheelbarrow",
-        "style": "American Amber / Red Ale",
-        "abv": "7.00%",
+        "name": "Nature",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "5.20%",
         "ba_score": "4.09"
-      }
-    ]
-  },
-  "Martha's%20Exchange": {
-    "beers": [
-      {
-        "name": "Martha's The Prestidigitator Dopplebock",
-        "style": "Doppelbock",
-        "abv": "9.00%",
-        "ba_score": "3.84"
       },
       {
-        "name": "Oxymoronic",
-        "style": "Belgian IPA",
-        "abv": "7.50%",
-        "ba_score": "3.67"
-      },
-      {
-        "name": "Smoked Maple Porter",
-        "style": "American Porter",
-        "abv": "7.50%",
-        "ba_score": "3.74"
-      },
-      {
-        "name": "The Farmer's Daughter",
-        "style": "Rye Beer",
-        "abv": "6.00%",
-        "ba_score": "-"
+        "name": "Walking Away In Slow Motion While The Car Explodes Behind You",
+        "style": "Gose",
+        "abv": "7.00%",
+        "ba_score": "4.26"
       }
     ]
   },
   "Marz%20Community%20Brewing": {
     "beers": [
       {
-        "name": "Duchess De Bridgeport",
-        "style": "American Wild Ale",
-        "abv": "5.00%",
-        "ba_score": "3.15"
-      },
-      {
-        "name": "Jungle Boogie",
-        "style": "American Pale Wheat Ale",
-        "abv": "5.30%",
-        "ba_score": "4.29"
-      },
-      {
-        "name": "Ruby's Tears",
-        "style": "Gose",
-        "abv": "6.20%",
-        "ba_score": "3.77"
-      },
-      {
-        "name": "The Machine",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.30%",
-        "ba_score": "4.06"
-      }
-    ]
-  },
-  "Matt%20Brewing%20Company%20%2F%20Saranac%20Brewery": {
-    "beers": [
-      {
-        "name": "Saranac Clouded Dream",
-        "style": "Belgian IPA",
-        "abv": "7.30%",
-        "ba_score": "3.7"
-      },
-      {
-        "name": "Saranac Imperial IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.50%",
-        "ba_score": "3.91"
-      },
-      {
-        "name": "Saranac Legacy IPA",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.73"
-      },
-      {
-        "name": "Saranac Xocolatl",
-        "style": "American Stout",
-        "abv": "9.00%",
-        "ba_score": "3.86"
-      }
-    ]
-  },
-  "Maui%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Bikini Blonde Lager",
-        "style": "Munich Helles Lager",
-        "abv": "5.10%",
-        "ba_score": "3.65"
-      },
-      {
-        "name": "CoCoNut Porter",
-        "style": "American Porter",
-        "abv": "6.00%",
-        "ba_score": "3.99"
-      },
-      {
-        "name": "Haleakala SunRyes",
-        "style": "Rye Beer",
-        "abv": "6.90%",
-        "ba_score": "3.68"
-      },
-      {
-        "name": "HopKine",
-        "style": "American Pale Lager",
-        "abv": "5.10%",
-        "ba_score": "3.97"
-      }
-    ]
-  },
-  "Mayflower%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Mayflower Golden Ale",
-        "style": "American Blonde Ale",
-        "abv": "4.70%",
-        "ba_score": "3.64"
-      },
-      {
-        "name": "Mayflower IPA",
-        "style": "American IPA",
-        "abv": "6.10%",
-        "ba_score": "3.88"
-      },
-      {
-        "name": "Mayflower Porter",
-        "style": "English Porter",
-        "abv": "5.50%",
-        "ba_score": "4.11"
-      },
-      {
-        "name": "Mayflower Summer Rye",
-        "style": "Rye Beer",
-        "abv": "3.80%",
-        "ba_score": "3.59"
-      }
-    ]
-  },
-  "Medusa%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Blighty",
-        "style": "English Porter",
-        "abv": "6.20%",
-        "ba_score": "4.22"
-      },
-      {
-        "name": "Chapterhouse",
-        "style": "Tripel",
-        "abv": "8.60%",
+        "name": "Bubbly Kriek",
+        "style": "Berliner Weissbier",
+        "abv": "7.00%",
         "ba_score": "-"
       },
       {
-        "name": "Palaver",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.50%",
-        "ba_score": "3.49"
-      },
-      {
-        "name": "Prosperous",
-        "style": "American IPA",
-        "abv": "6.60%",
-        "ba_score": "4.01"
-      },
-      {
-        "name": "Zweihänder",
+        "name": "Double Jungle Boogie",
         "style": "American Double / Imperial IPA",
-        "abv": "8.20%",
-        "ba_score": "4.01"
-      }
-    ]
-  },
-  "Moat%20Mountain%20Smoke%20House%20%26%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Hell Yes!",
-        "style": "Munich Helles Lager",
-        "abv": "4.70%",
-        "ba_score": "3.55"
-      },
-      {
-        "name": "Moat Blueberry Ale",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.50%",
-        "ba_score": "3.52"
-      },
-      {
-        "name": "Moat Iron Mike Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.60%",
-        "ba_score": "3.71"
-      },
-      {
-        "name": "Moat Lager",
-        "style": "Vienna Lager",
-        "abv": "5.50%",
-        "ba_score": "3.83"
-      },
-      {
-        "name": "Moat Matilda's Red Rage",
-        "style": "American Amber / Red Ale",
-        "abv": "5.40%",
-        "ba_score": "3.64"
-      },
-      {
-        "name": "Moat Scottie's IPA",
-        "style": "American IPA",
-        "abv": "6.00%",
-        "ba_score": "3.79"
-      },
-      {
-        "name": "Sour Hipster From Kentucky",
-        "style": "American Wild Ale",
-        "abv": "9.90%",
-        "ba_score": "3.75"
-      }
-    ]
-  },
-  "MobCraft%20Beer": {
-    "beers": [
-      {
-        "name": "Aloha Danke Schon",
-        "style": "Witbier",
-        "abv": "6.60%",
-        "ba_score": "3.84"
-      },
-      {
-        "name": "Batshit Crazy",
-        "style": "English Brown Ale",
-        "abv": "5.60%",
-        "ba_score": "3.75"
-      },
-      {
-        "name": "Hop Gose The Grapefruit",
-        "style": "Gose",
-        "abv": "4.50%",
-        "ba_score": "3.41"
-      }
-    ]
-  },
-  "Mystic%20Brewery": {
-    "beers": [
-      {
-        "name": "Day Of Doom",
-        "style": "Quadrupel (Quad)",
-        "abv": "12.00%",
-        "ba_score": "3.89"
-      },
-      {
-        "name": "Entropy",
-        "style": "American Barleywine",
-        "abv": "14.20%",
-        "ba_score": "4.08"
-      },
-      {
-        "name": "Flor Ventus",
-        "style": "American Wild Ale",
-        "abv": "5.30%",
+        "abv": "8.00%",
         "ba_score": "4.25"
       },
       {
-        "name": "Greensleeves",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.40%",
-        "ba_score": "4.1"
-      },
-      {
-        "name": "The Hum",
-        "style": "American Porter",
-        "abv": "7.50%",
-        "ba_score": "4.02"
-      }
-    ]
-  },
-  "Narragansett%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Narragansett Bohemian Pilsner",
-        "style": "German Pilsener",
-        "abv": "5.20%",
-        "ba_score": "3.7"
-      },
-      {
-        "name": "Narragansett Del's Shandy",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.70%",
-        "ba_score": "3.41"
-      },
-      {
-        "name": "Narragansett Lager",
-        "style": "American Adjunct Lager",
-        "abv": "5.00%",
-        "ba_score": "3.43"
-      },
-      {
-        "name": "Narragansett Lovecraft Series - Innsmouth Olde Ale",
-        "style": "Old Ale",
-        "abv": "7.00%",
-        "ba_score": "3.7"
-      },
-      {
-        "name": "Narragansett Summer Ale",
-        "style": "American Blonde Ale",
-        "abv": "4.20%",
-        "ba_score": "3.8"
-      }
-    ]
-  },
-  "Newburyport%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Melt Away",
-        "style": "American IPA",
-        "abv": "4.60%",
-        "ba_score": "4.13"
-      },
-      {
-        "name": "Newburyport Green Head IPA",
-        "style": "American IPA",
-        "abv": "7.20%",
-        "ba_score": "3.88"
-      },
-      {
-        "name": "Newburyport Pale Ale",
-        "style": "American Pale Ale (APA)",
+        "name": "Smoke Wheat Every Day",
+        "style": "Smoked Beer",
         "abv": "5.50%",
-        "ba_score": "3.75"
+        "ba_score": "-"
       },
       {
-        "name": "Plum Island Belgian White",
-        "style": "Witbier",
-        "abv": "5.40%",
-        "ba_score": "3.78"
+        "name": "What The Phở?",
+        "style": "American Porter",
+        "abv": "5.30%",
+        "ba_score": "3.33"
+      }
+    ]
+  },
+  "Newburgh%20Brewing%20Company": {
+    "beers": [
+      {
+        "name": "Chocolate Fruition Gose",
+        "style": "Gose",
+        "abv": "5.70%",
+        "ba_score": "3.82"
+      },
+      {
+        "name": "MegaBoss IPA",
+        "style": "American IPA",
+        "abv": "7.00%",
+        "ba_score": "4.14"
+      },
+      {
+        "name": "Newburgh Black Oyster Cult",
+        "style": "Gose",
+        "abv": "4.90%",
+        "ba_score": "4.19"
+      },
+      {
+        "name": "Newburgh C.A.F.E. Sour",
+        "style": "Fruit / Vegetable Beer",
+        "abv": "5.20%",
+        "ba_score": "4.47"
+      },
+      {
+        "name": "Newburgh Magnanini Niagara Tripel",
+        "style": "Tripel",
+        "abv": "11.30%",
+        "ba_score": "3.84"
       }
     ]
   },
   "Night%20Shift%20Brewing": {
     "beers": [
       {
-        "name": "Diagonal",
-        "style": "Berliner Weissbier",
-        "abv": "3.50%",
-        "ba_score": "3.68"
+        "name": "Barrel'd Trophy",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "9.40%",
+        "ba_score": "-"
       },
       {
-        "name": "Ever Weisse",
-        "style": "Berliner Weissbier",
-        "abv": "5.00%",
-        "ba_score": "4.15"
+        "name": "Darkling",
+        "style": "American Double / Imperial Stout",
+        "abv": "10.00%",
+        "ba_score": "4.59"
       },
       {
-        "name": "Santilli",
-        "style": "American IPA",
-        "abv": "6.00%",
-        "ba_score": "4.19"
+        "name": "Elevensies",
+        "style": "Baltic Porter",
+        "abv": "9.00%",
+        "ba_score": "4.25"
       },
       {
-        "name": "Viva Habanera",
-        "style": "Rye Beer",
-        "abv": "7.00%",
-        "ba_score": "3.72"
+        "name": "Sargent",
+        "style": "American Wild Ale",
+        "abv": "6.60%",
+        "ba_score": "3.67"
       },
       {
         "name": "Whirlpool",
         "style": "American Pale Ale (APA)",
         "abv": "4.50%",
-        "ba_score": "4.11"
+        "ba_score": "4.12"
       }
     ]
   },
-  "North%20Coast%20Brewing%20Co%2E": {
+  "OEC%20Brewing%20(Ordinem%20Ecentrici%20Coctores)": {
     "beers": [
       {
-        "name": "Brother Thelonious",
-        "style": "Belgian Strong Dark Ale",
-        "abv": "9.40%",
-        "ba_score": "3.78"
+        "name": "Exilior",
+        "style": "Berliner Weissbier",
+        "abv": "3.90%",
+        "ba_score": "-"
       },
       {
-        "name": "Le Merle",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "7.90%",
-        "ba_score": "3.91"
-      },
-      {
-        "name": "Old Rasputin Russian Imperial Stout",
-        "style": "Russian Imperial Stout",
-        "abv": "9.00%",
-        "ba_score": "4.27"
-      },
-      {
-        "name": "Old Stock Ale",
-        "style": "Old Ale",
-        "abv": "11.80%",
-        "ba_score": "4.1"
-      },
-      {
-        "name": "Pranqster",
-        "style": "Belgian Strong Pale Ale",
-        "abv": "7.60%",
-        "ba_score": "3.99"
-      },
-      {
-        "name": "Puck The Beer",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "4.00%",
-        "ba_score": "3.64"
-      }
-    ]
-  },
-  "Offshore%20Ale%20Company": {
-    "beers": [
-      {
-        "name": "East Chop Lighthouse",
-        "style": "American Blonde Ale",
-        "abv": "4.70%",
-        "ba_score": "3.42"
-      },
-      {
-        "name": "Hop Goddess",
-        "style": "Belgian Pale Ale",
-        "abv": "6.90%",
-        "ba_score": "4.11"
-      },
-      {
-        "name": "Islander Double IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.00%",
-        "ba_score": "4.18"
-      },
-      {
-        "name": "Lazy Frog IPA",
-        "style": "American IPA",
+        "name": "Experimentalis With Peaches (Pedro Ximenez Barrel)",
+        "style": "American Wild Ale",
         "abv": "7.00%",
-        "ba_score": "3.56"
+        "ba_score": "3.83"
+      },
+      {
+        "name": "Figtasma (Double Barrel-Aged On Figs)",
+        "style": "American Wild Ale",
+        "abv": "9.50%",
+        "ba_score": "4.36"
+      },
+      {
+        "name": "Grandis",
+        "style": "Old Ale",
+        "abv": "12.00%",
+        "ba_score": "4.3"
+      },
+      {
+        "name": "Salsus Singularis",
+        "style": "Gose",
+        "abv": "4.90%",
+        "ba_score": "4.18"
       }
     ]
   },
   "Oskar%20Blues%20Grill%20%26%20Brew": {
     "beers": [
       {
-        "name": "Dale's Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "6.50%",
-        "ba_score": "3.93"
-      },
-      {
-        "name": "Death By Coconut",
-        "style": "English Porter",
-        "abv": "6.50%",
-        "ba_score": "4.13"
-      },
-      {
-        "name": "GUBNA Imperial IPA",
+        "name": "GUBNA Imperial IPA (Tequila Barrel-Aged)",
         "style": "American Double / Imperial IPA",
         "abv": "10.00%",
-        "ba_score": "3.76"
+        "ba_score": "4.04"
       },
       {
-        "name": "Mama's Little Yella Pils",
-        "style": "Czech Pilsener",
-        "abv": "5.30%",
-        "ba_score": "3.61"
-      },
-      {
-        "name": "Old Chub NITRO",
-        "style": "Scotch Ale / Wee Heavy",
-        "abv": "8.00%",
+        "name": "Hotbox Coffee Porter",
+        "style": "American Porter",
+        "abv": "6.50%",
         "ba_score": "3.94"
       },
       {
-        "name": "Pinner Throwback IPA",
-        "style": "American IPA",
-        "abv": "4.90%",
-        "ba_score": "3.81"
+        "name": "Shordy",
+        "style": "American Stout",
+        "abv": "5.00%",
+        "ba_score": "3.75"
       }
     ]
   },
   "Other%20Half%20Brewing%20Co%2E": {
     "beers": [
       {
-        "name": "All I See Is Green",
-        "style": "American Double / Imperial IPA",
-        "abv": "7.90%",
-        "ba_score": "4.12"
-      },
-      {
-        "name": "Chardonnay Barrel Aged Brett Saison",
+        "name": "Dogfish Head/Other Half - Consider The Carrot",
         "style": "Saison / Farmhouse Ale",
-        "abv": "6.00%",
-        "ba_score": "4.26"
-      },
-      {
-        "name": "Other Half IPA",
-        "style": "American IPA",
-        "abv": "7.10%",
-        "ba_score": "3.91"
-      }
-    ]
-  },
-  "Otter%20Creek%20Brewing%20%2F%20Wolaver's": {
-    "beers": [
-      {
-        "name": "Backseat Berner",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "4.09"
-      },
-      {
-        "name": "Otter Creek Fresh Slice",
-        "style": "Belgian IPA",
-        "abv": "5.50%",
-        "ba_score": "3.72"
-      },
-      {
-        "name": "Over Easy",
-        "style": "American Pale Ale (APA)",
-        "abv": "4.60%",
-        "ba_score": "3.91"
-      }
-    ]
-  },
-  "Overshores%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Belgique Du Noire",
-        "style": "Belgian Strong Dark Ale",
-        "abv": "9.50%",
-        "ba_score": "3.12"
-      },
-      {
-        "name": "Belle Fermiere",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.60%",
-        "ba_score": "3.81"
-      },
-      {
-        "name": "Blanc De Blanche",
-        "style": "Witbier",
-        "abv": "6.40%",
-        "ba_score": "4.01"
-      },
-      {
-        "name": "Tripel Brun",
-        "style": "Tripel",
-        "abv": "9.50%",
-        "ba_score": "3.94"
-      }
-    ]
-  },
-  "Peak%20Organic%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Peak Organic Citrus Saison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "4.70%",
-        "ba_score": "3.65"
-      },
-      {
-        "name": "Peak Organic IPA",
-        "style": "American IPA",
-        "abv": "7.20%",
-        "ba_score": "3.67"
-      },
-      {
-        "name": "Peak Organic Summer Session Ale",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.40%",
-        "ba_score": "3.76"
-      },
-      {
-        "name": "Peak Organic The Maple Collaboration",
-        "style": "American Amber / Red Ale",
-        "abv": "7.00%",
-        "ba_score": "3.6"
-      }
-    ]
-  },
-  "Port%20Jeff%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Beach Beer",
-        "style": "Witbier",
-        "abv": "4.80%",
-        "ba_score": "3.8"
-      },
-      {
-        "name": "H3 Trippel",
-        "style": "Tripel",
-        "abv": "10.10%",
-        "ba_score": "3.69"
-      },
-      {
-        "name": "Overboard",
-        "style": "Russian Imperial Stout",
-        "abv": "9.30%",
-        "ba_score": "4.24"
-      },
-      {
-        "name": "Party Boat IPA",
-        "style": "American IPA",
-        "abv": "7.70%",
-        "ba_score": "3.85"
-      },
-      {
-        "name": "Port Jeff Porter",
-        "style": "American Porter",
-        "abv": "6.50%",
-        "ba_score": "3.93"
-      }
-    ]
-  },
-  "Portico%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "Chroma",
-        "style": "Rye Beer",
-        "abv": "6.10%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Chroma Take 2",
-        "style": "Rye Beer",
-        "abv": "6.40%",
+        "abv": "4.50%",
         "ba_score": "-"
       },
       {
-        "name": "Fuzzy Logic",
-        "style": "Kölsch",
-        "abv": "5.40%",
-        "ba_score": "3.52"
+        "name": "Dogfish Head/Other Half - Too Much Blue Tho",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "4.50%",
+        "ba_score": "-"
       },
       {
-        "name": "Sett Seven",
-        "style": "Scotch Ale / Wee Heavy",
-        "abv": "7.70%",
-        "ba_score": "3.62"
+        "name": "Fuzzy Brett",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "4.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "In Absentia Luci",
+        "style": "American Double / Imperial Stout",
+        "abv": "12.00%",
+        "ba_score": "4.14"
+      },
+      {
+        "name": "Kerstperiode",
+        "style": "Bière de Garde",
+        "abv": "10.00%",
+        "ba_score": "3.7"
+      },
+      {
+        "name": "Midnight Showers",
+        "style": "American Black Ale",
+        "abv": "7.40%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Other Half/Burial - Diamond Mausoleum",
+        "style": "American Black Ale",
+        "abv": "7.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Second Anniversary DIPA",
+        "style": "American Double / Imperial IPA",
+        "abv": "9.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Tired Hands / Other Half - Oat Overdose",
+        "style": "American IPA",
+        "abv": "6.50%",
+        "ba_score": "4.45"
+      },
+      {
+        "name": "We've Been Out There In Orbit",
+        "style": "American Double / Imperial Stout",
+        "abv": "12.00%",
+        "ba_score": "4.32"
       }
     ]
   },
-  "Pretty%20Things%20Beer%20%26%20Ale%20Project": {
+  "Prairie%20Artisan%20Ales": {
     "beers": [
       {
-        "name": "Barbapapa",
-        "style": "Russian Imperial Stout",
-        "abv": "12.00%",
-        "ba_score": "4.39"
-      },
-      {
-        "name": "Bocky Bier",
-        "style": "Bock",
-        "abv": "7.50%",
-        "ba_score": "4.01"
-      },
-      {
-        "name": "FlowerLand",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.50%",
-        "ba_score": "3.56"
-      },
-      {
-        "name": "Fluffy White Rabbits",
-        "style": "Tripel",
-        "abv": "8.50%",
-        "ba_score": "4.03"
-      },
-      {
-        "name": "Fumapapa",
-        "style": "Russian Imperial Stout",
-        "abv": "12.00%",
+        "name": "Barrel Aged Bomb!",
+        "style": "American Double / Imperial Stout",
+        "abv": "13.00%",
         "ba_score": "4.24"
       },
       {
-        "name": "Jack D'Or",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.50%",
-        "ba_score": "4.01"
-      },
-      {
-        "name": "Meadowlark IPA",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "4.1"
+        "name": "Coffee Okie",
+        "style": "American Brown Ale",
+        "abv": "13.00%",
+        "ba_score": "4.3"
       }
     ]
   },
-  "Prohibition%20Pig": {
+  "Proclamation%20Ale%20Company": {
     "beers": [
       {
-        "name": "Amarillo Dream",
-        "style": "American Pale Wheat Ale",
-        "abv": "5.00%",
-        "ba_score": "3.9"
+        "name": "Derivative: Citra",
+        "style": "American Pale Ale (APA)",
+        "abv": "6.00%",
+        "ba_score": "4.5"
       },
       {
-        "name": "Bantam",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.00%",
-        "ba_score": "4.33"
+        "name": "Harper II: Electric Boogaloo",
+        "style": "American Wild Ale",
+        "abv": "8.20%",
+        "ba_score": "4.3"
       },
       {
-        "name": "Bourbon Barrel Aged Milk Stout",
-        "style": "American Stout",
-        "abv": "8.00%",
-        "ba_score": "3.98"
+        "name": "The Amazing Adventures Of The Alpaca Magi",
+        "style": "American Wild Ale",
+        "abv": "5.80%",
+        "ba_score": "4.31"
       },
       {
-        "name": "Pro Pig Brass Monkey",
-        "style": "American Malt Liquor",
-        "abv": "6.50%",
-        "ba_score": "3.87"
-      }
-    ]
-  },
-  "Queen%20City%20Brewery": {
-    "beers": [
-      {
-        "name": "Argument",
-        "style": "English India Pale Ale (IPA)",
-        "abv": "7.50%",
-        "ba_score": "3.46"
-      },
-      {
-        "name": "City Beer",
-        "style": "Kölsch",
-        "abv": "5.00%",
-        "ba_score": "3.84"
-      },
-      {
-        "name": "Landlady Ale",
-        "style": "Extra Special / Strong Bitter (ESB)",
-        "abv": "5.40%",
-        "ba_score": "3.51"
-      },
-      {
-        "name": "Queen City Dunkel",
-        "style": "Munich Dunkel Lager",
-        "abv": "5.20%",
-        "ba_score": "3.61"
-      },
-      {
-        "name": "Queen City Hefeweizen",
-        "style": "Hefeweizen",
-        "abv": "5.60%",
-        "ba_score": "3.8"
-      },
-      {
-        "name": "Yorkshire Porter",
-        "style": "English Porter",
-        "abv": "5.00%",
-        "ba_score": "3.24"
+        "name": "Zzzlumber (Barrel-Aged)",
+        "style": "Russian Imperial Stout",
+        "abv": "11.00%",
+        "ba_score": "4.25"
       }
     ]
   },
   "Relic%20Brewing%20Co": {
     "beers": [
       {
-        "name": "Field Hand",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.30%",
-        "ba_score": "4.13"
-      },
-      {
-        "name": "Kottbusser",
-        "style": "Kölsch",
-        "abv": "5.50%",
-        "ba_score": "4"
-      },
-      {
-        "name": "Rye Tripel Chai",
-        "style": "Tripel",
-        "abv": "9.00%",
-        "ba_score": "3.64"
-      },
-      {
-        "name": "The Huntress",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.30%",
-        "ba_score": "3.67"
-      }
-    ]
-  },
-  "Rhinegeist%20Brewery": {
-    "beers": [
-      {
-        "name": "A-Side",
-        "style": "American IPA",
-        "abv": "6.60%",
-        "ba_score": "3.87"
-      },
-      {
-        "name": "Andromeda",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.70%",
-        "ba_score": "3.92"
-      },
-      {
-        "name": "Cougar",
-        "style": "American Blonde Ale",
-        "abv": "4.80%",
-        "ba_score": "3.65"
-      },
-      {
-        "name": "Fiction",
-        "style": "Belgian Pale Ale",
-        "abv": "6.00%",
-        "ba_score": "3.74"
-      },
-      {
-        "name": "Hustle",
-        "style": "Rye Beer",
-        "abv": "5.70%",
-        "ba_score": "3.83"
-      },
-      {
-        "name": "Puma",
-        "style": "German Pilsener",
-        "abv": "5.20%",
-        "ba_score": "3.72"
-      },
-      {
-        "name": "Truth",
-        "style": "American IPA",
-        "abv": "7.20%",
-        "ba_score": "4.08"
-      },
-      {
-        "name": "Zen",
-        "style": "American Pale Ale (APA)",
-        "abv": "4.80%",
-        "ba_score": "3.79"
-      }
-    ]
-  },
-  "Rising%20Tide%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Gose",
-        "style": "Gose",
-        "abv": "3.60%",
-        "ba_score": "3.88"
-      },
-      {
-        "name": "Ishmael",
-        "style": "Altbier",
-        "abv": "4.90%",
-        "ba_score": "3.74"
-      },
-      {
-        "name": "Maine Island Trail Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "4.30%",
-        "ba_score": "3.96"
-      },
-      {
-        "name": "Zephyr",
-        "style": "American IPA",
-        "abv": "7.20%",
-        "ba_score": "3.68"
-      }
-    ]
-  },
-  "Riverwalk%20Brewing": {
-    "beers": [
-      {
-        "name": "Gnomad",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "7.50%",
-        "ba_score": "3.8"
-      },
-      {
-        "name": "Riverwalk IPA",
-        "style": "American IPA",
-        "abv": "6.75%",
-        "ba_score": "3.87"
-      },
-      {
-        "name": "Rt.1 Rye Stout",
-        "style": "English Stout",
-        "abv": "6.00%",
-        "ba_score": "3.65"
-      },
-      {
-        "name": "Rustic Pils",
-        "style": "Czech Pilsener",
-        "abv": "5.60%",
-        "ba_score": "3.98"
-      },
-      {
-        "name": "Screendoor Summer Ale",
-        "style": "American Pale Wheat Ale",
-        "abv": "5.50%",
-        "ba_score": "3.78"
-      }
-    ]
-  },
-  "Rogue%20Ales": {
-    "beers": [
-      {
-        "name": "Brutal Bitter Ale",
-        "style": "American IPA",
-        "abv": "5.80%",
-        "ba_score": "4.01"
-      },
-      {
-        "name": "Dead Guy Ale",
-        "style": "Maibock / Helles Bock",
-        "abv": "6.50%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Rogue Farms 7 Hop IPA",
-        "style": "American IPA",
-        "abv": "8.02%",
-        "ba_score": "3.92"
-      },
-      {
-        "name": "Rogue Farms Fresh Roast",
-        "style": "American Brown Ale",
-        "abv": "5.70%",
-        "ba_score": "3.87"
-      },
-      {
-        "name": "Voodoo Doughnut Pretzel, Raspberry & Chocolate Ale",
-        "style": "American Brown Ale",
-        "abv": "5.40%",
-        "ba_score": "3.58"
-      },
-      {
-        "name": "XS Dead Guy Ale",
+        "name": "Cygnet Strong Ale",
         "style": "American Strong Ale",
-        "abv": "9.00%",
-        "ba_score": "3.82"
-      }
-    ]
-  },
-  "Rushing%20Duck%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Baby Elephant",
-        "style": "American IPA",
-        "abv": "4.40%",
-        "ba_score": "4.01"
+        "abv": "8.00%",
+        "ba_score": "4.5"
       },
       {
-        "name": "Divided By Zero",
-        "style": "American IPA",
-        "abv": "7.00%",
-        "ba_score": "4.27"
-      },
-      {
-        "name": "Gluten Wine",
-        "style": "Wheatwine",
-        "abv": "12.30%",
-        "ba_score": "3.66"
-      },
-      {
-        "name": "Zingerbier",
-        "style": "Berliner Weissbier",
-        "abv": "4.60%",
-        "ba_score": "4.12"
-      }
-    ]
-  },
-  "Schilling%20Beer%20Co%2E": {
-    "beers": [
-      {
-        "name": "Alexandr 10*",
-        "style": "Czech Pilsener",
-        "abv": "4.70%",
-        "ba_score": "3.97"
-      },
-      {
-        "name": "Basse-Cour",
+        "name": "Demiana",
         "style": "Saison / Farmhouse Ale",
-        "abv": "6.00%",
-        "ba_score": "4.02"
-      },
-      {
-        "name": "Erastus",
-        "style": "Tripel",
-        "abv": "8.70%",
-        "ba_score": "4.46"
-      },
-      {
-        "name": "Poppy's Moonship",
-        "style": "Gose",
-        "abv": "4.70%",
-        "ba_score": "3.81"
-      },
-      {
-        "name": "Racogne",
-        "style": "Belgian IPA",
-        "abv": "5.40%",
-        "ba_score": "4.27"
-      },
-      {
-        "name": "Thaddeus",
-        "style": "Belgian Strong Dark Ale",
-        "abv": "8.50%",
-        "ba_score": "4.06"
-      }
-    ]
-  },
-  "Sea%20Dog%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Sea Dog Blueberry Wheat Ale",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.70%",
-        "ba_score": "3.47"
-      },
-      {
-        "name": "Sea Dog Sunfish",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.60%",
-        "ba_score": "3.6"
-      }
-    ]
-  },
-  "Sebago%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Frye's Leap IPA",
-        "style": "American IPA",
-        "abv": "6.00%",
+        "abv": "5.30%",
         "ba_score": "3.7"
       },
       {
-        "name": "Hop Swap - 2015",
-        "style": "American IPA",
-        "abv": "6.70%",
-        "ba_score": "3.87"
+        "name": "Fore",
+        "style": "Quadrupel (Quad)",
+        "abv": "10.50%",
+        "ba_score": "-"
       },
       {
-        "name": "Runabout Red Ale",
-        "style": "American Amber / Red Ale",
-        "abv": "4.40%",
-        "ba_score": "3.58"
-      },
-      {
-        "name": "Simmer Down - A Summer Session Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "4.90%",
-        "ba_score": "3.65"
+        "name": "Nelson Gose",
+        "style": "Gose",
+        "abv": "5.00%",
+        "ba_score": "-"
       }
     ]
   },
-  "Shipyard%20Brewing%20Co%2E": {
+  "Revolution%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Shipyard Melonhead",
+        "name": "Cafe Deth LTD 2015",
+        "style": "Russian Imperial Stout",
+        "abv": "11.40%",
+        "ba_score": "4.32"
+      },
+      {
+        "name": "Hellzapoppin",
         "style": "Fruit / Vegetable Beer",
-        "abv": "4.40%",
-        "ba_score": "3.08"
+        "abv": "2.50%",
+        "ba_score": "4.37"
       },
       {
-        "name": "Shipyard Monkey Fist IPA",
-        "style": "English India Pale Ale (IPA)",
-        "abv": "6.90%",
-        "ba_score": "3.44"
+        "name": "Queequegs Coffin - Barrel Aged",
+        "style": "Witbier",
+        "abv": "11.00%",
+        "ba_score": "4.15"
       },
       {
-        "name": "Shipyard Summer Ale",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.80%",
-        "ba_score": "3.08"
+        "name": "Ryeway To Heaven",
+        "style": "Rye Beer",
+        "abv": "13.70%",
+        "ba_score": "4.32"
+      }
+    ]
+  },
+  "Right%20Brain%20Brewery": {
+    "beers": [
+      {
+        "name": "1841",
+        "style": "Dubbel",
+        "abv": "6.20%",
+        "ba_score": "4.3"
+      },
+      {
+        "name": "2 Brains",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "5.70%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Barrel Aged CEO Stout",
+        "style": "American Stout",
+        "abv": "5.50%",
+        "ba_score": "3.96"
+      },
+      {
+        "name": "CakeWalk Vanilla Cream",
+        "style": "Cream Ale",
+        "abv": "3.80%",
+        "ba_score": "3.79"
+      },
+      {
+        "name": "North Shore Iron Works",
+        "style": "English Barleywine",
+        "abv": "9.60%",
+        "ba_score": "3.86"
+      },
+      {
+        "name": "Thai Peanut",
+        "style": "Fruit / Vegetable Beer",
+        "abv": "7.90%",
+        "ba_score": "3.88"
+      }
+    ]
+  },
+  "Rivertown%20Brewing%20Co%2E": {
+    "beers": [
+      {
+        "name": "Death",
+        "style": "American Double / Imperial Stout",
+        "abv": "11.70%",
+        "ba_score": "3.46"
+      },
+      {
+        "name": "Old Sour Cherry Porter",
+        "style": "American Wild Ale",
+        "abv": "7.90%",
+        "ba_score": "3.83"
+      },
+      {
+        "name": "Roebling Vanilla Espresso Porter",
+        "style": "American Porter",
+        "abv": "7.80%",
+        "ba_score": "3.54"
+      },
+      {
+        "name": "Ville De Rivere Geuze",
+        "style": "Gueuze",
+        "abv": "6.40%",
+        "ba_score": "3.71"
       }
     ]
   },
   "Shmaltz%20Brewing%20Company": {
     "beers": [
       {
-        "name": "He'brew Hop Manna IPA",
+        "name": "Chanukah In Kentucky",
+        "style": "Winter Warmer",
+        "abv": "8.00%",
+        "ba_score": "3.65"
+      },
+      {
+        "name": "He'Brew Funky Jewbelation '16",
+        "style": "American Wild Ale",
+        "abv": "9.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "He'Brew Jewbelation 19",
+        "style": "American Strong Ale",
+        "abv": "11.90%",
+        "ba_score": "4.03"
+      },
+      {
+        "name": "Hop Mamma IPA",
+        "style": "American IPA",
+        "abv": "5.80%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Short's%20Brewing%20Company": {
+    "beers": [
+      {
+        "name": "Critterless",
+        "style": "American Wild Ale",
+        "abv": "7.50%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Fantastic Mr Funx",
+        "style": "American Wild Ale",
+        "abv": "4.10%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Funky Is As Funky Does",
         "style": "American IPA",
         "abv": "6.80%",
-        "ba_score": "3.8"
+        "ba_score": "-"
       },
       {
-        "name": "He'Brew Messiah Nut Brown Ale",
-        "style": "American Brown Ale",
-        "abv": "5.20%",
-        "ba_score": "3.61"
+        "name": "Melt My Brain",
+        "style": "American Blonde Ale",
+        "abv": "6.10%",
+        "ba_score": "3.97"
       },
       {
-        "name": "She'brew Triple IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "11.00%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Slingshot American Craft Lager",
+        "name": "Nectar De La Vida",
         "style": "American Pale Lager",
-        "abv": "5.50%",
-        "ba_score": "3.63"
+        "abv": "6.20%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Occam's Razor",
+        "style": "Cream Ale",
+        "abv": "8.80%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Pinball Whispers",
+        "style": "American Wild Ale",
+        "abv": "9.10%",
+        "ba_score": "4.11"
+      },
+      {
+        "name": "Short's The Woodmaster",
+        "style": "English Brown Ale",
+        "abv": "10.50%",
+        "ba_score": "3.78"
+      },
+      {
+        "name": "Tip Ta Tip",
+        "style": "American Strong Ale",
+        "abv": "10.80%",
+        "ba_score": "-"
       }
     ]
   },
   "Sierra%20Nevada%20Brewing%20Co%2E": {
     "beers": [
       {
-        "name": "Beer Camp #99 - India Farmhouse Ale",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "7.40%",
-        "ba_score": "3.56"
-      },
-      {
-        "name": "Hop Hunter",
-        "style": "American IPA",
-        "abv": "6.20%",
-        "ba_score": "4.03"
-      },
-      {
-        "name": "Nooner Pilsner",
-        "style": "German Pilsener",
+        "name": "Corn Stalk Cream Ale",
+        "style": "Cream Ale",
         "abv": "5.20%",
-        "ba_score": "3.86"
+        "ba_score": "-"
       },
       {
-        "name": "Sierra Nevada Hoptimum Imperial IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "10.40%",
-        "ba_score": "4.11"
+        "name": "Squared Away",
+        "style": "Weizenbock",
+        "abv": "6.90%",
+        "ba_score": "3.91"
       },
       {
-        "name": "Sierra Nevada Kellerweis Hefeweizen",
-        "style": "Hefeweizen",
-        "abv": "4.80%",
+        "name": "Trip In The Woods Barrel Aged C & K",
+        "style": "American Brown Ale",
+        "abv": "10.90%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Wolfinanny",
+        "style": "Wheatwine",
+        "abv": "9.20%",
         "ba_score": "4.06"
-      },
-      {
-        "name": "Sierra Nevada Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.60%",
-        "ba_score": "4.05"
-      },
-      {
-        "name": "Sierra Nevada Summerfest Lager",
-        "style": "Czech Pilsener",
-        "abv": "5.00%",
-        "ba_score": "3.67"
       }
     ]
   },
   "Sixpoint%20Brewery": {
     "beers": [
       {
-        "name": "Jammer",
-        "style": "Gose",
-        "abv": "4.20%",
-        "ba_score": "3.68"
+        "name": "Barrel Aged 5Beans",
+        "style": "American Porter",
+        "abv": "10.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Resin",
+        "name": "Brettstone With Cherries",
+        "style": "American Brown Ale",
+        "abv": "9.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Double Sweet Action",
+        "style": "American Strong Ale",
+        "abv": "9.00%",
+        "ba_score": "4.09"
+      },
+      {
+        "name": "Hi-Res",
         "style": "American Double / Imperial IPA",
-        "abv": "9.10%",
-        "ba_score": "4.06"
-      },
-      {
-        "name": "Righteous Ale",
-        "style": "Rye Beer",
-        "abv": "6.50%",
-        "ba_score": "4"
-      },
-      {
-        "name": "Sweet Action",
-        "style": "Cream Ale",
-        "abv": "5.20%",
-        "ba_score": "3.93"
+        "abv": "11.00%",
+        "ba_score": "4.12"
       }
     ]
   },
   "Smuttynose%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Smuttynose Baltic Porter",
-        "style": "Baltic Porter",
-        "abv": "9.24%",
-        "ba_score": "4.25"
+        "name": "Smuttlabs Oak-aged The Stallion",
+        "style": "American Double / Imperial Stout",
+        "abv": "11.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Smuttynose IPA \"Finest Kind\"",
-        "style": "American IPA",
-        "abv": "6.90%",
-        "ba_score": "4.09"
+        "name": "Smuttlabs Ol' Grundy Humper",
+        "style": "American Barleywine",
+        "abv": "10.80%",
+        "ba_score": "3.85"
       },
       {
-        "name": "Smuttynose Spank",
+        "name": "Smuttlabs Smoked Cherry Short Weisse",
+        "style": "Berliner Weissbier",
+        "abv": "7.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Smuttlabs Trucco",
         "style": "Saison / Farmhouse Ale",
-        "abv": "7.50%",
-        "ba_score": "3.99"
+        "abv": "10.00%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Solemn%20Oath%20Brewery": {
+    "beers": [
+      {
+        "name": "Death By Viking",
+        "style": "American Double / Imperial IPA",
+        "abv": "10.00%",
+        "ba_score": "3.81"
       },
       {
-        "name": "Smuttynose Vunderbar",
-        "style": "German Pilsener",
-        "abv": "5.20%",
-        "ba_score": "3.82"
+        "name": "La Grippe",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "9.00%",
+        "ba_score": "3.86"
+      },
+      {
+        "name": "Tickle Fight",
+        "style": "American Barleywine",
+        "abv": "11.50%",
+        "ba_score": "3.56"
       }
     ]
   },
   "Somerville%20Brewing%20Company%20(Slumbrew)": {
     "beers": [
       {
-        "name": "Slumbrew Flagraiser IPA",
-        "style": "American IPA",
-        "abv": "7.50%",
-        "ba_score": "3.9"
+        "name": "Gose The Destroyer",
+        "style": "Gose",
+        "abv": "4.90%",
+        "ba_score": "-"
       },
       {
-        "name": "Slumbrew Happy Sol",
-        "style": "Hefeweizen",
-        "abv": "5.50%",
-        "ba_score": "3.71"
+        "name": "Hang Five",
+        "style": "Cream Ale",
+        "abv": "7.20%",
+        "ba_score": "-"
       },
       {
-        "name": "Slumbrew Porter Square Porter",
+        "name": "Porter For Paradise",
         "style": "American Porter",
         "abv": "6.50%",
-        "ba_score": "3.95"
+        "ba_score": "-"
       },
       {
-        "name": "Slumbrew Trekker Trippel",
-        "style": "Tripel",
-        "abv": "9.50%",
-        "ba_score": "3.73"
-      }
-    ]
-  },
-  "Southampton%20Publick%20House": {
-    "beers": [
-      {
-        "name": "Double White Ale",
-        "style": "Witbier",
-        "abv": "6.60%",
-        "ba_score": "3.98"
-      },
-      {
-        "name": "Southampton Biere De Mars",
-        "style": "Bière de Garde",
-        "abv": "6.50%",
-        "ba_score": "3.79"
-      },
-      {
-        "name": "Southampton Cuvee Des Fleurs",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "8.20%",
-        "ba_score": "4.04"
-      },
-      {
-        "name": "Southampton Grand Cru",
-        "style": "Belgian Strong Pale Ale",
-        "abv": "9.50%",
-        "ba_score": "4.22"
-      },
-      {
-        "name": "Summer Blonde",
-        "style": "Belgian Pale Ale",
-        "abv": "5.00%",
-        "ba_score": "3.68"
-      }
-    ]
-  },
-  "Southern%20Tier%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "2XIPA",
+        "name": "Super LUMA",
         "style": "American Double / Imperial IPA",
-        "abv": "8.20%",
-        "ba_score": "4.01"
+        "abv": "11.20%",
+        "ba_score": "-"
       },
       {
-        "name": "Choklat Oranj",
-        "style": "American Double / Imperial Stout",
-        "abv": "10.00%",
-        "ba_score": "4.21"
-      },
+        "name": "Union",
+        "style": "American Barleywine",
+        "abv": "11.80%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Stillwater%20Artisanal%20Ales": {
+    "beers": [
       {
-        "name": "Right*O*Way IPA",
-        "style": "American IPA",
-        "abv": "4.50%",
-        "ba_score": "3.61"
-      },
-      {
-        "name": "Tangier",
-        "style": "American IPA",
+        "name": "Moneytree$",
+        "style": "Gose",
         "abv": "4.60%",
-        "ba_score": "3.67"
-      }
-    ]
-  },
-  "Speakeasy%20Ales%20%26%20Lagers": {
-    "beers": [
+        "ba_score": "4.29"
+      },
       {
-        "name": "Big Daddy IPA",
+        "name": "O Trabalho",
+        "style": "American Wild Ale",
+        "abv": "5.50%",
+        "ba_score": "3.54"
+      },
+      {
+        "name": "Stillwater / Westbrook Gose Gone Wild",
+        "style": "Gose",
+        "abv": "4.60%",
+        "ba_score": "4.41"
+      },
+      {
+        "name": "Te Nasede",
         "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.73"
-      },
-      {
-        "name": "Metropolis Lager",
-        "style": "American Pale Lager",
-        "abv": "5.30%",
-        "ba_score": "3.76"
-      },
-      {
-        "name": "Prohibition Ale",
-        "style": "American Amber / Red Ale",
-        "abv": "6.10%",
-        "ba_score": "3.84"
-      },
-      {
-        "name": "Tallulah Extra Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.60%",
-        "ba_score": "3.7"
-      }
-    ]
-  },
-  "Spencer%20Brewery": {
-    "beers": [
-      {
-        "name": "Spencer Trappist Ale",
-        "style": "Belgian Pale Ale",
-        "abv": "6.50%",
-        "ba_score": "4"
-      }
-    ]
-  },
-  "Spoetzl%20Brewery%20%2F%20Shiner": {
-    "beers": [
-      {
-        "name": "Shiner Bock",
-        "style": "Bock",
-        "abv": "4.40%",
-        "ba_score": "3.04"
-      },
-      {
-        "name": "Shiner Prickly Pear",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.90%",
-        "ba_score": "3.33"
-      },
-      {
-        "name": "Shiner Ruby Redbird",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.01%",
-        "ba_score": "3.11"
-      },
-      {
-        "name": "Shiner White Wing",
-        "style": "Witbier",
-        "abv": "4.70%",
-        "ba_score": "3.46"
+        "abv": "6.00%",
+        "ba_score": "4.16"
       }
     ]
   },
   "Stone%20Brewing%20Co%2E": {
     "beers": [
       {
-        "name": "Stone Cali-Belgique IPA",
-        "style": "Belgian IPA",
-        "abv": "6.90%",
-        "ba_score": "3.99"
-      },
-      {
-        "name": "Stone Pale Ale 2.0",
-        "style": "American Pale Ale (APA)",
-        "abv": "6.00%",
-        "ba_score": "3.68"
-      },
-      {
-        "name": "Stone Ruination Double IPA  2.0",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.50%",
-        "ba_score": "4.22"
-      },
-      {
-        "name": "Stone Spotlight: Imperial Mutt Brown Ale",
-        "style": "American Brown Ale",
-        "abv": "9.00%",
-        "ba_score": "3.9"
-      }
-    ]
-  },
-  "Stoneface%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "India Red Rye Ale",
-        "style": "Rye Beer",
-        "abv": "6.00%",
-        "ba_score": "4.05"
-      },
-      {
-        "name": "Stoneface IPA",
-        "style": "American IPA",
-        "abv": "7.20%",
+        "name": "Chris Banker / Insurgente / Stone Xocoveza - Charred",
+        "style": "Milk / Sweet Stout",
+        "abv": "10.00%",
         "ba_score": "4.28"
       },
       {
-        "name": "Stoneface RIS",
-        "style": "Russian Imperial Stout",
-        "abv": "9.50%",
-        "ba_score": "4.37"
-      }
-    ]
-  },
-  "The%20Fort%20Collins%20Brewery": {
-    "beers": [
-      {
-        "name": "Chocolate Stout",
-        "style": "American Stout",
-        "abv": "5.30%",
-        "ba_score": "3.48"
-      },
-      {
-        "name": "Giles Golden Stong Ale",
-        "style": "American Blonde Ale",
-        "abv": "10.20%",
-        "ba_score": "2.55"
-      },
-      {
-        "name": "Hoptitude Imperial Extra Pale Ale",
-        "style": "American Double / Imperial IPA",
+        "name": "Stochasticity Project Grainiac",
+        "style": "American Amber / Red Ale",
         "abv": "8.50%",
-        "ba_score": "3.41"
+        "ba_score": "3.92"
       },
       {
-        "name": "Major Tom's Pomegranate Wheat",
-        "style": "Witbier",
-        "abv": "5.20%",
-        "ba_score": "3.23"
+        "name": "Stochasticity Project HiFi+LoFi Mixtape",
+        "style": "American Strong Ale",
+        "abv": "8.80%",
+        "ba_score": "3.64"
       },
       {
-        "name": "Rocky Mountain IPA",
-        "style": "American IPA",
-        "abv": "6.20%",
-        "ba_score": "3.66"
+        "name": "Winter Harvest",
+        "style": "Belgian Strong Pale Ale",
+        "abv": "11.30%",
+        "ba_score": "4.17"
       }
     ]
   },
-  "The%20People's%20Pint": {
+  "Strangeways%20Brewing": {
     "beers": [
       {
-        "name": "Barnbash Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "6.00%",
-        "ba_score": "3.69"
-      },
-      {
-        "name": "People's Pilsener",
-        "style": "German Pilsener",
+        "name": "O.T.I.S. Gin Barrel Aged Juniper & Rose Hips",
+        "style": "American Wild Ale",
         "abv": "5.00%",
-        "ba_score": "3.65"
+        "ba_score": "-"
       },
       {
-        "name": "The People's Pint Double IPA",
-        "style": "American Double / Imperial IPA",
+        "name": "Rot•In•Hell Pumpkin Sour",
+        "style": "American Wild Ale",
+        "abv": "5.40%",
+        "ba_score": "4.16"
+      },
+      {
+        "name": "Tirami'zu Brew Rum Barrel Aged Porter",
+        "style": "American Porter",
         "abv": "7.00%",
-        "ba_score": "3.94"
+        "ba_score": "4.1"
       },
       {
-        "name": "Training Wheels",
-        "style": "American IPA",
-        "abv": "4.50%",
-        "ba_score": "3.85"
+        "name": "Virginia Stingo",
+        "style": "English Strong Ale",
+        "abv": "10.00%",
+        "ba_score": "4.05"
       }
     ]
   },
-  "The%20Tap%20Brewing%20Company": {
+  "Surly%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Bitter Rival",
+        "name": "Abrasive Ale",
         "style": "American Double / Imperial IPA",
-        "abv": "7.30%",
-        "ba_score": "3.8"
+        "abv": "9.00%",
+        "ba_score": "4.47"
       },
       {
-        "name": "Grass Widow",
+        "name": "Darkness - High West Rye Whiskey Barrel Aged (2015)",
+        "style": "Russian Imperial Stout",
+        "abv": "12.00%",
+        "ba_score": "4.63"
+      },
+      {
+        "name": "Misanthrope",
         "style": "Saison / Farmhouse Ale",
-        "abv": "5.90%",
-        "ba_score": "3.96"
+        "abv": "9.00%",
+        "ba_score": "4.18"
       },
       {
-        "name": "Intergalactic Acid Berliner Weiss",
-        "style": "Berliner Weissbier",
-        "abv": "3.00%",
-        "ba_score": "3.86"
+        "name": "Nein Ale",
+        "style": "Hefeweizen",
+        "abv": "10.00%",
+        "ba_score": "4.07"
+      }
+    ]
+  },
+  "The%20Bruery": {
+    "beers": [
+      {
+        "name": "Geriatric Hipster Club",
+        "style": "American Strong Ale",
+        "abv": "12.20%",
+        "ba_score": "3.16"
       },
       {
-        "name": "Opus",
-        "style": "Euro Pale Lager",
-        "abv": "4.90%",
-        "ba_score": "3.9"
+        "name": "Imperial Cabinet",
+        "style": "American Wild Ale",
+        "abv": "8.30%",
+        "ba_score": "4.14"
+      },
+      {
+        "name": "Ukulele",
+        "style": "Chile Beer",
+        "abv": "13.50%",
+        "ba_score": "3.47"
+      },
+      {
+        "name": "White Chocolate",
+        "style": "Wheatwine",
+        "abv": "14.75%",
+        "ba_score": "4.13"
+      }
+    ]
+  },
+  "The%20Lost%20Abbey": {
+    "beers": [
+      {
+        "name": "Cuvee De Tomme",
+        "style": "American Wild Ale",
+        "abv": "11.00%",
+        "ba_score": "4.17"
+      },
+      {
+        "name": "Experimental Barrel # C9",
+        "style": "American Barleywine",
+        "abv": "15.90%",
+        "ba_score": "-"
+      },
+      {
+        "name": "House Sour #1",
+        "style": "American Wild Ale",
+        "abv": "6.25%",
+        "ba_score": "4.4"
+      },
+      {
+        "name": "The Angel's Share - Brandy Barrel-Aged",
+        "style": "American Strong Ale",
+        "abv": "12.50%",
+        "ba_score": "3.84"
+      }
+    ]
+  },
+  "The%20North%20Brewery": {
+    "beers": [
+      {
+        "name": "Cinnabomb",
+        "style": "American Porter",
+        "abv": "7.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "French Kiss",
+        "style": "American Brown Ale",
+        "abv": "7.00%",
+        "ba_score": "4.33"
+      },
+      {
+        "name": "God Complex",
+        "style": "American Stout",
+        "abv": "9.00%",
+        "ba_score": "4.5"
+      },
+      {
+        "name": "Minet",
+        "style": "American Wild Ale",
+        "abv": "5.00%",
+        "ba_score": "4.34"
+      }
+    ]
+  },
+  "The%20Rare%20Barrel": {
+    "beers": [
+      {
+        "name": "Cosmic Dust",
+        "style": "American Wild Ale",
+        "abv": "5.40%",
+        "ba_score": "4.19"
+      },
+      {
+        "name": "Forces Unseen",
+        "style": "American Wild Ale",
+        "abv": "5.30%",
+        "ba_score": "4.24"
+      },
+      {
+        "name": "Impossible Soul",
+        "style": "American Wild Ale",
+        "abv": "7.20%",
+        "ba_score": "4.36"
+      },
+      {
+        "name": "Map Of The Sun",
+        "style": "American Wild Ale",
+        "abv": "5.30%",
+        "ba_score": "4.37"
       }
     ]
   },
   "Throwback%20Brewery": {
     "beers": [
       {
-        "name": "Oh Snap",
+        "name": "Carrot Cake Milk Stout",
+        "style": "Milk / Sweet Stout",
+        "abv": "5.30%",
+        "ba_score": "-"
+      },
+      {
+        "name": "El ChuBREWcabra",
         "style": "American Porter",
-        "abv": "6.00%",
-        "ba_score": "3.47"
+        "abv": "5.60%",
+        "ba_score": "-"
       },
       {
-        "name": "Throwback Double Dippity Smoked Double Brown Ale",
-        "style": "American Brown Ale",
-        "abv": "7.00%",
-        "ba_score": "3.81"
+        "name": "Soggy Donkey",
+        "style": "Belgian IPA",
+        "abv": "6.20%",
+        "ba_score": "-"
       },
       {
-        "name": "Throwback Hog Happy Hefeweizen",
-        "style": "Hefeweizen",
-        "abv": "4.90%",
-        "ba_score": "4.02"
+        "name": "Throwback Donkey-Hote",
+        "style": "American Double / Imperial IPA",
+        "abv": "8.20%",
+        "ba_score": "3.79"
       },
       {
-        "name": "Throwback Spicy Bohemian",
-        "style": "Chile Beer",
-        "abv": "4.80%",
-        "ba_score": "3.9"
+        "name": "Throwback Oyster Stout",
+        "style": "American Stout",
+        "abv": "5.50%",
+        "ba_score": "3.67"
       }
     ]
   },
-  "Tr%C3%B6egs%20Brewing%20Company": {
+  "Tin%20Man%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Scratch Beer 186 - 2015 (Gose)",
+        "name": "Bourbon Czar",
+        "style": "Russian Imperial Stout",
+        "abv": "12.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Ego Crusher Triple Bock",
+        "style": "Doppelbock",
+        "abv": "12.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Mint Micro Chip",
+        "style": "Milk / Sweet Stout",
+        "abv": "12.20%",
+        "ba_score": "4.15"
+      },
+      {
+        "name": "Port Barrel Barelywine",
+        "style": "American Barleywine",
+        "abv": "10.60%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Prickly Pear Pale Ale",
+        "style": "American Pale Ale (APA)",
+        "abv": "5.60%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Strawberry Sour",
+        "style": "American Wild Ale",
+        "abv": "5.20%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Szechuan Saison",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "6.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Tomato Gose",
         "style": "Gose",
-        "abv": "3.90%",
+        "abv": "5.30%",
+        "ba_score": "-"
+      }
+    ]
+  },
+  "Tree%20House%20Brewing%20Company": {
+    "beers": [
+      {
+        "name": "Give Me Truth",
+        "style": "American Double / Imperial Stout",
+        "abv": "12.80%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Good Morning",
+        "style": "American Double / Imperial Stout",
+        "abv": "8.40%",
+        "ba_score": "4.76"
+      },
+      {
+        "name": "Impermanence",
+        "style": "American Double / Imperial IPA",
+        "abv": "8.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "JJJuliusss",
+        "style": "American IPA",
+        "abv": "6.80%",
+        "ba_score": "4.54"
+      }
+    ]
+  },
+  "Trophy%20Brewing": {
+    "beers": [
+      {
+        "name": "Barrel D'Night Shift",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "6.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Horchata Stout",
+        "style": "American Double / Imperial Stout",
+        "abv": "9.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Southern Staple",
+        "style": "Tripel",
+        "abv": "10.00%",
+        "ba_score": "-"
+      },
+      {
+        "name": "The King",
+        "style": "Dubbel",
+        "abv": "6.50%",
+        "ba_score": "3.76"
+      }
+    ]
+  },
+  "TRVE%20Brewing%20Co%2E": {
+    "beers": [
+      {
+        "name": "Cursed",
+        "style": "American Wild Ale",
+        "abv": "4.40%",
+        "ba_score": "-"
+      },
+      {
+        "name": "Grey Watcher",
+        "style": "Saison / Farmhouse Ale",
+        "abv": "4.70%",
         "ba_score": "4.03"
       },
       {
-        "name": "Troegs / Appalachian / Pizza Boy (717) Collaboration",
-        "style": "American IPA",
-        "abv": "7.17%",
-        "ba_score": "3.65"
-      },
-      {
-        "name": "Tröegs Java Head Stout (Bourbon Barrel Aged)",
-        "style": "Oatmeal Stout",
-        "abv": "7.50%",
-        "ba_score": "4.18"
-      },
-      {
-        "name": "Tröegs Perpetual IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "7.50%",
-        "ba_score": "4.08"
-      },
-      {
-        "name": "Tröegs Sunshine Pils",
-        "style": "German Pilsener",
-        "abv": "4.50%",
-        "ba_score": "3.8"
-      },
-      {
-        "name": "Tröegs Troegenator Double Bock",
-        "style": "Doppelbock",
-        "abv": "8.20%",
-        "ba_score": "3.89"
-      }
-    ]
-  },
-  "Tuckerman%20Brewing%20Co%2E": {
-    "beers": [
-      {
-        "name": "6288 Stout",
-        "style": "American Stout",
-        "abv": "6.30%",
-        "ba_score": "3.7"
-      },
-      {
-        "name": "Headwall Alt",
-        "style": "Altbier",
-        "abv": "4.50%",
-        "ba_score": "3.7"
-      },
-      {
-        "name": "TRale",
-        "style": "Kölsch",
-        "abv": "4.90%",
-        "ba_score": "3.62"
-      },
-      {
-        "name": "Tuckerman's Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.30%",
-        "ba_score": "3.51"
+        "name": "Red Chaos",
+        "style": "American Wild Ale",
+        "abv": "6.00%",
+        "ba_score": "-"
       }
     ]
   },
   "Two%20Roads%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Conntucky Lightnin' Bourbon Ale",
-        "style": "American Strong Ale",
-        "abv": "8.50%",
-        "ba_score": "3.57"
-      },
-      {
-        "name": "Honeyspot Road White IPA",
-        "style": "American IPA",
-        "abv": "6.00%",
-        "ba_score": "3.64"
-      },
-      {
-        "name": "No Limits Hefeweizen",
-        "style": "Hefeweizen",
-        "abv": "5.00%",
-        "ba_score": "3.69"
-      },
-      {
-        "name": "Road 2 Ruin",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.00%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Road Jam Raspberry Wheat Ale",
-        "style": "American Pale Wheat Ale",
-        "abv": "5.00%",
-        "ba_score": "3.29"
-      }
-    ]
-  },
-  "Uinta%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "22nd Crooked Line Birthday Suit: Sour Plum Abbey Ale",
-        "style": "American Wild Ale",
-        "abv": "7.60%",
-        "ba_score": "3.58"
-      },
-      {
-        "name": "Cahoots Saison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "6.00%",
-        "ba_score": "3.76"
-      },
-      {
-        "name": "Hop Nosh IPA",
-        "style": "American IPA",
-        "abv": "7.30%",
-        "ba_score": "4.01"
-      },
-      {
-        "name": "Sum'r Summer Ale",
-        "style": "American Blonde Ale",
-        "abv": "4.00%",
-        "ba_score": "3.57"
-      },
-      {
-        "name": "Trader Session IPA",
-        "style": "American IPA",
-        "abv": "4.00%",
-        "ba_score": "3.4"
-      }
-    ]
-  },
-  "Urban%20Chestnut%20Brewing%20Company%20-%20Midtown%20Brewery%20%26%20Biergarten": {
-    "beers": [
-      {
-        "name": "Fantasyland",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.75"
-      },
-      {
-        "name": "Oxnbräu",
-        "style": "Doppelbock",
-        "abv": "8.00%",
-        "ba_score": "3.72"
-      },
-      {
-        "name": "Schnickelfritz",
-        "style": "Hefeweizen",
-        "abv": "4.80%",
-        "ba_score": "3.92"
-      },
-      {
-        "name": "Zwickel",
-        "style": "Kellerbier / Zwickelbier",
-        "abv": "5.20%",
-        "ba_score": "3.86"
-      }
-    ]
-  },
-  "Utah%20Brewers%20Cooperative": {
-    "beers": [
-      {
-        "name": "Squatters Full Suspension Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "4.00%",
-        "ba_score": "3.63"
-      },
-      {
-        "name": "Squatters Hop Rising Double IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.00%",
-        "ba_score": "3.79"
-      },
-      {
-        "name": "Wasatch Apricot Hefeweizen",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.00%",
-        "ba_score": "3.44"
-      },
-      {
-        "name": "Wasatch GhostRider White IPA",
-        "style": "American IPA",
-        "abv": "6.00%",
-        "ba_score": "3.71"
-      }
-    ]
-  },
-  "Victory%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Hop Ranch",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.00%",
-        "ba_score": "4.19"
-      },
-      {
-        "name": "Kirsch Gose",
-        "style": "Gose",
-        "abv": "4.70%",
-        "ba_score": "3.94"
-      },
-      {
-        "name": "Sour Monkey",
-        "style": "American Wild Ale",
-        "abv": "9.50%",
-        "ba_score": "4.04"
-      },
-      {
-        "name": "Summer Love",
-        "style": "American Blonde Ale",
-        "abv": "5.20%",
-        "ba_score": "3.78"
-      }
-    ]
-  },
-  "Wachusett%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Green Monsta IPA",
-        "style": "American IPA",
-        "abv": "6.10%",
-        "ba_score": "3.62"
-      },
-      {
-        "name": "Larry",
-        "style": "American Double / Imperial IPA",
-        "abv": "8.50%",
-        "ba_score": "4.03"
-      },
-      {
-        "name": "Wachusett Blueberry Ale",
-        "style": "Fruit / Vegetable Beer",
-        "abv": "4.50%",
-        "ba_score": "3.35"
-      },
-      {
-        "name": "Wachusett Summer",
-        "style": "American Pale Wheat Ale",
-        "abv": "4.70%",
-        "ba_score": "3.31"
-      }
-    ]
-  },
-  "Wandering%20Star%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Bert's Disqualified Imperial Stout (Rum Barrel Aged)",
-        "style": "American Double / Imperial Stout",
-        "abv": "10.50%",
-        "ba_score": "4.09"
-      },
-      {
-        "name": "Catnip Belgian XPA",
-        "style": "Belgian IPA",
-        "abv": "6.80%",
-        "ba_score": "3.99"
-      },
-      {
-        "name": "Champ De Puits Maple Saison",
-        "style": "Saison / Farmhouse Ale",
-        "abv": "5.60%",
+        "name": "Igor's Dream Aged In Maple Whiskey Barrel",
+        "style": "Russian Imperial Stout",
+        "abv": "11.00%",
         "ba_score": "-"
       },
       {
-        "name": "Spring Loaded Grapefruit IPA",
-        "style": "American IPA",
-        "abv": "7.20%",
-        "ba_score": "4"
+        "name": "Lambic Series : Hexotic",
+        "style": "American Wild Ale",
+        "abv": "5.80%",
+        "ba_score": "4.66"
       },
       {
-        "name": "Zingari White",
-        "style": "Witbier",
+        "name": "Mosaic Dry-hopped No Limits",
+        "style": "Hefeweizen",
         "abv": "5.00%",
-        "ba_score": "3.71"
+        "ba_score": "-"
+      },
+      {
+        "name": "Road 2 Rouen",
+        "style": "Belgian IPA",
+        "abv": "8.30%",
+        "ba_score": "3.7"
       }
     ]
   },
-  "Weyerbacher%20Brewing%20Co%2E": {
+  "Upland%20Brewing%20Company": {
     "beers": [
       {
-        "name": "Blithering Idiot",
-        "style": "English Barleywine",
-        "abv": "11.10%",
-        "ba_score": "3.67"
-      },
-      {
-        "name": "Double Simcoe IPA",
-        "style": "American Double / Imperial IPA",
-        "abv": "9.00%",
-        "ba_score": "4.08"
-      },
-      {
-        "name": "Last Chance IPA",
-        "style": "American IPA",
-        "abv": "5.90%",
-        "ba_score": "3.57"
-      },
-      {
-        "name": "Merry Monks",
-        "style": "Tripel",
-        "abv": "9.30%",
-        "ba_score": "3.82"
-      }
-    ]
-  },
-  "White%20Lion%20Brewing%20Company": {
-    "beers": [
-      {
-        "name": "Insane Mane Red Ale",
+        "name": "Stoaked Imperial Red",
         "style": "American Amber / Red Ale",
-        "abv": "NL",
-        "ba_score": "4.18"
+        "abv": "10.00%",
+        "ba_score": "-"
       },
       {
-        "name": "Twisted Tale Cream Ale",
-        "style": "Cream Ale",
-        "abv": "5.00%",
-        "ba_score": "3.21"
+        "name": "Vinosynth Red",
+        "style": "American Wild Ale",
+        "abv": "7.00%",
+        "ba_score": "4.06"
       },
       {
-        "name": "White Lion Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.50%",
-        "ba_score": "3.82"
+        "name": "Vinosynth White",
+        "style": "American Wild Ale",
+        "abv": "7.00%",
+        "ba_score": "4.03"
+      },
+      {
+        "name": "Way Down Yonder",
+        "style": "Lambic - Fruit",
+        "abv": "6.10%",
+        "ba_score": "4.38"
       }
     ]
   },
-  "Woodstock%20Inn%20Brewery": {
+  "Wicked%20Weed%20Brewing": {
     "beers": [
       {
-        "name": "4000'er IPA",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "3.39"
+        "name": "Angel Of Darkness",
+        "style": "American Wild Ale",
+        "abv": "11.00%",
+        "ba_score": "4.32"
       },
       {
-        "name": "Double Pig's Ear Double Down Brown Ale",
-        "style": "American Brown Ale",
-        "abv": "8.40%",
-        "ba_score": "3.69"
+        "name": "Chocolate Covered Black Angel",
+        "style": "American Wild Ale",
+        "abv": "7.20%",
+        "ba_score": "4.42"
       },
       {
-        "name": "Kanc Country Maple Porter",
-        "style": "American Porter",
-        "abv": "5.60%",
-        "ba_score": "3.34"
+        "name": "Dark Age Bourbon Stout",
+        "style": "Russian Imperial Stout",
+        "abv": "12.00%",
+        "ba_score": "4.36"
       },
       {
-        "name": "Old Man Oatmeal Stout",
-        "style": "Oatmeal Stout",
-        "abv": "5.40%",
-        "ba_score": "3.41"
+        "name": "Framboos Morte",
+        "style": "American Wild Ale",
+        "abv": "6.60%",
+        "ba_score": "4.6"
       },
       {
-        "name": "Pemi Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.70%",
-        "ba_score": "3.26"
-      },
-      {
-        "name": "Pig's Ear Brown Ale",
-        "style": "English Brown Ale",
-        "abv": "4.30%",
-        "ba_score": "3.6"
-      },
-      {
-        "name": "Red Rack Ale",
-        "style": "Extra Special / Strong Bitter (ESB)",
-        "abv": "5.50%",
-        "ba_score": "3.42"
-      },
-      {
-        "name": "Summer Brew",
-        "style": "German Pilsener",
-        "abv": "3.80%",
-        "ba_score": "3.45"
-      }
-    ]
-  },
-  "Wormtown%20Brewery": {
-    "beers": [
-      {
-        "name": "Be Hoppy",
-        "style": "American IPA",
-        "abv": "6.50%",
-        "ba_score": "4.26"
-      },
-      {
-        "name": "Birthday Brew #5 TIPA",
+        "name": "Freak Of Nature DIPA",
         "style": "American Double / Imperial IPA",
-        "abv": "10.70%",
-        "ba_score": "4.49"
+        "abv": "8.00%",
+        "ba_score": "4.3"
       },
       {
-        "name": "Bottle Rocket Pale Ale",
-        "style": "American Pale Ale (APA)",
-        "abv": "5.50%",
-        "ba_score": "3.9"
-      },
-      {
-        "name": "Kola Nut Brown",
-        "style": "American Brown Ale",
-        "abv": "5.00%",
-        "ba_score": "3.77"
+        "name": "Golden Angel",
+        "style": "American Wild Ale",
+        "abv": "7.00%",
+        "ba_score": "4.34"
       }
     ]
   }

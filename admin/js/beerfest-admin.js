@@ -1,7 +1,8 @@
 
+
 (function(BEERFEST_ADMIN, $, undefined){
 
-    var BA_EVENT_URL = 'http://www.beeradvocate.com/acbf/beer/';
+    var BA_EVENT_URL = 'http://www.beeradvocate.com/ebf/beer/';
 
     BEERFEST_ADMIN.beerObj = {};
 
@@ -28,10 +29,12 @@
             }, 
             success   : function(data) {
 
+                console.log("The page was loaded");
+
                 $('#ba-content table tr', data).each(function(index, $tr){
 
                     if($('h6', $tr).length > 0){
-                        brewery = BEERFEST.encodeValue( $('h6', $tr).text() );
+                        brewery = BEERFEST.encode( $('h6', $tr).text() );
                         BEERFEST_ADMIN.beerObj[brewery] = {
                             "beers":[]
                         };
@@ -51,6 +54,12 @@
                         }
                     }
                 });
+
+                console.log(BEERFEST_ADMIN.beerObj);
+            },
+            error   : function( jqXHR, textStatus, error ){
+                console.error("The page was not loaded");
+                console.log(error);
             }
         }).done(function(){
             console.log("ajax is done");

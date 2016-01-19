@@ -2,6 +2,10 @@
 
 ;(function(BEERFEST, $, undefined){
 
+    if( typeof angular === "undefined" ){
+        return;
+    }
+
     BEERFEST.name = "ebf-2016";
 
     // -------------------------------
