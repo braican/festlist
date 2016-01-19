@@ -27,7 +27,7 @@
                     <div class="l-col-fluid"><svg class="beerfest-logo"><use xlink:href="#svg--logo"></use></svg></div>
 
                     <ul class="l-col-fit l-pad-left util-nav">
-                        <li><span ng-hide="currentUser">Log in</span><span ng-show="currentUser">{{ currentUser.password.email }}</span></li>
+                        <li ng-click="drawerActive = !drawerActive"><span ng-hide="currentUser">Log in</span><span ng-show="currentUser">{{ currentUser.password.email }}</span></li>
                         <li ng-hide="drawerActive" ng-click="drawerActive = true"><svg class="icon--user"><use xlink:href="#svg--icon--user"></use></svg></li>
                         <li ng-show="drawerActive" ng-click="drawerActive = false"><svg class="icon--close"><use xlink:href="#svg--icon--close"></use></svg></li>
                     </ul>
