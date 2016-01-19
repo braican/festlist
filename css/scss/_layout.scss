@@ -2,10 +2,6 @@
    --layout
    ============================================================== */
 
-html, body, #app{
-    height: 100%;
-}
-
 #app{
     position: relative;
     overflow: hidden;
@@ -37,7 +33,7 @@ html, body, #app{
  */
 
 .app-drawer{
-    position: absolute;
+    position: fixed;
     background: $color-white;
     top: 0;
     bottom: 0;

@@ -63,21 +63,27 @@
             </header>
 
             <header ng-show="currentUser">
-                <h6>Welcome</h6>
+                <h6>Welcome, {{ currentUser.password.email }}</h6>
             </header>
 
-            <form ng-controller="AuthController" ng-hide="currentUser">
-                <p><strong>Log in</strong></p>
+            <form ng-controller="AuthController">
+                <fieldset ng-hide="currentUser">
+                    <p><strong>Log in</strong></p>
 
-                <input type="email" placeholder="Email" ng-model="email">
-                <input type="password" placeholder="Password" ng-model="password">
+                    <input type="email" placeholder="Email" ng-model="email">
+                    <input type="password" placeholder="Password" ng-model="password">
 
-                <div class="actionable">
-                    <button ng-click="login()">Log in</button>
-                </div>
+                    <div class="actionable">
+                        <button ng-click="login()">{{ loginText }}</button>
+                    </div>
 
-                <div class="form-error" ng-show="ctrlError">
-                    {{ ctrlError }}
+                    <div class="form-error" ng-show="ctrlError">
+                        {{ ctrlError }}
+                    </div>
+                </fieldset>
+
+                <div ng-show="currentUser">
+                    <button ng-click="logout()">Log out</button>
                 </div>
             </form>
             
