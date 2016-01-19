@@ -13,7 +13,7 @@
                     <ul>
                         <li class="trigger-had" ng-click="drinkBeer( beer, brewery )"><svg class="icon--checkmark"><use xlink:href="#svg--icon--checkmark"></use></svg></li>
                         <li class="trigger-wishlist" ng-click="wishlistBeer( beer, brewery )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                        <li class="beer-rating" ng-show="beerRating( beer, brewery )" ng-click="openRating( beer, brewery )">{{ beerRating(beer, brewery) }}</li>
+                        <li class="beer-rating" ng-show="getBeerRating( beer, brewery )" ng-click="openRating( beer, brewery )">{{ getBeerRating(beer, brewery) }}</li>
                     </ul>
                 </div><!-- .beer-actionable -->
 

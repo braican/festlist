@@ -19,10 +19,12 @@
 
     var BEERFEST_DATA = new Firebase("https://braican-beerfest.firebaseio.com");
 
-    app.controller( 'BeerfestController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
+    app.controller( 'BeerfestController', ['$firebaseObject', '$firebaseAuth', '$scope', function( $firebaseObject, $firebaseAuth, $scope ){
+        
         // loaded
         $scope.loaded = false;
 
+        // whether or not the right drawer is active
         $scope.drawerActive = false;
 
         // the current app view
@@ -32,7 +34,25 @@
         $scope.appView = 'all-beers';
 
 
+        // -------------------------------
+        // auth stuff
+        //
+
+        // authenticate
+        $scope.auth = $firebaseAuth( BEERFEST_DATA );
+
+        // the user object
         $scope.currentUser = null;
+
+
+        var authData = $scope.auth.$getAuth();
+
+        if( authData ){
+            console.log("Logged in");
+            console.log(authData);
+
+            $scope.currentUser = authData;
+        }
 
 
         /**
@@ -53,27 +73,16 @@
     } ]); // BeerfestController
 
 
-    app.controller( 'AuthController', ['$scope', '$firebaseAuth', function( $scope, $firebaseAuth ){
-
-        var auth = $firebaseAuth( BEERFEST_DATA );
+    app.controller( 'AuthController', ['$scope', function( $scope ){
 
         $scope.ctrlError = null;
-
-
-        var authData = auth.$getAuth();
-
-
-        if (authData) {
-          console.log("Logged in as:", authData.uid);
-          $scope.$parent.currentUser = authData;
-        }
 
         /**
          * sign in
          */
         $scope.login = function(){
 
-            auth.$authWithPassword({
+            $scope.$parent.auth.$authWithPassword({
                 email    : $scope.email,
                 password : $scope.password
             }).then( function( user ){
@@ -90,21 +99,26 @@
     app.controller( 'BeerlistController', ['$firebaseObject', '$scope', '$timeout', function( $firebaseObject, $scope, $timeout ){
         
         // an object of all the current user's beers
-        $scope.userHads = getUserHads();
+        $scope.userHads = null;
 
         // an object of all the user's wishlisted beers
-        $scope.userWishlist = getUserWishlist();
+        $scope.userWishlist = null;
 
         // the beer data, from firebase
-        $scope.beerData = $firebaseObject( BEERFEST_DATA );
+        $scope.beerfestData = $firebaseObject( BEERFEST_DATA );
 
-        // lets load the data in
-        $scope.beerData.$loaded().then(function(){
+        // lets load the data in. once that's done, load the beer
+        //  list and lets get the hads and wishlists
+        $scope.beerfestData.$loaded().then(function(){
+            console.log("load main");
             $scope.$parent.loaded = true;
 
             // get the specific beerfest data into a variable so we
             //  can get it easier in the template.
-            $scope.beerlist = $scope.beerData.beerfests[BEERFEST.name].beerlist;
+            $scope.beerlist = $scope.beerfestData.beerfests[BEERFEST.name].beerlist;
+
+            $scope.userHads = getUserHads();
+            $scope.userWishlist = getUserWishlist();
 
         }).catch(function(error){
             console.error("Error: " + error);
@@ -211,7 +225,7 @@
          * @param brewery (string)
          *    - an encoded string of the brewery
          */
-        $scope.beerRating = function( beer, brewery ){
+        $scope.getBeerRating = function( beer, brewery ){
             var hadslist = $scope.userHads,
                 beerName = BEERFEST.encode( beer.name );
 
@@ -241,14 +255,11 @@
             }
 
             hadslist[brewery].beers[beerName].rating = rating;
+            hadslist[brewery].beers[beerName].isRating = false;
+
+            $scope.beerfestData.users['simplelogin:1'].fests['ebf-2016'].hads = hadslist;
 
             $scope.saveData();
-
-            $timeout(function(){
-                hadslist[brewery].beers[beerName].isRating = false;
-
-                $scope.saveData();
-            }, 600);
         }
 
 
@@ -333,9 +344,17 @@
             var hads     = $scope.userHads,
                 wishlist = $scope.userWishlist;
 
-            localStorage.userHads = JSON.stringify( hads );
-            localStorage.userWishlist = JSON.stringify( wishlist );
-            
+            if( $scope.$parent.currentUser ){
+                $scope.beerfestData.$save().then(function(r){
+                    r.key() === $scope.beerfestData.$id;
+                }, function(error){
+                    console.log("Error: " + error);
+                });
+
+            } else {
+                localStorage.userHads = JSON.stringify( hads );
+                localStorage.userWishlist = JSON.stringify( wishlist );
+            }
         }
 
 
@@ -349,6 +368,23 @@
          * @return object
          */
         function getUserHads(){
+
+            // if someone is logged in
+            if( $scope.$parent.currentUser ){
+                var uid = $scope.$parent.currentUser.uid;
+
+                if( $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ] === undefined ){
+                    $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ] = {
+                        hads     : {},
+                        wishlist : {}
+                    }
+                }
+
+                return $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ].hads;
+            }
+
+            // if they're not logged in, check if this device has any
+            //  saved data
             if( localStorage.userHads ){
                 return JSON.parse( localStorage.userHads );
             }
@@ -362,6 +398,21 @@
          * @return object
          */
         function getUserWishlist(){
+
+            if( $scope.$parent.currentUser ){
+                var uid = $scope.$parent.currentUser.uid;
+
+                if( $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ] === undefined ){
+                    $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ] = {
+                        hads     : {},
+                        wishlist : {}
+                    }
+                }
+
+                return $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ].wishlist;
+            }
+
+
             if( localStorage.userWishlist ){
                 return JSON.parse( localStorage.userWishlist );
             }
@@ -375,11 +426,24 @@
     app.controller( 'AllBeersController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
         $scope.view = 'all';
     }]);
+
     app.controller( 'HadsController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
-        $scope.beerlist = $scope.userHads;
+
+        $scope.view = 'hads';
+        
+        $scope.$parent.beerfestData.$loaded().then(function(){
+            $scope.beerlist = $scope.$parent.userHads;
+        });
+
     }]);
     app.controller( 'WishlistController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
-        $scope.beerlist = $scope.userWishlist;
+        $scope.view = 'wishlist';
+
+        $scope.$parent.beerfestData.$loaded().then(function(){
+            $scope.beerlist = $scope.$parent.userWishlist;
+        });
+
+
     }]);
 
 

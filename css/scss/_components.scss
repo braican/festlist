@@ -204,7 +204,7 @@ img, svg{
         .beer-stats {
             opacity: 1;
             visibility: visible;
-            @include transition( all, .4s );
+            @include transition( all .4s 1s );
 
             & > div + div{
                 padding-left: 12px;
@@ -243,7 +243,7 @@ img, svg{
             top: 10px;
             opacity: 0;
             visibility: hidden;
-            @include transition( all, .4s );
+            @include transition( all .4s 1s );
 
             li + li{
                 margin-left: 10px;
@@ -265,10 +265,12 @@ img, svg{
             .rating{
                 opacity: 1;
                 visibility: visible;
+                transition-delay: 0s;
             }
             .beer-stats{
                 opacity: 0;
                 visibility: hidden;
+                transition-delay: 0s;
             }
         }
 
