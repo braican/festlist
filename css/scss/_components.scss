@@ -58,12 +58,13 @@ img, svg{
 
     .app-nav{
         background: #333;
-        text-align: center;
 
         li{
             padding: 10px;
+            text-align: center;
             @include flexbox();
-            justify-content: center;
+            -webkit-justify-content: center;
+                    justify-content: center;
 
             &.active{
                 background: #222;
@@ -179,7 +180,7 @@ img, svg{
     display: none;
 
     .beer{
-        padding: 10px 0;
+        padding: 14px 0;
         position: relative;
         border-top: 1px solid $color-light-gray;
 
@@ -193,6 +194,11 @@ img, svg{
             padding-top: 10px;
             min-height: 48px;
             position: relative;
+        }
+
+
+        .beer-name{
+            min-height: 24px;
         }
 
 

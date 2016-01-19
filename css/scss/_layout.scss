@@ -99,7 +99,8 @@ html, body, #app{
 .l-center{
     -webkit-justify-content: center;
             justify-content: center;
-    align-items: center;
+    -webkit-align-items:center;
+           align-items: center;
 }
 
 .l-pad-left{
