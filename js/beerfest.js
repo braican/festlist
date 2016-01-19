@@ -469,24 +469,79 @@
 
 
     app.controller( 'AllBeersController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
+        
         $scope.view = 'all';
+
+
+        /**
+         * return false, since this is the master list and requires
+         *  no user input
+         */
+        $scope.noBeers = function(){
+            return false;
+        }
+
     }]);
 
     app.controller( 'HadsController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
 
         $scope.view = 'hads';
+
+        $scope.beerlist = {};
         
-        $scope.$parent.beerfestData.$loaded().then(function(){
+        // when the parent scope loads, set the beerlist
+        $scope.$parent.beerfestData.$loaded().then( setBeerlist );
+
+        // if the current user changes, set the beerlist
+        $scope.$parent.$parent.$watch('currentUser', setBeerlist);
+
+
+        /**
+         * sets the scoped beerlist var to the user hads
+         */
+        function setBeerlist(){
             $scope.beerlist = $scope.$parent.userHads;
-        });
+        }
+
+
+        /**
+         * check to see if there are any beers, and return the
+         *  default message
+         */
+        $scope.noBeers = function(){
+            return Object.keys( $scope.beerlist ).length > 0 ? false : "You have not had any beers.";
+        }
 
     }]);
     app.controller( 'WishlistController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
+        
         $scope.view = 'wishlist';
 
-        $scope.$parent.beerfestData.$loaded().then(function(){
+        $scope.beerlist = {};
+
+        // when the parent scope loads, set the beerlist
+        $scope.$parent.beerfestData.$loaded().then( setBeerlist );
+
+        // if the current user changes, set the beerlist
+        $scope.$parent.$parent.$watch('currentUser', setBeerlist);
+
+
+        /**
+         * sets the scoped beerlist var to the user hads
+         */
+        function setBeerlist(){
             $scope.beerlist = $scope.$parent.userWishlist;
-        });
+        }
+
+
+
+        /**
+         * check to see if there are any beers, and return the
+         *  default message
+         */
+        $scope.noBeers = function(){
+            return Object.keys( $scope.beerlist ).length > 0 ? false : "You have not wishlisted any beers.";
+        }
 
 
     }]);
