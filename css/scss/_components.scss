@@ -143,7 +143,7 @@ img, svg{
     margin: 0;
 
     .brewery-name{
-        padding: 16px 48px 16px 20px;
+        padding: 16px 48px 16px 10px;
         position: relative;
         cursor: pointer;
     }
@@ -160,7 +160,7 @@ img, svg{
     &.active{
         z-index: 2;
         margin-bottom: -1px;
-        border-bottom: 2px solid $color-gray;
+        border-bottom: 1px solid $color-gray;
 
         .brewery-name{
             font-weight: bold;
@@ -187,7 +187,7 @@ img, svg{
         border-top: 1px solid $color-light-gray;
 
         label{
-            font-size: .8em;
+            font-size: .86em;
             font-style: italic;
             display: block;
         }
@@ -203,6 +203,7 @@ img, svg{
                 padding-top: 10px;
                 min-height: 48px;
                 position: relative;
+                font-size: .8em;
             }
 
             .beer-stats {
