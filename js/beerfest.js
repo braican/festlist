@@ -434,12 +434,17 @@
                     }
                 }
 
-                return $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ].hads;
+                if( $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ].hads ){
+                    return $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ].hads;
+                } else {
+                    return {};
+                }
+                
             }
 
             // if they're not logged in, check if this device has any
             //  saved data
-            if( localStorage.userHads ){
+            else if( localStorage.userHads ){
                 return JSON.parse( localStorage.userHads );
             }
 
@@ -463,11 +468,13 @@
                     }
                 }
 
-                return $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ].wishlist;
-            }
+                if( $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ].wishlist ){
+                    return $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ].wishlist;
+                } else {
+                    return {};
+                }
 
-
-            if( localStorage.userWishlist ){
+            } else if( localStorage.userWishlist ){
                 return JSON.parse( localStorage.userWishlist );
             }
 
@@ -549,7 +556,8 @@
          *  default message
          */
         $scope.noBeers = function(){
-            return Object.keys( $scope.beerlist ).length > 0 ? false : "You have not wishlisted any beers.";
+
+            return $scope.beerlist && Object.keys( $scope.beerlist ).length > 0 ? false : "You have not wishlisted any beers.";
         }
 
 
