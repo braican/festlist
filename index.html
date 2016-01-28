@@ -38,7 +38,7 @@
                     <li class="l-col-fluid col-1-4" ng-click="appView = 'all-beers'" ng-class="{active: appView === 'all-beers'}"><svg class="icon--beerlist"><use xlink:href="#svg--icon--bottles"></use></svg></li>
                     <li class="l-col-fluid col-1-4" ng-click="appView = 'hads'" ng-class="{active: appView === 'hads'}"><svg class="icon--hads"><use xlink:href="#svg--icon--hads"></use></svg></li>
                     <li class="l-col-fluid col-1-4" ng-click="appView = 'wishlist'" ng-class="{active: appView === 'wishlist'}"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                    <li class="l-col-fluid col-1-4"><svg class="icon--more"><use xlink:href="#svg--icon--more"></use></svg>
+                    <li class="l-col-fluid col-1-4" ng-click="appView = 'more'" ng-class="{active: appView === 'more'}"><svg class="icon--more"><use xlink:href="#svg--icon--more"></use></svg>
                 </ul>
             </div>
         </header><!-- .app-banner -->
@@ -52,7 +52,10 @@
                 <div class="beers--all app-beerlist" beerlist ng-controller="AllBeersController" ng-show="appView === 'all-beers'"></div><!-- .beers-all -->
                 <div class="beers--hads app-beerlist" beerlist ng-controller="HadsController" ng-show="appView === 'hads'" ></div><!-- .beers-hads -->
                 <div class="beers--wishlist app-beerlist" beerlist ng-controller="WishlistController" ng-show="appView === 'wishlist'"></div><!-- .beers-wishlist -->
-
+                
+                <div class="app--more" ng-show="appView === 'more'" ng-controller="MoreController">
+                    <autocomplete data="test">
+                </div>
             </div><!-- .app-main -->
         </div>
 
