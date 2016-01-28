@@ -40,7 +40,7 @@ html, body, #app{
  */
 
 .app-drawer{
-    position: absolute;
+    position: fixed;
     background: $color-white;
     top: 0;
     bottom: 0;
