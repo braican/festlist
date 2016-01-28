@@ -299,7 +299,12 @@
             }
 
             hadslist[brewery].beers[beerName].rating = rating;
-            hadslist[brewery].beers[beerName].isRating = false;
+
+            $timeout(function(){
+                hadslist[brewery].beers[beerName].isRating = false;    
+            }, 400);
+
+            
 
             if( $scope.$parent.currentUser ){
                 var uid = $scope.$parent.currentUser.uid;

@@ -140,6 +140,7 @@ img, svg{
 
 .brewery{
     position: relative;
+    margin: 0;
 
     .brewery-name{
         padding: 16px 48px 16px 20px;
@@ -158,9 +159,8 @@ img, svg{
 
     &.active{
         z-index: 2;
-        background-color: $color-white;
         margin-bottom: -1px;
-        border-bottom: 2px solid $color-main;
+        border-bottom: 2px solid $color-gray;
 
         .brewery-name{
             font-weight: bold;
@@ -168,7 +168,7 @@ img, svg{
                 left: 0;
                 right: 0;
                 border-top-width: 2px;
-                border-top-color: $color-main;
+                border-top-color: $color-gray;
             }
         }
         .brewery-beers{
@@ -179,11 +179,10 @@ img, svg{
     
 
 .brewery-beers{
-    margin: 0 20px;
+    margin: 0 14px;
     display: none;
 
     .beer{
-        padding: 14px 0;
         position: relative;
         border-top: 1px solid $color-light-gray;
 
@@ -193,25 +192,27 @@ img, svg{
             display: block;
         }
 
-        .second-row{
-            padding-top: 10px;
-            min-height: 48px;
-            position: relative;
-        }
+        .beer-info{
+            padding: 12px 0 12px 12px;
 
+            .beer-name{
+                min-height: 24px;
+            }
 
-        .beer-name{
-            min-height: 24px;
-        }
+            .second-row{
+                padding-top: 10px;
+                min-height: 48px;
+                position: relative;
+            }
 
+            .beer-stats {
+                opacity: 1;
+                visibility: visible;
+                @include transition( all .4s );
 
-        .beer-stats {
-            opacity: 1;
-            visibility: visible;
-            @include transition( all .4s 1s );
-
-            & > div + div{
-                padding-left: 12px;
+                & > div + div{
+                    padding-left: 12px;
+                }
             }
         }
 
@@ -219,12 +220,23 @@ img, svg{
             flex-basis:42px;
             width: 42px;
             text-align: center;
-            margin-top: -8px;
-            margin-left: -8px;
+            position: relative;
 
             li{
-                cursor: pointer;
-                padding: 5px;
+                @extend .l-flex;
+                @extend .l-center;
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 50%;
+            }
+
+            .trigger-had{
+                top: 0;
+            }
+            .trigger-wishlist,
+            .beer-rating{
+                bottom: 0;
             }
 
             svg{
@@ -246,7 +258,7 @@ img, svg{
             top: 10px;
             opacity: 0;
             visibility: hidden;
-            @include transition( all .4s 1s );
+            @include transition( all .4s );
 
             li + li{
                 margin-left: 10px;
@@ -264,7 +276,7 @@ img, svg{
         }
         
         // prompt the rating
-        &.prompt-rating {
+        &.prompt-rating .beer-info{
             .rating{
                 opacity: 1;
                 visibility: visible;
@@ -279,17 +291,24 @@ img, svg{
 
         
         // beer status things
-        &.wishlisted .beer-actionable .icon--starred{
-            fill: $color-yellow;
+        &.wishlisted .trigger-wishlist {
+            background: rgba( $color-yellow, .5 );
+            .icon--starred{
+                fill: $color-yellow;
+            }
         }
 
         &.had {
             .trigger-wishlist{
                 display: none;
             }
-            .icon--checkmark{
-                fill: $color-green;
+            .trigger-had{
+                background: rgba( $color-green, .5 );
+                .icon--checkmark{
+                    fill: $color-green;
+                }    
             }
+            
         }
 
     } // beer
