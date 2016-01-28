@@ -22,28 +22,30 @@
 
 
     <div id="app" ng-controller="BeerfestController as beerfest" ng-class="getAppClasses()">
+        <header class="app-banner">
+            <div class="branding l-flex l-center">
+                <div class="l-col-fluid"><svg class="beerfest-logo"><use xlink:href="#svg--logo"></use></svg></div>
+
+                <ul class="l-col-fit l-pad-left util-nav">
+                    <li ng-click="drawerActive = !drawerActive"><span ng-hide="currentUser">Log in</span><span ng-show="currentUser">{{ currentUser.password.email }}</span></li>
+                    <li ng-hide="drawerActive" ng-click="drawerActive = true"><svg class="icon--user"><use xlink:href="#svg--icon--user"></use></svg></li>
+                    <li ng-show="drawerActive" ng-click="drawerActive = false"><svg class="icon--close"><use xlink:href="#svg--icon--close"></use></svg></li>
+                </ul>
+            </div><!-- .branding -->
+
+            <div class="app-nav">
+                <ul class="l-flex">
+                    <li class="l-col-fluid col-1-5" ng-click="appView = 'all-beers'" ng-class="{active: appView === 'all-beers'}"><svg class="icon--beerlist"><use xlink:href="#svg--icon--bottles"></use></svg></li>
+                    <li class="l-col-fluid col-1-5" ng-click="appView = 'hads'" ng-class="{active: appView === 'hads'}"><svg class="icon--hads"><use xlink:href="#svg--icon--hads"></use></svg></li>
+                    <li class="l-col-fluid col-1-5" ng-click="appView = 'wishlist'" ng-class="{active: appView === 'wishlist'}"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                    <li class="l-col-fluid col-1-5"><svg class="icon--search"><use xlink:href="#svg--icon--search"></use></svg></li>
+                    <li class="l-col-fluid col-1-5"><svg class="icon--more"><use xlink:href="#svg--icon--more"></use></svg>
+                </ul>
+            </div>
+        </header><!-- .app-banner -->
+
+        
         <div class="app-main">
-            <header class="app-banner">
-                <div class="branding l-flex l-center">
-                    <div class="l-col-fluid"><svg class="beerfest-logo"><use xlink:href="#svg--logo"></use></svg></div>
-
-                    <ul class="l-col-fit l-pad-left util-nav">
-                        <li ng-click="drawerActive = !drawerActive"><span ng-hide="currentUser">Log in</span><span ng-show="currentUser">{{ currentUser.password.email }}</span></li>
-                        <li ng-hide="drawerActive" ng-click="drawerActive = true"><svg class="icon--user"><use xlink:href="#svg--icon--user"></use></svg></li>
-                        <li ng-show="drawerActive" ng-click="drawerActive = false"><svg class="icon--close"><use xlink:href="#svg--icon--close"></use></svg></li>
-                    </ul>
-                </div><!-- .branding -->
-
-                <div class="app-nav">
-                    <ul class="l-flex">
-                        <li class="l-col-fluid col-1-5" ng-click="appView = 'all-beers'" ng-class="{active: appView === 'all-beers'}"><svg class="icon--beerlist"><use xlink:href="#svg--icon--bottles"></use></svg></li>
-                        <li class="l-col-fluid col-1-5" ng-click="appView = 'hads'" ng-class="{active: appView === 'hads'}"><svg class="icon--hads"><use xlink:href="#svg--icon--hads"></use></svg></li>
-                        <li class="l-col-fluid col-1-5" ng-click="appView = 'wishlist'" ng-class="{active: appView === 'wishlist'}"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                        <li class="l-col-fluid col-1-5"><svg class="icon--search"><use xlink:href="#svg--icon--search"></use></svg></li>
-                        <li class="l-col-fluid col-1-5"><svg class="icon--more"><use xlink:href="#svg--icon--more"></use></svg>
-                    </ul>
-                </div>
-            </header><!-- .app-banner -->
 
 
             <div class="beerlists" ng-controller="BeerlistController">
