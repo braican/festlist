@@ -53,8 +53,21 @@
                 <div class="beers--hads app-beerlist" beerlist ng-controller="HadsController" ng-show="appView === 'hads'" ></div><!-- .beers-hads -->
                 <div class="beers--wishlist app-beerlist" beerlist ng-controller="WishlistController" ng-show="appView === 'wishlist'"></div><!-- .beers-wishlist -->
                 
-                <div class="app--more" ng-show="appView === 'more'" ng-controller="MoreController">
-                    <autocomplete data="test">
+                <div class="app--more" ng-show="appView === 'more'">
+                    <div ng-controller="AddBeerController">
+                        <header>Add a beer</header>
+                        <autocomplete data="breweryList" attr-placeholder="Brewery name" ng-model="breweryName" on-select="chooseBrewery" on-type="clearBeers"></autocomplete>
+                        
+                        <ul>
+                            <li ng-repeat="beer in breweryBeers track by $index">
+                                {{ beer.name }}
+                            </li>
+                        </ul>
+                        
+                        <input type="text" placeholder="Beer name" ng-model="beerName">
+
+                        <button ng-click="addBeer()">{{ submitText }}</button>
+                    </div>
                 </div>
             </div><!-- .app-main -->
         </div>

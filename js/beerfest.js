@@ -693,14 +693,22 @@
 
         /**
          * save the data, either to localStorage or to firebase
+         * @return a promise, indicating that the save is done
          */
         $scope.saveData = function(){
             var hads     = $scope.userHads,
-                wishlist = $scope.userWishlist;
+                wishlist = $scope.userWishlist,
+                df       = $.Deferred();
+
+            console.log("saving data");
 
             if( $scope.$parent.currentUser ){
                 $scope.beerfestData.$save().then(function(r){
                     r.key() === $scope.beerfestData.$id;
+
+                    console.log("Saved to firebase");
+
+                    df.resolve("Saved to Firebase");
                 }, function(error){
                     console.log("Error: " + error);
                 });
@@ -709,6 +717,8 @@
                 localStorage.userHads = JSON.stringify( hads );
                 localStorage.userWishlist = JSON.stringify( wishlist );
             }
+
+            return df;
         }
 
 
@@ -850,13 +860,11 @@
         }
 
 
-
         /**
          * check to see if there are any beers, and return the
          *  default message
          */
         $scope.noBeers = function(){
-
             return $scope.beerlist && Object.keys( $scope.beerlist ).length > 0 ? false : "You have not wishlisted any beers.";
         }
 
@@ -864,21 +872,86 @@
     }]);
 
 
-    app.controller( 'MoreController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope){
+    app.controller( 'AddBeerController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope){
 
         $scope.breweryList = [];
+
+        $scope.breweryName = '';
+        $scope.beerName = '';
+        $scope.breweryBeers = [];
+
+        $scope.submitText = "Add beer";
 
         // when the parent scope loads, set the beerlist
         $scope.$parent.beerfestData.$loaded().then( getBreweryList );
 
 
         /**
+         * the brewery that has been chosen
+         */
+        $scope.chooseBrewery = function( brewery ){
+            brewery = BEERFEST.encode( brewery );
+
+            if( $scope.$parent.beerlist[brewery] === undefined ){
+                return;
+            }
+
+            $scope.breweryBeers = $scope.$parent.beerlist[brewery].beers;
+        }
+
+
+        /**
+         * when the user is typing into the brewery input, clear the beers
+         */
+        $scope.clearBeers = function( search ){
+            if( search.length < 2 ){
+                $scope.breweryBeers = [];    
+            }
+        }
+
+
+        /**
+         * add the beer
+         */
+        $scope.addBeer = function(){
+
+            var brewery  = BEERFEST.encode( $scope.breweryName ),
+                beerData = {
+                    abv      : "-",
+                    ba_score : "-",
+                    name     : $scope.beerName,
+                    style    : "-"
+                };
+
+            $scope.submitText = "Adding the new beer...";
+
+            var ref = BEERFEST_DATA.child( 'beerfests/' + BEERFEST.name + '/beerlist/' + brewery + '/beers').push();
+
+            if( $scope.$parent.beerlist[brewery] === undefined ){
+                $scope.$parent.beerlist[brewery] = {
+                    beers: [ beerData ]
+                }
+            } else {
+                $scope.$parent.beerlist[brewery].beers.push( beerData );
+            }
+
+            ref.set( beerData, function(){
+                $scope.submitText = "Add beer";
+                $scope.beerName = '';
+                $scope.breweryName = '';
+                $scope.breweryBeers = [];
+            } );
+
+        }
+
+
+        /**
          * gets the breweries and returns an array of them
          */
         function getBreweryList(){
-            var list = [];
-
-            
+            angular.forEach( $scope.$parent.beerlist, function( beers, brewery ){
+                $scope.breweryList.push( BEERFEST.decode( brewery) );
+            });
         }
     }]);
 

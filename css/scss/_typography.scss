@@ -77,6 +77,13 @@ input[type="text"]:focus{
     border-bottom-color: $color-light-gray;
 }
 
+.app--more input[type="email"],
+.app--more input[type="password"],
+.app--more input[type="text"]{
+    background: #fafafa;
+    border: 1px solid $color-light-gray;
+}
+
 // hack for autocomplete stuff
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px #fff inset;
