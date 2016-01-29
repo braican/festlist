@@ -705,9 +705,6 @@
             if( $scope.$parent.currentUser ){
                 $scope.beerfestData.$save().then(function(r){
                     r.key() === $scope.beerfestData.$id;
-
-                    console.log("Saved to firebase");
-
                     df.resolve("Saved to Firebase");
                 }, function(error){
                     console.log("Error: " + error);
@@ -872,7 +869,7 @@
     }]);
 
 
-    app.controller( 'AddBeerController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope){
+    app.controller( 'AddBeerController', ['$firebaseArray', '$scope', '$timeout', function( $firebaseArray, $scope, $timeout ){
 
         $scope.breweryList = [];
 
@@ -881,6 +878,8 @@
         $scope.breweryBeers = [];
 
         $scope.submitText = "Add beer";
+
+        $scope.message = false;
 
         // when the parent scope loads, set the beerlist
         $scope.$parent.beerfestData.$loaded().then( getBreweryList );
@@ -925,23 +924,41 @@
 
             $scope.submitText = "Adding the new beer...";
 
-            var ref = BEERFEST_DATA.child( 'beerfests/' + BEERFEST.name + '/beerlist/' + brewery + '/beers').push();
+            var ref = BEERFEST_DATA.child( 'beerfests/' + BEERFEST.name + '/beerlist/' + brewery + '/beers');
 
-            if( $scope.$parent.beerlist[brewery] === undefined ){
-                $scope.$parent.beerlist[brewery] = {
-                    beers: [ beerData ]
+            var beers = $firebaseArray( ref );
+
+            beers.$add( beerData ).then(function( ref ){
+                var id = ref.key();
+                console.log("added record with id " + id);
+                beers.$indexFor(id); // returns location in the array
+
+                if( $scope.$parent.beerlist[brewery] === undefined ){
+                    $scope.$parent.beerlist[brewery] = {
+                        beers: {}
+                    };
                 }
-            } else {
-                $scope.$parent.beerlist[brewery].beers.push( beerData );
-            }
 
-            ref.set( beerData, function(){
+                if( Array.isArray( $scope.$parent.beerlist[brewery].beers ) ){
+                    $scope.$parent.beerlist[brewery].beers.push( beerData );
+                } else {
+                    $scope.$parent.beerlist[brewery].beers[ id ] = beerData;
+                }
+
                 $scope.submitText = "Add beer";
                 $scope.beerName = '';
                 $scope.breweryName = '';
                 $scope.breweryBeers = [];
-            } );
+                $scope.message = "Beer added";
 
+                $timeout(function(){
+                    $('.add-beer-message').fadeOut(function(){
+                        $scope.message = false;
+
+                        $(this).removeAttr('style');
+                    });
+                }, 1600);
+            });
         }
 
 

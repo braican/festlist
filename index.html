@@ -67,6 +67,7 @@
                         <input type="text" placeholder="Beer name" ng-model="beerName">
 
                         <button ng-click="addBeer()">{{ submitText }}</button>
+                        <div class="add-beer-message" ng-show="message">{{ message }}</div>
                     </div>
                 </div>
             </div><!-- .app-main -->
