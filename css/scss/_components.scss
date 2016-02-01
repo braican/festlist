@@ -370,6 +370,18 @@ img, svg{
 
 .app--more{
     padding: 16px;
+
+    .add-beer-message{
+        opacity: 0;
+        visibility: hidden;
+        color: $color-green;
+        @include transition( all .4s );
+
+        &.active{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 }
 
 /**

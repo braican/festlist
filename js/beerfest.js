@@ -875,11 +875,11 @@
 
         $scope.breweryName = '';
         $scope.beerName = '';
-        $scope.breweryBeers = [];
+        $scope.breweryBeers = false;
 
         $scope.submitText = "Add beer";
 
-        $scope.message = false;
+        $scope.message = '';
 
         // when the parent scope loads, set the beerlist
         $scope.$parent.beerfestData.$loaded().then( getBreweryList );
@@ -891,9 +891,15 @@
         $scope.chooseBrewery = function( brewery ){
             brewery = BEERFEST.encode( brewery );
 
+            console.log("chose the bewery");
+
             if( $scope.$parent.beerlist[brewery] === undefined ){
                 return;
             }
+
+            console.log("this should woek");
+
+            console.log( $scope.$parent.beerlist[brewery].beers );
 
             $scope.breweryBeers = $scope.$parent.beerlist[brewery].beers;
         }
@@ -904,7 +910,7 @@
          */
         $scope.clearBeers = function( search ){
             if( search.length < 2 ){
-                $scope.breweryBeers = [];    
+                $scope.breweryBeers = false;    
             }
         }
 
@@ -948,16 +954,12 @@
                 $scope.submitText = "Add beer";
                 $scope.beerName = '';
                 $scope.breweryName = '';
-                $scope.breweryBeers = [];
+                $scope.breweryBeers = false;
                 $scope.message = "Beer added";
 
                 $timeout(function(){
-                    $('.add-beer-message').fadeOut(function(){
-                        $scope.message = false;
-
-                        $(this).removeAttr('style');
-                    });
-                }, 1600);
+                    $scope.message = '';
+                }, 2000);
             });
         }
 

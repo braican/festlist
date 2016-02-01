@@ -55,19 +55,23 @@
                 
                 <div class="app--more" ng-show="appView === 'more'">
                     <div ng-controller="AddBeerController">
-                        <header>Add a beer</header>
+                        <header>
+                            <h6>Add a beer</h6>
+                            <p>If you can't find a beer at the festival in this list, add it to the database here.</p>
+                        </header>
                         <autocomplete data="breweryList" attr-placeholder="Brewery name" ng-model="breweryName" on-select="chooseBrewery" on-type="clearBeers"></autocomplete>
                         
-                        <ul>
-                            <li ng-repeat="beer in breweryBeers track by $index">
-                                {{ beer.name }}
-                            </li>
-                        </ul>
+                        <div ng-show="breweryBeers">
+                            <header><strong>Listed Beers</strong></header>
+                            <ul>
+                                <li ng-repeat="beer in breweryBeers">{{ beer.name }}</li>
+                            </ul>
+                        </div>
                         
                         <input type="text" placeholder="Beer name" ng-model="beerName">
 
                         <button ng-click="addBeer()">{{ submitText }}</button>
-                        <div class="add-beer-message" ng-show="message">{{ message }}</div>
+                        <div class="add-beer-message" ng-class="{ active: message !== '' }">{{ message }}</div>
                     </div>
                 </div>
             </div><!-- .app-main -->
