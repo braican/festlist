@@ -1,19 +1,19 @@
 <ul>
-    <li class="brewery" ng-repeat="(brewery, beers) in beerlist" ng-class="{active: view !== 'all'}">
+    <li class="brewery" ng-repeat="beers in beerlist | toArray | orderBy : '$key'" ng-class="{active: view !== 'all'}">
         <header class="brewery-name" ng-click="toggleActiveBrewery( $event )">
-            {{brewery | decode}}
+            {{ beers.$key | decode}}
 
             <span class="open-close-indicator"></span>
         </header>
 
         <ul class="brewery-beers">
-            <li class="beer l-flex" ng-repeat="(index, beer) in beers.beers" ng-class="beerClasses( beer, brewery )">
+            <li class="beer l-flex" ng-repeat="(index, beer) in beers.beers" ng-class="beerClasses( beer, beers.$key )">
 
                 <div class="beer-actionable l-col-fixed">
                     <ul>
-                        <li class="trigger-had" ng-click="drinkBeer( beer, brewery )"><svg class="icon--checkmark"><use xlink:href="#svg--icon--checkmark"></use></svg></li>
-                        <li class="trigger-wishlist" ng-click="wishlistBeer( beer, brewery )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                        <li class="beer-rating" ng-show="getBeerRating( beer, brewery )" ng-click="openRating( beer, brewery )">{{ getBeerRating(beer, brewery) }}</li>
+                        <li class="trigger-had" ng-click="drinkBeer( beer, beers.$key )"><svg class="icon--checkmark"><use xlink:href="#svg--icon--checkmark"></use></svg></li>
+                        <li class="trigger-wishlist" ng-click="wishlistBeer( beer, beers.$key )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                        <li class="beer-rating" ng-show="getBeerRating( beer, beers.$key )" ng-click="openRating( beer, beers.$key )">{{ getBeerRating(beer, beers.$key) }}</li>
                     </ul>
                 </div><!-- .beer-actionable -->
 
@@ -34,11 +34,11 @@
 
                         <div class="rating">
                             <ul class="l-flex">
-                                <li ng-click="rateBeer( beer, brewery, 1 )" ng-class="getRatingClass( beer, brewery, 1 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                <li ng-click="rateBeer( beer, brewery, 2 )" ng-class="getRatingClass( beer, brewery, 2 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                <li ng-click="rateBeer( beer, brewery, 3 )" ng-class="getRatingClass( beer, brewery, 3 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                <li ng-click="rateBeer( beer, brewery, 4 )" ng-class="getRatingClass( beer, brewery, 4 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
-                                <li ng-click="rateBeer( beer, brewery, 5 )" ng-class="getRatingClass( beer, brewery, 5 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                <li ng-click="rateBeer( beer, beers.$key, 1 )" ng-class="getRatingClass( beer, beers.$key, 1 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                <li ng-click="rateBeer( beer, beers.$key, 2 )" ng-class="getRatingClass( beer, beers.$key, 2 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                <li ng-click="rateBeer( beer, beers.$key, 3 )" ng-class="getRatingClass( beer, beers.$key, 3 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                <li ng-click="rateBeer( beer, beers.$key, 4 )" ng-class="getRatingClass( beer, beers.$key, 4 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
+                                <li ng-click="rateBeer( beer, beers.$key, 5 )" ng-class="getRatingClass( beer, beers.$key, 5 )"><svg class="icon--starred"><use xlink:href="#svg--icon--star"></use></svg></li>
                             </ul>
                         </div><!-- .rating -->
 
