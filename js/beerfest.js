@@ -891,15 +891,9 @@
         $scope.chooseBrewery = function( brewery ){
             brewery = BEERFEST.encode( brewery );
 
-            console.log("chose the bewery");
-
             if( $scope.$parent.beerlist[brewery] === undefined ){
                 return;
             }
-
-            console.log("this should woek");
-
-            console.log( $scope.$parent.beerlist[brewery].beers );
 
             $scope.breweryBeers = $scope.$parent.beerlist[brewery].beers;
         }
