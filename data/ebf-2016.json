@@ -23,7 +23,7 @@
         "name": "The Russian",
         "style": "Russian Imperial Stout",
         "abv": "9.00%",
-        "ba_score": "4.29"
+        "ba_score": "4.49"
       }
     ]
   },
@@ -97,13 +97,13 @@
         "name": "70K",
         "style": "American Double / Imperial Stout",
         "abv": "13.00%",
-        "ba_score": "4.32"
+        "ba_score": "4.33"
       },
       {
         "name": "Against The Grain / Aviary & Fountainhead: There Gose The Neighborhood",
         "style": "Gose",
         "abv": "4.50%",
-        "ba_score": "3.78"
+        "ba_score": "3.79"
       },
       {
         "name": "Bo & Luke",
@@ -139,7 +139,7 @@
         "name": "Sho' Nuff",
         "style": "Belgian Pale Ale",
         "abv": "4.90%",
-        "ba_score": "3.47"
+        "ba_score": "3.46"
       }
     ]
   },
@@ -149,7 +149,7 @@
         "name": "Allagash  St. Klippenstein",
         "style": "Belgian Strong Dark Ale",
         "abv": "9.00%",
-        "ba_score": "-"
+        "ba_score": "4.41"
       },
       {
         "name": "Astrid",
@@ -161,7 +161,7 @@
         "name": "Little Brett",
         "style": "American Wild Ale",
         "abv": "4.60%",
-        "ba_score": "3.89"
+        "ba_score": "3.92"
       },
       {
         "name": "Uncommon Crow",
@@ -177,19 +177,19 @@
         "name": "Barbary Coast",
         "style": "American Double / Imperial Stout",
         "abv": "10.00%",
-        "ba_score": "3.87"
+        "ba_score": "3.91"
       },
       {
         "name": "Elephant Heart De Brettaville",
         "style": "Saison / Farmhouse Ale",
         "abv": "6.50%",
-        "ba_score": "-"
+        "ba_score": "4.44"
       },
       {
         "name": "Hoppy Sour: Mosaic",
         "style": "American Wild Ale",
         "abv": "7.00%",
-        "ba_score": "-"
+        "ba_score": "4.18"
       },
       {
         "name": "Valley Of The Heart's Delight",
@@ -211,13 +211,13 @@
         "name": "Brother David's Belgian-style Double Ale",
         "style": "Dubbel",
         "abv": "9.00%",
-        "ba_score": "3.63"
+        "ba_score": "3.62"
       },
       {
         "name": "Horse Tongue Thribble Currant",
         "style": "American Wild Ale",
         "abv": "10.50%",
-        "ba_score": "4.16"
+        "ba_score": "4.17"
       },
       {
         "name": "Huge Arker",
@@ -251,7 +251,7 @@
         "name": "Victory At Sea - Coconut",
         "style": "American Porter",
         "abv": "10.00%",
-        "ba_score": "4.09"
+        "ba_score": "4.08"
       },
       {
         "name": "Victory At Sea - Peanut Butter",
@@ -291,7 +291,7 @@
         "name": "Reclaimer",
         "style": "American Wild Ale",
         "abv": "14.00%",
-        "ba_score": "-"
+        "ba_score": "4.38"
       }
     ]
   },
@@ -328,12 +328,6 @@
         "ba_score": "4"
       },
       {
-        "name": "Stay Puft",
-        "style": "American Double / Imperial Stout",
-        "abv": "10.20%",
-        "ba_score": "4.45"
-      },
-      {
         "name": "Teotihuacan",
         "style": "American Double / Imperial Stout",
         "abv": "11.80%",
@@ -359,7 +353,7 @@
         "name": "Money",
         "style": "American IPA",
         "abv": "7.30%",
-        "ba_score": "4.31"
+        "ba_score": "4.32"
       },
       {
         "name": "Morticia",
@@ -493,7 +487,7 @@
         "name": "Pants Are Cumbersome (Collaboration W/ Dogfish Head)",
         "style": "American Stout",
         "abv": "6.50%",
-        "ba_score": "-"
+        "ba_score": "3.87"
       },
       {
         "name": "Raspberries Of The Lost Tart",
@@ -511,7 +505,7 @@
         "name": "Wild Thang",
         "style": "American IPA",
         "abv": "6.20%",
-        "ba_score": "3.96"
+        "ba_score": "-"
       }
     ]
   },
@@ -577,13 +571,13 @@
         "name": "Boat Beer",
         "style": "American Pale Ale (APA)",
         "abv": "4.20%",
-        "ba_score": "4.1"
+        "ba_score": "4.11"
       },
       {
         "name": "Cafe Y Churro",
         "style": "Cream Ale",
         "abv": "12.00%",
-        "ba_score": "4.73"
+        "ba_score": "4.82"
       },
       {
         "name": "Grape Swisher",
@@ -651,7 +645,7 @@
         "name": "Rubescent Zhaftig Ghastly Blood Stout",
         "style": "American Double / Imperial Stout",
         "abv": "10.50%",
-        "ba_score": "3.4"
+        "ba_score": "-"
       },
       {
         "name": "Sarsaparilla 666 Bourbon Barrel Root Beer Stout",
@@ -673,16 +667,16 @@
         "name": "Higher Math",
         "style": "American Strong Ale",
         "abv": "17.00%",
-        "ba_score": "3.7"
+        "ba_score": "3.72"
       },
       {
         "name": "Hoo Lawd",
         "style": "American Black Ale",
         "abv": "9.50%",
-        "ba_score": "-"
+        "ba_score": "4.23"
       },
       {
-        "name": "Liquor De M’Alstroms",
+        "name": "Liquor De M'Alströms",
         "style": "American Malt Liquor",
         "abv": "8.00%",
         "ba_score": "-"
@@ -697,7 +691,7 @@
         "name": "Oak Aged Noble Rot",
         "style": "Fruit / Vegetable Beer",
         "abv": "9.30%",
-        "ba_score": "-"
+        "ba_score": "4.34"
       },
       {
         "name": "Romantic Chemistry",
@@ -719,7 +713,7 @@
         "name": "Category 5 IPA - White Oak",
         "style": "American Double / Imperial IPA",
         "abv": "8.50%",
-        "ba_score": "3.96"
+        "ba_score": "3.97"
       },
       {
         "name": "Coconut Bay Breeze",
@@ -803,7 +797,7 @@
         "name": "BQE - Barrel Aged",
         "style": "American Double / Imperial Stout",
         "abv": "10.00%",
-        "ba_score": "4.33"
+        "ba_score": "4.52"
       },
       {
         "name": "BQExC",
@@ -825,7 +819,7 @@
         "name": "Krieky Bones",
         "style": "American Wild Ale",
         "abv": "5.70%",
-        "ba_score": "4.2"
+        "ba_score": "4.23"
       },
       {
         "name": "La Piccola Pepe Di Sichuan",
@@ -859,7 +853,7 @@
         "name": "LFU Wild Oak",
         "style": "American Wild Ale",
         "abv": "8.00%",
-        "ba_score": "4.11"
+        "ba_score": "-"
       },
       {
         "name": "Mango Chili Prince",
@@ -937,7 +931,7 @@
         "name": "Project PAM",
         "style": "American Black Ale",
         "abv": "10.80%",
-        "ba_score": "4.2"
+        "ba_score": "4.19"
       },
       {
         "name": "Spike Cutlass",
@@ -1042,12 +1036,6 @@
   "Funky%20Buddha%20Brewery": {
     "beers": [
       {
-        "name": "Bourbon Barrel-Aged Gruit",
-        "style": "Scottish Gruit / Ancient Herbed Ale",
-        "abv": "10.00%",
-        "ba_score": "-"
-      },
-      {
         "name": "Lemon Meringue Blond",
         "style": "American Blonde Ale",
         "abv": "5.00%",
@@ -1064,6 +1052,12 @@
         "style": "Wheatwine",
         "abv": "9.00%",
         "ba_score": "4.01"
+      },
+      {
+        "name": "Tip Ta Tip",
+        "style": "Scottish Gruit / Ancient Herbed Ale",
+        "abv": "10.00%",
+        "ba_score": "-"
       }
     ]
   },
@@ -1073,13 +1067,13 @@
         "name": "Echoplex",
         "style": "American Wild Ale",
         "abv": "5.30%",
-        "ba_score": "4.24"
+        "ba_score": "4.19"
       },
       {
         "name": "Lumen",
         "style": "American IPA",
         "abv": "6.40%",
-        "ba_score": "4.42"
+        "ba_score": "4.48"
       },
       {
         "name": "Maple Bourbon Double Negative",
@@ -1091,7 +1085,7 @@
         "name": "Super Spruce",
         "style": "Gose",
         "abv": "4.70%",
-        "ba_score": "4.3"
+        "ba_score": "4.38"
       }
     ]
   },
@@ -1113,7 +1107,7 @@
         "name": "Trickery",
         "style": "Milk / Sweet Stout",
         "abv": "13.50%",
-        "ba_score": "4.47"
+        "ba_score": "4.49"
       },
       {
         "name": "Tropical Great Return",
@@ -1163,19 +1157,19 @@
         "name": "Bouillon",
         "style": "American Wild Ale",
         "abv": "6.00%",
-        "ba_score": "4.22"
+        "ba_score": "4.25"
       },
       {
         "name": "Jali Apricot Jalapeño Beer",
         "style": "American Wild Ale",
         "abv": "9.00%",
-        "ba_score": "3.6"
+        "ba_score": "3.59"
       },
       {
         "name": "Trinal",
         "style": "Tripel",
         "abv": "10.00%",
-        "ba_score": "3.86"
+        "ba_score": "3.92"
       }
     ]
   },
@@ -1185,24 +1179,24 @@
         "name": "ABS",
         "style": "American Wild Ale",
         "abv": "5.50%",
-        "ba_score": "-"
+        "ba_score": "3.89"
       },
       {
         "name": "Barrel-Aged Framinghammer - Orange Peppermint Bark",
         "style": "Baltic Porter",
         "abv": "10.00%",
-        "ba_score": "-"
+        "ba_score": "2.97"
       },
       {
         "name": "Barrel-Aged Framinghammer - The Italiano",
         "style": "Baltic Porter",
         "abv": "10.00%",
-        "ba_score": "3.63"
+        "ba_score": "3.62"
       },
       {
         "name": "Brewery Maker",
         "style": "American Amber / Red Lager",
-        "abv": "14.00%",
+        "abv": "10.00%",
         "ba_score": "-"
       },
       {
@@ -1265,13 +1259,13 @@
         "name": "1460",
         "style": "Quadrupel (Quad)",
         "abv": "12.00%",
-        "ba_score": "4.45"
+        "ba_score": "4.44"
       },
       {
         "name": "A Night To End All Dawns",
         "style": "American Double / Imperial Stout",
         "abv": "12.40%",
-        "ba_score": "4.38"
+        "ba_score": "4.4"
       },
       {
         "name": "HopLab: Triple IPA",
@@ -1349,7 +1343,7 @@
         "name": "MegaBoss IPA",
         "style": "American IPA",
         "abv": "7.00%",
-        "ba_score": "4.14"
+        "ba_score": "4.12"
       },
       {
         "name": "Newburgh Black Oyster Cult",
@@ -1435,7 +1429,7 @@
         "name": "Salsus Singularis",
         "style": "Gose",
         "abv": "4.90%",
-        "ba_score": "4.18"
+        "ba_score": "4.22"
       }
     ]
   },
@@ -1503,25 +1497,25 @@
         "name": "Other Half/Burial - Diamond Mausoleum",
         "style": "American Black Ale",
         "abv": "7.50%",
-        "ba_score": "-"
+        "ba_score": "4.41"
       },
       {
         "name": "Second Anniversary DIPA",
         "style": "American Double / Imperial IPA",
         "abv": "9.00%",
-        "ba_score": "-"
+        "ba_score": "4.61"
       },
       {
         "name": "Tired Hands / Other Half - Oat Overdose",
         "style": "American IPA",
         "abv": "6.50%",
-        "ba_score": "4.45"
+        "ba_score": "4.53"
       },
       {
         "name": "We've Been Out There In Orbit",
         "style": "American Double / Imperial Stout",
         "abv": "12.00%",
-        "ba_score": "4.32"
+        "ba_score": "4.27"
       }
     ]
   },
@@ -1530,8 +1524,8 @@
       {
         "name": "Barrel Aged Bomb!",
         "style": "American Double / Imperial Stout",
-        "abv": "13.00%",
-        "ba_score": "4.24"
+        "abv": "11.20%",
+        "ba_score": "4.4"
       },
       {
         "name": "Coffee Okie",
@@ -1547,7 +1541,7 @@
         "name": "Derivative: Citra",
         "style": "American Pale Ale (APA)",
         "abv": "6.00%",
-        "ba_score": "4.5"
+        "ba_score": "4.51"
       },
       {
         "name": "Harper II: Electric Boogaloo",
@@ -1559,7 +1553,7 @@
         "name": "The Amazing Adventures Of The Alpaca Magi",
         "style": "American Wild Ale",
         "abv": "5.80%",
-        "ba_score": "4.31"
+        "ba_score": "4.32"
       },
       {
         "name": "Zzzlumber (Barrel-Aged)",
@@ -1631,7 +1625,7 @@
         "name": "1841",
         "style": "Dubbel",
         "abv": "6.20%",
-        "ba_score": "4.3"
+        "ba_score": "4.25"
       },
       {
         "name": "2 Brains",
@@ -1671,7 +1665,7 @@
         "name": "Death",
         "style": "American Double / Imperial Stout",
         "abv": "11.70%",
-        "ba_score": "3.46"
+        "ba_score": "3.49"
       },
       {
         "name": "Old Sour Cherry Porter",
@@ -1683,7 +1677,7 @@
         "name": "Roebling Vanilla Espresso Porter",
         "style": "American Porter",
         "abv": "7.80%",
-        "ba_score": "3.54"
+        "ba_score": "3.56"
       },
       {
         "name": "Ville De Rivere Geuze",
@@ -1699,7 +1693,7 @@
         "name": "Chanukah In Kentucky",
         "style": "Winter Warmer",
         "abv": "8.00%",
-        "ba_score": "3.65"
+        "ba_score": "3.68"
       },
       {
         "name": "He'Brew Funky Jewbelation '16",
@@ -1711,7 +1705,7 @@
         "name": "He'Brew Jewbelation 19",
         "style": "American Strong Ale",
         "abv": "11.90%",
-        "ba_score": "4.03"
+        "ba_score": "3.95"
       },
       {
         "name": "Hop Mamma IPA",
@@ -1760,16 +1754,16 @@
         "ba_score": "-"
       },
       {
+        "name": "Peachy Pom Pom",
+        "style": "American Wild Ale",
+        "abv": "7.50%",
+        "ba_score": "-"
+      },
+      {
         "name": "Pinball Whispers",
         "style": "American Wild Ale",
         "abv": "9.10%",
-        "ba_score": "4.11"
-      },
-      {
-        "name": "Short's The Woodmaster",
-        "style": "English Brown Ale",
-        "abv": "10.50%",
-        "ba_score": "3.78"
+        "ba_score": "4.1"
       },
       {
         "name": "Tip Ta Tip",
@@ -1785,13 +1779,13 @@
         "name": "Corn Stalk Cream Ale",
         "style": "Cream Ale",
         "abv": "5.20%",
-        "ba_score": "-"
+        "ba_score": "2.42"
       },
       {
         "name": "Squared Away",
         "style": "Weizenbock",
         "abv": "6.90%",
-        "ba_score": "3.91"
+        "ba_score": "4.07"
       },
       {
         "name": "Trip In The Woods Barrel Aged C & K",
@@ -1810,12 +1804,6 @@
   "Sixpoint%20Brewery": {
     "beers": [
       {
-        "name": "Barrel Aged 5Beans",
-        "style": "American Porter",
-        "abv": "10.00%",
-        "ba_score": "-"
-      },
-      {
         "name": "Brettstone With Cherries",
         "style": "American Brown Ale",
         "abv": "9.00%",
@@ -1826,6 +1814,12 @@
         "style": "American Strong Ale",
         "abv": "9.00%",
         "ba_score": "4.09"
+      },
+      {
+        "name": "Goat Mutorcs",
+        "style": "American Porter",
+        "abv": "7.50%",
+        "ba_score": "-"
       },
       {
         "name": "Hi-Res",
@@ -1859,7 +1853,7 @@
         "name": "Smuttlabs Trucco",
         "style": "Saison / Farmhouse Ale",
         "abv": "10.00%",
-        "ba_score": "-"
+        "ba_score": "3.84"
       }
     ]
   },
@@ -1925,7 +1919,7 @@
         "name": "Moneytree$",
         "style": "Gose",
         "abv": "4.60%",
-        "ba_score": "4.29"
+        "ba_score": "4.3"
       },
       {
         "name": "O Trabalho",
@@ -1943,7 +1937,7 @@
         "name": "Te Nasede",
         "style": "American IPA",
         "abv": "6.00%",
-        "ba_score": "4.16"
+        "ba_score": "4.18"
       }
     ]
   },
@@ -1953,25 +1947,25 @@
         "name": "Chris Banker / Insurgente / Stone Xocoveza - Charred",
         "style": "Milk / Sweet Stout",
         "abv": "10.00%",
-        "ba_score": "4.28"
+        "ba_score": "4.24"
       },
       {
         "name": "Stochasticity Project Grainiac",
         "style": "American Amber / Red Ale",
         "abv": "8.50%",
-        "ba_score": "3.92"
+        "ba_score": "3.91"
       },
       {
         "name": "Stochasticity Project HiFi+LoFi Mixtape",
         "style": "American Strong Ale",
         "abv": "8.80%",
-        "ba_score": "3.64"
+        "ba_score": "3.63"
       },
       {
         "name": "Winter Harvest",
         "style": "Belgian Strong Pale Ale",
         "abv": "11.30%",
-        "ba_score": "4.17"
+        "ba_score": "4.15"
       }
     ]
   },
@@ -2043,7 +2037,7 @@
         "name": "Imperial Cabinet",
         "style": "American Wild Ale",
         "abv": "8.30%",
-        "ba_score": "4.14"
+        "ba_score": "4.15"
       },
       {
         "name": "Ukulele",
@@ -2139,7 +2133,7 @@
         "name": "Map Of The Sun",
         "style": "American Wild Ale",
         "abv": "5.30%",
-        "ba_score": "4.37"
+        "ba_score": "4.33"
       }
     ]
   },
@@ -2195,7 +2189,7 @@
         "name": "Mint Micro Chip",
         "style": "Milk / Sweet Stout",
         "abv": "12.20%",
-        "ba_score": "4.15"
+        "ba_score": "4.17"
       },
       {
         "name": "Port Barrel Barelywine",
@@ -2241,7 +2235,7 @@
         "name": "Good Morning",
         "style": "American Double / Imperial Stout",
         "abv": "8.40%",
-        "ba_score": "4.76"
+        "ba_score": "4.77"
       },
       {
         "name": "Impermanence",
@@ -2303,7 +2297,7 @@
         "name": "Red Chaos",
         "style": "American Wild Ale",
         "abv": "6.00%",
-        "ba_score": "-"
+        "ba_score": "3.5"
       }
     ]
   },
@@ -2369,13 +2363,13 @@
         "name": "Angel Of Darkness",
         "style": "American Wild Ale",
         "abv": "11.00%",
-        "ba_score": "4.32"
+        "ba_score": "4.33"
       },
       {
         "name": "Chocolate Covered Black Angel",
         "style": "American Wild Ale",
         "abv": "7.20%",
-        "ba_score": "4.42"
+        "ba_score": "4.38"
       },
       {
         "name": "Dark Age Bourbon Stout",
@@ -2399,7 +2393,7 @@
         "name": "Golden Angel",
         "style": "American Wild Ale",
         "abv": "7.00%",
-        "ba_score": "4.34"
+        "ba_score": "4.33"
       }
     ]
   }
