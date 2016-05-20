@@ -304,13 +304,15 @@
     });
 })();
 
+
+
 ;(function(BEERFEST, $, undefined){
 
     if( typeof angular === "undefined" ){
         return;
     }
 
-    BEERFEST.name = "ebf-2016";
+    BEERFEST.name = "microbrew-2016";
 
     // -------------------------------
     // globals
@@ -327,7 +329,9 @@
         Origami.fastclick(document.body);
     });
 
-    var BEERFEST_DATA = new Firebase("https://braican-beerfest.firebaseio.com");
+    // var BEERFEST_DATA = new Firebase("https://braican-beerfest.firebaseio.com");
+    var BEERFEST_DATA = firebase.database().ref();
+
 
     app.controller( 'BeerfestController', ['$firebaseObject', '$firebaseAuth', '$scope', function( $firebaseObject, $firebaseAuth, $scope ){
         
@@ -349,20 +353,24 @@
         //
 
         // authenticate
-        $scope.auth = $firebaseAuth( BEERFEST_DATA );
+        // $scope.auth = $firebaseAuth( BEERFEST_DATA );
+
 
         // the user object
         $scope.currentUser = null;
 
 
-        var authData = $scope.auth.$getAuth();
+        var authData = firebase.auth().currentUser;
 
-        if( authData ){
-            console.log("Logged in");
-            console.log(authData);
+        console.log( authData );
+        // var authData = $scope.auth.$getAuth();
 
-            $scope.currentUser = authData;
-        }
+        // if( authData ){
+            // console.log("Logged in");
+            // console.log(authData);
+
+            // $scope.currentUser = authData;
+        // }
 
 
         /**
@@ -383,7 +391,7 @@
     } ]); // BeerfestController
 
 
-    app.controller( 'AuthController', ['$scope', function( $scope ){
+    app.controller( 'AuthController', ['$scope', '$timeout', function( $scope, $timeout ){
 
         $scope.ctrlError = null;
 
@@ -396,28 +404,36 @@
 
             $scope.loginText = "Logging you in...";
 
-            $scope.$parent.auth.$authWithPassword({
-                email    : $scope.email,
-                password : $scope.password
-            }).then( function( user ){
-                $scope.$parent.currentUser = user;
-
-                $scope.loginText = "Log In";
-            }, function( error ){
-
-                console.error( error );
-
-                $scope.loginText = "Log In";
-
-                if( error.code && error.code === 'INVALID_PASSWORD'){
-                    $scope.ctrlError = "That password is incorrect for that user.";
-                } else if( error.code && error.code === 'INVALID_USER') {
-                    $scope.ctrlError = "There is no account with that email address in the system.";
-                } else {
-                    $scope.ctrlError = "An unknown error occurred and you could not be logged in. Please try again later."
-                }
+            firebase.auth().signInWithEmailAndPassword( $scope.email, $scope.password ).then(function( userData ){
                 
-            });
+                console.log( "Successfully logged in" );
+
+                $scope.$apply(function(){
+                    $scope.$parent.currentUser = userData;
+
+                    $scope.loginText = "Log In";
+
+                    $timeout(function(){
+                        console.log( "test" );
+                        $scope.$parent.drawerActive = false;
+                    }, 600);
+                    
+                });
+
+            }, function( error ){
+                console.log( error );
+
+                $scope.loginText = "Log In";
+
+                // if( error.code && error.code === 'INVALID_PASSWORD'){
+                //     $scope.ctrlError = "That password is incorrect for that user.";
+                // } else if( error.code && error.code === 'INVALID_USER') {
+                //     $scope.ctrlError = "There is no account with that email address in the system.";
+                // } else {
+                //     $scope.ctrlError = "An unknown error occurred and you could not be logged in. Please try again later."
+                // }
+            } );
+
         }
 
 
@@ -425,7 +441,14 @@
          * log out
          */
         $scope.logout = function(){
-            $scope.$parent.auth.$unauth();
+            firebase.auth().signOut().then(function(){
+                console.log( "Successfully logged out" );
+            }, function(error){
+                console.error( "Error logging out." );
+                console.log( error );
+                console.error( "-------" );
+            });
+            // $scope.$parent.auth.$unauth();
             $scope.$parent.currentUser = null;
         }
 
@@ -610,7 +633,6 @@
             $timeout(function(){
                 hadslist[brewery].beers[beerName].isRating = false;    
             }, 400);
-
             
 
             if( $scope.$parent.currentUser ){
@@ -637,7 +659,7 @@
                 return false;
             }
 
-            hadslist[brewery].beers[beerName].isRating = true;
+            hadslist[brewery].beers[beerName].isRating = !hadslist[brewery].beers[beerName].isRating;
         }
 
 
@@ -709,7 +731,7 @@
 
             if( $scope.$parent.currentUser ){
                 $scope.beerfestData.$save().then(function(r){
-                    r.key() === $scope.beerfestData.$id;
+                    r.key === $scope.beerfestData.$id;
                     df.resolve("Saved to Firebase");
                 }, function(error){
                     console.log("Error: " + error);
@@ -841,6 +863,8 @@
         }
 
     }]);
+
+
     app.controller( 'WishlistController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
         
         $scope.view = 'wishlist';
@@ -934,7 +958,7 @@
             var beers = $firebaseArray( ref );
 
             beers.$add( beerData ).then(function( ref ){
-                var id = ref.key();
+                var id = ref.key;
                 console.log("added record with id " + id);
                 beers.$indexFor(id); // returns location in the array
 
@@ -1020,6 +1044,9 @@
 
 
 
+
+
+
     // -------------------------------
     // regular functions
     //
@@ -1040,6 +1067,33 @@
 
     $(document).ready(function(){
         adjustAppLayout();
+
+
+        //
+        // focus for labels
+        //
+        $('.form-el input, .form-el textarea').on('focus', function(event) {
+            $(this).closest('.form-el').addClass('focus');
+        });
+
+        $('.form-el input, .form-el textarea').on('blur', function(event) {
+            var $input = $(this);
+            if( ! $input.val() ){
+                $input.closest('.form-el').removeClass('focus');
+            }
+        });
+
+        $('.trigger-focus').on('click', function(event) {
+            $('.form-el').each(function(index, el) {
+                var $el = $(this);
+
+                console.log( $('input', this ).val() );
+
+                if( $('input', this ).val() ){
+                    $el.addClass('focus');
+                }
+            });
+        });
     });
 
 
@@ -1049,7 +1103,7 @@
 
 
 
-(function(BEERFEST, $, undefined){
+;(function(BEERFEST, $, undefined){
 
 
     BEERFEST.encode = function(string){

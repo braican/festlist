@@ -3,8 +3,6 @@
    ============================================================== */
 
 
-
-
 /* --------------------------------------------
  * --media
  * -------------------------------------------- */
@@ -34,7 +32,7 @@ img, svg{
         .beerfest-logo{
             width: 100px;
             height: 12px;
-            fill: $color-white;
+            fill: $white;
         }
     }
 
@@ -52,7 +50,7 @@ img, svg{
             vertical-align: middle;
             width: 20px;
             max-height: 20px;
-            fill:$color-white;
+            fill:$white;
         }
     }
 
@@ -140,7 +138,9 @@ img, svg{
 
 .brewery{
     position: relative;
-    margin: 0;
+    margin: 10px;
+    background-color: $white;
+    box-shadow: 0 5px 10px -8px $color-gray;
 
     .brewery-name{
         padding: 16px 48px 16px 10px;
@@ -148,29 +148,15 @@ img, svg{
         cursor: pointer;
     }
 
-    & + .brewery .brewery-name:before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 10px;
-        right: 10px;
-        border-top: 1px solid $color-light-gray;
-    }
-
     &.active{
         z-index: 2;
-        margin-bottom: -1px;
-        border-bottom: 1px solid $color-gray;
 
         .brewery-name{
             font-weight: bold;
-            &:before{
-                left: 0;
-                right: 0;
-                border-top-width: 2px;
-                border-top-color: $color-gray;
-            }
+            color: $white;
+            background-color: $color-main;
         }
+
         .brewery-beers{
             display: block;
         }
@@ -179,12 +165,18 @@ img, svg{
     
 
 .brewery-beers{
-    margin: 0 14px;
+    margin: 0;
+    padding: 0;
     display: none;
 
     .beer{
         position: relative;
-        border-top: 1px solid $color-light-gray;
+        padding-right: 10px;
+
+        &:nth-child(even){
+            background-color: #f6f6f6;
+        }
+
 
         label{
             font-size: .86em;
@@ -338,10 +330,6 @@ img, svg{
         width: 100%;
         height: 2px;
         background-color: $color-light-gray;
-
-        .active &{
-            background-color: $color-main;
-        }
     }
 
     &:after{
@@ -352,7 +340,6 @@ img, svg{
     &:before{
         top: 7px;
         @include transform( rotate(90deg) );
-        @include transition( opacity .4s );
 
         .active &{
             opacity: 0;
@@ -387,18 +374,16 @@ img, svg{
 /**
  * --the autocomplete stuff
  */
-.autocomplete{
-    ul{
-        margin-top: -6px;
-        box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+.autocomplete ul{
+    margin-top: -6px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
 
-        li{
-            background: #fafafa;
-            padding: 8px;
+    li{
+        background: #fafafa;
+        padding: 8px;
 
-            &.active{
-                background: darken( #fafafa, 10%);
-            }
+        &.active{
+            background: darken( #fafafa, 10%);
         }
     }
 }
