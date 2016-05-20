@@ -39,7 +39,7 @@
 
                 <ul class="l-col-fit l-pad-left util-nav">
                     <li ng-click="drawerActive = !drawerActive"><span ng-hide="currentUser">Log in</span><span ng-show="currentUser">{{ currentUser.email }}</span></li>
-                    <li ng-hide="drawerActive" ng-click="drawerActive = true"><svg class="icon--user"><use xlink:href="#svg--icon--user"></use></svg></li>
+                    <li ng-hide="drawerActive" ng-click="drawerActive = true" class="trigger-focus"><svg class="icon--user"><use xlink:href="#svg--icon--user"></use></svg></li>
                     <li ng-show="drawerActive" ng-click="drawerActive = false"><svg class="icon--close"><use xlink:href="#svg--icon--close"></use></svg></li>
                 </ul>
             </div><!-- .branding -->
@@ -101,12 +101,16 @@
 
             <form ng-controller="AuthController">
                 <fieldset ng-hide="currentUser">
-                    <p><strong>Log in</strong></p>
+                    <div class="form-el">
+                        <input type="email" ng-model="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-el">
+                        <input type="password" ng-model="password">
+                        <label for="password">Password</label>
+                    </div>
 
-                    <input type="email" placeholder="Email" ng-model="email">
-                    <input type="password" placeholder="Password" ng-model="password">
-
-                    <div class="actionable">
+                    <div class="actionable form-el">
                         <button ng-click="login()">{{ loginText }}</button>
                     </div>
 

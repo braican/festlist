@@ -13,6 +13,7 @@ html, body, #app{
     position: relative;
     overflow: hidden;
     z-index: 2;
+    background-color: $bg-main;
 
     &:after{
         content: '';
@@ -41,7 +42,7 @@ html, body, #app{
 
 .app-drawer{
     position: fixed;
-    background: $color-white;
+    background: $bg-drawer;
     top: 0;
     bottom: 0;
     right: -100%;

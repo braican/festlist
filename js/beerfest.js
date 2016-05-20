@@ -312,7 +312,7 @@
         return;
     }
 
-    BEERFEST.name = "ebf-2016";
+    BEERFEST.name = "microbrew-2016";
 
     // -------------------------------
     // globals
@@ -391,7 +391,7 @@
     } ]); // BeerfestController
 
 
-    app.controller( 'AuthController', ['$scope', function( $scope ){
+    app.controller( 'AuthController', ['$scope', '$timeout', function( $scope, $timeout ){
 
         $scope.ctrlError = null;
 
@@ -408,16 +408,20 @@
                 
                 console.log( "Successfully logged in" );
 
-                console.log( userData );
+                $scope.$apply(function(){
+                    $scope.$parent.currentUser = userData;
 
-                $scope.$parent.currentUser = userData;
+                    $scope.loginText = "Log In";
 
-                $scope.loginText = "Log In";
+                    $timeout(function(){
+                        console.log( "test" );
+                        $scope.$parent.drawerActive = false;
+                    }, 600);
+                    
+                });
 
             }, function( error ){
                 console.log( error );
-
-
 
                 $scope.loginText = "Log In";
 
@@ -629,7 +633,6 @@
             $timeout(function(){
                 hadslist[brewery].beers[beerName].isRating = false;    
             }, 400);
-
             
 
             if( $scope.$parent.currentUser ){
@@ -656,7 +659,7 @@
                 return false;
             }
 
-            hadslist[brewery].beers[beerName].isRating = true;
+            hadslist[brewery].beers[beerName].isRating = !hadslist[brewery].beers[beerName].isRating;
         }
 
 
@@ -728,7 +731,7 @@
 
             if( $scope.$parent.currentUser ){
                 $scope.beerfestData.$save().then(function(r){
-                    r.key() === $scope.beerfestData.$id;
+                    r.key === $scope.beerfestData.$id;
                     df.resolve("Saved to Firebase");
                 }, function(error){
                     console.log("Error: " + error);
@@ -860,6 +863,8 @@
         }
 
     }]);
+
+
     app.controller( 'WishlistController', ['$firebaseObject', '$scope', function( $firebaseObject, $scope ){
         
         $scope.view = 'wishlist';
@@ -953,7 +958,7 @@
             var beers = $firebaseArray( ref );
 
             beers.$add( beerData ).then(function( ref ){
-                var id = ref.key();
+                var id = ref.key;
                 console.log("added record with id " + id);
                 beers.$indexFor(id); // returns location in the array
 
@@ -1039,6 +1044,9 @@
 
 
 
+
+
+
     // -------------------------------
     // regular functions
     //
@@ -1059,6 +1067,33 @@
 
     $(document).ready(function(){
         adjustAppLayout();
+
+
+        //
+        // focus for labels
+        //
+        $('.form-el input, .form-el textarea').on('focus', function(event) {
+            $(this).closest('.form-el').addClass('focus');
+        });
+
+        $('.form-el input, .form-el textarea').on('blur', function(event) {
+            var $input = $(this);
+            if( ! $input.val() ){
+                $input.closest('.form-el').removeClass('focus');
+            }
+        });
+
+        $('.trigger-focus').on('click', function(event) {
+            $('.form-el').each(function(index, el) {
+                var $el = $(this);
+
+                console.log( $('input', this ).val() );
+
+                if( $('input', this ).val() ){
+                    $el.addClass('focus');
+                }
+            });
+        });
     });
 
 
@@ -1068,7 +1103,7 @@
 
 
 
-(function(BEERFEST, $, undefined){
+;(function(BEERFEST, $, undefined){
 
 
     BEERFEST.encode = function(string){

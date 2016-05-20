@@ -51,8 +51,15 @@ button{
     border: 0;
     width: 100%;
     display: block;
-    padding: 8px;
-    margin: 6px 0;
+    padding: 8px 0;
+    background: none;
+    font-size: $font-size;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"]{
+    border-bottom: 2px solid $color-gray-accent;
 }
 
 input[type="email"]:focus,
@@ -62,41 +69,52 @@ button:focus{
     outline:none;
 }
 
-input[type="email"],
-input[type="password"],
-input[type="text"]{
-    background-color: #fff;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: transparent;
-    font-size: $font-size;
-}
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="text"]:focus{
-    border-bottom-color: $color-light-gray;
-}
 
-.app--more input[type="email"],
-.app--more input[type="password"],
-.app--more input[type="text"]{
-    background: #fafafa;
-    border: 1px solid $color-light-gray;
-}
 
 // hack for autocomplete stuff
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-box-shadow: 0 0 0px 1000px $bg-drawer inset;
 }
 
 button{
-    background-color: $color-main;
-    color: #fff;
+    text-align: left;
+    color: $color-main;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.form-el{
+    position: relative;
+
+    + .form-el{
+        margin-top: 20px;
+
+        &.actionable{
+            margin-top: 10px;
+        }
+    }
+
+    label{
+        position: absolute;
+        left: 0;
+        top: 8px;
+        font-size: .8em;
+        opacity: .6;
+        pointer-events:none;
+        @include transition( all .2s );
+    }
+
+    &.focus label{
+        font-size: .6em;
+        @include transform( translate( 0, -14px ));
+    }
 }
 
 .form-error{
     color: $color-main;
 }
+
+
 
 /* --------------------------------------------
  * --misc
