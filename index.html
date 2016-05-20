@@ -7,11 +7,22 @@
 
     <link rel="stylesheet" href="css/beerfest.css">
 
+
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBZRKKdCaoEiD1dOk5vycvVoLd1lUA0KxI",
+        authDomain: "braican-beerfest.firebaseapp.com",
+        databaseURL: "https://braican-beerfest.firebaseio.com",
+        storageBucket: "",
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/vendor/fastclick.min.js"></script>
     <script src="js/vendor/jquery-2.1.4.min.js"></script>
     <script src="js/vendor/angular-1.4.8.min.js"></script>
-    <script src="js/vendor/firebase.min.js"></script>
-    <script src="js/vendor/angularfire.min.js"></script>
+    <script src="js/vendor/angularfire.2.2.0.min.js"></script>
     <script src="js/beerfest.js"></script>
 
 </head>
@@ -27,7 +38,7 @@
                 <div class="l-col-fluid"><svg class="beerfest-logo"><use xlink:href="#svg--logo"></use></svg></div>
 
                 <ul class="l-col-fit l-pad-left util-nav">
-                    <li ng-click="drawerActive = !drawerActive"><span ng-hide="currentUser">Log in</span><span ng-show="currentUser">{{ currentUser.password.email }}</span></li>
+                    <li ng-click="drawerActive = !drawerActive"><span ng-hide="currentUser">Log in</span><span ng-show="currentUser">{{ currentUser.email }}</span></li>
                     <li ng-hide="drawerActive" ng-click="drawerActive = true"><svg class="icon--user"><use xlink:href="#svg--icon--user"></use></svg></li>
                     <li ng-show="drawerActive" ng-click="drawerActive = false"><svg class="icon--close"><use xlink:href="#svg--icon--close"></use></svg></li>
                 </ul>
@@ -85,7 +96,7 @@
             </header>
 
             <header ng-show="currentUser">
-                <h6>Welcome, {{ currentUser.password.email }}</h6>
+                <h6>Welcome, {{ currentUser.email }}</h6>
             </header>
 
             <form ng-controller="AuthController">

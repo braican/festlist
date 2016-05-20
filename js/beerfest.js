@@ -304,6 +304,8 @@
     });
 })();
 
+
+
 ;(function(BEERFEST, $, undefined){
 
     if( typeof angular === "undefined" ){
@@ -327,7 +329,9 @@
         Origami.fastclick(document.body);
     });
 
-    var BEERFEST_DATA = new Firebase("https://braican-beerfest.firebaseio.com");
+    // var BEERFEST_DATA = new Firebase("https://braican-beerfest.firebaseio.com");
+    var BEERFEST_DATA = firebase.database().ref();
+
 
     app.controller( 'BeerfestController', ['$firebaseObject', '$firebaseAuth', '$scope', function( $firebaseObject, $firebaseAuth, $scope ){
         
@@ -349,20 +353,24 @@
         //
 
         // authenticate
-        $scope.auth = $firebaseAuth( BEERFEST_DATA );
+        // $scope.auth = $firebaseAuth( BEERFEST_DATA );
+
 
         // the user object
         $scope.currentUser = null;
 
 
-        var authData = $scope.auth.$getAuth();
+        var authData = firebase.auth().currentUser;
 
-        if( authData ){
-            console.log("Logged in");
-            console.log(authData);
+        console.log( authData );
+        // var authData = $scope.auth.$getAuth();
 
-            $scope.currentUser = authData;
-        }
+        // if( authData ){
+            // console.log("Logged in");
+            // console.log(authData);
+
+            // $scope.currentUser = authData;
+        // }
 
 
         /**
@@ -396,28 +404,32 @@
 
             $scope.loginText = "Logging you in...";
 
-            $scope.$parent.auth.$authWithPassword({
-                email    : $scope.email,
-                password : $scope.password
-            }).then( function( user ){
-                $scope.$parent.currentUser = user;
-
-                $scope.loginText = "Log In";
-            }, function( error ){
-
-                console.error( error );
-
-                $scope.loginText = "Log In";
-
-                if( error.code && error.code === 'INVALID_PASSWORD'){
-                    $scope.ctrlError = "That password is incorrect for that user.";
-                } else if( error.code && error.code === 'INVALID_USER') {
-                    $scope.ctrlError = "There is no account with that email address in the system.";
-                } else {
-                    $scope.ctrlError = "An unknown error occurred and you could not be logged in. Please try again later."
-                }
+            firebase.auth().signInWithEmailAndPassword( $scope.email, $scope.password ).then(function( userData ){
                 
-            });
+                console.log( "Successfully logged in" );
+
+                console.log( userData );
+
+                $scope.$parent.currentUser = userData;
+
+                $scope.loginText = "Log In";
+
+            }, function( error ){
+                console.log( error );
+
+
+
+                $scope.loginText = "Log In";
+
+                // if( error.code && error.code === 'INVALID_PASSWORD'){
+                //     $scope.ctrlError = "That password is incorrect for that user.";
+                // } else if( error.code && error.code === 'INVALID_USER') {
+                //     $scope.ctrlError = "There is no account with that email address in the system.";
+                // } else {
+                //     $scope.ctrlError = "An unknown error occurred and you could not be logged in. Please try again later."
+                // }
+            } );
+
         }
 
 
@@ -425,7 +437,14 @@
          * log out
          */
         $scope.logout = function(){
-            $scope.$parent.auth.$unauth();
+            firebase.auth().signOut().then(function(){
+                console.log( "Successfully logged out" );
+            }, function(error){
+                console.error( "Error logging out." );
+                console.log( error );
+                console.error( "-------" );
+            });
+            // $scope.$parent.auth.$unauth();
             $scope.$parent.currentUser = null;
         }
 
