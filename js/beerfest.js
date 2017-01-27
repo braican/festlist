@@ -312,7 +312,7 @@
         return;
     }
 
-    BEERFEST.name = "microbrew-2016";
+    BEERFEST.name = "ebf-2017";
 
     // -------------------------------
     // globals
@@ -468,13 +468,13 @@
 
         // lets load the data in. once that's done, load the beer
         //  list and lets get the hads and wishlists
-        $scope.beerfestData.$loaded().then(function(){
+        $scope.beerfestData.$loaded().then(function( fb_data ){
             console.log("load main");
             $scope.$parent.loaded = true;
 
             // get the specific beerfest data into a variable so we
             //  can get it easier in the template.
-            $scope.beerlist = $scope.beerfestData.beerfests[BEERFEST.name].beerlist;
+            $scope.beerlist = fb_data.beerfests[BEERFEST.name].beerlist;
 
             $scope.userHads = getUserHads();
             $scope.userWishlist = getUserWishlist();

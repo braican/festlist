@@ -2,22 +2,26 @@
 
 (function(BEERFEST_ADMIN, $, undefined){
 
-    var BA_EVENT_URL = 'http://www.beeradvocate.com/micro/beer/';
+    var BA_EVENT_URL = 'https://www.beeradvocate.com/extreme/beer/';
 
     BEERFEST_ADMIN.beerObj = {};
 
     BEERFEST_ADMIN.getBeers = function(){
 
-        var brewery;
+        var _BREWERY;
 
-        function getBeerInfo(beerData, url, brewery){
-            return $.get('ajax/proxy.php', {url: 'http://www.beeradvocate.com' + url}, function(data) {
-                var ba_score = $('.BAscore_big.ba-score', data).text();
+        function getBeerScore( url ){
 
-                beerData.ba_score = ba_score;
+            var p = new Promise( function( resolve, reject ){
 
-                BEERFEST_ADMIN.beerObj[brewery]["beers"].push(beerData);
+                $.get('ajax/proxy.php', {url: 'https://www.beeradvocate.com' + url}, function(data) {
+                    var ba_score = $('.ba-ravg', data).text();
+                    resolve( ba_score );
+                });
+
             });
+
+            return p;
         }
 
         $.ajax({
@@ -31,31 +35,35 @@
 
                 console.log("The page was loaded");
 
-                $('#ba-content table tr', data).each(function(index, $tr){
+                $('#ba-content > span > div > div', data).each(function(){
 
-                    if($('h6', $tr).length > 0){
-                        brewery = BEERFEST.encode( $('h6', $tr).text() );
-                        BEERFEST_ADMIN.beerObj[brewery] = {
-                            "beers":[]
-                        };
-                    } else {
-                        var beerName  = $('td', $tr).eq(0).text(),
-                            beerStyle = $('td', $tr).eq(1).text(),
-                            beerAbv   = $('td', $tr).eq(2).text(),
-                            beerScore = $('td', $tr).eq(3).text();
+                    var $div   = $(this),
+                        tClass = $div.attr('class');
 
-                        if( BEERFEST_ADMIN.beerObj[brewery]){
-                            BEERFEST_ADMIN.beerObj[brewery]["beers"].push({
-                                "name"     : beerName,
-                                "style"    : beerStyle,
-                                "abv"      : beerAbv,
-                                "ba_score" : beerScore
-                            });    
+                    if( tClass === 'brewer' ){
+
+                        _BREWERY = BEERFEST.encode( $('a', $div).text() );
+
+                        BEERFEST_ADMIN.beerObj[ _BREWERY ] = {
+                            "beers": []
                         }
-                    }
-                });
 
-                console.log(BEERFEST_ADMIN.beerObj);
+
+                    } else {
+                        var beerName  = $('.col-1', $div).text(),
+                            beerStyle = $('.col-2', $div).text(),
+                            beerAbv   = $('.col-3', $div).text(),
+
+                            beerLink  = $('.col-1 a', $div).attr('href');
+
+                        addBeerToBrewery( _BREWERY, beerLink, {
+                            name     : beerName,
+                            style    : beerStyle,
+                            abv      : beerAbv,
+                        } );
+                    }
+
+                });
             },
             error   : function( jqXHR, textStatus, error ){
                 console.error("The page was not loaded");
@@ -64,6 +72,26 @@
         }).done(function(){
             console.log("ajax is done");
         });
+
+
+
+        /**
+         * Adds the beer to the brewery object
+         *
+         * @param string brewery  The brewery
+         * @param string beerLink URL to the BA page for this beer
+         * @param object beerData Data on the beer
+         */
+        function addBeerToBrewery( brewery, beerLink, beerData ){
+
+            getBeerScore( beerLink ).then(function( score ){
+                beerData.ba_score = score;
+
+                BEERFEST_ADMIN.beerObj[brewery].beers.push( beerData );
+
+                console.log( "added " + brewery + ' ' + beerData.name );
+            });
+        }
     }
 
 
