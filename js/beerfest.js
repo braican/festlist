@@ -362,15 +362,12 @@
 
         var authData = firebase.auth().currentUser;
 
-        console.log( authData );
-        // var authData = $scope.auth.$getAuth();
-
-        // if( authData ){
-            // console.log("Logged in");
-            // console.log(authData);
-
-            // $scope.currentUser = authData;
-        // }
+        if( authData ){
+            console.log("Logged in");
+            $scope.currentUser = authData;
+        } else {
+            console.log( "User not logged in" );
+        }
 
 
         /**
