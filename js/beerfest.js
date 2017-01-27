@@ -948,6 +948,10 @@
                     style    : "-"
                 };
 
+            if( $scope.beerName === '' || $scope.breweryName === '' ){
+                return false;
+            }
+
             $scope.submitText = "Adding the new beer...";
 
             var ref = BEERFEST_DATA.child( 'beerfests/' + BEERFEST.name + '/beerlist/' + brewery + '/beers');
