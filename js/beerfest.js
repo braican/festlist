@@ -352,9 +352,6 @@
         // auth stuff
         //
 
-        // authenticate
-        // $scope.auth = $firebaseAuth( BEERFEST_DATA );
-
 
         // the user object
         $scope.currentUser = null;
@@ -362,12 +359,15 @@
 
         var authData = firebase.auth().currentUser;
 
-        if( authData ){
-            console.log("Logged in");
-            $scope.currentUser = authData;
-        } else {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            console.log( "Logged in" );
+            $scope.currentUser = user;
+          } else {
             console.log( "User not logged in" );
-        }
+          }
+        });
+
 
 
         /**
@@ -411,7 +411,6 @@
                     $scope.loginText = "Log In";
 
                     $timeout(function(){
-                        console.log( "test" );
                         $scope.$parent.drawerActive = false;
                     }, 600);
                     
