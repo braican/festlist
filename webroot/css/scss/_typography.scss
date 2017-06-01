@@ -78,9 +78,14 @@ input:-webkit-autofill {
 
 button{
     text-align: left;
-    color: $color-main;
+    color: #fff;
     cursor: pointer;
     font-weight: 700;
+    display: inline-block;
+    width: auto;
+    background-color: $color-main;
+    padding: 10px 20px;
+    border-radius: 4px;
 }
 
 .form-el{
@@ -104,6 +109,7 @@ button{
         @include transition( all .2s );
     }
 
+    .ng-untouched.ng-valid.ng-dirty + label,
     &.focus label{
         font-size: .6em;
         @include transform( translate( 0, -14px ));

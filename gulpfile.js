@@ -7,29 +7,29 @@ var gulp       = require('gulp'),
 
 
 gulp.task('sass', function () {
-    gulp.src('./css/scss/*.scss')
+    gulp.src('./webroot/css/scss/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./webroot/css'));
 });
 
  
 gulp.task('watch', function () {
-    gulp.watch('./css/scss/*.scss', ['sass']);
-    gulp.watch('./svg/**/*.svg', ['svgstore']);
+    gulp.watch('./webroot/css/scss/*.scss', ['sass']);
+    gulp.watch('./webroot/svg/**/*.svg', ['svgstore']);
 });
 
 // svg store
 gulp.task('svgstore', function () {
-    return gulp.src('svg/**/*.svg')
+    return gulp.src('./webroot/svg/**/*.svg')
             .pipe(rename({prefix: 'svg--'}))
             .pipe( svgmin() )
             .pipe(svgstore({
                 inlineSvg: true
             }))
             .pipe( rename('icons.svg') )
-            .pipe(gulp.dest('svg/build'));
+            .pipe(gulp.dest('./webroot/svg/build'));
 });
 
 gulp.task('default', ['sass', 'svgstore']);

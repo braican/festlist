@@ -312,7 +312,7 @@
         return;
     }
 
-    BEERFEST.name = "ebf-2017";
+    BEERFEST.name = "microbrew-2017";
 
     // -------------------------------
     // globals
@@ -419,15 +419,10 @@
             }, function( error ){
                 console.log( error );
 
-                $scope.loginText = "Log In";
-
-                // if( error.code && error.code === 'INVALID_PASSWORD'){
-                //     $scope.ctrlError = "That password is incorrect for that user.";
-                // } else if( error.code && error.code === 'INVALID_USER') {
-                //     $scope.ctrlError = "There is no account with that email address in the system.";
-                // } else {
-                //     $scope.ctrlError = "An unknown error occurred and you could not be logged in. Please try again later."
-                // }
+                $scope.$apply( function(){
+                    $scope.loginText = "Log In";
+                    $scope.ctrlError = error.message;
+                });
             } );
 
         }

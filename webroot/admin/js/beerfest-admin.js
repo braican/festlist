@@ -2,7 +2,7 @@
 
 (function(BEERFEST_ADMIN, $, undefined){
 
-    var BA_EVENT_URL = 'https://www.beeradvocate.com/extreme/beer/';
+    var BA_EVENT_URL = 'https://www.beeradvocate.com/micro/beer/';
 
     BEERFEST_ADMIN.beerObj = {};
 
