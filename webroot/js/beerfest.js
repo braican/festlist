@@ -752,6 +752,14 @@
             if( $scope.$parent.currentUser && $scope.beerfestData.users ){
                 var uid = $scope.$parent.currentUser.uid;
 
+                console.log( $scope.$parent.currentUser.uid );
+
+                if( $scope.beerfestData.users[uid] === undefined ){
+                    $scope.beerfestData.users[uid] = {
+                        fests: {}
+                    };
+                }
+
                 if( $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ] === undefined ){
                     $scope.beerfestData.users[ uid ].fests[ BEERFEST.name ] = {
                         hads     : {},
