@@ -1,0 +1,57 @@
+body,
+button,
+input {
+  @include benton();
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+// Headers
+// -----------
+
+h1 {
+  @include termina-heavy();
+  @include fluid-font(22px $bp--phone, 60px $bp--desktop);
+}
+
+// Buttons
+// -----------
+
+button {
+  color: inherit;
+}
+
+.btn {
+  @include termina-heavy();
+  @include transition(background-color);
+  display: inline-block;
+  border: 0;
+  background-color: $c--yellow;
+  padding: 0.6em 0.8em;
+  font-size: $fs--sm;
+
+  &:hover {
+    background-color: $c--yellow-darker;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn--primary {
+  box-shadow: 4px 4px 0 $c--yellow-dark;
+  padding: 1em;
+
+  &:active {
+    transform: translate3d(1px, 1px, 0);
+    box-shadow: 3px 3px 0 $c--yellow-dark;
+  }
+}
+
+// Content stack
+// -----------
+
+.stack > * + * {
+  margin-top: 1em;
+}

@@ -1,27 +1,43 @@
 {
-  "name": "beerfest",
+  "name": "festlist",
   "version": "1.0.0",
   "description": "An app to track your beerfest brews",
-  "main": "index.html",
+  "private": true,
+  "author": "Nick Braica <nick.braica@gmail.com> (http://braican.com)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/braican/beerfest.git"
+    "url": "git+https://github.com/braican/festlist"
   },
-  "author": "Nick Braica <nick.braica@gmail.com> (http://braican.com)",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/braican/beerfest/issues"
+    "url": "https://github.com/braican/festlist/issues"
   },
-  "homepage": "https://github.com/braican/beerfest#readme",
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "firebase": "^6.2.3",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vuefire": "^2.0.0",
+    "vuex": "^3.0.1"
+  },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-svgmin": "^1.2.0",
-    "gulp-svgstore": "^5.0.5"
+    "@upstatement/eslint-config": "^0.4.1",
+    "@upstatement/prettier-config": "^0.3.0",
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-service": "^3.1.1",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-vue": "^2.0.2",
+    "eslint": "^5.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^9.9.0",
+    "stylelint-config-sass-guidelines": "^5.3.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }
