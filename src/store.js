@@ -6,9 +6,16 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
+    // Is the user profile visible?
+    profileVisible: false,
+
+    // Holds data for the current user, if there is one.
     currentUser: null,
   },
   mutations: {
+    setProfileVisible(state, val) {
+      state.profileVisible = val;
+    },
     setCurrentUser(state, val) {
       state.currentUser = val;
     },

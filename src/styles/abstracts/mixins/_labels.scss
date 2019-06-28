@@ -1,0 +1,6 @@
+@mixin label() {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: $fs--xs;
+  font-weight: 900;
+}

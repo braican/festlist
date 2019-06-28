@@ -1,7 +1,7 @@
 body,
 button,
 input {
-  @include benton();
+  @include roboto();
   font-size: 16px;
   line-height: 1.4;
 }
@@ -10,7 +10,11 @@ input {
 // -----------
 
 h1 {
-  @include termina-heavy();
+  @include rubik();
+  @include fluid-font(22px $bp--phone, 60px $bp--desktop);
+}
+h2 {
+  @include rubik();
   @include fluid-font(22px $bp--phone, 60px $bp--desktop);
 }
 
@@ -22,7 +26,6 @@ button {
 }
 
 .btn {
-  @include termina-heavy();
   @include transition(background-color);
   display: inline-block;
   border: 0;
@@ -36,16 +39,6 @@ button {
 
   &:focus {
     outline: none;
-  }
-}
-
-.btn--primary {
-  box-shadow: 4px 4px 0 $c--yellow-dark;
-  padding: 1em;
-
-  &:active {
-    transform: translate3d(1px, 1px, 0);
-    box-shadow: 3px 3px 0 $c--yellow-dark;
   }
 }
 

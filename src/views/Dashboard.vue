@@ -1,28 +1,27 @@
 <template>
   <div class="dash">
-    Festlist
+    <AppUtility />
+
+    <FestList />
   </div>
 </template>
 
 <script>
-import { auth, authProvider } from '@/firebase';
+import AppUtility from '@/components/AppUtility';
+import FestList from '@/components/FestList';
 
 export default {
   name: 'Login',
-  methods: {
-    login() {
-      auth.signInWithPopup(authProvider).then(() => {
-        this.$router.replace('/recipes');
-      }).catch(err => {
-        console.error(err);
-      });
-    },
-  },
+  components: { AppUtility, FestList },
 };
 </script>
 
 <style lang="scss" scoped>
 @import '../styles/abstracts/abstracts';
+
+.dash {
+  padding: $side-margin;
+}
 
 </style>
 

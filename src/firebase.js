@@ -12,4 +12,5 @@ export const auth = firebase.auth();
 export const authProvider = new firebase.auth.GoogleAuthProvider();
 
 // Collections
+export const festsCollection = db.collection('fests');
 export const usersCollection = db.collection('users');
