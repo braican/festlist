@@ -11,13 +11,26 @@ const store = new Vuex.Store({
 
     // Holds data for the current user, if there is one.
     currentUser: null,
+
+    // Store the most recently active fest.
+    activeFest: null,
   },
   mutations: {
+    initializeStore(state) {
+      if (localStorage.getItem('activeFest')) {
+        console.log(localStorage.getItem('activeFest'));
+
+        state.activeFest = localStorage.getItem('activeFest');
+      }
+    },
     setProfileVisible(state, val) {
       state.profileVisible = val;
     },
     setCurrentUser(state, val) {
       state.currentUser = val;
+    },
+    setActveFest(state, val) {
+      state.activeFest = val;
     },
   },
   actions: {

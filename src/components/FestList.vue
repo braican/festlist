@@ -4,7 +4,9 @@
     <nav class="list">
       <ul>
         <li v-for="fest in fests" :key="fest.id">
-          {{ fest.name }}
+          <router-link :to="`/fest/${fest.id}`" @click.native="setActiveFest(fest.id)">
+            {{ fest.name }}
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -22,6 +24,12 @@ export default {
   firestore: () => ({
     fests: festsCollection,
   }),
+  methods: {
+    setActiveFest(festId) {
+      localStorage.setItem('activeFest', festId);
+      this.$store.commit('setActveFest', festId);
+    },
+  },
 };
 </script>
 

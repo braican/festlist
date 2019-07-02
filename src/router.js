@@ -6,6 +6,7 @@ import 'firebase/auth';
 
 import Dashboard from '@/views/Dashboard';
 import Admin from '@/views/Admin';
+import Fest from '@/views/Fest';
 
 Vue.use(Router);
 
@@ -29,6 +30,11 @@ const router = new Router({
       meta: {
         requiresAdmin: true,
       },
+    },
+    {
+      path: '/fest/:id',
+      name: 'Fest',
+      component: Fest,
     },
   ],
 });

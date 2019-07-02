@@ -1,17 +1,18 @@
 <template>
   <aside class="profile" :class="{'visible': profileVisible}">
-    <h2>Profile</h2>
-
-    <button @click="closeProfile">
-      Close
+    <button class="close-profile" @click="closeProfile">
+      <BackArrowIcon />
+      <span>Close</span>
     </button>
 
     <div class="user">
       <Avatar :size="60" />
-      <h3>{{ currentUser.name }}</h3>
+      <h3 class="user-name">
+        {{ currentUser.name }}
+      </h3>
     </div>
 
-    <nav>
+    <nav class="profile-nav">
       <ul>
         <li>
           <button @click="logout">
@@ -27,17 +28,20 @@
 import { auth } from '@/firebase';
 import { mapState } from 'vuex';
 import Avatar from '@/components/Avatar';
+import BackArrowIcon from '@/svg/back-arrow';
 
 export default {
   name: 'Profile',
-  components: { Avatar },
+  components: { Avatar, BackArrowIcon },
   computed: {
     ...mapState(['currentUser', 'profileVisible']),
   },
   methods: {
     logout() {
       auth.signOut().then(() => {
-        this.$router.replace('login');
+        this.$router.replace('/');
+        this.$store.commit('setProfileVisible', false);
+        this.$store.commit('setCurrentUser', null);
       });
     },
     closeProfile() {
@@ -60,11 +64,56 @@ export default {
   transform: translate3d(100%, 0, 0);
   background-color: $c--gray-3;
   color: $c--white;
-  padding: $side-margin;
 
   &.visible {
     transform: translate3d(0, 0, 0);
   }
+}
+
+.close-profile {
+  position: absolute;
+  top: $side-margin;
+  right: $side-margin;
+
+  svg {
+    width: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    fill: $c--white;
+  }
+
+  span {
+    @include label();
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+
+  &:focus {
+    outline: none;
+
+    svg {
+      fill: $c--gray-e;
+    }
+  }
+}
+
+.user {
+  margin-bottom: $side-margin;
+  background-color: $c--gray-4;
+  padding: $side-margin;
+}
+
+.user-avatar {
+  border: 2px solid $c--white;
+}
+
+.user-name {
+  margin-top: 0.5em;
+  font-weight: $fw--bold;
+}
+
+.profile-nav {
+  padding: $side-margin;
 }
 
 </style>

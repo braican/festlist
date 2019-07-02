@@ -1,5 +1,5 @@
 <template>
-  <div class="dash">
+  <div class="app-wrap dash">
     <AppUtility />
 
     <FestList />
@@ -11,17 +11,13 @@ import AppUtility from '@/components/AppUtility';
 import FestList from '@/components/FestList';
 
 export default {
-  name: 'Login',
+  name: 'Dashboard',
   components: { AppUtility, FestList },
 };
 </script>
 
 <style lang="scss" scoped>
 @import '../styles/abstracts/abstracts';
-
-.dash {
-  padding: $side-margin;
-}
 
 </style>
 

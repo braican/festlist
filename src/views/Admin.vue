@@ -1,5 +1,7 @@
 <template>
-  <div class="admin">
+  <div class="app-wrap admin">
+    <AppUtility />
+
     <form @submit.prevent="addBeer">
       <h2>Add a beer</h2>
       <input v-model="name" type="text" placeholder="Name" required>
@@ -20,7 +22,7 @@
         max="5"
         step=".01"
       >
-      <button type="submit">
+      <button type="submit" class="btn add-beer-btn">
         Add beer
       </button>
     </form>
@@ -28,8 +30,11 @@
 </template>
 
 <script>
+import AppUtility from '@/components/AppUtility';
+
 export default {
   name: 'Admin',
+  components: { AppUtility },
   data() {
     return {
       name: '',
@@ -52,4 +57,17 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+
+input {
+  margin-top: 1em;
+}
+
+.add-beer-btn {
+  margin-top: 1em;
+}
+
+</style>
+
 

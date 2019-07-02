@@ -13,6 +13,9 @@ auth.onAuthStateChanged(() => {
   new Vue({
     router,
     store,
+    beforeCreate() {
+      this.$store.commit('initializeStore');
+    },
     render: h => h(App),
   }).$mount('#app');
 });
