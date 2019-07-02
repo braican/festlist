@@ -10,7 +10,7 @@
         </li>
         <li class="user-control">
           <button v-if="currentUser" class="user-data" @click="showProfileMenu">
-            <Avatar />
+            <Avatar :size="24" />
             <span class="label">Profile</span>
           </button>
 
@@ -68,7 +68,7 @@ export default {
 
 .icon {
   display: block;
-  height: 32px;
+  height: 24px;
 
   svg {
     display: block;

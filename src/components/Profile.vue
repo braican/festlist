@@ -15,6 +15,11 @@
     <nav class="profile-nav">
       <ul>
         <li>
+          <router-link to="/admin">
+            Add a beer
+          </router-link>
+        </li>
+        <li>
           <button @click="logout">
             Log out
           </button>
@@ -40,7 +45,6 @@ export default {
     logout() {
       auth.signOut().then(() => {
         this.$router.replace('/');
-        this.$store.commit('setProfileVisible', false);
         this.$store.commit('setCurrentUser', null);
       });
     },
@@ -113,7 +117,11 @@ export default {
 }
 
 .profile-nav {
-  padding: $side-margin;
+  a, button {
+    color: $c--white;
+    text-decoration: none;
+    padding: $side-margin;
+  }
 }
 
 </style>

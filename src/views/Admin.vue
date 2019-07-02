@@ -1,6 +1,5 @@
 <template>
   <div class="app-wrap admin">
-    <AppUtility />
     <section class="admin-section">
       <AddNewBeer />
     </section>
@@ -11,13 +10,12 @@
 </template>
 
 <script>
-import AppUtility from '@/components/AppUtility';
 import AddNewBeer from '@/components/AddNewBeer';
 import AddNewStyle from '@/components/AddNewStyle';
 
 export default {
   name: 'Admin',
-  components: { AppUtility, AddNewBeer, AddNewStyle },
+  components: { AddNewBeer, AddNewStyle },
 };
 </script>
 

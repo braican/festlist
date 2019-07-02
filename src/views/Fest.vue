@@ -1,7 +1,5 @@
 <template>
   <div class="app-wrap fest">
-    <AppUtility />
-
     <h2>Portland Craft Beer Fest</h2>
     <router-link to="/" class="back-btn">
       <BackArrowIcon />
@@ -11,12 +9,11 @@
 </template>
 
 <script>
-import AppUtility from '@/components/AppUtility';
 import BackArrowIcon from '@/svg/back-arrow';
 
 export default {
   name: 'Fest',
-  components: { AppUtility, BackArrowIcon },
+  components: { BackArrowIcon },
 };
 </script>
 

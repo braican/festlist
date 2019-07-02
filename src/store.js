@@ -14,6 +14,9 @@ const store = new Vuex.Store({
 
     // Store the most recently active fest.
     activeFest: null,
+
+    // The global router transition.
+    transitionName: 'slide-right',
   },
   mutations: {
     initializeStore(state) {
@@ -29,6 +32,9 @@ const store = new Vuex.Store({
     },
     setActveFest(state, val) {
       state.activeFest = val;
+    },
+    setTransitionName(state, val) {
+      state.transitionName = val;
     },
   },
   actions: {
