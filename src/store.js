@@ -18,8 +18,6 @@ const store = new Vuex.Store({
   mutations: {
     initializeStore(state) {
       if (localStorage.getItem('activeFest')) {
-        console.log(localStorage.getItem('activeFest'));
-
         state.activeFest = localStorage.getItem('activeFest');
       }
     },

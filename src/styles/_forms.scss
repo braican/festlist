@@ -1,8 +1,21 @@
 input[type='text'],
-input[type='number'] {
+input[type='number'],
+select {
   width: 100%;
   display: block;
   border: 0;
   padding: 0.5em;
+  background-color: $c--gray-f;
   border-bottom: 1px solid $c--gray-e;
+}
+
+.form-el {
+  label {
+    @include label();
+    margin-left: 0.5em;
+  }
+}
+
+.form-action {
+  margin-top: 1rem;
 }

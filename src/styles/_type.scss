@@ -1,6 +1,7 @@
 body,
 button,
-input {
+input,
+select {
   @include roboto();
   font-size: 16px;
   line-height: 1.4;
@@ -13,6 +14,7 @@ h1 {
   @include rubik();
   @include fluid-font(22px $bp--phone, 60px $bp--desktop);
 }
+
 h2 {
   @include rubik();
   @include fluid-font(22px $bp--phone, 60px $bp--desktop);

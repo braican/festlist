@@ -63,6 +63,7 @@ export default {
   left: 0;
   right: 0;
   box-shadow: 0 -1px 4px rgba($c--black, 0.2);
+  background-color: $c--white;
 }
 
 .icon {
