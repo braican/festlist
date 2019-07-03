@@ -12,7 +12,7 @@
           {{ beer.abv }}% ABV
         </p>
       </div>
-      <div class="beer-action">
+      <div v-show="currentUser" class="beer-action">
         <button class="thumb-rating thumbs-up" :class="{ active: rating > 0 }" @click="rateBeer(1)">
           <ThumbsUpIcon />
         </button>
@@ -32,7 +32,7 @@
             <span class="label">Find it:</span> Table {{ beer.location }}
           </p>
         </div>
-        <div class="more-actions">
+        <div v-show="currentUser" class="more-actions">
           <button class="save-btn" :class="{ active: saved }" @click="saveBeer">
             <span class="icon"><StarIcon /></span>
             <span class="label">{{ saved ? 'Unsave' : 'Save' }}</span>

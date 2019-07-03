@@ -1,10 +1,14 @@
 <template>
   <div class="app-wrap fest">
     <h2>Portland Craft Beer Fest</h2>
-    <router-link to="/" class="back-btn">
+    <!-- <router-link to="/" class="back-btn">
       <BackArrowIcon />
       <span class="label">Other fests</span>
-    </router-link>
+    </router-link> -->
+
+    <p v-show="!currentUser" class="anonymous-message">
+      Log in to save and rate your beers.
+    </p>
 
     <div class="beerlist">
       <ul>
@@ -26,6 +30,7 @@
 
 <script>
 import { festsCollection } from '@/firebase';
+import { mapState } from 'vuex';
 import Beer from '@/components/Beer';
 import BackArrowIcon from '@/svg/back-arrow';
 
@@ -59,6 +64,7 @@ export default {
 
       return beerlist;
     },
+    ...mapState(['currentUser']),
   },
 };
 </script>
@@ -82,6 +88,11 @@ export default {
     vertical-align: middle;
     margin-left: 6px;
   }
+}
+
+.anonymous-message {
+  margin-top: 1rem;
+  color: $c--teal;
 }
 
 .beerlist {

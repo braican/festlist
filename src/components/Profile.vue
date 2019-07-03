@@ -14,11 +14,11 @@
 
     <nav class="profile-nav">
       <ul>
-        <li>
+        <!-- <li>
           <router-link to="/admin">
             Add a beer
           </router-link>
-        </li>
+        </li> -->
         <li>
           <button @click="logout">
             Log out
