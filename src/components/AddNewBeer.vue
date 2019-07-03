@@ -22,13 +22,7 @@
       </div>
 
       <div class="form-el">
-        <input
-          id="beer-brewery"
-          v-model="brewery"
-          type="text"
-          placeholder="Brewery"
-          required
-        >
+        <BreweryInput :id="'beer-brewery'" v-model="brewery" :required="true" :breweries="breweries" />
         <label for="beer-brewery">Brewery</label>
       </div>
 
@@ -97,10 +91,11 @@
 import { festsCollection, stylesCollection  } from '@/firebase';
 import { logError } from '@/util/loggers';
 import Selectable from '@/components/Selectable';
+import BreweryInput from '@/components/BreweryInput';
 
 export default {
   name: 'AddNewBeer',
-  components: { Selectable },
+  components: { Selectable, BreweryInput },
   data() {
     return {
       fests: [],
@@ -127,11 +122,9 @@ export default {
     fest: {
       immediate: true,
       handler(festId) {
-        if (!festId) {
-          return;
+        if (festId) {
+          this.$bind('breweries', festsCollection.doc(festId).collection('breweries').orderBy('name'));
         }
-
-        this.$bind('breweries', festsCollection.doc(festId).collection('breweries').orderBy('name'));
       },
     },
   },

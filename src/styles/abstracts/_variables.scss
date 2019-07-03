@@ -10,6 +10,7 @@ $c--gray-3: #3d3d3d;
 $c--gray-2: #2b364a;
 $c--black: #222222;
 $c--teal: #4abba4;
+$c--teal-light: lighten($c--teal, 30%);
 $c--yellow: #feda6f;
 $c--yellow-darker: darken($c--yellow, 12%);
 $c--yellow-dark: darken($c--yellow, 26%);
