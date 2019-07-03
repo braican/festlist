@@ -18,7 +18,7 @@
           placeholder="Name"
           required
         >
-        <label for="beer-name">Name</label>
+        <label for="beer-name">Beer Name</label>
       </div>
 
       <div class="form-el">
@@ -66,6 +66,26 @@
         >
         <label for="beer-rating">Rating</label>
       </div>
+
+      <div class="form-el">
+        <textarea
+          id="beer-notes"
+          v-model="notes"
+          placeholder="Notes"
+        />
+        <label for="beer-notes">Notes</label>
+      </div>
+
+      <div class="form-el">
+        <input
+          id="beer-location"
+          v-model="location"
+          type="text"
+          placeholder="Location"
+        >
+        <label for="beer-location">Table/Booth number</label>
+      </div>
+
       <button type="submit" class="btn form-action">
         Add beer
       </button>
@@ -74,7 +94,8 @@
 </template>
 
 <script>
-import { festsCollection, beersCollection, breweriesCollection, stylesCollection  } from '@/firebase';
+import { festsCollection, stylesCollection  } from '@/firebase';
+import { logError } from '@/util/loggers';
 import Selectable from '@/components/Selectable';
 
 export default {
@@ -83,40 +104,88 @@ export default {
   data() {
     return {
       fests: [],
-      breweries: [],
       styles: [],
       fest: null,
+      breweries: [],
+
       name: '',
       brewery: '',
       style: '',
       abv: '',
       rating: '',
+      notes: '',
+      location: '',
     };
   },
   firestore() {
     return {
-      fests: festsCollection,
-      breweries: breweriesCollection,
-      styles: stylesCollection,
+      fests: festsCollection.where('date', '>', new Date()).orderBy('date'),
+      styles: stylesCollection.orderBy('name'),
     };
   },
+  watch: {
+    fest: {
+      immediate: true,
+      handler(festId) {
+        if (!festId) {
+          return;
+        }
+
+        this.$bind('breweries', festsCollection.doc(festId).collection('breweries').orderBy('name'));
+      },
+    },
+  },
   created() {
-    festsCollection.limit(1).get().then(snapshot => {
+    // Get the first Festival.
+    festsCollection.where('date', '>', new Date()).orderBy('date').limit(1).get().then(snapshot => {
       if (snapshot.empty) {
-        return;
+        throw new Error('There are no festivals.');
       }
 
+      // Set the first fest.
       const firstFest = snapshot.docs[0];
       this.fest = firstFest.id;
-    });
+    }).catch(logError);
   },
   methods: {
     addBeer() {
-      this.name = '';
-      this.brewery = '';
-      this.style = '';
-      this.abv = '';
-      this.rating = '';
+      const festRef = festsCollection.doc(this.fest);
+      const festBeers = festRef.collection('beers');
+
+      // We need to get the brewery first.
+      const breweryPromise = new Promise(resolve => {
+        const breweryTest = this.breweries.filter(brewery => brewery.name.toLowerCase() === this.brewery.toLowerCase());
+
+        // Add the brewery, since it doesn't exist.
+        if (breweryTest.length < 1) {
+          festRef.collection('breweries').add({ name: this.brewery }).then(docRef => resolve(docRef.id)).catch(logError);
+        } else {
+          resolve(breweryTest[0].id);
+        }
+      });
+
+      breweryPromise.then(breweryId => {
+        const beerData = {
+          name: this.name,
+          style: this.style,
+          abv: this.abv,
+          rating: this.rating,
+          notes: this.notes,
+          location: this.location,
+          brewery: breweryId,
+        };
+
+        festBeers.add(beerData).catch(logError);
+
+        // Clear form.
+        this.name = '';
+        this.brewery = '';
+        this.style = '';
+        this.abv = '';
+        this.rating = '';
+        this.notes = '';
+        this.location = '';
+      });
     },
   },
 };

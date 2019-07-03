@@ -29,6 +29,7 @@
 <script>
 import { auth, authProvider } from '@/firebase';
 import { mapState } from 'vuex';
+import { logError } from '@/util/loggers';
 import Profile from '@/components/Profile';
 import Avatar from '@/components/Avatar';
 import BottleIcon from '@/svg/bottle';
@@ -45,7 +46,7 @@ export default {
   },
   methods: {
     login() {
-      auth.signInWithPopup(authProvider).catch(err => console.error(err));
+      auth.signInWithPopup(authProvider).catch(logError);
     },
     showProfileMenu() {
       this.$store.commit('setProfileVisible', true);

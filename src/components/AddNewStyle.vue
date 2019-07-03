@@ -23,6 +23,7 @@
 
 <script>
 import { stylesCollection } from '@/firebase';
+import { logError } from '@/util/loggers';
 
 export default {
   name: 'AddNewStyle',
@@ -41,7 +42,7 @@ export default {
     addStyle() {
       stylesCollection.add({
         name: this.name,
-      }).catch(err => console.error(err));
+      }).catch(logError);
 
       this.name = '';
     },
