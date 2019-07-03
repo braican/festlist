@@ -13,10 +13,10 @@
         </p>
       </div>
       <div class="beer-action">
-        <button class="thumb-rating thumbs-up" :class="{ active: rating > 0 }" @click="rating = rating <= 0 ? 1 : 0">
+        <button class="thumb-rating thumbs-up" :class="{ active: rating > 0 }" @click="rateBeer(1)">
           <ThumbsUpIcon />
         </button>
-        <button class="thumb-rating thumbs-up" :class="{ active: rating < 0 }" @click="rating = rating >= 0 ? -1 : 0">
+        <button class="thumb-rating thumbs-up" :class="{ active: rating < 0 }" @click="rateBeer(-1)">
           <ThumbsDownIcon />
         </button>
       </div>
@@ -44,6 +44,9 @@
 </template>
 
 <script>
+import { usersCollection } from '@/firebase';
+import { logError } from '@/util/loggers';
+import { mapState } from 'vuex';
 import ThumbsUpIcon from '@/svg/thumbs-up';
 import ThumbsDownIcon from '@/svg/thumbs-down';
 import StarIcon from '@/svg/star';
@@ -64,9 +67,50 @@ export default {
       expanded: false,
     };
   },
+  computed: {
+    ...mapState(['currentUser']),
+  },
+  created() {
+    if (!this.currentUser) {
+      return;
+    }
+
+    this.beerRef = usersCollection.doc(this.currentUser.uid).collection('fests').doc(this.$route.params.id).collection('beers').doc(this.beer.id);
+
+    this.beerRef.get().then(snapshot => {
+      if (!snapshot.exists) {
+        return;
+      }
+
+      const { saved, rating } = snapshot.data();
+
+      if (saved) {
+        this.saved = saved;
+      }
+
+      if (rating) {
+        this.rating = rating;
+      }
+    });
+  },
   methods: {
     saveBeer() {
       this.saved = !this.saved;
+
+      if (!this.beerRef) {
+        return;
+      }
+
+      this.beerRef.set({ saved: this.saved }, { merge: true }).catch(logError);
+    },
+    rateBeer(rating) {
+      this.rating = this.rating === rating ? 0 : rating;
+
+      if (!this.beerRef) {
+        return;
+      }
+
+      this.beerRef.set({ rating: this.rating }, { merge: true }).catch(logError);
     },
   },
 };

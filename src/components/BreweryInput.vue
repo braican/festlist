@@ -12,7 +12,7 @@
 
     <ul v-show="isOpen" class="autocomplete-results">
       <li v-for="brewery in results" :key="brewery.id">
-        <button class="autocomplete-result" @click="setResult(brewery)">
+        <button type="button" class="autocomplete-result" @click="setResult(brewery)">
           {{ brewery.name }}
         </button>
       </li>
@@ -42,7 +42,6 @@ export default {
       breweryName: '',
       results: [],
       isOpen: false,
-      indexer: -1,
     };
   },
   mounted() {
@@ -65,7 +64,6 @@ export default {
     handleClickOutside(evt) {
       if (!this.$el.contains(evt.target)) {
         this.isOpen = false;
-        this.indexer = -1;
       }
     },
   },
@@ -89,6 +87,9 @@ export default {
 }
 
 .autocomplete-result {
+  display: block;
+  width: 100%;
+  text-align: left;
   padding: 1em;
 
   &:focus,
