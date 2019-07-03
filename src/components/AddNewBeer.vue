@@ -88,7 +88,7 @@
 </template>
 
 <script>
-import { festsCollection, stylesCollection  } from '@/firebase';
+import { festsCollection, stylesCollection } from '@/firebase';
 import { logError } from '@/util/loggers';
 import Selectable from '@/components/Selectable';
 import BreweryInput from '@/components/BreweryInput';

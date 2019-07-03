@@ -5,15 +5,61 @@
       <BackArrowIcon />
       <span class="label">Other fests</span>
     </router-link>
+
+    <div class="beerlist">
+      <ul>
+        <li v-for="brewery in beerlist" :key="brewery.id" class="brewery">
+          <h3 class="brewery-name">
+            {{ brewery.name }}
+          </h3>
+
+          <ul class="beers">
+            <li v-for="beer in brewery.beers" :key="beer.id">
+              <Beer :beer="beer" />
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
+import { festsCollection } from '@/firebase';
+import Beer from '@/components/Beer';
 import BackArrowIcon from '@/svg/back-arrow';
 
 export default {
   name: 'Fest',
-  components: { BackArrowIcon },
+  components: { Beer, BackArrowIcon },
+  data() {
+    return {
+      // The beers from firestore.
+      beers: [],
+
+      // The breweries from firestore.
+      breweries: [],
+    };
+  },
+  firestore() {
+    return {
+      beers: festsCollection.doc(this.$route.params.id).collection('beers'),
+      breweries: festsCollection.doc(this.$route.params.id).collection('breweries').orderBy('name'),
+    };
+  },
+  computed: {
+    beerlist() {
+      const beerlist = this.breweries.map(brewery => {
+        const beers = this.beers.filter(beer => beer.brewery === brewery.id);
+        return {
+          beers,
+          ...brewery,
+        };
+      });
+
+      return beerlist;
+    },
+  },
 };
 </script>
 
@@ -36,6 +82,35 @@ export default {
     vertical-align: middle;
     margin-left: 6px;
   }
+}
+
+.beerlist {
+  margin-top: 2rem;
+}
+
+.brewery {
+  position: relative;
+  margin-top: 2rem;
+  padding-top: 1rem;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3rem;
+    height: 4px;
+    background-color: $c--gray-e;
+  }
+}
+
+.brewery-name {
+  @include label($fs--xs);
+}
+
+.beers > li {
+  margin-left: -$side-margin;
+  margin-right: -$side-margin;
 }
 
 </style>
