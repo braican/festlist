@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { stylesCollection, beersCollection } from '@/firebase';
+import { stylesCollection } from '@/firebase';
 
 export default {
   name: 'AddNewStyle',
