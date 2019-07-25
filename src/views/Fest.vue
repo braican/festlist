@@ -18,19 +18,7 @@
     <Search v-if="searching" v-model="searchTerm" :onchange="handleSearch" />
 
     <div v-if="searchTerm !== ''">
-      <ul v-if="searchTerm.length > 2">
-        <li v-for="brewery in beerlistSearch" :key="brewery.id" class="brewery">
-          <h3 class="brewery-name">
-            {{ brewery.name }}
-          </h3>
-
-          <ul class="beers">
-            <li v-for="beer in brewery.beers" :key="beer.id">
-              <Beer :beer="beer" />
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <BeerList v-if="searchTerm.length > 2" :list="beerlistSearch" />
 
       <p v-else class="interstitial-search-message">
         Searching...
@@ -38,19 +26,7 @@
     </div>
 
     <div v-if="searchTerm === ''" class="beerlist">
-      <ul>
-        <li v-for="brewery in beerlist" :key="brewery.id" class="brewery">
-          <h3 class="brewery-name">
-            {{ brewery.name }}
-          </h3>
-
-          <ul class="beers">
-            <li v-for="beer in brewery.beers" :key="beer.id">
-              <Beer :beer="beer" />
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <BeerList :list="beerlist" />
     </div>
   </div>
 </template>
@@ -59,12 +35,12 @@
 import { festsCollection } from '@/firebase';
 import { mapState } from 'vuex';
 import Search from '@/components/Search';
-import Beer from '@/components/Beer';
+import BeerList from '@/components/BeerList';
 // import BackArrowIcon from '@/svg/back-arrow';
 
 export default {
   name: 'Fest',
-  components: { Search, Beer },
+  components: { Search, BeerList },
   data() {
     return {
       fest: {
@@ -159,26 +135,6 @@ export default {
 
 .beerlist {
   margin-top: 2rem;
-}
-
-.brewery {
-  position: relative;
-  margin-top: 2rem;
-  padding-top: 1rem;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3rem;
-    height: 4px;
-    background-color: $c--gray-e;
-  }
-}
-
-.brewery-name {
-  @include label($fs--xs);
 }
 
 .beers > li {
