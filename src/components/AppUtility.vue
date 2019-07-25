@@ -3,7 +3,7 @@
     <nav>
       <ul class="util-menu">
         <li class="beer-list">
-          <router-link tag="button" :to="activeFest === null ? '/' : `/fest/${activeFest}`">
+          <router-link tag="button" :to="activeFest === null ? '/' : `/fest/${activeFest}`" @click.native="clearAll">
             <span class="icon"><BottleIcon /></span>
             <span class="label">Beer List</span>
           </router-link>
@@ -12,6 +12,12 @@
           <button class="search-btn" :class="{active: searchActive}" @click="toggleSearch">
             <span class="icon"><SearchIcon /></span>
             <span class="label">Search</span>
+          </button>
+        </li>
+        <li class="starred">
+          <button class="starred-btn" :class="{active: starredActive}" @click="toggleStarred">
+            <span class="icon"><StarIcon /></span>
+            <span class="label">Starred</span>
           </button>
         </li>
         <li class="user-control">
@@ -41,13 +47,15 @@ import Avatar from '@/components/Avatar';
 import BottleIcon from '@/svg/bottle';
 import UserIcon from '@/svg/user';
 import SearchIcon from '@/svg/search';
+import StarIcon from '@/svg/star';
 
 export default {
   name: 'AppUtility',
-  components: { Profile, Avatar, BottleIcon, UserIcon, SearchIcon },
+  components: { Profile, Avatar, BottleIcon, UserIcon, SearchIcon, StarIcon },
   data: () => ({
     profileVisible: false,
     searchActive: false,
+    starredActive: false,
   }),
   computed: {
     ...mapState(['currentUser', 'activeFest']),
@@ -59,9 +67,20 @@ export default {
     showProfileMenu() {
       this.$store.commit('setProfileVisible', true);
     },
+    clearAll() {
+      this.starredActive = false;
+      this.$store.commit('setStarred', false);
+    },
     toggleSearch() {
-      this.searchActive = !this.searchActive;
-      this.$store.commit('toggleSearching');
+      const searchStatus = !this.searchActive;
+      this.searchActive = searchStatus;
+      this.$store.commit('setSearching', this.searchStatus);
+    },
+    toggleStarred() {
+      const starredStatus = !this.starredActive;
+      this.starredActive = starredStatus;
+      this.$store.commit('setStarred', this.starredStatus);
+
     },
   },
 };
@@ -104,8 +123,11 @@ export default {
     padding: 0.5rem;
 
     &:focus {
-      background-color: $c--gray-e;
       outline: none;
+    }
+
+    &:not(.active):focus {
+      background-color: $c--gray-e;
     }
   }
 
@@ -133,6 +155,7 @@ export default {
   }
 }
 
+.starred-btn.active,
 .search-btn.active {
   background-color: $c--teal-light;
 }
