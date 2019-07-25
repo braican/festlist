@@ -73,13 +73,17 @@ export default {
     },
     toggleSearch() {
       const searchStatus = !this.searchActive;
+      this.starredActive = false;
       this.searchActive = searchStatus;
-      this.$store.commit('setSearching', this.searchStatus);
+      this.$store.commit('setSearching', searchStatus);
+      this.$store.commit('setStarred', false);
     },
     toggleStarred() {
       const starredStatus = !this.starredActive;
       this.starredActive = starredStatus;
-      this.$store.commit('setStarred', this.starredStatus);
+      this.searchActive = false;
+      this.$store.commit('setStarred', starredStatus);
+      this.$store.commit('setSearching', false);
 
     },
   },

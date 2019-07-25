@@ -25,7 +25,7 @@
       </p>
     </div>
 
-    <div v-if="searchTerm === ''" class="beerlist">
+    <div v-if="searchTerm === ''" ref="mainlist" class="beerlist" :class="{'show-starred': starred}">
       <BeerList :list="beerlist" />
     </div>
   </div>
@@ -76,12 +76,27 @@ export default {
 
       return beerlist;
     },
-    ...mapState(['currentUser', 'searching']),
+    ...mapState(['currentUser', 'searching', 'starred']),
   },
   watch: {
     searching(val) {
       if (!val) {
         this.searchTerm = '';
+      }
+    },
+    starred(val) {
+      const breweries = this.$refs.mainlist.querySelectorAll('.brewery');
+
+      if (val) {
+        breweries.forEach(brewery => {
+          const savedBeers = brewery.querySelectorAll('.beer.saved');
+
+          if (savedBeers.length === 0) {
+            brewery.classList.add('hide');
+          }
+        });
+      } else {
+        breweries.forEach(brewery => brewery.classList.remove('hide'));
       }
     },
   },
@@ -137,11 +152,14 @@ export default {
   margin-top: 2rem;
 }
 
-.beers > li {
-  margin-left: -$side-margin;
-  margin-right: -$side-margin;
+</style>
+
+<style>
+.brewery.hide {
+  display: none;
 }
 
 </style>
+
 
 

@@ -51,6 +51,16 @@ export default {
 .brewery-name {
   @include label($fs--xs);
 }
+
+.beers > li {
+  margin-left: -$side-margin;
+  margin-right: -$side-margin;
+}
+
+.show-starred .beer:not(.saved) {
+  display: none;
+}
+
 </style>
 
 
