@@ -24,7 +24,7 @@ const router = new Router({
       path: '/',
       name: 'Dashboard',
       component: Dashboard,
-      // redirect: '/fest/gsTbyRNGUx9IM32Ipir9',
+      redirect: '/fest/8Cr6aA3ECFPeuxPWVSp8',
     },
     {
       path: '/admin',
