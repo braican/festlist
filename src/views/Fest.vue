@@ -1,10 +1,15 @@
 <template>
   <div class="app-wrap fest">
-    <h2>Portland Craft Beer Fest</h2>
-    <!-- <router-link to="/" class="back-btn">
-      <BackArrowIcon />
-      <span class="label">Other fests</span>
-    </router-link> -->
+    <p v-if="fest.name === ''">
+      Loading...
+    </p>
+    <header v-if="fest.name !== ''">
+      <h2>{{ fest.name }}</h2>
+      <!-- <router-link to="/" class="back-btn">
+        <BackArrowIcon />
+        <span class="label">Other fests</span>
+      </router-link> -->
+    </header>
 
     <p v-show="!currentUser" class="anonymous-message">
       Log in to save and rate your beers.
@@ -39,6 +44,10 @@ export default {
   components: { Beer, BackArrowIcon },
   data() {
     return {
+      fest: {
+        name: '',
+      },
+
       // The beers from firestore.
       beers: [],
 
@@ -48,6 +57,7 @@ export default {
   },
   firestore() {
     return {
+      fest: festsCollection.doc(this.$route.params.id),
       beers: festsCollection.doc(this.$route.params.id).collection('beers'),
       breweries: festsCollection.doc(this.$route.params.id).collection('breweries').orderBy('name'),
     };

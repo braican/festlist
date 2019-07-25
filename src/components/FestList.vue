@@ -18,12 +18,16 @@ import { festsCollection } from '@/firebase';
 
 export default {
   name: 'FestList',
-  data: () => ({
-    fests: [],
-  }),
-  firestore: () => ({
-    fests: festsCollection,
-  }),
+  data() {
+    return {
+      fests: [],
+    };
+  },
+  firestore() {
+    return {
+      fests: festsCollection,
+    };
+  },
   methods: {
     setActiveFest(festId) {
       localStorage.setItem('activeFest', festId);
