@@ -1,0 +1,1014 @@
+{
+  "beers": [
+    {
+        "trailer": 1,
+        "brewery": "Ancestry Brewing",
+        "city": "Tualatin",
+        "beer": "IPA–Sabro Hop Experimental",
+        "style": "IPA (Hazy, West Coast)",
+        "description": "A West Coast style Hazy IPA loaded with Sabro hops. With aromas of tropical fruit, this beer is a hazy juice bomb.",
+        "abv": "6.3",
+        "ibu": 55
+    },
+    {
+        "trailer": 1,
+        "brewery": "Ascendant Beer Co.",
+        "city": "Portland",
+        "beer": "Cha-Cha-Chata",
+        "style": "IPA (Horchata)",
+        "description": "Think Horchata, then drink it. Cinnamon, nutmeg, and vanilla play perfectly off of Juice yeast, the light powdery note of lactose, and the tropical hops. The brewers added pineapple and tart cherry to give it some pizzazz. The goal here is the ultimately refreshing yet bold summer drink.",
+        "abv": 5.2,
+        "ibu": 8
+    },
+    {
+        "trailer": 1,
+        "brewery": "Breakside Brewery",
+        "city": "Portland",
+        "beer": "Lucky As Helles ",
+        "style": "Lager (German)",
+        "description": "This is a classic Bavarian Lager with a hint of malt sweetness and a light kiss of hop flavor. It's meant for drinking in large quantities while enjoying pretzels, oompah music, and a sunny day.",
+        "abv": "5.1",
+        "ibu": 16
+    },
+    {
+        "trailer": 1,
+        "brewery": "Buoy Beer Co.",
+        "city": "Astoria",
+        "beer": "die Bierleichen",
+        "style": "Pilsner (German)",
+        "description": "This authentically styled North German Pils sums up why Buoy proudly crafts traditional Lager beers. The very palest Heidelberg malt and “Noble” hops yields this seamless beauty, showing mid-palate notes of graham cracker/honey, and gliding to a dry, crisp, satisfying finish. Prost to a sunny, beery July. ",
+        "abv": 5.3,
+        "ibu": 30
+    },
+    {
+        "trailer": 1,
+        "brewery": "Ecliptic Brewing",
+        "city": "Portland",
+        "beer": "LIGO Key Lime Gose",
+        "style": "Gose (Key Lime)",
+        "description": "Key lime combines with a clean malt profile and Ecliptic's house lactobacillus strain to create a refreshingly tart summer ale.",
+        "abv": "4.8",
+        "ibu": 25
+    },
+    {
+        "trailer": 1,
+        "brewery": "Collaborator Project",
+        "city": "Portland",
+        "beer": "Mango & Cash",
+        "style": "Pale (Hazy with Mango)",
+        "description": "Homebrewer and 2018 Collaborator Project winner Adam Lund wanted to pay tribute to one of his favorite styles with this brew, but decided to switch it up to a lower alcohol version for the summer. He also really likes fruited beers, so what better time than now to combine the two to create one fantastic ale! The result is a Hazy Pale Ale brewed with mango purée and a hop base of Citra, Mosaic, El Dorado, and Idaho #7.",
+        "abv": 5.5,
+        "ibu": 41
+    },
+    {
+        "trailer": 1,
+        "brewery": "Widmer Brothers Brewing",
+        "city": "Portland",
+        "beer": "Fruit It and Brut It IPA",
+        "style": "IPA (Brut Mixed Fruit)",
+        "description": "Widmer's explorations of the Brut IPA style continue with this dry and wine-like fruit punch of Bruts. A complex mix of fruits, including black currant, blackberry, blueberry, and dragon fruit, create a framework of rich flavor and tannins to balance out the dry finish of the beer. The mix of 468, 527 and Brewers Gold hops up the ante on berry intensity and easily complement the flavor of the fruit without being excessively bitter. A fruity ale yeast creates complexity with a bright ester profile to tie the other flavors together.  Lastly, the magenta/purple hue of the beer helps it to stand out from the crowd.",
+        "abv": "7.5",
+        "ibu": 40
+    },
+    {
+        "trailer": 1,
+        "brewery": "Zoiglhaus Brewing Co.",
+        "city": "Portland",
+        "beer": "Wolkenbombe",
+        "style": "IPA (Hazy, German)",
+        "description": "The Zoiglhaus brewers love working within the traditions of German brewing, but sometimes they crave a little innovation. That's why they blended throwback techniques with a modern style for an all-German Hazy IPA with heaps of citrus-forward hops of Mandarina Bavaria, Hüll Melon, and Saphir.",
+        "abv": 6.1,
+        "ibu": 38
+    },
+    {
+        "trailer": 1,
+        "brewery": "Pelican Brewing",
+        "city": "Tillamook",
+        "beer": "Jamacito",
+        "style": "Lager (Hibiscus Mojito)",
+        "description": "Take one look at this beer's hot pink color and you'll know immediately that this is not your average light Lager. With clean, noble hops and classic Lager malt as the basis, the brewery's layered an infusion of hibiscus flowers, aromatic mint, and tangy lime. Let the aromas of citrus zest, floral hops and hibiscus blossoms float serenely over a clean, biscuity malt foundation. Then, take in the herbaceous mint flavors that combine beautifully with lime tartness and an ever so slight sweet aftertaste. With a finish that is effervescent and refreshing, Jamaicito will leave you feeling in the pink!",
+        "abv": "4.8",
+        "ibu": 15
+    },
+    {
+        "trailer": 1,
+        "brewery": "Fort George Brewery",
+        "city": "Astoria",
+        "beer": "Sunrise Oatmeal Pale Ale",
+        "style": "Pale",
+        "description": "This classic Pale Ale is based on the first beer ever brewed at Fort George––Beer #1. Oatmeal was added to make it even better. Sessionable with a slight bitterness and lovely hop aroma, Sunrise OPA is great at anytime of day.",
+        "abv": "5.5",
+        "ibu": "n/a"
+    },
+    {
+        "trailer": 1,
+        "brewery": "Sunriver Brewing Co.",
+        "city": "Sunriver",
+        "beer": "Sunriver Roll",
+        "style": "Lager (Japanese Field)",
+        "description": "Sunriver's Japanese Dry Lager is the base for this Kappamaki roll-inspired beer. The brewers added fresh cucumbers, ginger, and Oregon-grown wasabi root to create a refreshing journey into Japanese cuisine.",
+        "abv": "5",
+        "ibu": 20
+    },
+    {
+        "trailer": 1,
+        "brewery": "Old Town Brewing",
+        "city": "Portland",
+        "beer": "Mango Unchained",
+        "style": "IPA (Mango)",
+        "description": "How many mangos is too many mangos? The answer is impossible to know. Old Town has packed every measurable volume of space full of sweet mango deliciousness. The result delivers a punchbowl of fresh orange blossom, ripe passion fruit and, of course, juicy mango––complemented by a welcomed hoppy presence and refreshing bite. So dodge the heat with this sweet treat and enjoy the FRUIT of Old Town's labor.",
+        "abv": 6,
+        "ibu": 50
+    },
+    {
+        "trailer": 2,
+        "brewery": "Little Beast Brewing",
+        "city": "Clackamas",
+        "beer": "Vermillion Sour",
+        "style": "Sour (American with Watermelon & Marionberries)",
+        "description": "Alive and unpasteurized, this American style Sour Ale has loads of Marionberries and watermelon juice. A bright but approachable acidity enhances the flavors of the fruits, giving way to a very drinkable and balanced beer.",
+        "abv": 5,
+        "ibu": 2.5
+    },
+    {
+        "trailer": 2,
+        "brewery": "Ninkasi Brewing",
+        "city": "Eugene",
+        "beer": "Whiteaker Series No. 10 Pineapple and Peppercorn Saison",
+        "style": "Saison (Pineapple & Szechuan Peppercorns)",
+        "description": "Made from the same mouthwatering ingredients that inspired your favorite Hawaiian shirt, this tropical Saison features pineapple juice and citrusy Szechuan peppercorns that twirl into a classic Saison to create a subtle and refreshing ale.",
+        "abv": "5.2",
+        "ibu": 17
+    },
+    {
+        "trailer": 2,
+        "brewery": "Gigantic featuring Upright Brewing",
+        "city": "Portland",
+        "beer": "Adding Lightness",
+        "style": "Lager (Hoppy)",
+        "description": "Inspired by the newly available Lotus hop, Gigantic developed an innovative procedure of using Chapman struts to simplify a crucial part of the brewing process. Greater lightness was found by combining the use of a rigidly simple malt backbone with an increased use of hop fiber. The result is a beer that offers the excitement of IPA with the easy lightness of Pilsner. No other beer handles quite so well in your glass. *A collaboration with Upright Brewing",
+        "abv": "5.8",
+        "ibu": 28
+    },
+    {
+        "trailer": 2,
+        "brewery": "Kells Brew Pub",
+        "city": "Portland",
+        "beer": "Hawaiian Punch ",
+        "style": "Pale (Hazy)",
+        "description": "A delightful blend of two fantastic hops––Mandarina Bavaria and some premium Mosaic––leads to a nose of pineapple, mandarin, and papaya in this Hazy Pale Ale, keeping you feeling fruity fresh on the hottest of days. ",
+        "abv": "5.5",
+        "ibu": 22
+    },
+    {
+        "trailer": 2,
+        "brewery": "Oakshire Brewing",
+        "city": "Eugene",
+        "beer": "Smoke'N Hell",
+        "style": "Lager (Smoked Helles with Spruce Tips)",
+        "description": "This is a Northwest interpretation of the classic Smoked Lager. It starts with a traditional base of German Pilsner and specialty malts, including beech smoked malt. Freshly picked spruce tips were then smoked and added to the kettle with even more fresh (unsmoked) spruce tips. The result is a Lager packed with fresh citrus character from the tips, with the classic Lager character and a gentle hit of smokiness. Smoke'N Hell is reminiscent of the valleys and forests of Oregon throughout the summer!",
+        "abv": "5.1",
+        "ibu": 20
+    },
+    {
+        "trailer": 2,
+        "brewery": "Lompoc Brewing",
+        "city": "Portland",
+        "beer": "Another Day In Lomparadise",
+        "style": "Wheat (Hazy Blood Orange)",
+        "description": "This hazy wheat was brewed with Strata, Simcoe, Citra and Lemon Drop hops, all being added at the end of the boil. Blood orange purée was added in the brite tank. This light ale has a big citrus aroma and is slightly fruity, offering an easy drinking beer with no bitterness.",
+        "abv": 5,
+        "ibu": 0
+    },
+    {
+        "trailer": 2,
+        "brewery": "Kobold Brewing",
+        "city": "Redmond",
+        "beer": "Kobold Raspberry Weizen",
+        "style": "Wheat (American with Raspberries)",
+        "description": "Evidence of the first beer brewed with wheat dates back to 800 B.C. to Eastern Germany in a town named Kulmbach. Weissen translates to wheat in German and this beer is brewed with more than 40% wheat. Kobold added raspberry purée to give it a twist with a great fruit flavor and a slight purple hue. A light and refreshing beer for a hot summer day. ",
+        "abv": 4.7,
+        "ibu": 20
+    },
+    {
+        "trailer": 2,
+        "brewery": "Binary Brewing Co.",
+        "city": "Portland",
+        "beer": "@Wit's End",
+        "style": "Wit (Belgian)",
+        "description": "For those @Wit's End looking for something to believe in, this crisp, tart, spicy, and citrusy beer will deliver. It's phenomenal. ",
+        "abv": "5.3",
+        "ibu": 1
+    },
+    {
+        "trailer": 2,
+        "brewery": "Allegory Brewing",
+        "city": "McMinnville",
+        "beer": "Strata Lager",
+        "style": "Lager (Hoppy)",
+        "description": "This is a fruity and bright Hoppy Lager featuring Strata hops. This was a collaboration with 54°40′ Brewing Company and Crosby Hop Farm. ",
+        "abv": 5,
+        "ibu": 25
+    },
+    {
+        "trailer": 2,
+        "brewery": "Great Notion Brewing ",
+        "city": "Portland ",
+        "beer": "Double Stack",
+        "style": "Stout (Coffee & Maple) ",
+        "description": "Double Stack is Great Notion's Imperial Breakfast Stout fermented with an irresponsible amount of maple syrup and aged on whole bean Sumatra from Clutch Coffee. ",
+        "abv": "11",
+        "ibu": 0
+    },
+    {
+        "trailer": 2,
+        "brewery": "Cascade Brewing",
+        "city": "Portland",
+        "beer": "Coral Horizon",
+        "style": "Sour (Barrel Aged Blond Ale with Grapefruit Zest, Hibiscus & Ginger)",
+        "description": "Coral Horizon is a blend of sour blond ales aged in oak wine barrels for up to 16 months with late infusions of grapefruit zest, hibiscus tea and freshly chopped ginger root. Pouring a brilliant coral-red hue reminiscent of a summer sunset, this highly approachable, lightly soured seasonal release offers both complexity and refreshment, perfect for the hottest days of the year.  ",
+        "abv": "6",
+        "ibu": 5
+    },
+    {
+        "trailer": 2,
+        "brewery": "Arch Rock Brewing Co.",
+        "city": "Gold Beach",
+        "beer": "Arch Rock Belgian Style Wit",
+        "style": "Wit (Belgian Traditional)",
+        "description": "This beer was fermented using traditional Belgian Wit yeast, an unmalted wheat that gives this beer its haze and mouthfeel. The aroma is slightly fruity and if you can’t place the subtle spice, it’s the fresh orange zest and coriander added to the brew. A great summer beer!",
+        "abv": "5.3",
+        "ibu": 15
+    },
+    {
+        "trailer": 3,
+        "brewery": "McMenamins",
+        "city": "Portland",
+        "beer": "Rosé City Brut IPA",
+        "style": "IPA (Brut Hibiscus)",
+        "description": "This IPA is dry and light bodied with a champagne-like effervescence. Dried hibiscus flowers and Centennial hops were added to the kettle after the boil to contribute a beautiful rose color and floral aroma with little bitterness. Amarillo hops were added at the end of fermentation for that extra bit of hop character. ",
+        "abv": "6.6",
+        "ibu": 7
+    },
+    {
+        "trailer": 3,
+        "brewery": "RiverBend Brewing",
+        "city": "Bend",
+        "beer": "Capri Fun",
+        "style": "Imperial IPA (Milkshake with Kiwi & Strawberry)",
+        "description": "This Imperial Milkshake IPA offers a bright tropical fruit aroma backed up by a big dry hop of Mosaic and tons of fresh strawberry and kiwi. It's brewed with oats in the mash, lactose in the kettle, and just a touch of vanilla for a smooth creamy body.",
+        "abv": "8.2",
+        "ibu": 65
+    },
+    {
+        "trailer": 3,
+        "brewery": "Von Ebert Brewing",
+        "city": "Portland ",
+        "beer": "Fruits and Roots ",
+        "style": "Farmhouse Ale (Kiwi, Cucumber & Licorice Root)",
+        "description": "This is a delicate Farmhouse Ale with the addition of kiwi, cucumber, and licorice root. ",
+        "abv": "5.4",
+        "ibu": 10
+    },
+    {
+        "trailer": 3,
+        "brewery": "Rusty Truck Brewing Co.",
+        "city": "Lincoln City",
+        "beer": "Orange You Glad I Didn't Say Banana? Orange Hefeweizen",
+        "style": "Hefeweizen (Orange)",
+        "description": "Brewed with German BEST wheat and pilsen malts for a medium body in Rusty Truck's small batch brewery overlooking the Siletz Bay, this German classic is made with a summer twist (of orange that is). Look for a robust head with aromas of orange, earthy cloves, and fresh baked bread.\n",
+        "abv": "5.6",
+        "ibu": 14.9
+    },
+    {
+        "trailer": 3,
+        "brewery": "Caldera Brewing Co.",
+        "city": "Ashland",
+        "beer": "Caldera Mother Pucker Chocolate Raspberry Sour",
+        "style": "Sour (Chocolate Raspberry)",
+        "description": "Caldera Mother Pucker Chocolate Raspberry Sour is a kettle sour ale brewed with a pure lactobacillus yeast. Peak of ripeness red raspberries are added during fermentation for the ultimate raspberry experience. Natural liquid chocolate is added to the brite tank post fermentation.",
+        "abv": "6.7",
+        "ibu": 18
+    },
+    {
+        "trailer": 3,
+        "brewery": "Oregon City Brewing ",
+        "city": "Oregon City",
+        "beer": "Blonde On Blonde",
+        "style": "Blonde (Barrel Aged Belgian)",
+        "description": "The brewers at OCB are pretty big fans of Bob Dylan, so they decided to name this barrel-aged Belgian Blonde after one of his seminal albums. In one raucous recording session, they laid down tracks of white pepper, peaches, orange blossom, and honey, and backed them with vocals of faint oak, grape must, and vanilla. It tastes wonderful, and after one sip you'll be saying \"I Want You.\" Then, as quick as you know it, it's the 4th Time Around.",
+        "abv": 7.5,
+        "ibu": 30
+    },
+    {
+        "trailer": 3,
+        "brewery": "Monkless Belgian Ales",
+        "city": "Bend",
+        "beer": "Grapefruit Shepplekofeggan",
+        "style": "Wit (Grapefruit)",
+        "description": "A twist on a classic Wit, this beer is brewed with generous portions of wheat and oats, spiced with coriander and fresh orange zest, and finished with a grapefruit purée. This beer presents with a bite of tart, a burst of tang, and a crisp and fruity finish. Unfiltered and cloudy in nature, yet clean and refreshing.",
+        "abv": "5.4",
+        "ibu": 16
+    },
+    {
+        "trailer": 3,
+        "brewery": "MadCow Brewing Co.",
+        "city": "Gresham",
+        "beer": "Riverview Cream Ale",
+        "style": "Cream Ale",
+        "description": "This Cream Ale is brewed in the American tradition of balancing the malt complexity. It is slightly sweet with a creamy mouthfeel. The refreshing body has a crisp, clean finish and is a bit fruity and satisfying, perfect for those summer days whether it be on the river, by the pool, or just soaking in the sun.",
+        "abv": "5",
+        "ibu": 15
+    },
+    {
+        "trailer": 3,
+        "brewery": "Public Coast Brewing Co.",
+        "city": "Cannon Beach",
+        "beer": "’67 Blonde Ale",
+        "style": "Blonde",
+        "description": "It’s an easy drinker––clean, crisp, and enjoyed by pretty much everyone. Treated and hopped like a Pilsner, this Blonde Ale pairs well with everything from hot dogs to caviar.",
+        "abv": 5,
+        "ibu": 19
+    },
+    {
+        "trailer": 3,
+        "brewery": "Xicha Brewing Co.",
+        "city": "Salem",
+        "beer": "Palomita",
+        "style": "Gose (Grapefruit)",
+        "description": "A brew inspired by the popular Mexican cocktail, Paloma, this Gose is refreshing, tart, and sessionable. The style's natural spicy coriander, acidity, and salinity balance the sweetness added by grapefruit during secondary fermentation. ",
+        "abv": 3,
+        "ibu": 10
+    },
+    {
+        "trailer": 3,
+        "brewery": "Deluxe Brewing Co.",
+        "city": "Albany",
+        "beer": "Resurrection Pilsner",
+        "style": "Pilsner (Pre-Prohibition)",
+        "description": "A hoppy, thirst-quenching Pilsner, this pre-Prohibition style beer was brewed with traditional Pilsner malt and flaked maize to create a full-flavored Lager. Mt. Hood and Santiam hops add moderate spice and bitterness.",
+        "abv": "5.5",
+        "ibu": 35
+    },
+    {
+        "trailer": 3,
+        "brewery": "Porter Brewing Co.",
+        "city": "Redmond",
+        "beer": "Buggy Bitter",
+        "style": "Bitter (Best)",
+        "description": "A Best Bitter that is not bitter! Instead, the bitterness is low with earthiness and dark fruit esters. This beer features bready, biscuity, and lightly toasty malt flavors and some slight toffee hints. ",
+        "abv": "4.3",
+        "ibu": 31
+    },
+    {
+        "trailer": 4,
+        "brewery": "Coin Toss Brewing",
+        "city": "Oregon City",
+        "beer": "Hot Cakes",
+        "style": "Stout (American-esque with Chocolate & Habanero)",
+        "description": "Enjoy this Sweet Stout brewed with cocoa nibs and double chocolate cupcakes, then dry hopped on roasted habanero peppers.",
+        "abv": "6.5",
+        "ibu": 24
+    },
+    {
+        "trailer": 4,
+        "brewery": "Laurelwood Brewing Co.",
+        "city": "Portland",
+        "beer": "Tom from Myspace",
+        "style": "IPA (Hazy, Northwest with Guava)",
+        "description": "Can this IPA be in your Top 8? This Hazy IPA is bursting with juicy goodness from an addition of fresh guava, complemented by dank, tropical hops. The abundance of fruity flavor and aroma and soft creamy mouthfeel are perfectly balanced by a gentle hop bitterness.",
+        "abv": "5",
+        "ibu": 0
+    },
+    {
+        "trailer": 4,
+        "brewery": "pFriem Family Brewers",
+        "city": "Hood River",
+        "beer": "Landbier",
+        "style": "Lager (Keller Landbier) ",
+        "description": "pFriem Landbier was made just for the Oregon Brewers Festival and it’s a perfect companion for summer days. Aromas of fresh sourdough, candied lemon, and white pepper complement notes of bright pear and white grape. Take this spun gold Lager on a picnic in the Gorge or anywhere the summer sun may take you. ",
+        "abv": 5,
+        "ibu": 25
+    },
+    {
+        "trailer": 4,
+        "brewery": "Stickmen Brewing Co.",
+        "city": "Lake Oswego",
+        "beer": "Mosaingo!",
+        "style": "Gose (Mango & Dry Hopped)",
+        "description": "After a brief kettle sour, this refreshing and fruity Gose was brewed with Jacobsen Sea Salt, fermented with mango, and dry hopped with Mosaic. It's mildly tart, tropical, fruity, and crisp.",
+        "abv": "5.4",
+        "ibu": 11
+    },
+    {
+        "trailer": 4,
+        "brewery": "Mazama Brewing",
+        "city": "Corvallis",
+        "beer": "Razzle Weisse",
+        "style": "Berliner Weisse (Raspberry, Cucumber & Meyer Lemon)",
+        "description": "A delicious, quenching summer drink full of raspberry for sweetness, cucumber for freshness, and lemon for tartness. Best enjoyed in good company. ",
+        "abv": 4.5,
+        "ibu": 13
+    },
+    {
+        "trailer": 4,
+        "brewery": "Double Mountain Brewery",
+        "city": "Hood River",
+        "beer": "Coyote Sunset IPA",
+        "style": "IPA (West Coast)",
+        "description": "The color of this West Coast IPA reflects the gaze of a coyote staring at you as the sun sets on the high desert of Oregon.  He's surprised to see you and, like you, thirsty. Teaming with juicy ripe fruit and a hope of rain, this beer is quenching, with a bite of kind herb and citrus rind. ",
+        "abv": "6.7",
+        "ibu": 45
+    },
+    {
+        "trailer": 4,
+        "brewery": "Upright Brewing featuring Gigantic Brewing",
+        "city": "Portland",
+        "beer": "Flora Fantastica",
+        "style": "Saison (Botanical Blend)",
+        "description": "Blend of Flora Rustica with a vermouth barrel version of Gigantic's Fantastic Voyage, this collaborative saison shows a wide botanical expression and a layered, yeast driven profile. A one-time project specific to the OBF, Flora Fantastica is refreshingly cool and complex.  *A collaboration with Gigantic",
+        "abv": "5.8",
+        "ibu": 21
+    },
+    {
+        "trailer": 4,
+        "brewery": "Boneyard Beer",
+        "city": "Bend",
+        "beer": "Speedy Goseales",
+        "style": "Gose (German)",
+        "description": "This German style Sour Ale is pitched with lactobacillus in the brew kettle and allowed to naturally sour for approximately 24 hours. When the desired level of tartness is achieved, a small amount of sea salt, lime zest and coriander are added. The beer is then further fruited with lime purée and more fresh zest in conditioning, creating a tart, crisp and savory beverage. Speedy will catch your taste buds off guard and keep you guessing where the complexity of flavors come from. ¡Andale!",
+        "abv": "4.5",
+        "ibu": 5
+    },
+    {
+        "trailer": 4,
+        "brewery": "GoodLife Brewing Co.",
+        "city": "Bend",
+        "beer": "Brewer's Breakfast",
+        "style": "Wheat (Grapefruit)",
+        "description": "An American-style Wheat Ale, dry hopped with Citra hops and fermented with grapefruit.",
+        "abv": "6.2",
+        "ibu": 25
+    },
+    {
+        "trailer": 4,
+        "brewery": "Terminal Gravity Brewing",
+        "city": "Enterprise",
+        "beer": "Hi My Name Is",
+        "style": "IPA (Milkshake)",
+        "description": "Oats and honey malt provide the base, while a generous amount of Citra, Mosaic and Azacca hops supply a floral aroma and citrus finish. This IPA was brewed with lactose and a touch of vanilla to give it the classic milkshake body, with hints of orange creamsicle on the finish.",
+        "abv": 8,
+        "ibu": 45
+    },
+    {
+        "trailer": 4,
+        "brewery": "Wild Ride Brewing",
+        "city": "Redmond",
+        "beer": "Tarty to the Party Cherry Lemon Sour Ale",
+        "style": "Sour (Cherry Lemon)",
+        "description": "This Sour Ale is kettle soured, with lemons added to the brew to give extra tartness. Cherries are also added to create a touch of sweetness and complexity in the beer.  These tart and sweet flavors blend well and are prominent in the mouthfeel.",
+        "abv": "5.5",
+        "ibu": 10
+    },
+    {
+        "trailer": 5,
+        "brewery": "Ram Restaurant & Brewery",
+        "city": "Salem",
+        "beer": "Bubble Berry Brut IPA",
+        "style": "IPA (Brut Blackberry)",
+        "description": "This one of a kind Brut IPA takes a new style to a new level, creating a magnificent and refreshing blend of hops and fruit! Strong floral and citrus hop aromas hit the nose, followed by underlying berry notes. The fruity and sweet taste of Oregon grown blackberries is complemented with a burst of hop flavor and balanced by a mildly bitter background. Brewed in the Brut style, this IPA has a crisp and light body that finishes dry and bubbly. ",
+        "abv": 6.5,
+        "ibu": 35
+    },
+    {
+        "trailer": 5,
+        "brewery": "Elk Horn Brewery",
+        "city": "Eugene",
+        "beer": "Fruity Pebbles Milkshake IPA",
+        "style": "IPA (Milkshake with Fruity Pebbles & with Mixed Fruit)",
+        "description": "This Milkshake IPA is brewed with 100 lbs. of Fruity Pebbles cereal in the mash and conditioned on 800 lbs. of blueberries, tangerines, and cherries. It's then dry hopped with Citra and kept hazy with lactose.",
+        "abv": "6.3",
+        "ibu": 45
+    },
+    {
+        "trailer": 5,
+        "brewery": "Sasquatch Brewing Co.",
+        "city": "Portland",
+        "beer": "Passion of the Rice",
+        "style": "Lager (Rice with Passion Fruit)",
+        "description": "This is a crisp, crushable Rice Lager with subtle noble hop bitterness. Brewed with traditional Pilsner malt and flaked rice with a touch of acid malt for a dry, zingy finish. Fermented with over 450-pounds of passion fruit. Rice is risen. ",
+        "abv": "5.3",
+        "ibu": 12
+    },
+    {
+        "trailer": 5,
+        "brewery": "Coalition Brewing Co.",
+        "city": "Portland",
+        "beer": "Color Me Kush",
+        "style": "IPA (Terpene Infused)",
+        "description": "A classic IPA at with a one-of-a-kind twist, Color Me Kush strives to showcase unique flavors and aromatics not found in any other beer.  The flavor and aroma, AKA the \"terpene profile\" of Marionberry Kush, reconstructed from non-cannabis sources, is infused into the beer lending notes of pine and berries in this balanced, delicious treat. ",
+        "abv": "6",
+        "ibu": 60
+    },
+    {
+        "trailer": 5,
+        "brewery": "Freebridge Brewing",
+        "city": "The Dalles",
+        "beer": "Cherry Heights",
+        "style": "Berliner Weisse (Oregon Tart Cherry)",
+        "description": "A regional spin on a classic German Berliner Weisse, \"Cherry Heights\" incorporates a menagerie of local ingredients, including Wasco County unmalted winter wheat, Hood River Valley tart cherries, and Nancy's Yogurt for the lactobacillus culture. This \"kettle soured\" Berliner is delicately tart with layered notes of vanilla, biscuit, and honey. Best consumed under a stunning Oregon blue sky.",
+        "abv": 4,
+        "ibu": 0
+    },
+    {
+        "trailer": 5,
+        "brewery": "Funhouse Brews",
+        "city": "Portland",
+        "beer": "Mt. Hood Snowcone",
+        "style": "Sour (Kettle with Marionberry)",
+        "description": "A lightly kettle soured ale finished with a blend of Belgian Abby yeasts and back sweetened with Oregon grown Marionberry purée for that perfect balance of sweet, tart, and sour.  ",
+        "abv": "5",
+        "ibu": 32
+    },
+    {
+        "trailer": 5,
+        "brewery": "Evasion Brewing Co.",
+        "city": "McMinnville",
+        "beer": "Michelada",
+        "style": "Lager (Lime & Chili)",
+        "description": "Basically a Mexican beer cocktail, this crisp, low-alcohol Lager is made with Tajín chili salt and Mexican limes. The mild heat, salt, and tart lime juice have been balanced to be as refreshing as possible for the hot summer weather.",
+        "abv": "3.7",
+        "ibu": 0
+    },
+    {
+        "trailer": 5,
+        "brewery": "GMAN Brewery ",
+        "city": "Tualatin ",
+        "beer": "Toucan Jam",
+        "style": "Pale (Guava & Mango)",
+        "description": "A medium-bodied Pale Ale featuring a hoppy tropical aroma and flavor with a burst of guava and mango. Brewed with a Lager yeast so the finish is crisp, clean, and refreshing.",
+        "abv": "5.7",
+        "ibu": 35
+    },
+    {
+        "trailer": 5,
+        "brewery": "Immersion Brewing",
+        "city": "Bend",
+        "beer": "Mango Tango",
+        "style": "Blond (Mango)",
+        "description": "It's hot...really hot. Mango Tango will quench that thirst and cool you down. This Mango Blond Ale is light and crisp with a mango twist. The subdued hop character pairs perfectly with the subtle sweetness of the mango. Drink up and enjoy the sun. ",
+        "abv": "5.1",
+        "ibu": 22
+    },
+    {
+        "trailer": 5,
+        "brewery": "Santiam Brewing featuring Anthem Cider",
+        "city": "Salem",
+        "beer": "Captain Pit, The Cherry Pirate",
+        "style": "Snakebite (Stout & Cider)",
+        "description": "Snakebites are half beer, half cider. This version is a blend of Santiam's Pirate Stout, a tropical Export Strength Stout aged in rum barrels and finished with coconut, and Anthem Cherry, a sweet cherry cider.",
+        "abv": 6.2,
+        "ibu": 18
+    },
+    {
+        "trailer": 5,
+        "brewery": "Weekend Beer Co.",
+        "city": "Grants Pass",
+        "beer": "Kumquat and Get It!",
+        "style": "IPA (Kumquat)",
+        "description": "A cross between Northeast and Northwest, this IPA is bursting with big citrus and tropical fruit flavors and aromas from El Dorado, Amarillo, and Mandarina Bavaria hops, along with whole kumquats. Pale, Pilsner, and Munich malts provide just enough for a soft, subtle malt character. Finishing with an easy, crisp bitterness, you’ll be wanting more. Kumquat and get it!",
+        "abv": 6.2,
+        "ibu": 50
+    },
+    {
+        "trailer": 5,
+        "brewery": "Wolf Tree Brewery",
+        "city": "Seal Rock",
+        "beer": "King of the Forest",
+        "style": "Oud Bruin (Spruce Tips)",
+        "description": "King of the Forest is a blended Oud Bruin style ale made with 50% Pinot Noir barrel aged Spruce Tip Ale and 50% fresh Spruce Tip Ale. This is an easy drinking, crisp Oud Bruin that's slightly sour and fruity. ",
+        "abv": "6.5",
+        "ibu": 0
+    },
+    {
+        "trailer": 6,
+        "brewery": "Rock Bottom Brewery",
+        "city": "Portland",
+        "beer": "Cezanne Saison",
+        "style": "Saison (Strawberry & Honey)",
+        "description": "Cezanne Saison features a sweet forefront with a refreshing finish. Flavors of honey and strawberries, with undertones of citrus and clove, lead to a floral and dry, slightly tart finish.",
+        "abv": 6.3,
+        "ibu": 27
+    },
+    {
+        "trailer": 6,
+        "brewery": "Gateway Brewing",
+        "city": "Portland",
+        "beer": "Gateway Summer Stout",
+        "style": "Stout (Summer)",
+        "description": "Rich and malty meets light and easy: Gateway took its high-alcohol Oatmeal Stout and lightened the OG and the dark malt bitterness to make a nicely balanced Summer Stout.",
+        "abv": 6.8,
+        "ibu": 40
+    },
+    {
+        "trailer": 6,
+        "brewery": "Scout Beer",
+        "city": "Portland",
+        "beer": "Rock Out With Your Guac Out",
+        "style": "Lager (Mexican)",
+        "description": "The perfect summer drink that will quench your thirst and satisfy your snack cravings. This Mexican Lager is brewed with salt, lime, cilantro, and jalapeno for a guacamole twist.",
+        "abv": 5,
+        "ibu": 20
+    },
+    {
+        "trailer": 6,
+        "brewery": "13 Virtues Brewing",
+        "city": "Portland",
+        "beer": "Guavalicious",
+        "style": "Pale (Guava & Tangerine)",
+        "description": "This experimental Pale Ale is a Guavalicious fruit explosion! Imperial's \"Loki\" yeast strain provides notes of stone fruit, peach and melon, while massive Mosaic hop additions pile on the citrus and mango. To send this one out of the park, the brewers added 20 lbs. per barrel of guava and tangerine fruit, resulting in a tropical brew that's begging to meet you.",
+        "abv": 7,
+        "ibu": 34
+    },
+    {
+        "trailer": 6,
+        "brewery": "Bevel Craft Brewing",
+        "city": "Bend",
+        "beer": "First Run IPA",
+        "style": "IPA (American)",
+        "description": "This American IPA is the epitome of balance. Simcoe hops lead the way to a slight citrusy, light piney hop profile with a kick of bitterness to round it all out.",
+        "abv": "6.8",
+        "ibu": 45
+    },
+    {
+        "trailer": 6,
+        "brewery": "Ferment Brewing Co.",
+        "city": "Hood River",
+        "beer": "Belgian IPA",
+        "style": "IPA (Belgian) ",
+        "description": "Why it's so damned good: A European grain bill, Belgian Abbey yeast, and a blend of European and Pacific Northwest hops come together to create a complex ale: bold and fruity yet dry and refreshing. Proost!   ",
+        "abv": 7,
+        "ibu": 35
+    },
+    {
+        "trailer": 6,
+        "brewery": "Three Mugs Brewing Co.",
+        "city": "Hillsboro ",
+        "beer": "It Takes Tea To Mango, Honey",
+        "style": "Honey Ale (Mango & Green Tea)",
+        "description": "Grab your tea bags and buckle up, Honey! We mango not make it out...We have incoming fire from our friendlies at Oregon Fruit Products, Stash Tea, Crosby Hop Farm, Imperial Yeast, and Pure Oregon Malt from Great Western Malting. Hunker down for the assault coming for your taste buds!",
+        "abv": 6.9,
+        "ibu": 20
+    },
+    {
+        "trailer": 6,
+        "brewery": "Lucky Labrador Brewpub",
+        "city": "Portland",
+        "beer": "Griffen's Guava Passionfruit Gose",
+        "style": "Gose (Guava & Passionfruit)",
+        "description": "Inspired by the Goses of Germany, this fruit Gose was made for its summer drinkability. The beer is kettle soured and brewed with Himalayan sea salt and corriander, then guava and passion fruit are added to the brite tank at a rate of 18 lbs. per barrel. The hops are Sterling and the malts are Pilsner, wheat and acidulated. The brewers added the fruit in the brite to offset the natural sourness  of the base beer. This beer is extremley quaffable and its fruit-forward nature make it a perfect hot weather beverage.",
+        "abv": "4.5",
+        "ibu": 8
+    },
+    {
+        "trailer": 6,
+        "brewery": "Deep Space Brewing",
+        "city": "Hillsboro",
+        "beer": "Wil's wHeatN-Berry: The Next Generation",
+        "style": "Wheat (Berry)",
+        "description": "The data is in...and this Next Generation is heatin' things up! Just like the brewery's well loved Wil's WheatN-Berry, this beer is full of raspberries and blackberries put through the crusher. But this time, the brewers added just the right amount of red habaneros and limes to the beer to make it Out of This World. No need to be a Trekkie to enjoy this beer. It's just what the doctor ordered. ",
+        "abv": 4.9,
+        "ibu": 9
+    },
+    {
+        "trailer": 6,
+        "brewery": "LABrewatory",
+        "city": "Portland",
+        "beer": "TepaCzech",
+        "style": "Pilsner (Tepache Inspired)",
+        "description": "Your perfect summer beer has arrived! The LABrewatory brewers paired the crisp, dry flavors of a Pilsner with the flair of Mexican Pineapple Tepache in this refreshing brew. Subtle spices of cinnamon and clove paired with pineapple complement the light fruity cleanliness of a classic Pilsner, making this the perfect pint for your backyard, barbecue or boat outing. Cheers to summer!",
+        "abv": 6.2,
+        "ibu": 30
+    },
+    {
+        "trailer": 6,
+        "brewery": "Gilgamesh Brewing Co.",
+        "city": "Salem",
+        "beer": "Blood Orange Kristallweizen ",
+        "style": "Hefeweizen (Blood Orange)",
+        "description": "A crisp, refreshing Wheat Beer with balanced blood orange citrus flavor.",
+        "abv": 5.6,
+        "ibu": 22
+    },
+    {
+        "trailer": 6,
+        "brewery": "Thunder Island Brewing Co.",
+        "city": "Cascade Locks",
+        "beer": "Habanaro Train to Cologne",
+        "style": "Kölsch (Peppered)",
+        "description": "A refreshing Kölsch-style beer designed for a hot day, this beer was brewed with traditional German malts and hops with a uniquely American addition of habanaro peppers in the whirlpool. Crushable heat! Pröst!",
+        "abv": "5.2",
+        "ibu": 23
+    },
+    {
+        "trailer": 7,
+        "brewery": "Fearless Brewing Co.",
+        "city": "Estacada",
+        "beer": "Happy Days Helles",
+        "style": "Helles (German)",
+        "description": "Nothing says summer like a bright golden fresh Lager. Very sessionable, these Lagers lend themselves to sunny warm afternoon drinking. Let Fearless Helles Lager transport you to your favorite Munich beer garden. The Helles style offers a touch of sweetness that balances a measurable addition of spicy German hop flavor and light bitterness. The malt character is soft and bready. Clean and crisp, this is a refreshing beer with substance.",
+        "abv": "5.4",
+        "ibu": 20
+    },
+    {
+        "trailer": 7,
+        "brewery": "StormBreaker Brewing",
+        "city": "Portland",
+        "beer": "Go Ahead & CRYOver It",
+        "style": "IPA (Cryo Hazeless)",
+        "description": "With the emergence of cryo-hops, beer aromas have been taken to a whole new level. Intense hop flavor and aroma without the vegetal characteristics set this beer apart. StormBreaker is excited to debut this Cryo Hazeless IPA at OBF!",
+        "abv": "6.6",
+        "ibu": 67
+    },
+    {
+        "trailer": 7,
+        "brewery": "Baerlic Brewing Co.",
+        "city": "Portland",
+        "beer": "Fancy Umbrella Drink",
+        "style": "Gose (Pink Guava)",
+        "description": "A tart Gose brewed with pink guava and a lick of sea salt that finishes ever so slightly sweet. “Toes in the water, ass in the sand, a smile on your face and a Fancy Umbrella Drink™ in your hand.”",
+        "abv": 5.5,
+        "ibu": 7
+    },
+    {
+        "trailer": 7,
+        "brewery": "Vanguard Brewing Co.",
+        "city": "Wilsonville",
+        "beer": "Porch Sipper Pale",
+        "style": "Pale",
+        "description": "Why does everything written for the summer sound like a description you’d see in a low-budget TV ad? It’s summer. It’s hot out. Pull up a chair and enjoy the smooth,  refreshing vibes of this Pale Ale, letting you forget about the clip-art-laden world out there where lawn flamingos are always appropriate.",
+        "abv": "5.5",
+        "ibu": 40
+    },
+    {
+        "trailer": 7,
+        "brewery": "ColdFire Brewing Co.",
+        "city": "Eugene",
+        "beer": "Summer In Belgium ",
+        "style": "Table Beer (Belgian)",
+        "description": "As the summer weather warms the Willamette Valley, the brewers at ColdFire look toward lighter, easier drinking fermentations in the brewhouse. For its first appearance at OBF, ColdFire brewed a golden version of the standard Belgian Table Beer, a refreshing beverage that is usually lighter in body and lower in alcohol. The brewers added citrus fruit and grains of paradise and increased the ABV to a whopping 4.6%. This beer was made to be refreshing and quaffable with just a touch of intrigue. ",
+        "abv": 4.6,
+        "ibu": 6
+    },
+    {
+        "trailer": 7,
+        "brewery": "Old Market Pub and Brewery",
+        "city": "Portland",
+        "beer": "British Bombardier IPA",
+        "style": "Imperial IPA (West Coast)",
+        "description": "British Bombardier Imperial IPA is amber in color thanks to caramel 60L malt and balanced out with organic Vienna, Munich and pale 2-row malts. Cascade hops are added during ferment and in the secondary tank for dry hopping along with Columbus, Chinook, Centennial and Simcoe used during the boil. Aggressive Northwest hopping lends to a piney, herbal, and citrusy Imperial IPA with a grapefruit aroma that's guaranteed to tantalize the hopheads of the festival.",
+        "abv": 9,
+        "ibu": 80
+    },
+    {
+        "trailer": 7,
+        "brewery": "Cascade Lakes Brewing Co.",
+        "city": "Redmond ",
+        "beer": "Raspberry Eagle",
+        "style": "Radler (Raspberry)",
+        "description": "Imagine laying your head on Aphrodite’s shoulder in the glimmering rays of a golden summer day while pixies frolic in the nearby jasmine fields. Conjure the sensory experience of an afternoon rain. Feel the fur of a Chow Chow between your fingers. Summon the pleasure of biting into a ripe peach. Immerse yourself in the rapturous visual of a beloved waterfall. Feel the audible texture of ukuleles playing in the pine forest.  All of these things combined couldn’t offer you the luxurious bliss that is Raspberry Eagle. ",
+        "abv": "2.6",
+        "ibu": 9
+    },
+    {
+        "trailer": 7,
+        "brewery": "Silver Moon Brewing",
+        "city": "Bend",
+        "beer": "Tepache",
+        "style": "Wheat (Pineapple)",
+        "description": "This Tepache offers a delicious blend of wheat and locally grown Munich specialty malts. Fermented with dark brown sugar and whole pineapple purée, this beer finishes smooth with lingering dark hints of sweetness. The perfect beer to put a kick into your summer!",
+        "abv": "6",
+        "ibu": 15
+    },
+    {
+        "trailer": 7,
+        "brewery": "Worthy Brewing",
+        "city": "Bend",
+        "beer": "Hawaii 5-0% Lager",
+        "style": "Pilsner (Strata Dry Hopped) ",
+        "description": "An all Oregon Lager brewed specially for the OBF, with hops sourced from the Willamette Valley and malt from Central Oregon. This Pilsner was dry hopped with a new standout hop––Strata. Put the flavors of the Beaver State in your taste factory and enjoy this tropical Lager. ",
+        "abv": 5,
+        "ibu": 11
+    },
+    {
+        "trailer": 7,
+        "brewery": "Crux Fermentation Project",
+        "city": "Bend",
+        "beer": "Strissel Pilz",
+        "style": "Pilsner",
+        "description": "Brewed with Strisselspalt hops grown in the Alsace region of France, this Pilsner has an intriguing lemon aroma with a pleasant herbal character.",
+        "abv": "5.2",
+        "ibu": 35
+    },
+    {
+        "trailer": 7,
+        "brewery": "Hopworks Urban Brewery",
+        "city": "Portland",
+        "beer": "Juicy Lager",
+        "style": "Lager (Dry Hopped)",
+        "description": "A refreshing and effervescent Lager dry hopped with Citra and Mosaic for a juicy fruit-forward aroma.",
+        "abv": 5.5,
+        "ibu": 25
+    },
+    {
+        "trailer": 8,
+        "brewery": "Golden Valley Brewery",
+        "city": "McMinnville",
+        "beer": "Cuidad de la Rosas",
+        "style": "Lager (Mexican)",
+        "description": "This is a full-bodied light Mexican Lager made with Pilsner and Vienna malts and corn flakes for a little complexity as well as body and flavor. Motueka hops were added in late additions for a hint of lime flavor. This is a perfect easy drinking summer brew––grab one and enjoy.",
+        "abv": "4.2",
+        "ibu": 20
+    },
+    {
+        "trailer": 8,
+        "brewery": "Deschutes Brewery",
+        "city": "Bend",
+        "beer": "Marionberry Lavender Sour",
+        "style": "Sour (Kettle)",
+        "description": "A luscious infusion of intricate flavors, this American Sour Ale drifts through tart patches of Oregon Marionberry and aromatic fields of lavender to a light, lemony finish.\n",
+        "abv": "4.3",
+        "ibu": 11
+    },
+    {
+        "trailer": 8,
+        "brewery": "Ordnance Brewing",
+        "city": "Boardman",
+        "beer": "Lite-Hearted Lager with Lime",
+        "style": "Lager (American)",
+        "description": "This American Lager pours a pale yellow with a rich white head. It's light bodied, with just a touch of bitterness and a crisp finish. The lime edition is only for the Oregon Brewers Festival.",
+        "abv": "4.2",
+        "ibu": 7
+    },
+    {
+        "trailer": 8,
+        "brewery": "Klamath Basin Brewing Co.",
+        "city": "Klamath Falls",
+        "beer": "Red on Red",
+        "style": "Red Ale (Barrel Aged Imperial)",
+        "description": "This Imperial Red Ale was aged for several months in Syrah barrels sourced from Folin Cellars, adding complexity of character. Notes of vanilla from the French oak barrels and wine character complement the caramel malt and American hops in this strong red.",
+        "abv": "7.7",
+        "ibu": 60
+    },
+    {
+        "trailer": 8,
+        "brewery": "Three Creeks Brewing Co.",
+        "city": "Sisters",
+        "beer": "Black Razz Stonefly Session Ale",
+        "style": "Session Ale (Blackberry & Raspberry)",
+        "description": "Three Creeks added 30 lbs. per barrel of blackberry and red raspberry fruit purée from Oregon Fruit Products during fermentation to create big berry notes, while keeping the sweetness on the lighter side. This unfiltered ale is made with 20% rye malt and a splash of honey malt, along with Crystal and Strata hops. The earthy sweetness of blackberries complements the subtle hints of spice from the rye, while the tartness of the red raspberries pairs perfectly with the lemony profile of the Crystal & Strata hops.                                                                                                                                            ",
+        "abv": "4.9",
+        "ibu": 24
+    },
+    {
+        "trailer": 8,
+        "brewery": "Full Sail Brewing Co.",
+        "city": "Hood River",
+        "beer": "Malted Milkshake IPA",
+        "style": "IPA (Milkshake)",
+        "description": "Nonfermentable lactose (milk sugars) provides a full bodied, smooth creaminess while the yeast strain creates a hazy, fruit-forward beer. Big juicy flavor and big juicy hops stand out in Full Sail's new Malted Milkshake Style IPA brewed with Ekuanot, Denali, Comet, Citra, and Cascade hops, and 2-row pale, wheat, and oats.",
+        "abv": "6.8",
+        "ibu": 40
+    },
+    {
+        "trailer": 8,
+        "brewery": "Rogue Ales & Spirits",
+        "city": "Newport",
+        "beer": "Picaro Negro",
+        "style": "Lager (Mexican Dark)",
+        "description": "To celebrate and commemorate Brewmaster John Maier's last Oregon Brewers Festival before he retires, John created Picaro Negro, a Rogue-ish version of a Dark Mexican Lager. Dark brown in color, it has a medium malt character that brings out chocolate, roast, and malt aromas and flavors––Lagered for eight weeks, because all good things take time. So raise a glass and congratulate John on an illustrious, trailblazing career in craft beer!",
+        "abv": "5.15",
+        "ibu": 21
+    },
+    {
+        "trailer": 8,
+        "brewery": "Vertigo Brewing",
+        "city": "Hillsboro",
+        "beer": "Apricot Peach Gose",
+        "style": "Gose (Apricot & Peach)",
+        "description": "A kettle-soured Gose brewed with 50% wheat and 50% pilsen malt. Lightly hopped, the sea salt, coriander, and apricot balance admirably, producing a light and refreshing flavor profile. The perfect beer to enjoy on a hot summer day.",
+        "abv": 4.8,
+        "ibu": 12
+    },
+    {
+        "trailer": 8,
+        "brewery": "Natian Brewery",
+        "city": "Portland",
+        "beer": "\"Cease & Desist\" Imperial Milk Stout",
+        "style": "Stout (Imperial Milk)",
+        "description": "This Imperial Milk Stout incorporates oatmeal and unfermentable milk sugar, lending to a subtle sweetness and a full creamy mouthfeel. The coffee notes are complemented by aging on Kahlúa® soaked Oregon oak. It's been renamed \"Cease and Desist\" from \"McGuinness\" due to some naming issues with...well, you figure it out!",
+        "abv": "9.2",
+        "ibu": 72
+    },
+    {
+        "trailer": 8,
+        "brewery": "Portland Brewing",
+        "city": "Portland",
+        "beer": "Hipster Viking",
+        "style": "Pale Ale (Norwegian Farmhouse)",
+        "description": "This Hazy Pale Ale is fermented with Norwegian farmhouse yeast, which lends a pleasant, subtle fruitiness. Light colored and hazy, it's dry hopped with Denali, El Dorado, and Amarillo. ",
+        "abv": 5.4,
+        "ibu": 52
+    },
+    {
+        "trailer": 8,
+        "brewery": "Migration Brewing",
+        "city": "Portland",
+        "beer": "Big Hazy Kane",
+        "style": "Imperial IPA (Hazy)",
+        "description": "Deep golden in color with flavors reminiscent of mango, guava and cannabis, this Imperial Hazy IPA is incredibly refreshing for 10% ABV. Featuring loads of Southern Hemisphere hops that will intrigue, this beer takes a very popular style and puts it on another level! ",
+        "abv": "8.5",
+        "ibu": 0
+    },
+    {
+        "trailer": 9,
+        "brewery": "Anthem Cider",
+        "city": "Salem",
+        "beer": "JUN",
+        "style": "Cider (Juniper Berries & Grapefruit)",
+        "description": "Anthem Cider is blended with juniper berries and grapefruit for a light fresh woody cider with a tart citrus finish.",
+        "abv": 5.5,
+        "ibu": 1
+    },
+    {
+        "trailer": 9,
+        "brewery": "Apple Outlaw",
+        "city": "Jacksonville",
+        "beer": "Oregon Blackberry",
+        "style": "Cider (Blackberry)",
+        "description": "Oregon Blackberry Cider offers a fresh berry aroma with a hint of lime and a fruity dry finish.",
+        "abv": "5.9",
+        "ibu": 0
+    },
+    {
+        "trailer": 9,
+        "brewery": "Cider Riot!",
+        "city": "Portland",
+        "beer": "Worker's Playtime Beet Hibiscus Cider",
+        "style": "Cider (Botanical)",
+        "description": "This striking red cider is made with fresh pressed Pacific Northwest apples, organic beets, and hibiscus for a cooling refreshing flavor. Worker’s Playtime is designed to be thirst-quenching and delicious. Beets were once added to English cider to give it a hint of sweetness and smoother body. Cider Riot's paired this traditional ingredient with hibiscus flowers for a floral note and a hint of tannin to round out the mouthfeel. Visit its pub just across the Burnside Bridge after the Festival to try more refreshing ciders. ",
+        "abv": "6",
+        "ibu": 0
+    },
+    {
+        "trailer": 9,
+        "brewery": "Portland Cider Co.",
+        "city": "Clackamas",
+        "beer": "Pineapple Rosé",
+        "style": "Cider (Pineapple & Blueberry)",
+        "description": "This Cider is bursting with juicy, fresh pineapple, with a naturally pink hue from a splash of Northwest grown blueberries. Treat yourself with this fruity, tropical delight that will take your tastebuds to an island oasis.",
+        "abv": "5.2",
+        "ibu": 0
+    },
+    {
+        "trailer": 9,
+        "brewery": "Swift Cider",
+        "city": "Portland",
+        "beer": "Guava Peach",
+        "style": "Cider (Guava & Peach)",
+        "description": "This Semi Dry Fruit Cider is made with a base of fresh pressed local apples, fermented to a dry finish, and aged on guava and peach.",
+        "abv": 6.5,
+        "ibu": 0
+    },
+    {
+        "trailer": 9,
+        "brewery": "Reverend Nat's Hard Cider",
+        "city": "Portland",
+        "beer": "Saint Citron with Cherry",
+        "style": "Cider",
+        "description": "Saint Citron is a new summer seasonal cider containing six citrus fruits including kumquat, Persian black limes and Meyer lemon with a hint of sea salt, strongly reminiscent of a salted lemonade thirst quencher. For this Oregon Brewers Festival exclusive, the makers added sweet Washington-grown cherries while maintaining a dry finish.",
+        "abv": "5.2",
+        "ibu": 0
+    },
+    {
+        "trailer": 9,
+        "brewery": "2 Towns Ciderhouse",
+        "city": "Corvallis",
+        "beer": "8th Anniversary",
+        "style": "Cider (Pacific NW Heirloom) ",
+        "description": "An incredibly rare selection of American and English heritage apples were blended together and fermented at a painstakingly slow pace with a European white wine yeast strain. ",
+        "abv": "6.9",
+        "ibu": 0
+    },
+    {
+        "trailer": 9,
+        "brewery": "WildCraft Cider Works",
+        "city": "Eugene",
+        "beer": "Mystic Summer Sour",
+        "style": "Cider (Gueuze)",
+        "description": "WildCraft took 2017 aged cider and refermented it on Ozark Beauty strawberry skins and whole blueberries. The cider was barrel aged for six months and blended 1:1 with 2018 aged cider refermented on strawberry skins of native Mt. Hood X AC Wendy house bred variety. Enjoy this high acidity-mixed culture cider with bright berry notes and a hint of oak.",
+        "abv": "6.3",
+        "ibu": 0
+    }
+  ]
+}
