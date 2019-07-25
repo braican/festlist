@@ -15,20 +15,18 @@
       Log in to save and rate your beers.
     </p>
 
-    <div class="beerlist">
-      <ul>
-        <li v-for="brewery in beerlist" :key="brewery.id" class="brewery">
-          <h3 class="brewery-name">
-            {{ brewery.name }}
-          </h3>
+    <Search v-if="searching" v-model="searchTerm" :onchange="handleSearch" />
 
-          <ul class="beers">
-            <li v-for="beer in brewery.beers" :key="beer.id">
-              <Beer :beer="beer" />
-            </li>
-          </ul>
-        </li>
-      </ul>
+    <div v-if="searchTerm !== ''">
+      <BeerList v-if="searchTerm.length > 2" :list="beerlistSearch" />
+
+      <p v-else class="interstitial-search-message">
+        Searching...
+      </p>
+    </div>
+
+    <div v-if="searchTerm === ''" ref="mainlist" class="beerlist" :class="{'show-starred': starred}">
+      <BeerList :list="beerlist" />
     </div>
   </div>
 </template>
@@ -36,17 +34,21 @@
 <script>
 import { festsCollection } from '@/firebase';
 import { mapState } from 'vuex';
-import Beer from '@/components/Beer';
-import BackArrowIcon from '@/svg/back-arrow';
+import Search from '@/components/Search';
+import BeerList from '@/components/BeerList';
+// import BackArrowIcon from '@/svg/back-arrow';
 
 export default {
   name: 'Fest',
-  components: { Beer, BackArrowIcon },
+  components: { Search, BeerList },
   data() {
     return {
       fest: {
         name: '',
       },
+
+      searchTerm: '',
+      beerlistSearch: [],
 
       // The beers from firestore.
       beers: [],
@@ -74,7 +76,40 @@ export default {
 
       return beerlist;
     },
-    ...mapState(['currentUser']),
+    ...mapState(['currentUser', 'searching', 'starred']),
+  },
+  watch: {
+    searching(val) {
+      if (!val) {
+        this.searchTerm = '';
+      }
+    },
+    starred(val) {
+      const breweries = this.$refs.mainlist.querySelectorAll('.brewery');
+
+      if (val) {
+        breweries.forEach(brewery => {
+          const savedBeers = brewery.querySelectorAll('.beer.saved');
+
+          if (savedBeers.length === 0) {
+            brewery.classList.add('hide');
+          }
+        });
+      } else {
+        breweries.forEach(brewery => brewery.classList.remove('hide'));
+      }
+    },
+  },
+  methods: {
+    handleSearch(query) {
+      query = query.toLowerCase();
+      const beerlist = this.beerlist.filter(brewery => {
+        const beers = brewery.beers.filter(beer => beer.name.toLowerCase().indexOf(query) > -1);
+        return beers.length > 0 || brewery.name.toLowerCase().indexOf(query) > -1;
+      });
+
+      this.beerlistSearch = beerlist;
+    },
   },
 };
 </script>
@@ -105,35 +140,26 @@ export default {
   color: $c--teal;
 }
 
+.search {
+  margin-top: 2rem;
+}
+
+.interstitial-search-message {
+  margin-top: 1rem;
+}
+
 .beerlist {
   margin-top: 2rem;
 }
 
-.brewery {
-  position: relative;
-  margin-top: 2rem;
-  padding-top: 1rem;
+</style>
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3rem;
-    height: 4px;
-    background-color: $c--gray-e;
-  }
-}
-
-.brewery-name {
-  @include label($fs--xs);
-}
-
-.beers > li {
-  margin-left: -$side-margin;
-  margin-right: -$side-margin;
+<style>
+.brewery.hide {
+  display: none;
 }
 
 </style>
+
 
 
