@@ -8,6 +8,12 @@
             <span class="label">Beer List</span>
           </router-link>
         </li>
+        <li class="search">
+          <button class="search-btn" :class="{active: searchActive}" @click="toggleSearch">
+            <span class="icon"><SearchIcon /></span>
+            <span class="label">Search</span>
+          </button>
+        </li>
         <li class="user-control">
           <button v-if="currentUser" class="user-data" @click="showProfileMenu">
             <Avatar :size="24" />
@@ -34,12 +40,14 @@ import Profile from '@/components/Profile';
 import Avatar from '@/components/Avatar';
 import BottleIcon from '@/svg/bottle';
 import UserIcon from '@/svg/user';
+import SearchIcon from '@/svg/search';
 
 export default {
   name: 'AppUtility',
-  components: { Profile, Avatar, BottleIcon, UserIcon },
+  components: { Profile, Avatar, BottleIcon, UserIcon, SearchIcon },
   data: () => ({
     profileVisible: false,
+    searchActive: false,
   }),
   computed: {
     ...mapState(['currentUser', 'activeFest']),
@@ -50,6 +58,10 @@ export default {
     },
     showProfileMenu() {
       this.$store.commit('setProfileVisible', true);
+    },
+    toggleSearch() {
+      this.searchActive = !this.searchActive;
+      this.$store.commit('toggleSearching');
     },
   },
 };
@@ -119,6 +131,10 @@ export default {
   .label {
     color: $c--teal;
   }
+}
+
+.search-btn.active {
+  background-color: $c--teal-light;
 }
 
 </style>

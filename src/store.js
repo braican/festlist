@@ -17,6 +17,9 @@ const store = new Vuex.Store({
 
     // The global router transition.
     transitionName: 'slide-right',
+
+    // Searching flag
+    searching: false,
   },
   mutations: {
     initializeStore(state) {
@@ -35,6 +38,9 @@ const store = new Vuex.Store({
     },
     setTransitionName(state, val) {
       state.transitionName = val;
+    },
+    toggleSearching(state) {
+      state.searching = !state.searching;
     },
   },
   actions: {
