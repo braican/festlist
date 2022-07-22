@@ -18,9 +18,6 @@ const store = new Vuex.Store({
     // The global router transition.
     transitionName: 'slide-right',
 
-    // Searching is active flag.
-    searching: false,
-
     // Starred view is active flag.
     starred: false,
   },
@@ -42,15 +39,11 @@ const store = new Vuex.Store({
     setTransitionName(state, val) {
       state.transitionName = val;
     },
-    setSearching(state, val) {
-      state.searching = val;
-    },
     setStarred(state, val) {
       state.starred = val;
     },
   },
-  actions: {
-  },
+  actions: {},
 });
 
 auth.onAuthStateChanged(user => {

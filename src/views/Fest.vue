@@ -1,9 +1,9 @@
 <template>
-  <div class="app-wrap fest">
-    <p v-if="fest.name === ''">
+  <div class="fest">
+    <p v-if="fest.name === ''" class="loading">
       Loading...
     </p>
-    <header v-if="fest.name !== ''">
+    <header v-if="fest.name !== ''" class="header">
       <h2>{{ fest.name }}</h2>
       <!-- <router-link to="/" class="back-btn">
         <BackArrowIcon />
@@ -15,9 +15,9 @@
       Log in to save and rate your beers.
     </p>
 
-    <Search v-if="searching" v-model="searchTerm" :onchange="handleSearch" />
+    <Search v-if="fest.name !== '' && !starred" v-model="searchTerm" :onchange="handleSearch" />
 
-    <div v-if="searchTerm !== ''">
+    <div v-if="searchTerm !== ''" class="beerlist">
       <BeerList v-if="searchTerm.length > 2" :list="beerlistSearch" />
 
       <p v-else class="interstitial-search-message">
@@ -25,7 +25,13 @@
       </p>
     </div>
 
-    <div v-if="searchTerm === ''" ref="mainlist" class="beerlist" :class="{'show-starred': starred}">
+    <div
+      v-if="searchTerm === ''"
+      ref="mainlist"
+      class="beerlist"
+      :class="{ 'show-starred': starred }"
+    >
+      <p v-if="starred && starredCount === 0">Nothing starred!</p>
       <BeerList :list="beerlist" />
     </div>
   </div>
@@ -55,13 +61,18 @@ export default {
 
       // The breweries from firestore.
       breweries: [],
+
+      starredCount: 0,
     };
   },
   firestore() {
     return {
       fest: festsCollection.doc(this.$route.params.id),
       beers: festsCollection.doc(this.$route.params.id).collection('beers'),
-      breweries: festsCollection.doc(this.$route.params.id).collection('breweries').orderBy('name'),
+      breweries: festsCollection
+        .doc(this.$route.params.id)
+        .collection('breweries')
+        .orderBy('name'),
     };
   },
   computed: {
@@ -76,25 +87,26 @@ export default {
 
       return beerlist;
     },
-    ...mapState(['currentUser', 'searching', 'starred']),
+    ...mapState(['currentUser', 'starred']),
   },
   watch: {
-    searching(val) {
-      if (!val) {
-        this.searchTerm = '';
-      }
-    },
     starred(val) {
       const breweries = this.$refs.mainlist.querySelectorAll('.brewery');
 
       if (val) {
+        let starredCount = 0;
+
         breweries.forEach(brewery => {
           const savedBeers = brewery.querySelectorAll('.beer.saved');
+
+          starredCount += savedBeers.length;
 
           if (savedBeers.length === 0) {
             brewery.classList.add('hide');
           }
         });
+
+        this.starredCount = starredCount;
       } else {
         breweries.forEach(brewery => brewery.classList.remove('hide'));
       }
@@ -117,6 +129,16 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/abstracts/abstracts';
 
+.loading {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fest {
+}
+
 .back-btn {
   text-decoration: none;
   color: $c--gray-9;
@@ -135,6 +157,11 @@ export default {
   }
 }
 
+.header {
+  padding: 1rem;
+  background-color: rgba($c--teal, 0.12);
+}
+
 .anonymous-message {
   margin-top: 1rem;
   color: $c--teal;
@@ -149,17 +176,12 @@ export default {
 }
 
 .beerlist {
-  margin-top: 2rem;
+  padding: 1rem 1rem 120px 1rem;
 }
-
 </style>
 
 <style>
 .brewery.hide {
   display: none;
 }
-
 </style>
-
-
-

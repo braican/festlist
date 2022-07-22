@@ -1,43 +1,55 @@
 <template>
-  <div class="beer" :class="{'rated-positive': rating > 0, 'rated-negative': rating < 0, 'expanded': expanded, 'saved': saved && rating === 0}">
+  <div
+    class="beer"
+    :class="{
+      'rated-positive': rating > 0,
+      'rated-negative': rating < 0,
+      expanded: expanded,
+      saved: saved && rating === 0,
+    }"
+  >
     <div class="placard">
-      <div class="beer-data" @click="expanded = !expanded">
+      <button @click="expanded = !expanded" class="more-button">
         <p class="beer-name">
-          {{ beer.name }}
+          <strong>{{ beer.name }}</strong>
         </p>
+
         <p class="beer-style">
           {{ beer.style }}
         </p>
-        <p class="beer-abv">
-          {{ beer.abv }}% ABV
-        </p>
-      </div>
+        <p class="beer-abv">{{ beer.abv }}% ABV</p>
+      </button>
+
       <div v-show="currentUser" class="beer-action">
-        <button class="thumb-rating thumbs-up" :class="{ active: rating > 0 }" @click="rateBeer(1)">
-          <ThumbsUpIcon />
-        </button>
-        <button class="thumb-rating thumbs-up" :class="{ active: rating < 0 }" @click="rateBeer(-1)">
-          <ThumbsDownIcon />
+        <div>
+          <button
+            class="thumb-rating thumbs-up"
+            :class="{ active: rating > 0 }"
+            @click="rateBeer(1)"
+          >
+            <ThumbsUpIcon />
+          </button>
+          <button
+            class="thumb-rating thumbs-down"
+            :class="{ active: rating < 0 }"
+            @click="rateBeer(-1)"
+          >
+            <ThumbsDownIcon />
+          </button>
+        </div>
+        <button class="save-btn" :class="{ active: saved }" @click="saveBeer">
+          <span class="icon"><StarIcon /></span>
+          <span class="label">{{ saved ? 'Unsave' : 'Save' }}</span>
         </button>
       </div>
     </div>
 
     <transition name="more">
       <div v-show="expanded" class="beer-more">
-        <div class="more-info stack">
-          <p class="beer-notes">
-            {{ beer.notes }}
-          </p>
-          <p v-if="beer.location">
-            <span class="label">Find it:</span> Table {{ beer.location }}
-          </p>
-        </div>
-        <div v-show="currentUser" class="more-actions">
-          <button class="save-btn" :class="{ active: saved }" @click="saveBeer">
-            <span class="icon"><StarIcon /></span>
-            <span class="label">{{ saved ? 'Unsave' : 'Save' }}</span>
-          </button>
-        </div>
+        <p class="beer-notes">
+          {{ beer.notes }}
+        </p>
+        <p v-if="beer.location"><span class="label">Find it:</span> Table {{ beer.location }}</p>
       </div>
     </transition>
   </div>
@@ -75,7 +87,12 @@ export default {
       return;
     }
 
-    this.beerRef = usersCollection.doc(this.currentUser.uid).collection('fests').doc(this.$route.params.id).collection('beers').doc(this.beer.id);
+    this.beerRef = usersCollection
+      .doc(this.currentUser.uid)
+      .collection('fests')
+      .doc(this.$route.params.id)
+      .collection('beers')
+      .doc(this.beer.id);
 
     this.beerRef.get().then(snapshot => {
       if (!snapshot.exists) {
@@ -119,82 +136,66 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/abstracts/abstracts';
 
-$bullet-size: 16px;
-
 .label {
   @include label();
 }
 
 .beer {
   position: relative;
-  padding: 1rem 1rem 1rem 3rem;
+  padding: 1rem;
   margin-top: 1rem;
+  box-shadow: 0 0 12px -5px rgba($c--black, 0.2);
+  border: 1px solid rgba($c--black, 0.05);
+  background-color: $c--white;
 
-  &.expanded {
-    background-color: $c--gray-e;
-    padding-left: 1rem;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1em;
+  }
+  &.rated-positive:after {
+    border-right-color: $c--teal;
+    border-top-color: $c--teal;
   }
 
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 3rem;
-    top: 0;
-    right: 1rem;
-    height: 1px;
-    background-color: $c--gray-e;
+  &.rated-negative:after {
+    border-right-color: $c--red;
+    border-top-color: $c--red;
+  }
+  &.saved:after {
+    border-right-color: $c--yellow;
+    border-top-color: $c--yellow;
+  }
+
+  &.expanded {
+    border: 1px solid rgba($c--teal, 0.1);
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-left: 4px solid $c--teal;
+    }
   }
 }
 
-.placard {
-  position: relative;
-  display: flex;
-  align-items: center;
-
-  &:before {
-    content: '';
-    position: absolute;
-    width: $bullet-size;
-    height: $bullet-size;
-    left: -2rem;
-    top: 50%;
-    margin-top: -#{$bullet-size / 2};
-    border-radius: 50%;
-
-    .rated-positive & {
-      background-color: $c--teal;
-    }
-
-    .rated-negative & {
-      background-color: $c--gray-d;
-    }
-
-    .saved & {
-      background-color: $c--yellow;
-    }
-  }
+.more-button {
+  text-align: left;
 }
 
 .beer-style,
-.beer-abv,
-.more-info {
+.beer-abv {
   font-size: $fs--sm;
 }
 
 .beer-style {
   font-style: italic;
-}
-
-.beer-data,
-.more-info {
-  flex: 1;
-}
-
-.beer-action,
-.more-actions {
-  flex: 0 0 88px;
-  width: 88px;
 }
 
 .thumb-rating {
@@ -214,10 +215,21 @@ $bullet-size: 16px;
     stroke-width: 1;
   }
 
-  &.active svg {
+  &.thumbs-up.active svg {
     fill: $c--teal;
     stroke: $c--teal;
   }
+
+  &.thumbs-down.active svg {
+    fill: $c--red;
+    stroke: $c--red;
+  }
+}
+
+.beer-action {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .beer-more {
@@ -225,12 +237,12 @@ $bullet-size: 16px;
   display: none;
 
   .expanded & {
-    display: flex;
+    display: block;
   }
 }
 
 .beer-notes {
-  color: $c--gray-6;
+  font-size: 0.86rem;
 }
 
 .more-actions {
@@ -270,8 +282,4 @@ $bullet-size: 16px;
 .more-leave-to {
   opacity: 0;
 }
-
-
-
 </style>
-

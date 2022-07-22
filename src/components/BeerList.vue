@@ -34,17 +34,10 @@ export default {
 
 .brewery {
   position: relative;
-  margin-top: 2rem;
   padding-top: 1rem;
 
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3rem;
-    height: 4px;
-    background-color: $c--gray-e;
+  + .brewery {
+    margin-top: 1rem;
   }
 }
 
@@ -52,15 +45,7 @@ export default {
   @include label($fs--xs);
 }
 
-.beers > li {
-  margin-left: -$side-margin;
-  margin-right: -$side-margin;
-}
-
 .show-starred .beer:not(.saved) {
   display: none;
 }
-
 </style>
-
-

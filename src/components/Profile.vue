@@ -1,5 +1,5 @@
 <template>
-  <aside class="profile" :class="{'visible': profileVisible}">
+  <aside class="profile" :class="{ visible: profileVisible }">
     <button class="close-profile" @click="closeProfile">
       <BackArrowIcon />
       <span>Close</span>
@@ -14,11 +14,11 @@
 
     <nav class="profile-nav">
       <ul>
-        <!-- <li>
+        <li>
           <router-link to="/admin">
             Add a beer
           </router-link>
-        </li> -->
+        </li>
         <li>
           <button @click="logout">
             Log out
@@ -117,11 +117,11 @@ export default {
 }
 
 .profile-nav {
-  a, button {
+  a,
+  button {
     color: $c--white;
     text-decoration: none;
     padding: $side-margin;
   }
 }
-
 </style>

@@ -3,19 +3,17 @@
     <nav>
       <ul class="util-menu">
         <li class="beer-list">
-          <router-link tag="button" :to="activeFest === null ? '/' : `/fest/${activeFest}`" @click.native="clearAll">
+          <router-link
+            tag="button"
+            :to="activeFest === null ? '/' : `/fest/${activeFest}`"
+            @click.native="clearAll"
+          >
             <span class="icon"><BottleIcon /></span>
             <span class="label">Beer List</span>
           </router-link>
         </li>
-        <li class="search">
-          <button class="search-btn" :class="{active: searchActive}" @click="toggleSearch">
-            <span class="icon"><SearchIcon /></span>
-            <span class="label">Search</span>
-          </button>
-        </li>
         <li class="starred">
-          <button class="starred-btn" :class="{active: starredActive}" @click="toggleStarred">
+          <button class="starred-btn" :class="{ active: starredActive }" @click="toggleStarred">
             <span class="icon"><StarIcon /></span>
             <span class="label">Starred</span>
           </button>
@@ -46,12 +44,11 @@ import Profile from '@/components/Profile';
 import Avatar from '@/components/Avatar';
 import BottleIcon from '@/svg/bottle';
 import UserIcon from '@/svg/user';
-import SearchIcon from '@/svg/search';
 import StarIcon from '@/svg/star';
 
 export default {
   name: 'AppUtility',
-  components: { Profile, Avatar, BottleIcon, UserIcon, SearchIcon, StarIcon },
+  components: { Profile, Avatar, BottleIcon, UserIcon, StarIcon },
   data: () => ({
     profileVisible: false,
     searchActive: false,
@@ -71,20 +68,11 @@ export default {
       this.starredActive = false;
       this.$store.commit('setStarred', false);
     },
-    toggleSearch() {
-      const searchStatus = !this.searchActive;
-      this.starredActive = false;
-      this.searchActive = searchStatus;
-      this.$store.commit('setSearching', searchStatus);
-      this.$store.commit('setStarred', false);
-    },
     toggleStarred() {
       const starredStatus = !this.starredActive;
       this.starredActive = starredStatus;
       this.searchActive = false;
       this.$store.commit('setStarred', starredStatus);
-      this.$store.commit('setSearching', false);
-
     },
   },
 };
@@ -98,7 +86,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 -1px 4px rgba($c--black, 0.2);
+  box-shadow: 0 0 12px rgba($c--black, 0.16);
   background-color: $c--white;
 }
 
@@ -163,6 +151,4 @@ export default {
 .search-btn.active {
   background-color: $c--teal-light;
 }
-
 </style>
-
