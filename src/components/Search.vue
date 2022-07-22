@@ -4,10 +4,10 @@
     <input
       id="beer-search"
       ref="search"
-      type="text"
-      placeholder="Start typing to search..."
+      type="search"
+      placeholder="Search for a beer or brewery"
       @input="handleChange"
-    >
+    />
   </div>
 </template>
 
@@ -37,10 +37,13 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/abstracts/abstracts';
 
+.search {
+  padding: 1rem;
+}
+
 .search-label {
   @include label;
   display: block;
   margin-bottom: 1em;
 }
 </style>
-
