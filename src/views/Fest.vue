@@ -17,22 +17,19 @@
 
     <Search v-if="fest.name !== '' && !starred" v-model="searchTerm" :onchange="handleSearch" />
 
-    <div v-if="searchTerm !== ''" class="beerlist">
-      <BeerList v-if="searchTerm.length > 2" :list="beerlistSearch" />
+    <div ref="mainlist">
+      <div v-if="searchTerm !== ''" class="beerlist">
+        <p v-if="beerlistSearch.length < 1" class="interstitial-search-message">No results</p>
+        <BeerList v-else-if="searchTerm.length > 2" :list="beerlistSearch" />
+        <p v-else class="interstitial-search-message">
+          Searching...
+        </p>
+      </div>
 
-      <p v-else class="interstitial-search-message">
-        Searching...
-      </p>
-    </div>
-
-    <div
-      v-if="searchTerm === ''"
-      ref="mainlist"
-      class="beerlist"
-      :class="{ 'show-starred': starred }"
-    >
-      <p v-if="starred && starredCount === 0">Nothing starred!</p>
-      <BeerList :list="beerlist" />
+      <div v-if="searchTerm === ''" class="beerlist" :class="{ 'show-starred': starred }">
+        <p v-if="starred && starredCount === 0" class="no-starred-msg">Nothing starred!</p>
+        <BeerList :list="beerlist" />
+      </div>
     </div>
   </div>
 </template>
@@ -91,7 +88,12 @@ export default {
   },
   watch: {
     starred(val) {
-      const breweries = this.$refs.mainlist.querySelectorAll('.brewery');
+      if (val) {
+        this.searchTerm = '';
+        this.beerlistSearch = [];
+      }
+
+      const breweries = document.querySelectorAll('.brewery');
 
       if (val) {
         let starredCount = 0;
@@ -136,9 +138,6 @@ export default {
   justify-content: center;
 }
 
-.fest {
-}
-
 .back-btn {
   text-decoration: none;
   color: $c--gray-9;
@@ -159,7 +158,9 @@ export default {
 
 .header {
   padding: 1rem;
-  background-color: rgba($c--teal, 0.12);
+  background-color: $c--yellow-dark;
+  color: $c--white;
+  text-shadow: 2px 2px rgba($c--black, 0.2);
 }
 
 .anonymous-message {
@@ -173,10 +174,16 @@ export default {
 
 .interstitial-search-message {
   margin-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .beerlist {
-  padding: 1rem 1rem 120px 1rem;
+  padding: 1rem 0 120px 0;
+}
+
+.no-starred-msg {
+  padding: 1rem;
 }
 </style>
 

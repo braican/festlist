@@ -2,6 +2,7 @@
   <div class="search">
     <label for="beer-search" class="search-label">Search</label>
     <input
+      class="search-input"
       id="beer-search"
       ref="search"
       type="search"
@@ -45,5 +46,11 @@ export default {
   @include label;
   display: block;
   margin-bottom: 1em;
+}
+
+.search-input {
+  background-color: $c--white;
+  font-size: 1.25rem;
+  border: 1px solid $c--gray-e;
 }
 </style>
