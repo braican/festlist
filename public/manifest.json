@@ -1,0 +1,17 @@
+{
+  "name": "Fest List",
+  "short_name": "Fest List",
+  "theme_color": "#feda6f",
+  "background_color": "#feda6f",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "https://beerfest.braican.com/",
+  "description": "Keep track of your beerfest.",
+  "orientation": "any",
+  "icons": [
+      {
+          "src": "https://beerfest.braican.com/icon.png",
+          "sizes": "1024x1024"
+      }
+  ]
+}
