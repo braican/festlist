@@ -1,0 +1,562 @@
+[
+  {
+    "BreweryName": "Stickmen Brewing Company",
+    "Name": "Hey Yuzu",
+    "Style": "Berliner Weisse",
+    "Description": "Classic Berliner Weisse brewed with yuzu, a Japanese citrus variety and Meridian hops. Slightly tart, very refreshing.",
+    "ABV": 6.2,
+    "IBU": 10
+  },
+  {
+    "BreweryName": "Three Mugs Brewing Company",
+    "Name": "Praline Dreams",
+    "Style": "Blonde Ale - Chocolate",
+    "Description": "Inspired by Mardi Gras, we infused our super-popular White Chocolate Blonde Ale with delicious pecans. This light, slightly sweet brew is reminiscent of pralines and cream, with delicious white chocolate up front and a pecan finish. Let the good times roll!",
+    "ABV": 6.5,
+    "IBU": 15
+  },
+  {
+    "BreweryName": "Pelican Brewing",
+    "Name": "SunRise Surfer",
+    "Style": "Blonde Ale - Dry-hopped",
+    "Description": "Lightly dry-hopped with floral, herbal and melon aromas, a bread-like malt flavor and a crisp refreshing finish. Classic quaffability.",
+    "ABV": 4,
+    "IBU": 20
+  },
+  {
+    "BreweryName": "Three Mugs Brewing Company",
+    "Name": "Strawberry White Chocolate Blonde Ale",
+    "Style": "Blonde Ale - Strawberry",
+    "Description": "The delicate aroma of white chocolate and strawberries hits the nose, while light maltiness bathes the palate up front, then the sweet white chocolate and strawberries hit on the back end. Mmm, delectable.",
+    "ABV": 6.5,
+    "IBU": 15
+  },
+  {
+    "BreweryName": "Old Town Brewery",
+    "Name": "Bike Lane",
+    "Style": "Bock",
+    "Description": "Rich malt flavors of rustic bread, honey, raisins, and figs, with a touch of spicy hops in the finish.",
+    "ABV": 6.5,
+    "IBU": 22
+  },
+  {
+    "BreweryName": "Cascade Brewing",
+    "Name": "Don't Bock Down",
+    "Style": "Bock-inspired Ale",
+    "Description": "Brewed with a German Bock in mind, deep red in color, slightly sweet and bursting with toasted bread and malt notes and perfectly balanced bitterness in the finish.",
+    "ABV": 6.7,
+    "IBU": 27
+  },
+  {
+    "BreweryName": "Binary Brewing",
+    "Name": "Resolution Wrecker",
+    "Style": "Cascadian Dark Ale",
+    "Description": "Start the new year off right with this hoppy black IPA. Cascade, Amarillo and Nugget hops break through the dark roasted malts to create a balanced, dark, but hop-forward beer.",
+    "ABV": 7.3,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Labyrinth Forge Brewing Company",
+    "Name": "Oubliette Black",
+    "Style": "Cascadian Dark Ale",
+    "Description": "An Oubliette, from the French for \"to forget,\" is a dark prison in which the only exit and light source is a trapdoor at the top—apropos of the darkness found in this Cascadian Dark Ale.",
+    "ABV": 6.2,
+    "IBU": 62
+  },
+  {
+    "BreweryName": "Portland Cider Company",
+    "Name": "Mango Mimosa",
+    "Style": "Cider",
+    "Description": "Take a trip to the tropics with this cider that pairs Northwest apples with mangos and bright citrus. A refreshing sea breeze in a can, it’s sure to be your next brunch favorite.",
+    "ABV": 6,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Flyboy Brewery",
+    "Name": "Pilots Peach Ale",
+    "Style": "Fruit Ale",
+    "Description": "A smooth, creamy pale ale with crisp peach flavor, not too sweet.",
+    "ABV": 6,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Bauman's Cider Co.",
+    "Name": "Boysenberry Lemonade",
+    "Style": "Fruit Cider",
+    "Description": "This juicy cider starts with our traditional cider base, and then is blended with our estate boysenberries and puréed lemons. The result is a semi-sweet, zesty treat bursting with berry goodness.",
+    "ABV": 6.5,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Public Coast Brewing",
+    "Name": "'67 Blonde",
+    "Style": "Golden Ale",
+    "Description": "A crisp, light, easy drinker that won gold at the 2018 World Beer Cup.",
+    "ABV": 5,
+    "IBU": 19
+  },
+  {
+    "BreweryName": "Maui Hard Seltzer",
+    "Name": "Passionfruit Orange Guava (POG)",
+    "Style": "Hard Seltzer",
+    "Description": "Spiked Sparking Water with Natural Flavors- 100 calories, less than 1 gm or carbs and sugar, Gluten Free",
+    "ABV": 5,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Maui Hard Seltzer",
+    "Name": "Lemonade",
+    "Style": "Hard Seltzer",
+    "Description": "Spiked Sparking Water with Natural Flavors- 100 calories, less than 1 gm or carbs and sugar, Gluten Free",
+    "ABV": 5,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Hopworks Urban Brewery",
+    "Name": "Orcanaut",
+    "Style": "Hazy Pale Ale",
+    "Description": "Our Hazy Pale has notes of lemon/lime, passion fruit, and pine resin derived from Cashmere, Azacca, El Dorado and Strata hops, all grown Salmon Safe from our friends at Roy Farms.",
+    "ABV": 5.9,
+    "IBU": 22
+  },
+  {
+    "BreweryName": "Parallel 45 Brewing",
+    "Name": "Helles Ja!",
+    "Style": "Helles Lager",
+    "Description": "A German Helles with notes of toasted and grassy malt with a subtle spicy hop bite. The traditional German malts work with a classic Bavarian lager yeast to form an extra crisp and refreshing beer; perfect for the warmer weather. Prost!",
+    "ABV": 5,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "La Familia Hard Cider",
+    "Name": "Jamaica",
+    "Style": "Herbal Cider",
+    "Description": "Jamaica is crisp, bringing to mind springtime with light floral notes in every sip. Whole, dried hibiscus flowers lend an authentic tartness to complement Northwest-grown apples. The result is perfectly balanced, similar in taste to a fine wine.",
+    "ABV": 6.9,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Caldera Brewing Company",
+    "Name": "Caldera 541 IPA",
+    "Style": "IPA",
+    "Description": "Old school IPA with new school dank hops. Light in body, but heavy on the hops. Medium bitterness with a big hop aroma.",
+    "ABV": 5.9,
+    "IBU": 85
+  },
+  {
+    "BreweryName": "Hopworks Urban Brewery",
+    "Name": "Giggle Nuggets",
+    "Style": "IPA",
+    "Description": "Giggle Nuggets is brewed with the dankest, stickiest, most resinous Trident, Eureka, Altus, Chinook, and Columbus hops we could get our hands on. Aromas of pine sap and grapefruit zest blend with assertive hop flavor",
+    "ABV": 7.5,
+    "IBU": 70
+  },
+  {
+    "BreweryName": "Parallel 45 Brewing",
+    "Name": "Electric Dream Machine",
+    "Style": "IPA",
+    "Description": "A sun-kissed golden body and creamy white head give rise to a tropical fruit nose with a subtle hint of cannabis dankness.  Drink in flavors of strawberry and honeydew melon, with hints of soursop and watermelon.",
+    "ABV": 7,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "pFriem Family Brewers",
+    "Name": "Citrus Zest IPA",
+    "Style": "IPA",
+    "Description": "By adding citrus zest to fruit and citrus forward hops we’ve boosted the fruit flavors in pFriem Citrus Zest IPA. Notes of melon and papaya, and a zesty finish will have you puckering up with joy in no time.",
+    "ABV": 6.3,
+    "IBU": 45
+  },
+  {
+    "BreweryName": "Sunriver Brewing Company",
+    "Name": "Bondi Beach Party",
+    "Style": "IPA",
+    "Description": "Dry hopping during active fermentation creates vibrant notes of mango nectar, ripe passionfruit, strawberry kush, and lychee blossoms.  Light bodied and relatively dry, this tropical IPA is your own Bondi beach party in a glass.",
+    "ABV": 6.4,
+    "IBU": 50
+  },
+  {
+    "BreweryName": "Sunriver Brewing Company",
+    "Name": "Sultana Single Hop IPA",
+    "Style": "IPA",
+    "Description": "Big cones bring big flavors. Sultana is an easy choice for a single-hop beer as its exceptionally expressive, with resinous notes of crushed pineapple, fresh cut evergreen, and bright citrus.",
+    "ABV": 6.8,
+    "IBU": 65
+  },
+  {
+    "BreweryName": "Coin Toss Brewing",
+    "Name": "Black Hohl Dark IPA",
+    "Style": "IPA - Black",
+    "Description": "Dark and hoppy with a malty backbone & a hint of roast, this brew is one of the first that Coin Toss ever released, and has remained one of its most popular.",
+    "ABV": 6,
+    "IBU": 68
+  },
+  {
+    "BreweryName": "Ridgewalker Brewing",
+    "Name": "Chill Hop",
+    "Style": "IPA - Cold",
+    "Description": "IPA brewed at lager temperatures while keeping the hop intensity, malt character, and lightly crisp flavor.",
+    "ABV": 6.2,
+    "IBU": 80
+  },
+  {
+    "BreweryName": "Buoy Beer Company",
+    "Name": "Double IPA",
+    "Style": "IPA - Double",
+    "Description": "Buoy's newest year-round. Big, balanced, and memorable with punchy grapefruit and ripe, zesty citrus, our Double IPA is rounded out with aromatics of floral and pine.",
+    "ABV": 8.7,
+    "IBU": 65
+  },
+  {
+    "BreweryName": "Deschutes Brewery",
+    "Name": "Farmstand Fresh Mango",
+    "Style": "IPA - Fruited",
+    "Description": "Huge mango flavor from aroma to finish. This fruit-forward IPA will transport you to a tropical paradise, where you grab a ripe mango from a farmstand, drop it in your IPA, and sip it in your beachside hammock.",
+    "ABV": 6.4,
+    "IBU": 45
+  },
+  {
+    "BreweryName": "Ecliptic Brewing",
+    "Name": "Parsec Grapefruit Hazy IPA",
+    "Style": "IPA - Hazy",
+    "Description": "Brewed with Cashmere and Citra hops, plus real grapefruit, this hazy shines with astronomical amounts of stonefruit and citrus flavors.",
+    "ABV": 6.5,
+    "IBU": 40
+  },
+  {
+    "BreweryName": "StormBreaker Brewing",
+    "Name": "Hazy Frontier",
+    "Style": "IPA - Hazy",
+    "Description": "Live long, drink beer, and prosper. Citra, Mosaic, And Strata hops provide this hazy IPA aromas of passion fruit and mango with flavors of grapefruit, tropical fruit, and hints of strawberry, to boldly go where no beer has gone before.",
+    "ABV": 6.5,
+    "IBU": 47
+  },
+  {
+    "BreweryName": "Wild Ride Brewing",
+    "Name": "Hippy Hippy Haze",
+    "Style": "IPA - Hazy Double",
+    "Description": "A combination of Citra, Mosaic, Sultana, and Chinook hops offers citrus and pineapple flavors with a pleasant floral aroma. Shake it to the left, shake it to the right, drink this Hippy Hippy Haze with all of your might!",
+    "ABV": 8,
+    "IBU": 70
+  },
+  {
+    "BreweryName": "Laurelwood Brewing Co",
+    "Name": "Cartoon Dreams",
+    "Style": "IPA - Hazy Imperial",
+    "Description": "This exceptionally smooth imperial IPA is a fever dream of vivid taste and color.  Exotic citrus notes of Valencia orange, oroblanco & Murcott tangerine set senses alight sip after sip.",
+    "ABV": 8.4,
+    "IBU": 54
+  },
+  {
+    "BreweryName": "Integrity Brewing Company",
+    "Name": "Barely Hazed",
+    "Style": "IPA - Hazy New England",
+    "Description": "A light and refreshing, creamy-smooth anyday IPA. The late addition hops lower the bitterness extraction and lends to a citrusy slightly sweeter IPA.",
+    "ABV": 6.5,
+    "IBU": 75
+  },
+  {
+    "BreweryName": "Labyrinth Forge Brewing Company",
+    "Name": "Hazy Mazey",
+    "Style": "IPA - Hazy New England",
+    "Description": "Brewed with 100% Citra hops, this is a traditional New England IPA with a soft mouthfeel, plenty of tropical fruit and apricot aroma and flavor.",
+    "ABV": 6.7,
+    "IBU": 23
+  },
+  {
+    "BreweryName": "Gateway Brewing",
+    "Name": "Gateway Fog",
+    "Style": "IPA - Hazy New England",
+    "Description": "Our take on a juicy, hazy IPA, inspired by some pretty foggy days out in East County Portland. Hopped with plenty of Citra and mosaic hops.",
+    "ABV": 6,
+    "IBU": 50
+  },
+  {
+    "BreweryName": "Buoy Beer Company",
+    "Name": "Strong Gale",
+    "Style": "IPA - Robust",
+    "Description": "Brewed with Caramel and Chocolate malts for a touch sweetness and a slight roast character, this malty goodness is balanced by copious amounts of hops to weather any storm.",
+    "ABV": 7.7,
+    "IBU": 70
+  },
+  {
+    "BreweryName": "FlyBoy Brewery",
+    "Name": "Island Jumper IPA",
+    "Style": "IPA - West Coast",
+    "Description": "A favorite at our pub, Island Jumper is a classic, hoppy West Coast-style IPA sure to please any hop lover.",
+    "ABV": 7,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Gigantic Brewing",
+    "Name": "Mike Bennett's Day Off IPA",
+    "Style": "IPA - West Coast",
+    "Description": "Brewed with Public Joy Creator Mike Bennett, in celebration of his day off. We have created a West Coast IPA with an intense citrus, pine and dank hop aroma through the deft use of Chinook, Simcoe, Mosaic and Columbus hops.",
+    "ABV": 6.2,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Migration Brewing",
+    "Name": "Liven Up!",
+    "Style": "IPA - West Coast",
+    "Description": "Celebrating 13 years! Grapefruit and papaya notes with aromas of a tropical fruit smorgasbord of pineapple, guava, and mango as well as watermelon Jolly Ranchers, blueberries, and grapefruit with subtle pine resin.",
+    "ABV": 6.1,
+    "IBU": 44
+  },
+  {
+    "BreweryName": "Cascade Brewing",
+    "Name": "Stein of the Times",
+    "Style": "Lager",
+    "Description": "Dry, crisp & crushable, this German-inspired lager is the perfect beer for socializing at the festival and kicking back a few.  It's a Stein of the times.",
+    "ABV": 4.4,
+    "IBU": 11
+  },
+  {
+    "BreweryName": "pFriem Family Brewers",
+    "Name": "pFriem Lager",
+    "Style": "Lager",
+    "Description": "Casual moments call for an easy-drinking beer. Fresh and smooth, with nuanced notes of melon and honey.",
+    "ABV": 5,
+    "IBU": 20
+  },
+  {
+    "BreweryName": "GoodLife Brewing Company",
+    "Name": "High Altitude Premium American Lager",
+    "Style": "Lager - American",
+    "Description": "Crafted with premium American Pilsner malt and American-grown Saaz hops. With a humbling amount of rice and water from the highest glaciers in the Central Oregon Cascades, this beer drinks light and refreshing!",
+    "ABV": 4.9,
+    "IBU": 12
+  },
+  {
+    "BreweryName": "Gateway Brewing",
+    "Name": "Mahogany Dark Lager",
+    "Style": "Lager - Dark",
+    "Description": "A nicely hopped lager with hints of chocolate and roast notes.",
+    "ABV": 5.5,
+    "IBU": 30
+  },
+  {
+    "BreweryName": "Binary Brewing",
+    "Name": "8-Bitte Helles",
+    "Style": "Munich Helles",
+    "Description": "This nice, light helles leads with a grainy-sweet malt flavor, a soft, rounded palate, and low to medium-low hop bitterness. The finish is soft and dry, and the aroma nicely showcases the floral, herby nature of Mt. Hood hops.",
+    "ABV": 5.4,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Laurelwood Brewing Co.",
+    "Name": "Piston Pale Ale",
+    "Style": "Pale Ale - American",
+    "Description": "Piston Pale Ale is a classic Laurelwood favorite pale recipe that has been updated for 2023 by utilizing new-age hops.",
+    "ABV": 5.8,
+    "IBU": 44
+  },
+  {
+    "BreweryName": "Montavilla Brew Works",
+    "Name": "Soak Up The Citra",
+    "Style": "Pale Ale - American",
+    "Description": "This crisp and fresh Pale Ale is full of ripe orange citrus flavors and jam-packed with tropical, grapefruit, and lime aromas from generous Citra dry hopping.",
+    "ABV": 5.5,
+    "IBU": 40
+  },
+  {
+    "BreweryName": "Fort George Brewery",
+    "Name": "Power Cycle: Waimea",
+    "Style": "Pale Ale - Hazy",
+    "Description": "Power Cycle: Waimea is characterized by slightly resinous, sweet stone fruit aromas and juicy, bright, tropical fruit flavors.",
+    "ABV": 5,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Boneyard Beer",
+    "Name": "Crooked Pilsner",
+    "Style": "Pilsner",
+    "Description": "This American-style Pilsner with German hops is for drinkers who work their fingers to the bone, whatever it is they may be passionate about. Crush one today after a job well done.",
+    "ABV": 5,
+    "IBU": 24
+  },
+  {
+    "BreweryName": "Ecliptic Brewing",
+    "Name": "Pyxis Pilsner",
+    "Style": "Pilsner",
+    "Description": "Noble hops compliment this balanced Pilsner. Finishing crisp and refreshing, Pyxis is our spin on this classic German-style lager.",
+    "ABV": 5.5,
+    "IBU": 30
+  },
+  {
+    "BreweryName": "Steeplejack Brewing Company",
+    "Name": "West Coast Pilsner",
+    "Style": "Pilsner",
+    "Description": "This hop-driven lager features Francin Pilsner malt from LINC, complimented by a blend of Michigan Chinook, Mosaic, and Motueka hops. This beer is tropical, dank and resinous with notes of pineapple, weed resin and ripe red berries.",
+    "ABV": 5.2,
+    "IBU": 35
+  },
+  {
+    "BreweryName": "Old Town Brewery",
+    "Name": "Pilsner",
+    "Style": "Pilsner - American",
+    "Description": "Exquisitely balanced with notes of fresh flowers, honey biscuits, and a crisp dry finish.",
+    "ABV": 4.9,
+    "IBU": 23
+  },
+  {
+    "BreweryName": "Integrity Brewing Company",
+    "Name": "Zen Beast",
+    "Style": "Pilsner - Czech",
+    "Description": "Embrace your inner Bohemian and let all your troubles melt away with this bright Pilsner made with a rhapsody of slightly sweet malt followed by the bitterness of lemon zest.",
+    "ABV": 5.2,
+    "IBU": 40
+  },
+  {
+    "BreweryName": "Deschutes Brewery",
+    "Name": "King Crispy",
+    "Style": "Pilsner - German",
+    "Description": "This light and refreshing classic German-style Pilsner was crowned winner of the Pilsner Fest Bitburger Challenge in Portland, Oregon. Perfectly crushable. Wonderfully crisp. All hail the king of the crispy boys!",
+    "ABV": 4.8,
+    "IBU": 35
+  },
+  {
+    "BreweryName": "Cooper Mountain Ale Works",
+    "Name": "What doesn't Pilsner, makes you Lager",
+    "Style": "Pilsner - Italian",
+    "Description": "Fresh lemon peel, right on the kisser! A traditional German pilsner base, dry hopped delicately with Lorien hops for an ultra refreshing slice of delicious.",
+    "ABV": 5,
+    "IBU": 24
+  },
+  {
+    "BreweryName": "Slowdrift Brewing Company",
+    "Name": "Fishin in the Dark",
+    "Style": "Porter",
+    "Description": "Chocolate coffee porter with a hint of caramel finish.  As February is traditionally a dark beer month we took an all-grain recipe that uses roasted barley and grains to give you an easy-drinking dark beer.",
+    "ABV": 6.9,
+    "IBU": 81
+  },
+  {
+    "BreweryName": "Steeplejack Brewing Company",
+    "Name": "London Porter",
+    "Style": "Porter",
+    "Description": "Featuring brown, crystal and chocolate malts, this rich and creamy porter has a full body with just the right amount of chocolate and fresh-roasted coffee notes through every sip.",
+    "ABV": 5.4,
+    "IBU": 20
+  },
+  {
+    "BreweryName": "Threshold Brewing & Blending",
+    "Name": "Neptune",
+    "Style": "Porter - Baltic",
+    "Description": "A traditional Polish-style Baltic Porter featuring notes of dark chocolate and biscuit with rich dark fruit undertones. Baltic Porters were originally brewed at a higher ABV to withstand an 18th-century journey across the Baltic Sea.",
+    "ABV": 7.5,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Boneyard Beer",
+    "Name": "Diablo Rojo",
+    "Style": "Red Ale",
+    "Description": "Strikingly deep-amber in color, Diablo Rojo beckons for both the hop lover and non-hop lover. This award-winning medium bodied ale is well balanced and sure to satisfy your deepest desires.",
+    "ABV": 5.5,
+    "IBU": 30
+  },
+  {
+    "BreweryName": "Caldera Brewing Company",
+    "Name": "Beer Beer Biddily Beer",
+    "Style": "Red Ale",
+    "Description": "Ned Flanders-style sour red ale aged in red wine barrels with sweet cheery and sour cherry added.",
+    "ABV": 5.7,
+    "IBU": 27
+  },
+  {
+    "BreweryName": "Public Coast Brewing",
+    "Name": "Farm Honey Red Ale",
+    "Style": "Red Ale",
+    "Description": "A light, amber ale made with wildflower honey from our farm in Banks. A touch of hoppiness, subtly malty, bee-licious.",
+    "ABV": 5.4,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Level Beer",
+    "Name": "Fire Flower",
+    "Style": "Red Ale - NW",
+    "Description": "Fire Flower is a Hoppy Red Ale with a lot of bread and caramel malt flavors and is balanced with a BIG hop-back, giving this beer a lovely floral, citrus and herbal hop aroma. BLOOP BLOOP!",
+    "ABV": 6.3,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Migration Brewing",
+    "Name": "Cannonball NW Red",
+    "Style": "Red Ale - NW",
+    "Description": "This multi-award winning beer is brewed for your winter adventures on the slopes.  This beer has aromas and flavors of caramel, toffee and dark fruit with medium-high bitterness. Assertively hopped to balance the rich malt character.",
+    "ABV": 7,
+    "IBU": 55
+  },
+  {
+    "BreweryName": "Fort George Brewery",
+    "Name": "Dismal Nitch",
+    "Style": "Schwarzbier",
+    "Description": "Dismal Nitch boasts aromas of roasted coffee, dark chocolate, and toasty bread. A mild sweetness is balanced by flavors of roasted malt, resulting in the perfect lager to accompany rainy season in the PNW.",
+    "ABV": 4.8,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Occidental Brewing Co",
+    "Name": "Schwarzbier",
+    "Style": "Schwarzbier",
+    "Description": "Classic German-Style Schwarzbier. Black in color, but light in taste. A hint of roast with a clean finish.",
+    "ABV": 4.7,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Occidental Brewing Co",
+    "Name": "Rauchbier Spezial",
+    "Style": "Smoke Beer",
+    "Description": "Rauchbier Spezial\" is a delicious copper-colored smoke beer. Well balanced with just the right amount of smoke flavor from a combination of beechwood-smoked barley and oak-smoked wheat.",
+    "ABV": 5,
+    "IBU": 20
+  },
+  {
+    "BreweryName": "Wild Ride Brewing",
+    "Name": "Tarty to the Party Blackberry Peach Sour Ale",
+    "Style": "Sour Ale",
+    "Description": "A kettle-soured ale with blackberry and peach added to create a sweet and refreshing flavor in the beer. Full of flavor from tart to finish, this sour ale is a party you don't want to miss!",
+    "ABV": 5.6,
+    "IBU": 10
+  },
+  {
+    "BreweryName": "Slowdrift Brewing Company",
+    "Name": "Muddy Waters",
+    "Style": "Stout - Chocolate",
+    "Description": "A double milk chocolate vanilla bean stout.",
+    "ABV": 5.9,
+    "IBU": 34
+  },
+  {
+    "BreweryName": "Stickmen Brewing Company",
+    "Name": "Pooka",
+    "Style": "Stout - Irish",
+    "Description": "Traditional light bodied stout with deep roasted malt flavor throughout. Hints of dark chocolate and tobacco and a slight bitterness from Willamette hops.",
+    "ABV": 4.5,
+    "IBU": 39
+  },
+  {
+    "BreweryName": "Coin Toss Brewing",
+    "Name": "Salted Caramel Imperial Milk Stout",
+    "Style": "Stout - Milk",
+    "Description": "A blend of chocolate and caramel malts, toasted oats and wheat with a hint of salted caramel and a silky mouthfeel.",
+    "ABV": 9,
+    "IBU": ""
+  },
+  {
+    "BreweryName": "Montavilla Brew Works",
+    "Name": "Old Montavillain",
+    "Style": "Strong Ale - Barrel Aged",
+    "Description": "Aged in Freeland Spirits' \"Private Reserve\" barrels, this elegant strong ale exhibits notes of dark fruit, red wine grapes, anise/licorice, oak and smooth, mellow whiskey.",
+    "ABV": 8,
+    "IBU": 50
+  },
+  {
+    "BreweryName": "Level Beer",
+    "Name": "Neon Snowsuit",
+    "Style": "Winter Warmer",
+    "Description": "Grab your snurfer and head up to the hill. Big malt complexity with spicy rye and toffee notes blend into earthy hops for a totally rad experience!",
+    "ABV": 7.2,
+    "IBU": ""
+  }
+]
