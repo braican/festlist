@@ -28,7 +28,8 @@ export default {
 @import './styles/abstracts/abstracts';
 
 #app {
-  overflow: hidden;
+  background-color: $c--gray-f;
+  min-height: 100vh;
 }
 
 // Transitions
@@ -54,6 +55,4 @@ export default {
   opacity: 0;
   transform: translate(-2em, 0);
 }
-
 </style>
-

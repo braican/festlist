@@ -33,16 +33,20 @@ export default {
 @import '../styles/abstracts/abstracts';
 
 .brewery {
+  border-bottom: 4px solid $c--gray-e;
   position: relative;
-  padding-top: 1rem;
-
-  + .brewery {
-    margin-top: 1rem;
-  }
 }
 
 .brewery-name {
-  @include label($fs--xs);
+  font-family: 'Rubik Mono One', sans-serif;
+  padding: 1em;
+  color: $c--gray-4;
+  margin-top: 2rem;
+  background-color: $c--gray-f;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  box-shadow: 0 4px 4px -4px rgba($c--black, 0.16);
 }
 
 .show-starred .beer:not(.saved) {

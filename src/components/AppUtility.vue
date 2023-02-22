@@ -88,6 +88,7 @@ export default {
   right: 0;
   box-shadow: 0 0 12px rgba($c--black, 0.16);
   background-color: $c--white;
+  z-index: 10;
 }
 
 .icon {
